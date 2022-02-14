@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/alexandrefonseca00/" target="_blank">Alexandre Fonseca</a>, <a href="https://www.linkedin.com/in/victorbarq/">Emanuele Morais</a>, <a href="https://www.linkedin.com/in/gabriel-nascimento-b80933217/">Gabriel Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/">Jean Rothstein</a>, <a href="https://www.linkedin.com/in/lucas-britto-376665208/">Lucas Vieira</a>, <a href="https://www.linkedin.com/in/victorbarq/">Mariana Paula</a>, <a href="https://www.linkedin.com/in/victorbarq/">Michel Mansur</a>, <a href="https://www.linkedin.com/in/victorbarq/">Stefano Tinelli</a>
+## Integrantes: <a href="https://www.linkedin.com/in/alexandrefonseca00/" target="_blank">Alexandre Fonseca</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Emanuele Morais</a>, <a href="https://www.linkedin.com/in/gabriel-nascimento-b80933217/" target="_blank">Gabriel Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Jean Rothstein</a>, <a href="https://www.linkedin.com/in/lucas-britto-376665208/" target="_blank">Lucas Vieira</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Mariana Paula</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Michel Mansur</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Stefano Tinelli</a>
 
 ## Descrição
 
