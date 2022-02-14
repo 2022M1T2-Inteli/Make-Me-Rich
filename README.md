@@ -4,27 +4,23 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Money Guy Adventures
 
-## Nome do Grupo
+## The FinancialEd Devs
 
 ## Integrantes: <a href="https://www.linkedin.com/in/alexandrefonseca00/" target="_blank">Alexandre Fonseca</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Emanuele Morais</a>, <a href="https://www.linkedin.com/in/gabriel-nascimento-b80933217/" target="_blank">Gabriel Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Jean Rothstein</a>, <a href="https://www.linkedin.com/in/lucas-britto-376665208/" target="_blank">Lucas Vieira</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Mariana Paula</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Michel Mansur</a>, <a href="https://www.linkedin.com/in/victorbarq/" target="_blank">Stefano Tinelli</a>
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
-<br><br>
-Meu projeto é um exemplo de como utilizar o github.
+📜 Nosso projeto tem como objetivo ensinar conteúdos relacionados à educação financeira de forma entretida.
 <br><br>
 
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+
+💡 O projeto traz em seu escopo o objetivo de ensinar conteúdos educativos por meio de um jogo, além disso, conforme a evolução do usuário, ele poderá adquirir mais informações sobre investimentos e formas de administrar melhor sua vida financeira como um todo.
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+
 
 ## 🛠 Estrutura de pastas
 
