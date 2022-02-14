@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/alexandrefonseca00/">Alexandre Fonseca</a>, <a href="https://www.linkedin.com/in/victorbarq/">Emanuele Morais</a>, <a href="https://www.linkedin.com/in/gabriel-nascimento-b80933217/">Gabriel Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/">Jean Rothstein</a>, <a href="https://www.linkedin.com/in/lucas-britto-376665208/">Lucas Vieira</a>, <a href="https://www.linkedin.com/in/victorbarq/">Mariana Paula</a>, <a href="https://www.linkedin.com/in/victorbarq/">Michel Mansur</a>, <a href="https://www.linkedin.com/in/victorbarq/">Stefano Tinelli</a>
 
 ## Descrição
 
@@ -126,7 +126,7 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">Money Guy Adventures</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/2022M1T2/Projeto2" property="cc:attributionName" rel="cc:attributionURL">Alexandre Fonseca, Emanuele Morais, Gabriel Nascimento,  Jean Rothstein, Lucas Vieira, Mariana Paula,  Michel Mansur, Stefano Tinelli</a> está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons - Atribuição 4.0 Internacional</a>.<br />Baseado no trabalho disponível em <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/2022M1T2/Projeto2" rel="dct:source">https://github.com/2022M1T2/Projeto2</a>.<br />Podem estar disponíveis autorizações adicionais às concedidas no âmbito desta licença em <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/2022M1T2/Projeto2" rel="cc:morePermissions">https://github.com/2022M1T2/Projeto2</a></p>
 
 ## 🎓 Referências
 
