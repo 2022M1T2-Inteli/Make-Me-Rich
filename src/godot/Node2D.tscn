@@ -44,25 +44,25 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": false,
-"name": "idle.costas",
+"name": "idle.frente",
 "speed": 0.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
 }, {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
