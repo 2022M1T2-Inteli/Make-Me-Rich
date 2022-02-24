@@ -14,12 +14,12 @@
 [ext_resource path="res://player/personagem-esquerda-1.png" type="Texture" id=12]
 [ext_resource path="res://player/personagem-esquerda-2.png" type="Texture" id=13]
 [ext_resource path="res://player/personagem-direita-2.png" type="Texture" id=14]
-[ext_resource path="res://player/personagem-direita-4.png" type="Texture" id=15]
-[ext_resource path="res://player/personagem-direita-3.png" type="Texture" id=16]
 [ext_resource path="res://player/personagem-esquerda-4.png" type="Texture" id=17]
 [ext_resource path="res://player/personagem-esquerda-3.png" type="Texture" id=18]
 [ext_resource path="res://porta 1.gd" type="Script" id=19]
 [ext_resource path="res://Captura de tela 2022-02-22 144254.png" type="Texture" id=20]
+[ext_resource path="res://image (1).png" type="Texture" id=21]
+[ext_resource path="res://verde.png" type="Texture" id=22]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 123.5, 118.5 )
@@ -29,14 +29,9 @@ extents = Vector2( 15.5, 18.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "walk.direita",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "walk.esquerda",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
@@ -44,40 +39,70 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "walk.costas",
-"speed": 5.0
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "idle.esquerda",
+"name": "walk.costas",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 26.75, 19.5 )
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 38, 15 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 10.5, 10 )
+extents = Vector2( 23.5, 9 )
 
 [node name="cidade" type="Node2D"]
 position = Vector2( 1, -4 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 4576.75, 1203 )
+scale = Vector2( 3.11838, 2.6808 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite5/StaticBody2D"]
+polygon = PoolVector2Array( -345.612, -71.9934, -69.1866, -67.1441, -71.7521, -230.528, -72.3934, -268.203, -42.5702, -268.203, -35.1946, -450.612, -462.019, -446.882, -460.415, 438.675, -280.835, 434.572, -280.835, 325.649, -245.24, 325.649, -243.636, 237.243, -222.792, 237.243, -224.395, 325.649, -77.2036, 329.379, -75.6002, 62.6678, -383.132, 55.2074, -383.773, -70.8744, -368.701, -70.8744, -369.342, -107.431, -359.722, -109.296, -346.895, -105.939 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite5/StaticBody2D2"]
+polygon = PoolVector2Array( 74.7983, -446.135, -32.6292, -446.508, -33.5912, -437.929, 75.4398, -436.064, 75.4398, -66.7711, 100.773, -66.7711, 98.8494, -91.3906, 117.128, -90.2715, 120.335, -67.8902, 188.319, -69.0092, 188.319, -95.1208, 213.973, -94.0018, 213.011, -70.1283, 330.059, -69.0092, 331.021, -89.1525, 355.393, -88.0334, 354.431, -74.9776, 368.541, -73.8586, 368.541, -140.257, 319.797, -140.257, 320.759, -192.107, 363.41, -193.226, 369.503, -237.243, 389.064, -238.362, 391.95, -196.956, 403.174, -198.075, 403.174, 58.9376, 403.174, 60.0567, 403.174, 89.5255, 290.295, 91.0176, 291.257, 201.059, 333.907, 202.178, 332.945, 180.916, 353.469, 180.916, 353.469, 198.448, 372.709, 198.448, 369.503, 220.084, 248.607, 220.084, 247.324, 134.661, 145.669, 133.542, 145.669, 118.248, 78.3259, 122.725, 76.4019, 333.482, 149.837, 332.363, 150.799, 350.269, 189.602, 349.149, 189.602, 331.244, 191.526, 295.807, 207.88, 293.196, 207.88, 324.157, 221.99, 325.276, 225.197, 344.3, 280.995, 344.3, 279.071, 306.252, 299.274, 307.744, 298.312, 344.3, 366.617, 344.3, 365.655, 410.698, -280.835, 411.817, -280.835, 441.286, 456.407, 441.286, 453.521, -441.286 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Sprite5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite5/StaticBody2D3"]
+polygon = PoolVector2Array( -186.876, 356.983, -151.601, 355.864, -151.922, 378.991, -185.272, 378.991 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Sprite5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite5/StaticBody2D4"]
+polygon = PoolVector2Array( 81.212, -38.0483, 81.212, -45.5088, 282.919, -46.2549, 281.957, -36.9293 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Sprite5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite5/StaticBody2D5"]
+polygon = PoolVector2Array( 286.126, -38.0483, 285.805, -50.3581, 293.181, -51.1042, 292.219, -38.4214 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Sprite5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite5/StaticBody2D6"]
+polygon = PoolVector2Array( 335.19, -39.1674, 334.228, -44.3897, 369.503, -44.7628, 370.144, -37.3023 )
 
 [node name="Sprite4" type="Sprite" parent="."]
 position = Vector2( -636, 1072.5 )
@@ -90,8 +115,8 @@ scale = Vector2( 1, 2.70518 )
 texture = ExtResource( 20 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 1656.25, 1698.5 )
-scale = Vector2( 2.58483, 1.83865 )
+position = Vector2( 1317, 1720 )
+scale = Vector2( 2.58483, 1.84761 )
 texture = ExtResource( 20 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -118,6 +143,20 @@ polygon = PoolVector2Array( -54.5712, 12.3399, -102.568, 8.91217, -106.512, -105
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D4"]
 polygon = PoolVector2Array( 143.331, 150.821, 197.245, 150.136, 197.245, 137.796, 252.474, 138.481, 252.474, 254.34, 198.56, 254.34, 197.903, 220.062, 143.989, 219.376 )
+
+[node name="fundo" type="Node2D" parent="Sprite/StaticBody2D4"]
+position = Vector2( 1398.47, 758.22 )
+scale = Vector2( 1.69948, 1.26049 )
+
+[node name="Sprite" type="Sprite" parent="Sprite/StaticBody2D4/fundo"]
+position = Vector2( -119.733, -294.801 )
+scale = Vector2( 3.54308, 15.293 )
+texture = ExtResource( 22 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite/StaticBody2D4/fundo"]
+position = Vector2( 1347.48, -299.133 )
+scale = Vector2( 5.11416, 15.3191 )
+texture = ExtResource( 22 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 2161.0
@@ -169,7 +208,7 @@ position = Vector2( -1, -4 )
 shape = SubResource( 2 )
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 1006, 807 )
+position = Vector2( 1009, 858 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -183,31 +222,31 @@ shape = SubResource( 3 )
 position = Vector2( -20, -6.50005 )
 scale = Vector2( 2.48, 2.49 )
 frames = SubResource( 4 )
-animation = "idle.esquerda"
+animation = "walk.direita"
 
 [node name="Camera2D" type="Camera2D" parent="personagem"]
 position = Vector2( 2, 0 )
 script = ExtResource( 2 )
 
 [node name="porta 1" type="Area2D" parent="."]
-position = Vector2( 1299, 507 )
+position = Vector2( 1025, 1141 )
 script = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta 1"]
-position = Vector2( 323, -79 )
-shape = SubResource( 5 )
+position = Vector2( -7, 25 )
+shape = SubResource( 7 )
 
 [node name="posicao" type="Node2D" parent="."]
 position = Vector2( 1291, 568 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 2270, -126 )
+position = Vector2( 3453, 947 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 20.5, 0 )
+position = Vector2( 7.5, -1 )
 shape = SubResource( 6 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
