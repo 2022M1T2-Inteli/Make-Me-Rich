@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/money_guy.png-137b513cff0a4eedc18448da35fb29ad.stex"
+path="res://.import/Money_guy.png-113e43d775f34c818b824605fcf8c59b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HTML/money_guy.png"
-dest_files=[ "res://.import/money_guy.png-137b513cff0a4eedc18448da35fb29ad.stex" ]
+source_file="res://HTML/Money_guy.png"
+dest_files=[ "res://.import/Money_guy.png-113e43d775f34c818b824605fcf8c59b.stex" ]
 
 [params]
 
