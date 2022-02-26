@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Money_Guy.apple-touch-icon.png-b2e98ee5fef716d7cd5f7dc279e0a7bd.stex"
+path="res://.import/money_guy.apple-touch-icon.png-afd3554928348c0b00403afa41516942.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HTML/Money_Guy.apple-touch-icon.png"
-dest_files=[ "res://.import/Money_Guy.apple-touch-icon.png-b2e98ee5fef716d7cd5f7dc279e0a7bd.stex" ]
+source_file="res://HTML/money_guy.apple-touch-icon.png"
+dest_files=[ "res://.import/money_guy.apple-touch-icon.png-afd3554928348c0b00403afa41516942.stex" ]
 
 [params]
 
