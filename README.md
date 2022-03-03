@@ -14,8 +14,9 @@
 
 📜 O objetivo geral do "FAÇA-ME RICO!" é promover a educação financeira entre os jovens, através de conteúdos dinâmicos e interativos. O intuito é que o usuário consiga compreender sobre economia e finanças, por meio de um ambiente virtual, que contenha diversas situações cotidianas, simulando de forma gamificada o sistema financeiro nacional. Desse modo, assuntos como matemática financeira, investimentos, e produtos financeiros serão ensinados de maneira prática.
 <br><br>
-
+<center>
 <img src="imagens\logo.jpeg" alt="Logo">
+</center>
 
 
 💡 O projeto traz em seu escopo o objetivo de ensinar conteúdos educativos por meio de um jogo, além disso, conforme a evolução do usuário, ele poderá adquirir mais informações sobre investimentos e formas de administrar melhor sua vida financeira como um todo.
