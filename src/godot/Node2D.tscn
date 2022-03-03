@@ -41,25 +41,25 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": false,
 "name": "idle.costas",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
@@ -71,10 +71,10 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"name": "walk.frente",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
@@ -146,7 +146,7 @@ scale = Vector2( 2.58483, 1.84761 )
 texture = ExtResource( 20 )
 
 [node name="casa" type="Sprite" parent="."]
-position = Vector2( 951, 641 )
+position = Vector2( 943, 640 )
 scale = Vector2( 1.52095, 1.45868 )
 texture = ExtResource( 10 )
 
@@ -163,7 +163,7 @@ polygon = PoolVector2Array( 130.839, -105.575, 134.784, -45.9319, 190.67, -43.87
 [node name="StaticBody2D3" type="StaticBody2D" parent="casa"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D3"]
-polygon = PoolVector2Array( -54.5712, 12.3399, -102.568, 8.91217, -106.512, -105.575, 14.4646, -104.889, 16.4371, -42.5042, -59.8311, -42.5042 )
+polygon = PoolVector2Array( -54.5712, 12.3399, -102.568, 8.91217, -106.512, -105.575, 14.4646, -104.889, 16.4371, -42.5042, -104.54, -67.8696, -103.225, -32.2209, -59.1736, -26.0509 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="casa"]
 
@@ -338,10 +338,10 @@ position = Vector2( 104, 19 )
 scale = Vector2( 0.207851, 0.207851 )
 
 [node name="NExt" type="Button" parent="Aula1"]
-margin_left = -522.0
-margin_top = 296.0
-margin_right = -474.0
-margin_bottom = 327.0
+margin_left = -630.0
+margin_top = 291.0
+margin_right = -587.0
+margin_bottom = 313.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

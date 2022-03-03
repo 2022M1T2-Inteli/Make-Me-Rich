@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var contador = 0
 func _on_NExt_pressed():
 	contador += 1
