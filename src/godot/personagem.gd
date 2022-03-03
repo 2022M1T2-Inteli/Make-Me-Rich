@@ -78,3 +78,7 @@ func _on_porta_1_body_entered(body):
 func _on_Area2D_body_entered(body):
 	position.x = 1037
 	position.y = 1077
+
+
+func _on_computer_body_entered(body):
+	pass
