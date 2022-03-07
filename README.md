@@ -25,11 +25,15 @@
 
 ## 🛠 Instalação
 ItchIO: "https://itch.io/embed/1416795"
+
+Instruções para rodar no computador:
+
+
 Abra a engine Godot;
 Com a engine aberta, clique na opção "escanear", em seguida selecione a pasta do repositório;
 Abra o projeto e rode.
 
-Instruções para rodar no computador!
+
 
 Para utilização no celular, acessar: 
 https://itch.io/embed/1416795"
