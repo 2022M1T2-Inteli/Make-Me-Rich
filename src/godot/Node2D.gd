@@ -11,3 +11,10 @@ func _on_NExt_pressed():
 		$"Aula1/Tela Preta".visible = false
 		$"Aula1/Parece azul".visible = true
 		
+		
+		
+		
+
+
+func _on_Movi_A_pressed():
+	pass # Replace with function body.

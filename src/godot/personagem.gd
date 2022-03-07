@@ -15,6 +15,7 @@ var velocidade = Vector2.ZERO
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # Codigo pra movimentação 
 func _physics_process(delta):
+	move_and_slide(velocidade)
 	if Input.is_action_pressed("tecla_w"):
 		m = true
 		if m:
@@ -27,6 +28,7 @@ func _physics_process(delta):
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSprite.play("idle.costas")
+	
 		
 		
 	elif Input.is_action_pressed("tecla_s"):
@@ -68,7 +70,6 @@ func _physics_process(delta):
 		$AnimatedSprite.play("idle.direita")
 
 
-
 #funçao que faz o personagem entrar em um ambiente novo em uma area
 func _on_porta_1_body_entered(body):
 	position.x = 3457
@@ -82,3 +83,39 @@ func _on_Area2D_body_entered(body):
 
 func _on_computer_body_entered(body):
 	pass
+
+#Movimentação Botões
+func _on_Movi_A_button_down():
+	velocidade.x = -200
+	$AnimatedSprite.play("walk.esquerda")
+
+func _on_Movi_A_button_up():
+	velocidade.x = 0
+	$AnimatedSprite.play("idle.esquerda")
+
+
+func _on_Movi_D_button_down():
+	velocidade.x = 200
+	$AnimatedSprite.play("walk.direita")
+
+func _on_Movi_D_button_up():
+	velocidade.x = 0
+	$AnimatedSprite.play("idle.direita")
+
+
+func _on_Movi_W_button_down():
+	velocidade.y = -200
+	$AnimatedSprite.play("walk.costas")
+
+func _on_Movi_W_button_up():
+	velocidade.y = 0
+	$AnimatedSprite.play("idle.costas")
+
+
+func _on_Movi_S_button_down():
+	velocidade.y = 200
+	$AnimatedSprite.play("walk.frente")
+
+func _on_Movi_S_button_up():
+	velocidade.y = 0
+	$AnimatedSprite.play("idle.frente")
