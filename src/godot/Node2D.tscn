@@ -262,10 +262,10 @@ position = Vector2( 2, 0 )
 script = ExtResource( 2 )
 
 [node name="Movi_A" type="Button" parent="personagem"]
-margin_left = -580.0
-margin_top = 200.0
-margin_right = -535.0
-margin_bottom = 245.0
+margin_left = -480.0
+margin_top = 150.0
+margin_right = -435.0
+margin_bottom = 195.0
 text = "A"
 script = ExtResource( 16 )
 __meta__ = {
@@ -273,30 +273,30 @@ __meta__ = {
 }
 
 [node name="Movi_D" type="Button" parent="personagem"]
-margin_left = -480.0
-margin_top = 200.0
-margin_right = -435.0
-margin_bottom = 245.0
+margin_left = -380.0
+margin_top = 150.0
+margin_right = -335.0
+margin_bottom = 195.0
 text = "D"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Movi_W" type="Button" parent="personagem"]
-margin_left = -530.0
-margin_top = 150.0
-margin_right = -485.0
-margin_bottom = 195.0
+margin_left = -430.0
+margin_top = 100.0
+margin_right = -385.0
+margin_bottom = 145.0
 text = "W"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Movi_S" type="Button" parent="personagem"]
-margin_left = -530.0
-margin_top = 250.0
-margin_right = -485.0
-margin_bottom = 295.0
+margin_left = -430.0
+margin_top = 200.0
+margin_right = -385.0
+margin_bottom = 245.0
 text = "S"
 __meta__ = {
 "_edit_use_anchors_": false

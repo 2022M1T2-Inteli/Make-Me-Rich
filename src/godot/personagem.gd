@@ -21,7 +21,6 @@ func _physics_process(delta):
 		if m:
 			velocidade.y = -200
 			$AnimatedSprite.play("walk.costas")
-			move_and_slide(velocidade)
 		#o codigo abaixo faz o personagem ficar parado na direção do seu ultimo movimento
 	elif Input.is_action_just_released("tecla_w"):
 		m = false
@@ -36,7 +35,6 @@ func _physics_process(delta):
 		if	mu:
 			velocidade.y = 200
 			$AnimatedSprite.play("walk.frente")
-			move_and_slide(velocidade)
 	elif Input.is_action_just_released("tecla_s"):
 		mu = false
 		velocidade.x = 0
@@ -49,7 +47,6 @@ func _physics_process(delta):
 		if	mo:
 			velocidade.x = -200
 			$AnimatedSprite.play("walk.esquerda")
-			move_and_slide(velocidade)
 	elif Input.is_action_just_released("tecla_a"):
 		mo = false
 		velocidade.x = 0
@@ -62,7 +59,6 @@ func _physics_process(delta):
 		if	mi:
 			velocidade.x = 200
 			$AnimatedSprite.play("walk.direita")
-			move_and_slide(velocidade)
 	elif Input.is_action_just_released("tecla_d"):
 		mi = false
 		velocidade.x = 0
