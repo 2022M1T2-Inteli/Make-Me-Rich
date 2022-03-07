@@ -24,29 +24,17 @@
 
 
 ## 🛠 Instalação
+ItchIO: <iframe frameborder="0" src="https://itch.io/embed/1416795" width="208" height="167"><a href="https://group2.itch.io/faca-merico">Faça-me Rico! by Group2</a></iframe>
 
-<b>Android:</b>
+Faça o clone do repositório na sua máquina;
+Em seguida, abra a engine Godot;
+Com a engine aberta, clique na opção "escanear", em seguida selecione a pasta do repositório.
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
+Instruções para rodar no computador!
 
-```sh
-Coloque código do prompt de comnando se for necessário
-```
+Para utilização no celular, acessar: 
+<iframe frameborder="0" src="https://itch.io/embed/1416795" width="208" height="167"><a href="https://group2.itch.io/faca-merico">Faça-me Rico! by Group2</a></iframe>
 
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
 ## 📈 Exemplo de uso
 
