@@ -24,7 +24,7 @@
 
 
 ## 🛠 Instalação
-ItchIO: <iframe frameborder="0" src="https://itch.io/embed/1416795" width="208" height="167"><a href="https://group2.itch.io/faca-merico">Faça-me Rico! by Group2</a></iframe>
+ItchIO: <img src="<iframe frameborder="0" src="https://itch.io/embed/1416795" width="208" height="167"><a href="https://group2.itch.io/faca-merico">Faça-me Rico! by Group2</a></iframe>>
 
 Faça o clone do repositório na sua máquina;
 Em seguida, abra a engine Godot;
