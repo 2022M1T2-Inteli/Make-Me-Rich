@@ -1,10 +1,6 @@
 extends KinematicBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 # vector2 é a coordenada inicial física do personagem, o ZERO zera o vetor
 var m = false
 var mu = false
@@ -12,10 +8,11 @@ var mo = false
 var mi = false
 var velocidade = Vector2.ZERO
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# Codigo pra movimentação 
+# delta é um método que faz o codigo ser executado a cada frame
+
 func _physics_process(delta):
 	move_and_slide(velocidade)
+	# Codigo pra movimentação 
 	if Input.is_action_pressed("tecla_w"):
 		m = true
 		if m:
@@ -27,7 +24,7 @@ func _physics_process(delta):
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSprite.play("idle.costas")
-	
+	#o exemplo acima se repete pra todas as direções 
 		
 		
 	elif Input.is_action_pressed("tecla_s"):
