@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-
 # vector2 é a coordenada inicial física do personagem, o ZERO zera o vetor
+
 var m = false
 var mu = false
 var mo = false
@@ -18,13 +18,13 @@ func _physics_process(delta):
 		if m:
 			velocidade.y = -200
 			$AnimatedSprite.play("walk.costas")
-		#o codigo abaixo faz o personagem ficar parado na direção do seu ultimo movimento
+	#O código abaixo faz o personagem ficar parado na direção do seu ultimo movimento
 	elif Input.is_action_just_released("tecla_w"):
 		m = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSprite.play("idle.costas")
-	#o exemplo acima se repete pra todas as direções 
+	#O exemplo acima se repete pra todas as direções 
 		
 		
 	elif Input.is_action_pressed("tecla_s"):
@@ -63,7 +63,7 @@ func _physics_process(delta):
 		$AnimatedSprite.play("idle.direita")
 
 
-#funçao que faz o personagem entrar em um ambiente novo em uma area
+#função que faz o personagem entrar em um ambiente novo em uma area
 func _on_porta_1_body_entered(body):
 	position.x = 3457
 	position.y = 1025

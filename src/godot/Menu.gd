@@ -1,5 +1,7 @@
 extends CanvasLayer
-#variavel que controla a seta 
+
+#variavel que controla a seta
+
 onready var select_arrow = $Control/NinePatchRect/TextureRect
 onready var menu = $Control
 
@@ -20,7 +22,7 @@ func _unhandled_input(event):
 				menu.visible = true
 				screen_loaded = ScreenLoaded.JUST_MENU
 				
-		#fecha o menu
+		#Fecha o menu
 		ScreenLoaded.JUST_MENU:
 			if event.is_action_pressed("interacao") or event.is_action_pressed("x"):
 				menu.visible = false
