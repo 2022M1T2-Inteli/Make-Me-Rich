@@ -7,9 +7,13 @@ var mu = false
 var mo = false
 var mi = false
 var velocidade = Vector2.ZERO
-
+var abrirPcEnter = false
 # delta é um método que faz o codigo ser executado a cada frame
-
+func _process(delta):
+	if Input.is_action_pressed("interacao"):
+		abrirPcEnter = true
+	if abrirPcEnter == true and area2DPc ==true:
+		get_tree().change_scene("res://Cena_computador.tscn")
 func _physics_process(delta):
 	move_and_slide(velocidade)
 	# Codigo pra movimentação 
@@ -64,18 +68,22 @@ func _physics_process(delta):
 
 
 #função que faz o personagem entrar em um ambiente novo em uma area
-func _on_porta_1_body_entered(body):
-	position.x = 3457
-	position.y = 1025
-
-
-func _on_Area2D_body_entered(body):
-	position.x = 1037
-	position.y = 1077
-
-
-func _on_computer_body_entered(body):
-	pass
+#para a cidade
+func _on_portaDentro_body_entered(body):
+	position.x = 201
+	position.y = 3078
+#para dentro de casa
+func _on_portaFora_body_entered(body):
+	position.x = 1038
+	position.y = 1091
+#para dentro do banco
+func _on_portaBanco_body_entered(body):
+	position.x = 1133
+	position.y = -146
+#de volta pra cidade, na frente do banco
+func _on_dentroBanco_body_entered(body):
+	position.x = 1605
+	position.y = 3100
 
 #Movimentação Botões
 func _on_Movi_A_button_down():
@@ -112,3 +120,8 @@ func _on_Movi_S_button_down():
 func _on_Movi_S_button_up():
 	velocidade.y = 0
 	$AnimatedSprite.play("idle.frente")
+
+var area2DPc = false
+func _on_computer_body_entered(body):
+	area2DPc = true
+
