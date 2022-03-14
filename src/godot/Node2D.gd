@@ -1,7 +1,8 @@
 extends Node2D
 
 #código do card do computador
-
+func _ready():
+	$AudioStreamPlayer.play()
 var cont = 0
 func _on_NExt_pressed():
 	cont += 1
