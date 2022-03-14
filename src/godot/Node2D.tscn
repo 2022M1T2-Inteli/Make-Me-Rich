@@ -1,23 +1,23 @@
 [gd_scene load_steps=34 format=2]
 
-[ext_resource path="res://player/personagem-sprite.idle.png" type="Texture" id=1]
+[ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://assets/cidade_judite.jpg" type="Texture" id=3]
-[ext_resource path="res://player/personagem.frame-2.png" type="Texture" id=4]
+[ext_resource path="res://sprites_player/andando.esquerda.png" type="Texture" id=4]
 [ext_resource path="res://personagem.gd" type="Script" id=5]
-[ext_resource path="res://player/personagem.frame-1.png" type="Texture" id=6]
-[ext_resource path="res://player/boneco-de-costas-1-pixilart.png" type="Texture" id=7]
-[ext_resource path="res://player/boneco-de-costas-2.png" type="Texture" id=8]
-[ext_resource path="res://player/boneco-de-costas-pixilart.png" type="Texture" id=9]
+[ext_resource path="res://sprites_player/andando.frente_2.png" type="Texture" id=6]
+[ext_resource path="res://sprites_player/andando.direita.png" type="Texture" id=7]
+[ext_resource path="res://sprites_player/idle.frente.png" type="Texture" id=8]
+[ext_resource path="res://sprites_player/andando.costas.png" type="Texture" id=9]
 [ext_resource path="res://assets/casinha.png" type="Texture" id=10]
-[ext_resource path="res://player/personagem-direita-1.png" type="Texture" id=11]
-[ext_resource path="res://player/personagem-esquerda-1.png" type="Texture" id=12]
-[ext_resource path="res://player/personagem-esquerda-2.png" type="Texture" id=13]
-[ext_resource path="res://player/personagem-direita-2.png" type="Texture" id=14]
+[ext_resource path="res://sprites_player/andando.esquerda_2.png" type="Texture" id=11]
+[ext_resource path="res://sprites_player/andando.costas_2.png" type="Texture" id=12]
+[ext_resource path="res://sprites_player/andando.direita_2.png" type="Texture" id=13]
+[ext_resource path="res://sprites_player/parado.direita.png" type="Texture" id=14]
 [ext_resource path="res://Menu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/banco_judite.jpg" type="Texture" id=16]
-[ext_resource path="res://player/personagem-esquerda-4.png" type="Texture" id=17]
-[ext_resource path="res://player/personagem-esquerda-3.png" type="Texture" id=18]
+[ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
+[ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
 [ext_resource path="res://porta 1.gd" type="Script" id=19]
 [ext_resource path="res://assets/Captura de tela 2022-02-22 144254.png" type="Texture" id=20]
 [ext_resource path="res://Node2D.gd" type="Script" id=23]
@@ -39,48 +39,48 @@ height = 10.5835
 extents = Vector2( 38.6645, 5.98115 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 15.5, 18.5 )
+extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.frente",
+"name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 18 ) ],
 "loop": false,
 "name": "idle.costas",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.frente",
 "speed": 5.0
 } ]
 
@@ -117,7 +117,7 @@ shape = SubResource( 12 )
 [node name="hitbox" type="StaticBody2D" parent="CidadeJudite"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CidadeJudite/hitbox"]
-polygon = PoolVector2Array( -451.124, -80.6995, -500.514, -78.9355, -504.042, 86.8734, -87.7553, 86.8734, -85.9913, 363.81, -205.938, 360.282, -204.174, 328.531, -226.664, 329.413, -228.869, 357.636, -424.665, 356.754, -425.547, 339.997, -391.591, 339.115, -390.268, 317.948, -332.5, 315.302, -332.5, 285.756, -373.952, 285.756, -373.952, 253.123, -332.5, 251.8, -332.5, 204.615, -407.026, 204.615, -404.38, 250.477, -442.304, 249.595, -442.304, 263.707, -502.278, 264.589, -501.396, 466.558, 480.67, 464.794, 482.434, 362.928, 235.484, 361.164, 235.484, 334.705, 209.025, 334.705, 209.025, 361.164, 106.717, 359.841, 105.395, 114.655, 454.211, 109.804, 447.596, -303.395, 501.396, -306.482, 499.632, -377.039, 236.807, -377.039, 236.807, -402.175, 206.82, -402.175, 206.82, -380.126, -146.406, -381.89, -145.083, -410.113, -173.306, -410.113, -174.629, -381.89, -435.689, -380.126, -439.658, -238.13, -314.861, -235.925, -315.302, -82.4634, -383.654, -84.2274, -385.418, -130.089, -457.739, -131.853, -459.061, -130.53, -459.061, -433.926, 521.24, -432.162, 507.128, 488.607, -532.705, 479.788, -524.768, -129.207, -410.113, -125.68, -409.672, -78.9355 )
+polygon = PoolVector2Array( -451.124, -80.6995, -500.514, -78.9355, -504.042, 86.8734, -87.7553, 86.8734, -85.9913, 363.81, -205.938, 360.282, -204.174, 328.531, -226.664, 329.413, -228.869, 357.636, -424.665, 356.754, -425.547, 339.997, -391.591, 339.115, -390.268, 317.948, -332.5, 315.302, -332.5, 278.7, -369.101, 277.818, -368.219, 257.092, -331.618, 257.092, -332.5, 204.615, -407.026, 204.615, -444.95, 204.174, -443.186, 217.404, -407.908, 219.609, -406.585, 243.422, -444.509, 242.54, -442.304, 263.707, -502.278, 264.589, -501.396, 466.558, 480.67, 464.794, 482.434, 362.928, 235.484, 361.164, 235.484, 334.705, 209.025, 334.705, 209.025, 361.164, 106.717, 359.841, 105.395, 114.655, 454.211, 109.804, 447.596, -303.395, 501.396, -306.482, 499.632, -377.039, 236.807, -377.039, 236.807, -402.175, 206.82, -402.175, 206.82, -380.126, -146.406, -381.89, -145.083, -410.113, -173.306, -410.113, -174.629, -381.89, -435.689, -380.126, -439.658, -238.13, -314.861, -235.925, -315.302, -82.4634, -383.654, -84.2274, -385.418, -130.089, -457.739, -131.853, -459.061, -130.53, -459.061, -433.926, 521.24, -432.162, 507.128, 488.607, -532.705, 479.788, -524.768, -129.207, -410.113, -125.68, -409.672, -78.9355 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CidadeJudite/hitbox"]
 polygon = PoolVector2Array( 81.1406, -78.4946, 210.348, -83.3455, 212.553, -103.19, 231.074, -104.072, 233.72, -82.9044, 397.324, -82.0225, 397.324, -283.11, 81.1406, -283.11 )
@@ -144,7 +144,7 @@ texture = ExtResource( 16 )
 [node name="dentroBanco" type="Area2D" parent="BancoJudite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BancoJudite/dentroBanco"]
-position = Vector2( -0.748291, 329.266 )
+position = Vector2( -0.997803, 333.762 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 14 )
 
@@ -246,18 +246,22 @@ position = Vector2( -3.94495, -2.74219 )
 polygon = PoolVector2Array( -2.62994, -12.3399, -1.97247, -35.6487, -54.5712, -37.7053, -50.6263, -16.4532 )
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 911, 623 )
+position = Vector2( 961, 571 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
-position = Vector2( -22.5, 3.5 )
+position = Vector2( 1, 10 )
+scale = Vector2( 1.05181, 1.02724 )
 shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="personagem"]
-position = Vector2( -20, -6.50005 )
-scale = Vector2( 2.48, 2.49 )
+position = Vector2( -1, 4 )
+scale = Vector2( 0.148062, 0.14866 )
 frames = SubResource( 4 )
-animation = "idle.esquerda"
+animation = "idle.frente"
 
 [node name="Camera2D" type="Camera2D" parent="personagem"]
 position = Vector2( 2, 0 )

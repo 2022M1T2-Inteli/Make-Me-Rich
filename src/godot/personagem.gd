@@ -79,11 +79,11 @@ func _on_portaFora_body_entered(body):
 #para dentro do banco
 func _on_portaBanco_body_entered(body):
 	position.x = 1133
-	position.y = -146
+	position.y = -187
 #de volta pra cidade, na frente do banco
 func _on_dentroBanco_body_entered(body):
-	position.x = 1605
-	position.y = 3100
+	position.x = 1583
+	position.y = 3097
 
 #Movimentação Botões
 func _on_Movi_A_button_down():
