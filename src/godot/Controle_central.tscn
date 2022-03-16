@@ -20,7 +20,7 @@
 [ext_resource path="res://player/personagem-esquerda-3.png" type="Texture" id=18]
 [ext_resource path="res://player/personagem-esquerda-4.png" type="Texture" id=19]
 [ext_resource path="res://player/boneco-de-costas-pixilart.png" type="Texture" id=20]
-[ext_resource path="res://assets/Captura de tela 2022-02-22 144254.png" type="Texture" id=21]
+[ext_resource path="res://assets/fundo.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 25.0533, 17.6827 )

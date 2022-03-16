@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/Captura de tela 2022-02-22 144254.png" type="Texture" id=1]
+[ext_resource path="res://assets/fundo.png" type="Texture" id=1]
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Cena_computador.gd" type="Script" id=3]
 [ext_resource path="res://assets/computador_principal.png" type="Texture" id=4]
@@ -173,5 +173,6 @@ __meta__ = {
 [connection signal="mouse_exited" from="conquistas" to="conquistas" method="_on_conquistas_mouse_exited"]
 [connection signal="mouse_entered" from="investimentos" to="investimentos" method="_on_investimentos_mouse_entered"]
 [connection signal="mouse_exited" from="investimentos" to="investimentos" method="_on_investimentos_mouse_exited"]
+[connection signal="pressed" from="investimentos" to="investimentos" method="_on_investimentos_pressed"]
 [connection signal="mouse_entered" from="comprar" to="comprar" method="_on_comprar_mouse_entered"]
 [connection signal="mouse_exited" from="comprar" to="comprar" method="_on_comprar_mouse_exited"]

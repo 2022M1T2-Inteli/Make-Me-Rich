@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -19,18 +19,23 @@
 [ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
 [ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
 [ext_resource path="res://porta 1.gd" type="Script" id=19]
-[ext_resource path="res://assets/Captura de tela 2022-02-22 144254.png" type="Texture" id=20]
+[ext_resource path="res://assets/fundo.png" type="Texture" id=20]
 [ext_resource path="res://assets/videoplayback.mp3" type="AudioStream" id=21]
+[ext_resource path="res://assets/universidade_judite.jpg" type="Texture" id=22]
 [ext_resource path="res://Node2D.gd" type="Script" id=23]
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=24]
 [ext_resource path="res://Captura de tela 2022-02-22 144254.png" type="Texture" id=25]
 [ext_resource path="res://assets/seta.png" type="Texture" id=26]
+[ext_resource path="res://assets/npc professora.png" type="Texture" id=27]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 6.39423, 7.13025 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 10.3631, 8.59907 )
 
 [sub_resource type="CapsuleShape2D" id=13]
 radius = 11.9065
@@ -39,39 +44,28 @@ height = 10.5835
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 38.6645, 5.98115 )
 
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 85.0227, 13.4089 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 24.1534, 14.8103 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 19.1535, 28.4966 )
+
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "walk.direita",
-"speed": 10.0
+"name": "walk.frente",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
@@ -79,11 +73,35 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
 } ]
+
+[sub_resource type="DynamicFont" id=15]
+size = 26
+font_data = ExtResource( 24 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 38, 15 )
@@ -115,10 +133,16 @@ shape = SubResource( 11 )
 position = Vector2( 221.814, -92.165 )
 shape = SubResource( 12 )
 
+[node name="portaFaculdade" type="Area2D" parent="CidadeJudite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CidadeJudite/portaFaculdade"]
+position = Vector2( 222.034, 347.714 )
+shape = SubResource( 16 )
+
 [node name="hitbox" type="StaticBody2D" parent="CidadeJudite"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CidadeJudite/hitbox"]
-polygon = PoolVector2Array( -451.124, -80.6995, -500.514, -78.9355, -504.042, 86.8734, -87.7553, 86.8734, -85.9913, 363.81, -205.938, 360.282, -204.174, 328.531, -226.664, 329.413, -228.869, 357.636, -424.665, 356.754, -425.547, 339.997, -391.591, 339.115, -390.268, 317.948, -332.5, 315.302, -332.5, 278.7, -369.101, 277.818, -368.219, 257.092, -331.618, 257.092, -332.5, 204.615, -407.026, 204.615, -444.95, 204.174, -443.186, 217.404, -407.908, 219.609, -406.585, 243.422, -444.509, 242.54, -442.304, 263.707, -502.278, 264.589, -501.396, 466.558, 480.67, 464.794, 482.434, 362.928, 235.484, 361.164, 235.484, 334.705, 209.025, 334.705, 209.025, 361.164, 106.717, 359.841, 105.395, 114.655, 454.211, 109.804, 447.596, -303.395, 501.396, -306.482, 499.632, -377.039, 236.807, -377.039, 236.807, -402.175, 206.82, -402.175, 206.82, -380.126, -146.406, -381.89, -145.083, -410.113, -173.306, -410.113, -174.629, -381.89, -435.689, -380.126, -439.658, -238.13, -314.861, -235.925, -315.302, -82.4634, -383.654, -84.2274, -385.418, -130.089, -457.739, -131.853, -459.061, -130.53, -459.061, -433.926, 521.24, -432.162, 507.128, 488.607, -532.705, 479.788, -524.768, -129.207, -410.113, -125.68, -409.672, -78.9355 )
+polygon = PoolVector2Array( -451.124, -80.6995, -500.514, -78.9355, -504.042, 86.8734, -87.7553, 86.8734, -85.9913, 363.81, -205.938, 360.282, -204.174, 328.531, -226.664, 329.413, -228.869, 357.636, -424.665, 356.754, -425.547, 339.997, -391.591, 339.115, -390.268, 317.948, -332.5, 315.302, -332.5, 278.7, -369.101, 277.818, -368.219, 257.092, -331.618, 257.092, -332.5, 204.615, -407.026, 204.615, -444.95, 204.174, -443.186, 217.404, -407.908, 219.609, -406.585, 243.422, -444.509, 242.54, -442.304, 263.707, -502.278, 264.589, -501.396, 466.558, 480.67, 464.794, 482.434, 362.928, 246.95, 357.636, 246.509, 377.921, 236.366, 377.921, 235.484, 361.164, 235.484, 334.705, 209.025, 334.705, 209.025, 361.164, 209.025, 377.039, 196.678, 376.598, 196.237, 361.164, 106.717, 359.841, 105.395, 114.655, 454.211, 109.804, 447.596, -303.395, 501.396, -306.482, 499.632, -377.039, 236.807, -377.039, 236.807, -402.175, 206.82, -402.175, 206.82, -380.126, -146.406, -381.89, -145.083, -410.113, -173.306, -410.113, -174.629, -381.89, -435.689, -380.126, -439.658, -238.13, -314.861, -235.925, -315.302, -82.4634, -383.654, -84.2274, -385.418, -130.089, -457.739, -131.853, -459.061, -130.53, -459.061, -433.926, 521.24, -432.162, 507.128, 488.607, -532.705, 479.788, -524.768, -129.207, -410.113, -125.68, -409.672, -78.9355 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CidadeJudite/hitbox"]
 polygon = PoolVector2Array( 81.1406, -78.4946, 210.348, -83.3455, 212.553, -103.19, 231.074, -104.072, 233.72, -82.9044, 397.324, -82.0225, 397.324, -283.11, 81.1406, -283.11 )
@@ -184,6 +208,47 @@ polygon = PoolVector2Array( 38.9139, -21.4529, 40.9095, -139.691, 115.744, -138.
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="BancoJudite/hitbox"]
 polygon = PoolVector2Array( 156.155, -18.4595, 154.159, -138.694, 244.958, -136.698, 245.956, -18.4595 )
 
+[node name="UniversidadeJudite" type="Sprite" parent="."]
+position = Vector2( 1062.11, -2486.75 )
+scale = Vector2( 1.0703, 1.0703 )
+texture = ExtResource( 22 )
+
+[node name="dentroUniversidade" type="Area2D" parent="UniversidadeJudite"]
+position = Vector2( -1.03894, 419.273 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UniversidadeJudite/dentroUniversidade"]
+position = Vector2( 2.80298, 3.40894 )
+shape = SubResource( 17 )
+
+[node name="professora" type="Sprite" parent="UniversidadeJudite"]
+position = Vector2( -185.099, -209.521 )
+scale = Vector2( 1.28092, 1.28092 )
+texture = ExtResource( 27 )
+
+[node name="caixaTexto" type="Area2D" parent="UniversidadeJudite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UniversidadeJudite/caixaTexto"]
+position = Vector2( -178.559, -150.659 )
+shape = SubResource( 18 )
+
+[node name="hitbox" type="StaticBody2D" parent="UniversidadeJudite"]
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
+polygon = PoolVector2Array( -199.114, 300.615, -199.114, 252.031, -208.457, 251.097, -208.457, 195.972, -198.179, 195.972, -199.114, 125.898, -206.588, 124.964, -209.391, 73.5769, -199.114, 73.5769, -198.179, 8.1748, -208.457, 7.24048, -210.326, -44.1467, -150.529, -43.2124, -151.464, 6.30615, -158.938, 7.24048, -159.872, 72.6426, -148.661, 72.6426, -148.661, 127.767, -158.938, 128.701, -161.741, 195.972, -150.529, 195.972, -149.595, 252.031, -163.61, 253.9, -157.07, 301.55 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
+polygon = PoolVector2Array( 96.1298, 439.828, 91.4583, 366.018, 396.045, 366.018, 388.57, -176.82, 226.934, -174.951, 227.868, -235.681, -328.049, -242.222, -328.049, -173.082, -341.13, -173.082, -340.195, -117.023, -388.78, -117.023, -394.386, 368.82, -92.6018, 370.689, -92.6018, 439.828, -139.318, 437.96, -143.989, 410.865, -444.839, 410.865, -444.839, -414.135, 441.826, -412.267, 441.826, 414.602, 149.386, 410.865, 144.714, 437.96 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
+polygon = PoolVector2Array( -210.326, -115.155, -212.194, -176.82, -219.669, -177.754, -224.34, -233.813, -256.107, -234.747, -257.976, -189.9, -262.647, -177.754, -271.056, -174.951, -269.187, -115.155 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
+polygon = PoolVector2Array( -269.187, -41.344, -269.187, 4.4375, -282.268, 5.37183, -281.333, 74.5112, -269.187, 75.4456, -269.187, 126.833, -281.333, 125.898, -279.465, 196.906, -269.187, 197.841, -269.187, 245.491, -280.399, 245.491, -279.465, 305.287, -319.64, 305.287, -319.64, 251.097, -328.984, 249.228, -329.918, 197.841, -317.772, 198.775, -316.837, 127.767, -328.049, 124.964, -327.115, 74.5112, -316.837, 73.5769, -316.837, 5.37183, -328.984, 4.4375, -329.918, -42.2781 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UniversidadeJudite/hitbox"]
+position = Vector2( -184.632, -209.053 )
+shape = SubResource( 19 )
+
 [node name="Menu" parent="." instance=ExtResource( 15 )]
 
 [node name="fundo" type="Sprite" parent="."]
@@ -207,12 +272,27 @@ scale = Vector2( 0.237354, 3.42032 )
 texture = ExtResource( 20 )
 
 [node name="fundo5" type="Sprite" parent="."]
-position = Vector2( 1257.75, -1680.5 )
-scale = Vector2( 1.51012, 1.2012 )
+position = Vector2( 1257.75, -1696 )
+scale = Vector2( 1.51012, 1.26295 )
 texture = ExtResource( 20 )
 
 [node name="fundo6" type="Sprite" parent="."]
 position = Vector2( 2395, 256 )
+texture = ExtResource( 20 )
+
+[node name="fundo7" type="Sprite" parent="."]
+position = Vector2( 2493.49, -2960.5 )
+scale = Vector2( 1.44281, 4.00598 )
+texture = ExtResource( 20 )
+
+[node name="fundo8" type="Sprite" parent="."]
+position = Vector2( -362.25, -2966 )
+scale = Vector2( 1.44319, 3.93227 )
+texture = ExtResource( 20 )
+
+[node name="fundo9" type="Sprite" parent="."]
+position = Vector2( 1068.75, -3750.5 )
+scale = Vector2( 1.91012, 3.18526 )
 texture = ExtResource( 20 )
 
 [node name="casa" type="Sprite" parent="."]
@@ -246,8 +326,17 @@ polygon = PoolVector2Array( 143.331, 150.821, 197.245, 150.136, 197.245, 137.796
 position = Vector2( -3.94495, -2.74219 )
 polygon = PoolVector2Array( -2.62994, -12.3399, -1.97247, -35.6487, -54.5712, -37.7053, -50.6263, -16.4532 )
 
+[node name="pagarBoleto" type="Button" parent="casa"]
+margin_left = 159.0
+margin_top = 58.0
+margin_right = 241.0
+margin_bottom = 95.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 961, 571 )
+position = Vector2( 961, 569 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -339,6 +428,24 @@ position = Vector2( 143, 449 )
 scale = Vector2( 0.805, 0.81 )
 texture = ExtResource( 26 )
 
+[node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
+
+[node name="Sprite" type="Sprite" parent="personagem/CanvasLayerDinheiro"]
+position = Vector2( 70, 33.5 )
+scale = Vector2( 0.0949416, 0.0577689 )
+texture = ExtResource( 25 )
+
+[node name="DinheiroPlayer" type="Label" parent="personagem/CanvasLayerDinheiro"]
+margin_left = 18.0
+margin_top = 24.0
+margin_right = 134.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 15 )
+text = "DINHEIRO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="portaDentro" type="Area2D" parent="."]
 position = Vector2( 1025, 1141 )
 script = ExtResource( 19 )
@@ -421,8 +528,11 @@ stream = ExtResource( 21 )
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="BancoJudite/dentroBanco" to="personagem" method="_on_dentroBanco_body_entered"]
+[connection signal="body_entered" from="UniversidadeJudite/dentroUniversidade" to="personagem" method="_on_dentroUniversidade_body_entered"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
+[connection signal="pressed" from="casa/pagarBoleto" to="personagem" method="_on_pagarBoleto_pressed"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_down"]
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_up"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_W" to="personagem" method="_on_Movi_W_button_down"]

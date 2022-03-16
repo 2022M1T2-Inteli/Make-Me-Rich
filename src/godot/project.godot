@@ -14,6 +14,10 @@ config/name="teste"
 run/main_scene="res://main_menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [display]
 
 window/size/test_width=1200

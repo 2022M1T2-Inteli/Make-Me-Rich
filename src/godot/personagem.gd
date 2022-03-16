@@ -8,6 +8,13 @@ var mo = false
 var mi = false
 var velocidade = Vector2.ZERO
 var abrirPcEnter = false
+var dinheiro = 2000
+var pagarBoleto = false
+
+func _ready():
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
+	
+	
 # delta é um método que faz o codigo ser executado a cada frame
 func _process(delta):
 	if Input.is_action_pressed("interacao"):
@@ -85,6 +92,14 @@ func _on_dentroBanco_body_entered(body):
 	position.x = 1583
 	position.y = 3097
 
+func _on_portaFaculdade_body_entered(body):
+	position.x = 1060
+	position.y = -2090
+	
+func _on_dentroUniversidade_body_entered(body):
+	position.x = 1582
+	position.y = 4093
+
 #Movimentação Botões
 func _on_Movi_A_button_down():
 	velocidade.x = -200
@@ -124,4 +139,14 @@ func _on_Movi_S_button_up():
 var area2DPc = false
 func _on_computer_body_entered(body):
 	area2DPc = true
+
+
+
+func _on_pagarBoleto_pressed():
+	Global.dinheiro -= 500
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+
+
+
+
 
