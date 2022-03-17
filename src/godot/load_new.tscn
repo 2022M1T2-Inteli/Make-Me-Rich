@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/30063dc9-ab35-4b14-b6d4-52e95ff15def.jpg" type="Texture" id=1]
 [ext_resource path="res://new.gd" type="Script" id=2]
 [ext_resource path="res://Captura de tela 2022-03-09 151430.png" type="Texture" id=3]
+[ext_resource path="res://load_new.gd" type="Script" id=4]
+[ext_resource path="res://assets/Kevin MacLeod- Itty Bitty 8 Bit.mp3" type="AudioStream" id=5]
 
 [node name="load_new" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 512, 300 )
@@ -25,6 +28,9 @@ __meta__ = {
 position = Vector2( 75.5, 25 )
 scale = Vector2( 0.441595, 0.442623 )
 texture = ExtResource( 3 )
+
+[node name="musica1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="mouse_entered" from="new" to="new" method="_on_new_mouse_entered"]
 [connection signal="mouse_exited" from="new" to="new" method="_on_new_mouse_exited"]
