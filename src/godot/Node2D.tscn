@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Captura de tela 2022-02-22 144254.png" type="Texture" id=25]
 [ext_resource path="res://assets/seta.png" type="Texture" id=26]
 [ext_resource path="res://assets/npc professora.png" type="Texture" id=27]
+[ext_resource path="res://assets/Cenário do mercado.jpeg" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -37,12 +38,18 @@ extents = Vector2( 6.39423, 7.13025 )
 [sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 10.3631, 8.59907 )
 
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 8.37868, 8.37868 )
+
 [sub_resource type="CapsuleShape2D" id=13]
 radius = 11.9065
 height = 10.5835
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 38.6645, 5.98115 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 28.2038, 20.8462 )
 
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 85.0227, 13.4089 )
@@ -58,21 +65,6 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
@@ -88,15 +80,30 @@ animations = [ {
 "name": "idle.direita",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
+"speed": 5.0
 } ]
 
 [sub_resource type="DynamicFont" id=15]
@@ -138,6 +145,13 @@ shape = SubResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CidadeJudite/portaFaculdade"]
 position = Vector2( 222.034, 347.714 )
 shape = SubResource( 16 )
+
+[node name="portaMercado" type="Area2D" parent="CidadeJudite"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CidadeJudite/portaMercado"]
+position = Vector2( -217.845, 347.493 )
+shape = SubResource( 20 )
 
 [node name="hitbox" type="StaticBody2D" parent="CidadeJudite"]
 
@@ -207,6 +221,18 @@ polygon = PoolVector2Array( 38.9139, -21.4529, 40.9095, -139.691, 115.744, -138.
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="BancoJudite/hitbox"]
 polygon = PoolVector2Array( 156.155, -18.4595, 154.159, -138.694, 244.958, -136.698, 245.956, -18.4595 )
+
+[node name="MercadoJudite" type="Sprite" parent="."]
+position = Vector2( 1070, -4320 )
+scale = Vector2( 0.815495, 0.815495 )
+texture = ExtResource( 28 )
+
+[node name="dentroMercado" type="Area2D" parent="MercadoJudite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MercadoJudite/dentroMercado"]
+position = Vector2( 1.22632, 402.21 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 21 )
 
 [node name="UniversidadeJudite" type="Sprite" parent="."]
 position = Vector2( 1062.11, -2486.75 )
@@ -281,18 +307,22 @@ position = Vector2( 2395, 256 )
 texture = ExtResource( 20 )
 
 [node name="fundo7" type="Sprite" parent="."]
-position = Vector2( 2493.49, -2960.5 )
-scale = Vector2( 1.44281, 4.00598 )
+position = Vector2( 2493.49, -3519 )
+scale = Vector2( 1.44281, 6.23108 )
 texture = ExtResource( 20 )
 
 [node name="fundo8" type="Sprite" parent="."]
-position = Vector2( -362.25, -2966 )
-scale = Vector2( 1.44319, 3.93227 )
+position = Vector2( -362.25, -3434.5 )
+scale = Vector2( 1.44319, 5.79881 )
 texture = ExtResource( 20 )
 
 [node name="fundo9" type="Sprite" parent="."]
-position = Vector2( 1068.75, -3750.5 )
-scale = Vector2( 1.91012, 3.18526 )
+position = Vector2( 1068.75, -3460.5 )
+scale = Vector2( 1.91012, 2.02988 )
+texture = ExtResource( 20 )
+
+[node name="fundo10" type="Sprite" parent="."]
+position = Vector2( 1110, -4955 )
 texture = ExtResource( 20 )
 
 [node name="casa" type="Sprite" parent="."]
@@ -336,7 +366,7 @@ __meta__ = {
 }
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 961, 569 )
+position = Vector2( 1064, -4068 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -356,7 +386,7 @@ animation = "idle.frente"
 [node name="Camera2D" type="Camera2D" parent="personagem"]
 position = Vector2( 2, 0 )
 limit_left = -74
-limit_top = -4247
+limit_top = -8854
 limit_right = 2233
 limit_bottom = 4344
 editor_draw_limits = true
@@ -529,7 +559,9 @@ stream = ExtResource( 21 )
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
 [connection signal="body_entered" from="BancoJudite/dentroBanco" to="personagem" method="_on_dentroBanco_body_entered"]
+[connection signal="body_entered" from="MercadoJudite/dentroMercado" to="personagem" method="_on_dentroMercado_body_entered"]
 [connection signal="body_entered" from="UniversidadeJudite/dentroUniversidade" to="personagem" method="_on_dentroUniversidade_body_entered"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
 [connection signal="pressed" from="casa/pagarBoleto" to="personagem" method="_on_pagarBoleto_pressed"]

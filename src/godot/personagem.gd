@@ -100,6 +100,14 @@ func _on_dentroUniversidade_body_entered(body):
 	position.x = 1582
 	position.y = 4093
 
+func _on_portaMercado_body_entered(body):
+	position.x = 1070
+	position.y = -4053
+	
+func _on_dentroMercado_body_entered(body):
+	position.x = 586
+	position.y = 4101
+
 #Movimentação Botões
 func _on_Movi_A_button_down():
 	velocidade.x = -200
