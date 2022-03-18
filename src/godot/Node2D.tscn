@@ -108,6 +108,7 @@ animations = [ {
 
 [sub_resource type="DynamicFont" id=22]
 size = 18
+extra_spacing_top = 10
 font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=15]
@@ -492,10 +493,10 @@ margin_top = 500.0
 margin_right = 767.0
 margin_bottom = 565.0
 custom_fonts/font = SubResource( 22 )
-text = "Fátima Bernardes fugiu de casa Fátima Bernardes mandou um beijo 
-Fátima Bernardes foi baleada Fátima Bernardes chupando dedo
-
-"
+text = "Olá (player), seja bem vindo à sua aula inaugural de economia!!!
+Alguns dos pré-requisitos para a sua formação financeira são os
+conceitos de Juros Simples e Juros Compostos representados 
+respectivamente pelas fórmulas J = C.i.t e M = C(1+i)^t!!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
