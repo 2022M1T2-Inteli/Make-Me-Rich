@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/celSaldo.png-d4eddd84d2f347ddf3cb125b73a5fd7c.stex"
+path="res://.import/seta_voltar.png-ebbf68074ddace05346c5943dbec9175.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://celSaldo.png"
-dest_files=[ "res://.import/celSaldo.png-d4eddd84d2f347ddf3cb125b73a5fd7c.stex" ]
+source_file="res://assets/seta_voltar.png"
+dest_files=[ "res://.import/seta_voltar.png-ebbf68074ddace05346c5943dbec9175.stex" ]
 
 [params]
 

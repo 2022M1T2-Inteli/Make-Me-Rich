@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://sprites_player/andando.costas_2.png" type="Texture" id=12]
 [ext_resource path="res://sprites_player/andando.direita_2.png" type="Texture" id=13]
 [ext_resource path="res://sprites_player/parado.direita.png" type="Texture" id=14]
-[ext_resource path="res://celIcon.png" type="Texture" id=15]
 [ext_resource path="res://assets/banco_judite.jpg" type="Texture" id=16]
 [ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
 [ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
@@ -28,9 +27,7 @@
 [ext_resource path="res://assets/seta.png" type="Texture" id=26]
 [ext_resource path="res://assets/npc professora.png" type="Texture" id=27]
 [ext_resource path="res://assets/Cenário do mercado.jpeg" type="Texture" id=28]
-[ext_resource path="res://celAberto.png" type="Texture" id=29]
-[ext_resource path="res://celMapa.png" type="Texture" id=30]
-[ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=31]
+[ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=29]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -57,9 +54,6 @@ extents = Vector2( 28.2038, 20.8462 )
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 85.0227, 13.4089 )
 
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 24.1534, 21.9565 )
-
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 19.1535, 28.4966 )
 
@@ -68,40 +62,40 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
+"name": "walk.direita",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"name": "walk.costas",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
@@ -110,8 +104,7 @@ animations = [ {
 } ]
 
 [sub_resource type="DynamicFont" id=22]
-size = 35
-extra_spacing_top = 21
+size = 18
 font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=15]
@@ -245,6 +238,46 @@ shape = SubResource( 21 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MercadoJudite/hitbox"]
 polygon = PoolVector2Array( 31.8826, 426.735, 31.8826, 339.671, 95.6475, 339.671, 95.6475, 207.236, 436.545, 210.915, 436.545, 343.35, 492.952, 343.35, 490.5, -242.797, 431.64, -242.797, 432.866, -179.032, 149.602, -179.032, 148.376, -242.797, 104.231, -244.023, 105.458, -53.9546, 230.535, -52.7285, 228.082, -120.172, 300.431, -120.172, 304.11, -47.8237, 432.866, -47.8237, 432.866, 34.335, 31.8826, 34.335, 30.6563, -248.928, -163.091, -244.023, -160.639, -177.806, -488.047, -177.806, -486.821, -117.72, -164.317, -116.494, -160.639, 22.0728, -492.952, 20.8462, -490.5, 83.3853, -159.412, 83.3853, -160.639, 221.951, -490.5, 220.725, -491.726, 273.454, -159.412, 275.906, -159.412, 344.576, -34.335, 347.029, -34.335, 427.961, -93.1949, 427.961, -96.8737, 402.21, -549.36, 397.305, -546.907, -440.223, 554.265, -432.866, 562.848, 405.889, 90.7424, 403.436, 90.7424, 423.056 )
 
+[node name="casa" type="Sprite" parent="."]
+position = Vector2( 948, 623 )
+scale = Vector2( 1.52095, 1.45868 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D"]
+polygon = PoolVector2Array( 0.657471, -159.733, 174.233, -161.79, 305.072, -160.419, 308.36, 366.084, 73.6382, 368.827, 75.6106, 313.297, 255.761, 311.24, 251.159, -110.374, -104.54, -105.575, -101.253, 135.739, -226.832, 132.997, -227.489, 78.8384, -172.918, 74.7251, -171.603, -108.317, -286.005, -106.26, -281.403, 309.184, 14.4646, 310.555, 10.5197, 370.883, -348.466, 369.512, -342.549, -159.048 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D2"]
+polygon = PoolVector2Array( 130.839, -105.575, 134.784, -45.9319, 190.67, -43.8753, 191.985, 10.9688, 255.104, 13.0255, 252.474, -109.003 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D3"]
+polygon = PoolVector2Array( -57.2011, 8.22662, -102.568, 8.91217, -106.512, -105.575, 14.4646, -104.889, 16.4371, -42.5042, -59.8311, -42.5042 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D4"]
+polygon = PoolVector2Array( 143.331, 150.821, 197.245, 150.136, 197.245, 137.796, 252.474, 138.481, 252.474, 254.34, 198.56, 254.34, 197.903, 220.062, 143.989, 219.376 )
+
+[node name="computer" type="Area2D" parent="casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/computer"]
+position = Vector2( -3.94495, -2.74219 )
+polygon = PoolVector2Array( -2.62994, -12.3399, -1.97247, -35.6487, -54.5712, -37.7053, -50.6263, -16.4532 )
+
+[node name="pagarBoleto" type="Button" parent="casa"]
+margin_left = 159.0
+margin_top = 58.0
+margin_right = 241.0
+margin_bottom = 95.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="UniversidadeJudite" type="Sprite" parent="."]
 position = Vector2( 1062.11, -2486.75 )
 scale = Vector2( 1.0703, 1.0703 )
@@ -264,9 +297,8 @@ texture = ExtResource( 27 )
 
 [node name="caixaTexto" type="Area2D" parent="UniversidadeJudite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UniversidadeJudite/caixaTexto"]
-position = Vector2( -178.559, -152.995 )
-shape = SubResource( 18 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UniversidadeJudite/caixaTexto"]
+polygon = PoolVector2Array( -205.653, -176.82, -160.805, -178.688, -166.411, -123.564, -203.784, -123.564 )
 
 [node name="hitbox" type="StaticBody2D" parent="UniversidadeJudite"]
 
@@ -277,7 +309,7 @@ polygon = PoolVector2Array( -199.114, 300.615, -199.114, 252.031, -208.457, 251.
 polygon = PoolVector2Array( 96.1298, 439.828, 91.4583, 366.018, 396.045, 366.018, 388.57, -176.82, 226.934, -174.951, 227.868, -235.681, -328.049, -242.222, -328.049, -173.082, -341.13, -173.082, -340.195, -117.023, -388.78, -117.023, -394.386, 368.82, -92.6018, 370.689, -92.6018, 439.828, -139.318, 437.96, -143.989, 410.865, -444.839, 410.865, -444.839, -414.135, 441.826, -412.267, 441.826, 414.602, 149.386, 410.865, 144.714, 437.96 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
-polygon = PoolVector2Array( -210.326, -115.155, -212.194, -176.82, -219.669, -177.754, -224.34, -233.813, -256.107, -234.747, -257.976, -189.9, -262.647, -177.754, -271.056, -174.951, -269.187, -115.155 )
+polygon = PoolVector2Array( -210.326, -115.155, -209.39, -175.885, -219.669, -177.754, -224.34, -233.813, -256.107, -234.747, -257.976, -189.9, -262.647, -177.754, -271.056, -174.951, -269.187, -115.155 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
 polygon = PoolVector2Array( -269.187, -41.344, -269.187, 4.4375, -282.268, 5.37183, -281.333, 74.5112, -269.187, 75.4456, -269.187, 126.833, -281.333, 125.898, -279.465, 196.906, -269.187, 197.841, -269.187, 245.491, -280.399, 245.491, -279.465, 305.287, -319.64, 305.287, -319.64, 251.097, -328.984, 249.228, -329.918, 197.841, -317.772, 198.775, -316.837, 127.767, -328.049, 124.964, -327.115, 74.5112, -316.837, 73.5769, -316.837, 5.37183, -328.984, 4.4375, -329.918, -42.2781 )
@@ -346,52 +378,9 @@ texture = ExtResource( 20 )
 position = Vector2( 1110, -4955 )
 texture = ExtResource( 20 )
 
-[node name="casa" type="Sprite" parent="."]
-position = Vector2( 943, 625 )
-scale = Vector2( 1.52095, 1.45868 )
-texture = ExtResource( 10 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="casa"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D"]
-polygon = PoolVector2Array( 0.657471, -159.733, 174.233, -161.79, 305.072, -160.419, 308.36, 366.084, 73.6382, 368.827, 75.6106, 313.297, 255.761, 311.24, 251.159, -110.374, -104.54, -105.575, -101.253, 135.739, -226.832, 132.997, -227.489, 78.8384, -172.918, 74.7251, -171.603, -108.317, -286.005, -106.26, -281.403, 309.184, 14.4646, 310.555, 10.5197, 370.883, -348.466, 369.512, -342.549, -159.048 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="casa"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D2"]
-polygon = PoolVector2Array( 130.839, -105.575, 134.784, -45.9319, 190.67, -43.8753, 191.985, 10.9688, 255.104, 13.0255, 252.474, -109.003 )
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="casa"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D3"]
-polygon = PoolVector2Array( -57.2011, 8.22662, -102.568, 8.91217, -106.512, -105.575, 14.4646, -104.889, 16.4371, -42.5042, -59.8311, -42.5042 )
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="casa"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/StaticBody2D4"]
-polygon = PoolVector2Array( 143.331, 150.821, 197.245, 150.136, 197.245, 137.796, 252.474, 138.481, 252.474, 254.34, 198.56, 254.34, 197.903, 220.062, 143.989, 219.376 )
-
-[node name="computer" type="Area2D" parent="casa"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/computer"]
-position = Vector2( -3.94495, -2.74219 )
-polygon = PoolVector2Array( -2.62994, -12.3399, -1.97247, -35.6487, -54.5712, -37.7053, -50.6263, -16.4532 )
-
-[node name="pagarBoleto" type="Button" parent="casa"]
-margin_left = 159.0
-margin_top = 58.0
-margin_right = 241.0
-margin_bottom = 95.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 968, 568 )
+position = Vector2( 960, 574 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
 position = Vector2( 1, 10 )
@@ -455,15 +444,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="celIcon" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 935.0
-margin_top = 24.0
-margin_right = 961.0
-margin_bottom = 73.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="botaoEsquerdo" type="Sprite" parent="personagem/CanvasLayer"]
 position = Vector2( 97, 497 )
 rotation = 1.5708
@@ -488,67 +468,31 @@ position = Vector2( 143, 449 )
 scale = Vector2( 0.805, 0.81 )
 texture = ExtResource( 26 )
 
-[node name="celIconn" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 949, 49 )
-scale = Vector2( 0.107794, 0.107794 )
-texture = ExtResource( 15 )
-
-[node name="sairMapa" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 475.0
-margin_top = 461.0
-margin_right = 511.0
-margin_bottom = 481.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="celCamMapa" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-anchor_top = 0.025
-anchor_right = 0.027
-anchor_bottom = 0.041
-margin_left = 442.0
-margin_top = 221.0
-margin_right = 523.352
-margin_bottom = 254.4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="celAberto" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 462, 294 )
-scale = Vector2( 0.232987, 0.232987 )
-texture = ExtResource( 29 )
-
-[node name="celMapa" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 463, 295 )
-scale = Vector2( 0.236216, 0.236216 )
-texture = ExtResource( 30 )
-
 [node name="professora" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 1170, 603 )
-texture = ExtResource( 31 )
+position = Vector2( 1170, 602 )
+texture = ExtResource( 29 )
 
 [node name="fundo" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-modulate = Color( 1, 1, 1, 0.686275 )
-position = Vector2( 529.5, 541.5 )
-scale = Vector2( 0.39144, 0.209163 )
+modulate = Color( 0, 0, 0, 0.588235 )
+show_behind_parent = true
+light_mask = 0
+position = Vector2( 547, 544 )
+scale = Vector2( 0.415953, 0.191235 )
 texture = ExtResource( 20 )
 
-[node name="Label" type="Label" parent="personagem/CanvasLayer"]
+[node name="textoProf" type="Label" parent="personagem/CanvasLayer"]
 visible = false
-margin_left = 303.0
-margin_top = 476.0
-margin_right = 558.0
-margin_bottom = 551.0
+margin_left = 289.0
+margin_top = 500.0
+margin_right = 767.0
+margin_bottom = 565.0
 custom_fonts/font = SubResource( 22 )
-text = "Oi, rs
-Vem sempre aqui?"
+text = "Fátima Bernardes fugiu de casa Fátima Bernardes mandou um beijo 
+Fátima Bernardes foi baleada Fátima Bernardes chupando dedo
+
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -639,10 +583,10 @@ position = Vector2( 104, 19 )
 scale = Vector2( 0.207851, 0.207851 )
 
 [node name="NExt" type="Button" parent="Aula1"]
-margin_left = -1303.0
-margin_top = -295.0
-margin_right = -1261.0
-margin_bottom = -273.0
+margin_left = -1292.0
+margin_top = -187.0
+margin_right = -1250.0
+margin_bottom = -165.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -657,10 +601,11 @@ stream = ExtResource( 21 )
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
 [connection signal="body_entered" from="BancoJudite/dentroBanco" to="personagem" method="_on_dentroBanco_body_entered"]
 [connection signal="body_entered" from="MercadoJudite/dentroMercado" to="personagem" method="_on_dentroMercado_body_entered"]
-[connection signal="body_entered" from="UniversidadeJudite/dentroUniversidade" to="personagem" method="_on_dentroUniversidade_body_entered"]
-[connection signal="body_entered" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_entered"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
 [connection signal="pressed" from="casa/pagarBoleto" to="personagem" method="_on_pagarBoleto_pressed"]
+[connection signal="body_entered" from="UniversidadeJudite/dentroUniversidade" to="personagem" method="_on_dentroUniversidade_body_entered"]
+[connection signal="body_entered" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_entered"]
+[connection signal="body_exited" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_exited"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_down"]
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_up"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_W" to="personagem" method="_on_Movi_W_button_down"]
@@ -669,8 +614,5 @@ stream = ExtResource( 21 )
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_D" to="personagem" method="_on_Movi_D_button_up"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_down"]
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_up"]
-[connection signal="pressed" from="personagem/CanvasLayer/celIcon" to="personagem" method="_on_celIcon_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/sairMapa" to="personagem" method="_on_sairMapa_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/celCamMapa" to="personagem" method="_on_celCamMapa_pressed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
 [connection signal="pressed" from="Aula1/NExt" to="." method="_on_NExt_pressed"]

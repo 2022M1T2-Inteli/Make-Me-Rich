@@ -7,7 +7,7 @@ var mu = false
 var mo = false
 var mi = false
 var velocidade = Vector2.ZERO
-var abrirPcEnter = false
+var abrirEnter = false
 var dinheiro = 2000
 var pagarBoleto = false
 var contador = 0
@@ -33,6 +33,9 @@ func _process(delta):
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
+		
+	
+
 func _physics_process(delta):
 	move_and_slide(velocidade)
 	# Codigo pra movimentação 
@@ -164,26 +167,9 @@ var areaProf = false
 func _on_caixaTexto_body_entered(body):
 	areaProf = true
 
+func _on_caixaTexto_body_exited(body):
+	areaProf = false 
+	
 func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-
-func _on_celIcon_pressed():
-	$CanvasLayer/celAberto.visible = true
-	$CanvasLayer/celCamMapa.visible = true
-	$CanvasLayer/sairMapa.visible = true
-	
-func _on_celCamMapa_pressed():
-	$CanvasLayer/celAberto.visible = false
-	$CanvasLayer/celMapa.visible = true
-
-func _on_sairMapa_pressed():
-	$CanvasLayer/celMapa.visible = false
-	$CanvasLayer/celAberto.visible = false
-	$CanvasLayer/celCamMapa.visible = false
-	$CanvasLayer/sairMapa.visible = false
-	
-
-
-
-	
