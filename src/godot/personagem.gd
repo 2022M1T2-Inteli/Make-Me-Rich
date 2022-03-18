@@ -15,14 +15,20 @@ var contador = 0
 func _ready():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
 	
-	
+func _on_botaoTutorial_pressed():
+	contador += 1
 # delta é um método que faz o codigo ser executado a cada frame
 func _process(delta):
 	if Input.is_action_pressed("interacao"):
 		contador += 1
 		
-	if area2DPc ==true and contador % 2 == 1:
-		get_tree().change_scene("res://Cena_computador.tscn")
+	if contador == 1 :
+		$CanvasLayer/boasVindas.visible = true
+		$CanvasLayer/botaoTutorial.visible = true
+		
+	if contador > 2:
+		$CanvasLayer/boasVindas.visible = false
+		$CanvasLayer/botaoTutorial.visible = false
 		
 	if areaProf == true and contador % 2 == 1:
 		$CanvasLayer/professora.visible = true
@@ -33,7 +39,9 @@ func _process(delta):
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
-		
+	
+func _on_botaoPC_pressed():
+	get_tree().change_scene("res://Cena_computador.tscn")
 	
 func _on_celIcon_pressed():
 	$CanvasLayer/celAberto.visible = true
@@ -188,6 +196,3 @@ func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 
-
-func _on_saiMapa_pressed():
-	pass # Replace with function body.
