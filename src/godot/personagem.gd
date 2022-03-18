@@ -7,9 +7,10 @@ var mu = false
 var mo = false
 var mi = false
 var velocidade = Vector2.ZERO
-var abrirPcEnter = false
+var abrirEnter = false
 var dinheiro = 2000
 var pagarBoleto = false
+var contador = 0
 
 func _ready():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
@@ -18,9 +19,23 @@ func _ready():
 # delta é um método que faz o codigo ser executado a cada frame
 func _process(delta):
 	if Input.is_action_pressed("interacao"):
-		abrirPcEnter = true
-	if abrirPcEnter == true and area2DPc ==true:
+		contador += 1
+		
+	if area2DPc ==true and contador % 2 == 1:
 		get_tree().change_scene("res://Cena_computador.tscn")
+		
+	if areaProf == true and contador % 2 == 1:
+		$CanvasLayer/professora.visible = true
+		$CanvasLayer/fundo.visible = true
+		$CanvasLayer/textoProf.visible = true
+		
+	elif areaProf == true and contador % 2 == 0:
+		$CanvasLayer/professora.visible = false
+		$CanvasLayer/fundo.visible = false
+		$CanvasLayer/textoProf.visible = false
+		
+	
+
 func _physics_process(delta):
 	move_and_slide(velocidade)
 	# Codigo pra movimentação 
@@ -100,6 +115,14 @@ func _on_dentroUniversidade_body_entered(body):
 	position.x = 1582
 	position.y = 4093
 
+func _on_portaMercado_body_entered(body):
+	position.x = 1070
+	position.y = -4053
+	
+func _on_dentroMercado_body_entered(body):
+	position.x = 586
+	position.y = 4101
+
 #Movimentação Botões
 func _on_Movi_A_button_down():
 	velocidade.x = -200
@@ -140,13 +163,13 @@ var area2DPc = false
 func _on_computer_body_entered(body):
 	area2DPc = true
 
+var areaProf = false
+func _on_caixaTexto_body_entered(body):
+	areaProf = true
 
-
+func _on_caixaTexto_body_exited(body):
+	areaProf = false 
+	
 func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-
-
-
-
-
