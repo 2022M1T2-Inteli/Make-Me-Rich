@@ -35,6 +35,20 @@ func _process(delta):
 		$CanvasLayer/textoProf.visible = false
 		
 	
+func _on_celIcon_pressed():
+	$CanvasLayer/celAberto.visible = true
+	$CanvasLayer/celCamMapa.visible = true
+	$CanvasLayer/sairMapa.visible = true
+
+func _on_celCamMapa_pressed():
+	$CanvasLayer/celAberto.visible = false
+	$CanvasLayer/celMapa.visible = true
+
+func _on_sairMapa_pressed():
+	$CanvasLayer/celMapa.visible = false
+	$CanvasLayer/celAberto.visible = false
+	$CanvasLayer/celCamMapa.visible = false
+	$CanvasLayer/sairMapa.visible = false
 
 func _physics_process(delta):
 	move_and_slide(velocidade)
@@ -173,3 +187,7 @@ func _on_caixaTexto_body_exited(body):
 func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+
+
+func _on_saiMapa_pressed():
+	pass # Replace with function body.
