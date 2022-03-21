@@ -150,6 +150,22 @@ func _on_portaMercado_body_entered(body):
 func _on_dentroMercado_body_entered(body):
 	position.x = 586
 	position.y = 4101
+#entra no cassino
+func _on_portaCassino_body_entered(body):
+	position.x = 1352
+	position.y = -5417
+#de volta para cidade, na frente do cassino
+func _on_dentroCassino_body_entered(body):
+	position.x = 1588
+	position.y = 2422
+#entra no trabalho
+func _on_portaTrabalho_body_entered(body):
+	position.x = 1317
+	position.y = -7656
+#volta pra cidade, na frente do trabalho
+func _on_dentroTrabalho_body_entered(body):
+	position.x = 725
+	position.y = 2438
 
 #Movimentação Botões
 func _on_Movi_A_button_down():
