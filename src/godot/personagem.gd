@@ -12,51 +12,57 @@ var dinheiro = 2000
 var pagarBoleto = false
 var contador = 0
 
+#mostra o dinheiro no canto superior esquerdo
 func _ready():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
-	
+#faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	contador += 1
 # delta é um método que faz o codigo ser executado a cada frame
 func _process(delta):
 	if Input.is_action_pressed("interacao"):
 		contador += 1
-		
+		#tutorial aparece
 	if contador == 1 :
 		$CanvasLayer/boasVindas.visible = true
 		$CanvasLayer/botaoTutorial.visible = true
-		
+		#tutorial sai
 	if contador > 2:
 		$CanvasLayer/boasVindas.visible = false
 		$CanvasLayer/botaoTutorial.visible = false
-		
+		#fala da professora aparece
 	if areaProf == true and contador % 2 == 1:
 		$CanvasLayer/professora.visible = true
 		$CanvasLayer/fundo.visible = true
 		$CanvasLayer/textoProf.visible = true
-		
+		#fala da professora sai
 	elif areaProf == false or contador % 2 == 0:
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
-	
+
+#entra no computador
 func _on_botaoPC_pressed():
 	get_tree().change_scene("res://Cena_computador.tscn")
-	
+
+#abre o celular
 func _on_celIcon_pressed():
 	$CanvasLayer/celAberto.visible = true
 	$CanvasLayer/celCamMapa.visible = true
 	$CanvasLayer/sairMapa.visible = true
 
+#abre o mapa do celular 
 func _on_celCamMapa_pressed():
 	$CanvasLayer/celAberto.visible = false
 	$CanvasLayer/celMapa.visible = true
 
+#fecha o mapa e o celular
 func _on_sairMapa_pressed():
 	$CanvasLayer/celMapa.visible = false
 	$CanvasLayer/celAberto.visible = false
 	$CanvasLayer/celCamMapa.visible = false
 	$CanvasLayer/sairMapa.visible = false
+
 
 func _physics_process(delta):
 	move_and_slide(velocidade)
@@ -128,19 +134,19 @@ func _on_portaBanco_body_entered(body):
 func _on_dentroBanco_body_entered(body):
 	position.x = 1583
 	position.y = 3097
-
+#entra na faculdade
 func _on_portaFaculdade_body_entered(body):
 	position.x = 1060
 	position.y = -2090
-	
+#de volta para a cidade, na frente da faculdade
 func _on_dentroUniversidade_body_entered(body):
 	position.x = 1582
 	position.y = 4093
-
+#entra no mercado
 func _on_portaMercado_body_entered(body):
 	position.x = 1070
 	position.y = -4053
-	
+#de volta para a cidade, na frente do mercado
 func _on_dentroMercado_body_entered(body):
 	position.x = 586
 	position.y = 4101
@@ -182,16 +188,20 @@ func _on_Movi_S_button_up():
 	$AnimatedSprite.play("idle.frente")
 
 var area2DPc = false
+#muda a variável quando fica do lado do computador
 func _on_computer_body_entered(body):
 	area2DPc = true
 
+
+#muda a variável quando fica do lado da professora
 var areaProf = false
 func _on_caixaTexto_body_entered(body):
 	areaProf = true
 
 func _on_caixaTexto_body_exited(body):
 	areaProf = false 
-	
+
+#botao que gasta dinheiro
 func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
