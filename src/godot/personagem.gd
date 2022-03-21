@@ -10,7 +10,7 @@ var velocidade = Vector2.ZERO
 var abrirEnter = false
 var dinheiro = 2000
 var pagarBoleto = false
-var contador = 1
+var contador = 0
 
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
@@ -23,14 +23,29 @@ func _process(delta):
 	if Input.is_action_pressed("interacao"):
 		contador += 1
 		#tutorial aparece
-	if contador == 1 :
+	if contador == 0 :
 		$CanvasLayer/boasVindas.visible = true
 		$CanvasLayer/botaoTutorial.visible = true
 		#tutorial sai
-	if contador > 2:
+	if contador == 1:
 		$CanvasLayer/boasVindas.visible = false
 		$CanvasLayer/botaoTutorial.visible = false
+		$CanvasLayer/instrucNpc.visible = true
+		$CanvasLayer/botaoNpc.visible = true
 		#fala da professora aparece
+	if contador == 2:
+		$CanvasLayer/botaoNome.visible = true
+		$CanvasLayer/inserirNome.visible = true
+		$CanvasLayer/instrucNpc.visible = false
+		$CanvasLayer/botaoNpc.visible = false
+	if contador == 3:
+		$CanvasLayer/botaoNome.visible = false
+		$CanvasLayer/inserirNome.visible = false
+		$CanvasLayer/botaoPersonagem.visible = true
+		$CanvasLayer/escolherPersonagem.visible = true
+	if contador >=4:
+		$CanvasLayer/botaoPersonagem.visible = false
+		$CanvasLayer/escolherPersonagem.visible = false
 	if areaProf == true and contador % 2 == 1:
 		$CanvasLayer/professora.visible = true
 		$CanvasLayer/fundo.visible = true
@@ -221,3 +236,15 @@ func _on_caixaTexto_body_exited(body):
 func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+
+
+func _on_botaoNpc_pressed():
+	contador += 1
+
+
+func _on_botaoNome_pressed():
+	contador += 1
+
+
+func _on_botaoPersonagem_pressed():
+	contador += 1
