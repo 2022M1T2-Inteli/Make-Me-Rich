@@ -100,6 +100,21 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk.costas",
@@ -110,34 +125,19 @@ animations = [ {
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ) ],
 "loop": false,
-"name": "idle.frente",
+"name": "idle.costas",
 "speed": 0.0
 } ]
 
@@ -223,7 +223,6 @@ polygon = PoolVector2Array( 215.199, -394.237, 215.199, -382.772, 228.869, -381.
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CidadeJudite/portaTrabalho"]
 position = Vector2( -158.312, -391.15 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 30 )
 
 [node name="Cassino" type="Sprite" parent="."]
@@ -242,7 +241,6 @@ shape = SubResource( 23 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Cassino/StaticBody2D"]
 position = Vector2( -233.81, 166.803 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 24 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Cassino/StaticBody2D"]
@@ -314,7 +312,6 @@ polygon = PoolVector2Array( -54.9007, -208.446, -54.9007, -210.854, -215.419, -2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrabalhoCenário/dentroTrabalho"]
 position = Vector2( 1.23059, 368.304 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 31 )
 
 [node name="BancoJudite" type="Sprite" parent="."]
