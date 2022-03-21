@@ -10,7 +10,7 @@ var velocidade = Vector2.ZERO
 var abrirEnter = false
 var dinheiro = 2000
 var pagarBoleto = false
-var contador = 0
+var contador = 1
 
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
@@ -221,4 +221,3 @@ func _on_caixaTexto_body_exited(body):
 func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-
