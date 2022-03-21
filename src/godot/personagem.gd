@@ -35,7 +35,7 @@ func _process(delta):
 		$CanvasLayer/fundo.visible = true
 		$CanvasLayer/textoProf.visible = true
 		
-	elif areaProf == true and contador % 2 == 0:
+	elif areaProf == false or contador % 2 == 0:
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
