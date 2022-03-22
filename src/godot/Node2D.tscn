@@ -693,6 +693,46 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="personagemA" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 369.0
+margin_top = 184.0
+margin_right = 482.0
+margin_bottom = 294.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="personagemB" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 551.0
+margin_top = 182.0
+margin_right = 660.0
+margin_bottom = 296.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="personagemC" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 367.0
+margin_top = 339.0
+margin_right = 480.0
+margin_bottom = 464.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="personagemD" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 560.0
+margin_top = 348.0
+margin_right = 656.0
+margin_bottom = 462.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="escolherPersonagem" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
 position = Vector2( 511, 307 )
