@@ -237,7 +237,7 @@ func _on_pagarBoleto_pressed():
 	Global.dinheiro -= 500
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 
-
+#Adicionar um ao cont com os botões sendo pressionados
 func _on_botaoNpc_pressed():
 	contador += 1
 
