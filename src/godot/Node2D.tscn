@@ -112,15 +112,15 @@ animations = [ {
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
@@ -912,6 +912,10 @@ __meta__ = {
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoPersonagem" to="personagem" method="_on_botaoPersonagem_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/personagemA" to="personagem" method="_on_personagemA_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/personagemB" to="personagem" method="_on_personagemB_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/personagemC" to="personagem" method="_on_personagemC_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/personagemD" to="personagem" method="_on_personagemD_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]

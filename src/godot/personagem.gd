@@ -11,6 +11,7 @@ var abrirEnter = false
 var dinheiro = 2000
 var pagarBoleto = false
 var contador = 0
+var selecPersonagem
 
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
@@ -260,3 +261,21 @@ func _on_areaNotiicacao_body_entered(body):
 func _on_areaNotiicacao_visibility_changed():
 	$CanvasLayer/celIconn/Panel/AnimationPlayer.stop("popUp")
 	pass # Replace with function body.
+
+
+func _on_personagemA_pressed():
+	selecPersonagem = "personagemA"
+
+
+func _on_personagemB_pressed():
+	selecPersonagem = "personagemB"
+
+
+func _on_personagemC_pressed():
+	selecPersonagem = "personagemC"
+
+
+func _on_personagemD_pressed():
+	selecPersonagem = "personagemD"
+	
+
