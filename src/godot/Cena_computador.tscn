@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/fundo.png" type="Texture" id=1]
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://investimentos.gd" type="Script" id=8]
 [ext_resource path="res://estudar.gd" type="Script" id=9]
 [ext_resource path="res://sair_pc.gd" type="Script" id=10]
+[ext_resource path="res://assets/seta_voltar.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 42
@@ -32,14 +33,19 @@ font_data = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="sair_pc" type="Button" parent="."]
-margin_left = 204.0
-margin_top = 135.0
-margin_right = 245.0
-margin_bottom = 168.0
+margin_left = 199.0
+margin_top = 130.0
+margin_right = 255.0
+margin_bottom = 173.0
 script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SetaVoltar" type="Sprite" parent="sair_pc"]
+position = Vector2( 25, 19 )
+scale = Vector2( 0.052, 0.052 )
+texture = ExtResource( 11 )
 
 [node name="CapturaDeTela2022-02-22144254" type="Sprite" parent="."]
 position = Vector2( 515, 310 )

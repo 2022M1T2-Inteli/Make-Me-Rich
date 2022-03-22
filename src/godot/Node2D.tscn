@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -38,6 +38,8 @@
 [ext_resource path="res://assets/selecionarNome.png" type="Texture" id=36]
 [ext_resource path="res://assets/selecionarPersonagem.png" type="Texture" id=37]
 [ext_resource path="res://assets/faculdade.png" type="Texture" id=38]
+[ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
+[ext_resource path="res://assets/venderdor_npc.png" type="Texture" id=40]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -166,6 +168,9 @@ extents = Vector2( 38, 15 )
 [node name="cidade" type="Node2D"]
 position = Vector2( 1, -4 )
 script = ExtResource( 23 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="Fundo" type="Sprite" parent="."]
 position = Vector2( 1416.75, -2055 )
@@ -371,6 +376,11 @@ polygon = PoolVector2Array( 38.9139, -21.4529, 40.9095, -139.691, 115.744, -138.
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="BancoJudite/hitbox"]
 polygon = PoolVector2Array( 156.155, -18.4595, 154.159, -138.694, 244.958, -136.698, 245.956, -18.4595 )
 
+[node name="GuilhermeNpc" type="Sprite" parent="BancoJudite"]
+position = Vector2( -20.9551, 71.8408 )
+scale = Vector2( 0.0239159, 0.0239159 )
+texture = ExtResource( 39 )
+
 [node name="MercadoJudite" type="Sprite" parent="."]
 position = Vector2( 1070, -4320 )
 scale = Vector2( 0.815495, 0.815495 )
@@ -386,6 +396,11 @@ shape = SubResource( 21 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MercadoJudite/hitbox"]
 polygon = PoolVector2Array( 31.8826, 426.735, 31.8826, 339.671, 95.6475, 339.671, 95.6475, 207.236, 436.545, 210.915, 436.545, 343.35, 492.952, 343.35, 490.5, -242.797, 431.64, -242.797, 432.866, -179.032, 149.602, -179.032, 148.376, -242.797, 104.231, -244.023, 105.458, -53.9546, 230.535, -52.7285, 228.082, -120.172, 300.431, -120.172, 304.11, -47.8237, 432.866, -47.8237, 432.866, 34.335, 31.8826, 34.335, 30.6563, -248.928, -163.091, -244.023, -160.639, -177.806, -488.047, -177.806, -486.821, -117.72, -164.317, -116.494, -160.639, 22.0728, -492.952, 20.8462, -490.5, 83.3853, -159.412, 83.3853, -160.639, 221.951, -490.5, 220.725, -491.726, 273.454, -159.412, 275.906, -159.412, 344.576, -34.335, 347.029, -34.335, 427.961, -93.1949, 427.961, -96.8737, 402.21, -549.36, 397.305, -546.907, -440.223, 554.265, -432.866, 562.848, 405.889, 90.7424, 403.436, 90.7424, 423.056 )
+
+[node name="VenderdorNpc" type="Sprite" parent="MercadoJudite"]
+position = Vector2( 343.35, -95.6484 )
+scale = Vector2( 0.0570203, 0.0570203 )
+texture = ExtResource( 40 )
 
 [node name="Fundo2" type="Sprite" parent="."]
 position = Vector2( 1330, -4726.5 )
@@ -494,8 +509,11 @@ polygon = PoolVector2Array( 163.403, 300.617, 203.578, 303.419, 204.513, 247.36,
 polygon = PoolVector2Array( 282.061, 303.419, 284.864, 251.098, 273.652, 249.229, 270.849, 199.71, 282.995, 198.776, 287.667, 127.768, 273.652, 124.965, 275.521, 78.249, 282.995, 78.249, 284.864, 10.0437, 272.718, 9.10938, 271.784, -44.1467, 327.843, -44.1467, 330.646, 7.24097, 317.565, 5.37231, 321.302, 78.249, 334.383, 77.3147, 332.514, 124.965, 320.368, 124.965, 323.171, 193.17, 332.514, 195.973, 332.514, 253.901, 320.368, 252.032, 322.237, 301.551 )
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 991, 587 )
+position = Vector2( 964, 575 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
 position = Vector2( 1, 10 )
