@@ -20,8 +20,6 @@ func _on_botaoTutorial_pressed():
 	contador += 1
 # delta é um método que faz o codigo ser executado a cada frame
 func _process(delta):
-	if Input.is_action_pressed("interacao"):
-		contador += 1
 		#tutorial aparece
 	if contador == 0 :
 		$CanvasLayer/boasVindas.visible = true
@@ -46,12 +44,12 @@ func _process(delta):
 	if contador >=4:
 		$CanvasLayer/botaoPersonagem.visible = false
 		$CanvasLayer/escolherPersonagem.visible = false
-	if areaProf == true and contador % 2 == 1:
+	if areaProf == true and prof % 2 == 1:
 		$CanvasLayer/professora.visible = true
 		$CanvasLayer/fundo.visible = true
 		$CanvasLayer/textoProf.visible = true
 		#fala da professora sai
-	elif areaProf == false or contador % 2 == 0:
+	elif areaProf == false or prof % 2 == 0:
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
@@ -241,10 +239,13 @@ func _on_pagarBoleto_pressed():
 func _on_botaoNpc_pressed():
 	contador += 1
 
-
 func _on_botaoNome_pressed():
 	contador += 1
 
-
 func _on_botaoPersonagem_pressed():
 	contador += 1
+	
+#botao que foca atras da professora
+var prof = 0
+func _on_botaoProf_pressed():
+	prof += 1
