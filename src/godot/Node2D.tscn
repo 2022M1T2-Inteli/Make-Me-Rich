@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://assets/faculdade.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
 [ext_resource path="res://assets/venderdor_npc.png" type="Texture" id=40]
+[ext_resource path="res://assets/notifcação.png" type="Texture" id=41]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -111,20 +112,10 @@ animations = [ {
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -136,21 +127,46 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
 "name": "idle.costas",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
 } ]
 
 [sub_resource type="DynamicFont" id=22]
 size = 18
 extra_spacing_top = 10
 font_data = ExtResource( 24 )
+
+[sub_resource type="Animation" id=34]
+resource_name = "popUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="DynamicFont" id=32]
 font_data = ExtResource( 24 )
@@ -511,9 +527,6 @@ polygon = PoolVector2Array( 282.061, 303.419, 284.864, 251.098, 273.652, 249.229
 [node name="personagem" type="KinematicBody2D" parent="."]
 position = Vector2( 964, 575 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
 position = Vector2( 1, 10 )
@@ -643,6 +656,22 @@ __meta__ = {
 position = Vector2( 934, 48 )
 scale = Vector2( 0.0921054, 0.0921054 )
 texture = ExtResource( 15 )
+
+[node name="Panel" type="Panel" parent="personagem/CanvasLayer/celIconn"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="personagem/CanvasLayer/celIconn/Panel"]
+anims/popUp = SubResource( 34 )
+
+[node name="notificação" type="Sprite" parent="personagem/CanvasLayer/celIconn/Panel"]
+position = Vector2( 0, -21.7144 )
+scale = Vector2( 0.189906, 0.189906 )
+texture = ExtResource( 41 )
 
 [node name="sairMapa" type="Button" parent="personagem/CanvasLayer"]
 visible = false
@@ -823,6 +852,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="areaNotiicacao" type="Area2D" parent="personagem"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="personagem/areaNotiicacao"]
+polygon = PoolVector2Array( -17, 23, 21, 22, 21, -34, -17, -33 )
+
 [node name="portaDentro" type="Area2D" parent="."]
 position = Vector2( 1025, 1141 )
 script = ExtResource( 19 )
@@ -878,5 +912,7 @@ __meta__ = {
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoPersonagem" to="personagem" method="_on_botaoPersonagem_pressed"]
+[connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
+[connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
 [connection signal="pressed" from="botaoPC" to="personagem" method="_on_botaoPC_pressed"]

@@ -63,7 +63,7 @@ func _on_celIcon_pressed():
 	$CanvasLayer/celAberto.visible = true
 	$CanvasLayer/celCamMapa.visible = true
 	$CanvasLayer/sairMapa.visible = true
-
+	$CanvasLayer/celIconn/Panel/AnimationPlayer.play_backwards("popUp")
 #abre o mapa do celular 
 func _on_celCamMapa_pressed():
 	$CanvasLayer/celAberto.visible = false
@@ -249,3 +249,14 @@ func _on_botaoPersonagem_pressed():
 var prof = 0
 func _on_botaoProf_pressed():
 	prof += 1
+#mostra a notificação
+func _on_areaNotiicacao_body_entered(body):
+	yield(get_tree().create_timer(2.6), "timeout")
+	$CanvasLayer/celIconn/Panel/AnimationPlayer.play("popUp")
+	
+	
+
+
+func _on_areaNotiicacao_visibility_changed():
+	$CanvasLayer/celIconn/Panel/AnimationPlayer.stop("popUp")
+	pass # Replace with function body.
