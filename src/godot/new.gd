@@ -15,4 +15,4 @@ func _on_new_mouse_exited():
 
 #quando clica no botao a cena muda
 func _on_new_pressed():
-	get_tree().change_scene("res://Node2D.tscn")
+	get_tree().change_scene("res://seleçãoDePersonagem.tscn")

@@ -16,6 +16,12 @@ var selecPersonagem
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
+	if Global.selecPersonagem == 1:
+		$AnimatedSpriteA.visible = true
+		$AnimatedSpriteB.visible = false
+	if Global.selecPersonagem == 2:
+		$AnimatedSpriteA.visible = false
+		$AnimatedSpriteB.visible = true
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	contador += 1
@@ -37,20 +43,16 @@ func _process(delta):
 		$CanvasLayer/inserirNome.visible = true
 		$CanvasLayer/instrucNpc.visible = false
 		$CanvasLayer/botaoNpc.visible = false
-	if contador == 3:
+	if contador >= 3:
 		$CanvasLayer/botaoNome.visible = false
 		$CanvasLayer/inserirNome.visible = false
-		$CanvasLayer/botaoPersonagem.visible = true
-		$CanvasLayer/escolherPersonagem.visible = true
-	if contador >=4:
-		$CanvasLayer/botaoPersonagem.visible = false
-		$CanvasLayer/escolherPersonagem.visible = false
-	if areaProf == true and prof % 2 == 1:
+		
+	if areaProf == true and prof % 2 == 0:
 		$CanvasLayer/professora.visible = true
 		$CanvasLayer/fundo.visible = true
 		$CanvasLayer/textoProf.visible = true
 		#fala da professora sai
-	elif areaProf == false or prof % 2 == 0:
+	elif areaProf == false or prof % 2 == 1:
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
@@ -85,13 +87,13 @@ func _physics_process(delta):
 		m = true
 		if m:
 			velocidade.y = -200
-			$AnimatedSprite.play("walk.costas")
+			$AnimatedSpriteA.play("walk.costas")
 	#O código abaixo faz o personagem ficar parado na direção do seu ultimo movimento
 	elif Input.is_action_just_released("tecla_w"):
 		m = false
 		velocidade.x = 0
 		velocidade.y = 0
-		$AnimatedSprite.play("idle.costas")
+		$AnimatedSpriteA.play("idle.costas")
 	#O exemplo acima se repete pra todas as direções 
 		
 		
@@ -99,36 +101,36 @@ func _physics_process(delta):
 		mu = true
 		if	mu:
 			velocidade.y = 200
-			$AnimatedSprite.play("walk.frente")
+			$AnimatedSpriteA.play("walk.frente")
 	elif Input.is_action_just_released("tecla_s"):
 		mu = false
 		velocidade.x = 0
 		velocidade.y = 0
-		$AnimatedSprite.play("idle.frente")
+		$AnimatedSpriteA.play("idle.frente")
 		
 		
 	elif Input.is_action_pressed("tecla_a"):
 		mo = true
 		if	mo:
 			velocidade.x = -200
-			$AnimatedSprite.play("walk.esquerda")
+			$AnimatedSpriteA.play("walk.esquerda")
 	elif Input.is_action_just_released("tecla_a"):
 		mo = false
 		velocidade.x = 0
 		velocidade.y = 0
-		$AnimatedSprite.play("idle.esquerda")
+		$AnimatedSpriteA.play("idle.esquerda")
 
 
 	elif Input.is_action_pressed("tecla_d"):
 		mi = true
 		if	mi:
 			velocidade.x = 200
-			$AnimatedSprite.play("walk.direita")
+			$AnimatedSpriteA.play("walk.direita")
 	elif Input.is_action_just_released("tecla_d"):
 		mi = false
 		velocidade.x = 0
 		velocidade.y = 0
-		$AnimatedSprite.play("idle.direita")
+		$AnimatedSpriteA.play("idle.direita")
 
 
 #função que faz o personagem entrar em um ambiente novo em uma area
@@ -184,38 +186,38 @@ func _on_dentroTrabalho_body_entered(body):
 #Movimentação Botões
 func _on_Movi_A_button_down():
 	velocidade.x = -200
-	$AnimatedSprite.play("walk.esquerda")
+	$AnimatedSpriteA.play("walk.esquerda")
 
 func _on_Movi_A_button_up():
 	velocidade.x = 0
-	$AnimatedSprite.play("idle.esquerda")
+	$AnimatedSpriteA.play("idle.esquerda")
 
 
 func _on_Movi_D_button_down():
 	velocidade.x = 200
-	$AnimatedSprite.play("walk.direita")
+	$AnimatedSpriteA.play("walk.direita")
 
 func _on_Movi_D_button_up():
 	velocidade.x = 0
-	$AnimatedSprite.play("idle.direita")
+	$AnimatedSpriteA.play("idle.direita")
 
 
 func _on_Movi_W_button_down():
 	velocidade.y = -200
-	$AnimatedSprite.play("walk.costas")
+	$AnimatedSpriteA.play("walk.costas")
 
 func _on_Movi_W_button_up():
 	velocidade.y = 0
-	$AnimatedSprite.play("idle.costas")
+	$AnimatedSpriteA.play("idle.costas")
 
 
 func _on_Movi_S_button_down():
 	velocidade.y = 200
-	$AnimatedSprite.play("walk.frente")
+	$AnimatedSpriteA.play("walk.frente")
 
 func _on_Movi_S_button_up():
 	velocidade.y = 0
-	$AnimatedSprite.play("idle.frente")
+	$AnimatedSpriteA.play("idle.frente")
 
 var area2DPc = false
 #muda a variável quando fica do lado do computador
@@ -255,27 +257,6 @@ func _on_areaNotiicacao_body_entered(body):
 	yield(get_tree().create_timer(2.6), "timeout")
 	$CanvasLayer/celIconn/Panel/AnimationPlayer.play("popUp")
 	
-	
 
 
-func _on_areaNotiicacao_visibility_changed():
-	$CanvasLayer/celIconn/Panel/AnimationPlayer.stop("popUp")
-	pass # Replace with function body.
-
-
-func _on_personagemA_pressed():
-	selecPersonagem = "personagemA"
-
-
-func _on_personagemB_pressed():
-	selecPersonagem = "personagemB"
-
-
-func _on_personagemC_pressed():
-	selecPersonagem = "personagemC"
-
-
-func _on_personagemD_pressed():
-	selecPersonagem = "personagemD"
-	
 
