@@ -12,7 +12,7 @@ var dinheiro = 2000
 var pagarBoleto = false
 var contador = 0
 var selecPersonagem
-
+var cont = 0
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
@@ -284,3 +284,7 @@ func _on_caixaTextoGui_body_exited(body):
 
 func _on_botaoLivro_pressed():
 	$CanvasLayer/matFinanceira.visible = true
+	$CanvasLayer/next.visible = true
+	cont += 1
+	if cont == 2:
+		$CanvasLayer/matFinanceira.visible = false

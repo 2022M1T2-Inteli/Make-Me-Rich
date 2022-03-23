@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -44,6 +44,7 @@
 [ext_resource path="res://sprites_player/peronagemB.png" type="Texture" id=42]
 [ext_resource path="res://sprites_player/personagemC.png" type="Texture" id=43]
 [ext_resource path="res://sprites_player/personagemD.png" type="Texture" id=44]
+[ext_resource path="res://assets/next.png" type="Texture" id=45]
 [ext_resource path="res://assets/matFinanceira.png" type="Texture" id=46]
 [ext_resource path="res://assets/publico.png" type="Texture" id=47]
 [ext_resource path="res://assets/inflacao.png" type="Texture" id=48]
@@ -933,6 +934,12 @@ visible = false
 position = Vector2( 553, 281 )
 scale = Vector2( 0.194538, 0.194538 )
 texture = ExtResource( 52 )
+
+[node name="next" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 708.889, 438.25 )
+scale = Vector2( 0.315278, 0.315278 )
+texture = ExtResource( 45 )
 
 [node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
 
