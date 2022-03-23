@@ -40,7 +40,7 @@ func _process(delta):
 		$CanvasLayer/botaoTutorial.visible = false
 		$CanvasLayer/instrucNpc.visible = true
 		$CanvasLayer/botaoNpc.visible = true
-		#fala da professora aparece
+
 	if contador == 2:
 		$CanvasLayer/botaoNome.visible = true
 		$CanvasLayer/inserirNome.visible = true
@@ -49,7 +49,8 @@ func _process(delta):
 	if contador >= 3:
 		$CanvasLayer/botaoNome.visible = false
 		$CanvasLayer/inserirNome.visible = false
-		
+
+	#fala da professora aparece
 	if areaProf == true and prof % 2 == 0:
 		$CanvasLayer/professora.visible = true
 		$CanvasLayer/fundo.visible = true
@@ -59,7 +60,15 @@ func _process(delta):
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
-
+		#fala do guilherme aparece]
+	if areaGui == true and gui % 2 == 1:
+		$CanvasLayer/guilherme.visible = true
+		$CanvasLayer/textoGui.visible = true
+		$CanvasLayer/fundo.visible = true
+	elif areaGui == false or gui % 2 == 0:
+		$CanvasLayer/guilherme.visible = false
+		$CanvasLayer/textoGui.visible = false
+		$CanvasLayer/fundo.visible = false
 #entra no computador
 func _on_botaoPC_pressed():
 	get_tree().change_scene("res://Cena_computador.tscn")
@@ -255,11 +264,19 @@ func _on_botaoPersonagem_pressed():
 var prof = 0
 func _on_botaoProf_pressed():
 	prof += 1
+
+var gui = 0
+func _on_botaoGui_pressed():
+	gui += 1
+
 #mostra a notificação
 func _on_areaNotiicacao_body_entered(body):
 	yield(get_tree().create_timer(2.6), "timeout")
 	$CanvasLayer/celIconn/Panel/AnimationPlayer.play("popUp")
-	
 
-
-
+#detecta se esta perto do guilherme
+var areaGui = false
+func _on_caixaTextoGui_body_entered(body):
+	areaGui = true
+func _on_caixaTextoGui_body_exited(body):
+	areaGui = false
