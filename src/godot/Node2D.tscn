@@ -138,10 +138,10 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"name": "idle.direita",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
@@ -153,10 +153,10 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "idle.direita",
-"speed": 5.0
+"name": "walk.esquerda",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -894,52 +894,62 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="nextLivro" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 643.0
+margin_top = 419.0
+margin_right = 769.0
+margin_bottom = 473.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="matFinanceira" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 542, 305 )
-scale = Vector2( 0.183621, 0.183621 )
+position = Vector2( 533.784, 296.784 )
+scale = Vector2( 0.178144, 0.178144 )
 texture = ExtResource( 46 )
 
 [node name="inflacao" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 546, 300 )
-scale = Vector2( 0.20556, 0.20556 )
+position = Vector2( 532, 296 )
+scale = Vector2( 0.180447, 0.180447 )
 texture = ExtResource( 48 )
 
 [node name="jurosSimples" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 551, 278 )
-scale = Vector2( 0.207227, 0.207227 )
+position = Vector2( 534, 300 )
+scale = Vector2( 0.179307, 0.179307 )
 texture = ExtResource( 49 )
 
 [node name="jurosCompostos" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 557, 290 )
-scale = Vector2( 0.193704, 0.193704 )
+position = Vector2( 533, 291 )
+scale = Vector2( 0.174519, 0.174519 )
 texture = ExtResource( 51 )
 
 [node name="investimentos" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 524, 294 )
-scale = Vector2( 0.195769, 0.195769 )
+position = Vector2( 529, 304 )
+scale = Vector2( 0.186885, 0.186885 )
 texture = ExtResource( 50 )
 
 [node name="publico" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 518, 301 )
-scale = Vector2( 0.188408, 0.188408 )
+position = Vector2( 528, 306 )
+scale = Vector2( 0.181537, 0.181537 )
 texture = ExtResource( 47 )
 
 [node name="incentivados" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 553, 281 )
-scale = Vector2( 0.194538, 0.194538 )
+position = Vector2( 523.798, 306.798 )
+scale = Vector2( 0.178134, 0.178134 )
 texture = ExtResource( 52 )
 
 [node name="next" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 708.889, 438.25 )
-scale = Vector2( 0.315278, 0.315278 )
+position = Vector2( 676.444, 445 )
+scale = Vector2( 0.277778, 0.277778 )
 texture = ExtResource( 45 )
 
 [node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
@@ -997,8 +1007,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
@@ -1031,6 +1041,7 @@ __meta__ = {
 [connection signal="pressed" from="personagem/CanvasLayer/botaoTutorial" to="personagem" method="_on_botaoTutorial_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/nextLivro" to="personagem" method="_on_nextLivro_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]

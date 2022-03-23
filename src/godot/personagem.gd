@@ -10,9 +10,9 @@ var velocidade = Vector2.ZERO
 var abrirEnter = false
 var dinheiro = 2000
 var pagarBoleto = false
-
 var selecPersonagem
 var cont = 0
+
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
@@ -282,9 +282,39 @@ func _on_caixaTextoGui_body_exited(body):
 	areaGui = false
 
 
+
+	
 func _on_botaoLivro_pressed():
-	$CanvasLayer/matFinanceira.visible = true
-	$CanvasLayer/next.visible = true
 	cont += 1
-	if cont == 2:
+	if cont == 1:
+		$CanvasLayer/matFinanceira.visible = true
+		$CanvasLayer/next.visible = true
+		$CanvasLayer/nextLivro.visible = true
+	elif cont == 2:
 		$CanvasLayer/matFinanceira.visible = false
+		$CanvasLayer/inflacao.visible = true
+		$CanvasLayer/nextLivro.visible = true
+		print("oi")
+	elif cont == 3:
+		$CanvasLayer/inflacao.visible = false
+		$CanvasLayer/jurosSimples.visible = true
+	elif cont == 4:
+		$CanvasLayer/jurosSimples.visible = false
+		$CanvasLayer/jurosCompostos.visible = true
+	elif cont == 5:
+		$CanvasLayer/jurosCompostos.visible = false
+		$CanvasLayer/investimentos.visible = true
+	elif cont == 6:
+		$CanvasLayer/investimentos.visible = false
+		$CanvasLayer/publico.visible = true
+	elif cont == 7:
+		$CanvasLayer/publico.visible = false
+		$CanvasLayer/incentivados.visible = true
+	elif cont == 8:
+		$CanvasLayer/incentivados.visible = false
+		$CanvasLayer/next.visible = false
+		$CanvasLayer/nextLivro.visible = false
+
+
+func _on_nextLivro_pressed():
+	cont += 1
