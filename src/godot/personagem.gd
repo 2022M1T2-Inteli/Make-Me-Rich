@@ -280,3 +280,7 @@ func _on_caixaTextoGui_body_entered(body):
 	areaGui = true
 func _on_caixaTextoGui_body_exited(body):
 	areaGui = false
+
+
+func _on_botaoLivro_pressed():
+	$CanvasLayer/matFinanceira.visible = true
