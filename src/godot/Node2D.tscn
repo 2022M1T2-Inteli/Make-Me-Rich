@@ -151,7 +151,7 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="SpriteFrames" id=35]
+[sub_resource type="SpriteFrames" id=38]
 animations = [ {
 "frames": [ ExtResource( 42 ) ],
 "loop": true,
@@ -569,9 +569,10 @@ animation = "idle.frente"
 
 [node name="AnimatedSpriteB" type="AnimatedSprite" parent="personagem"]
 visible = false
-position = Vector2( 3.87502, -6.12498 )
-scale = Vector2( 0.035125, 0.035125 )
-frames = SubResource( 35 )
+position = Vector2( 0.343762, -5.34376 )
+scale = Vector2( 0.0346563, 0.0346563 )
+frames = SubResource( 38 )
+animation = "idle.frente"
 
 [node name="AnimatedSpriteC" type="AnimatedSprite" parent="personagem"]
 visible = false
