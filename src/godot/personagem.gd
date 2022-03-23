@@ -16,12 +16,15 @@ var selecPersonagem
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
+	#mostra o personagem escolhido
 	if Global.selecPersonagem == 1:
 		$AnimatedSpriteA.visible = true
-		$AnimatedSpriteB.visible = false
 	if Global.selecPersonagem == 2:
-		$AnimatedSpriteA.visible = false
 		$AnimatedSpriteB.visible = true
+	if Global.selecPersonagem == 3:
+		$AnimatedSpriteC.visible = true
+	if Global.selecPersonagem == 4:
+		$AnimatedSpriteD.visible = true
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	contador += 1

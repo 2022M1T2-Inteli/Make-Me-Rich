@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boneco-de-costas-pixilart.png-f39cda28208e608ae8a4c8d181f1d524.stex"
+path="res://.import/peronagemB.png-0299b4aa24c6389b893acf3674e0df03.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/boneco-de-costas-pixilart.png"
-dest_files=[ "res://.import/boneco-de-costas-pixilart.png-f39cda28208e608ae8a4c8d181f1d524.stex" ]
+source_file="res://sprites_player/peronagemB.png"
+dest_files=[ "res://.import/peronagemB.png-0299b4aa24c6389b893acf3674e0df03.stex" ]
 
 [params]
 
