@@ -118,20 +118,25 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
@@ -148,15 +153,10 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.costas",
+"name": "idle.direita",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -369,6 +369,7 @@ polygon = PoolVector2Array( 170.519, 64.1155, 172.565, 90.0342, 262.599, 90.7163
 position = Vector2( -21.1443, -113.906 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cassino/dentroCassino"]
+position = Vector2( 20.4622, 115.952 )
 polygon = PoolVector2Array( -14.8643, 441.679, 15.147, 440.998, 15.147, 411.668, -10.7719, 410.986 )
 
 [node name="TrabalhoCenário" type="Sprite" parent="."]
