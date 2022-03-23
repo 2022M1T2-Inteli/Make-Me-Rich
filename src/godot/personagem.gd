@@ -25,6 +25,7 @@ func _ready():
 		$AnimatedSpriteC.visible = true
 	if Global.selecPersonagem == 4:
 		$AnimatedSpriteD.visible = true
+	$CanvasLayer/happyBar.percent_visible = false 
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	Global.contador += 1
@@ -60,7 +61,7 @@ func _process(delta):
 		$CanvasLayer/professora.visible = false
 		$CanvasLayer/fundo.visible = false
 		$CanvasLayer/textoProf.visible = false
-		#fala do guilherme aparece]
+		#fala do guilherme aparece
 	if areaGui == true and gui % 2 == 1:
 		$CanvasLayer/guilherme.visible = true
 		$CanvasLayer/textoGui.visible = true
@@ -69,6 +70,19 @@ func _process(delta):
 		$CanvasLayer/guilherme.visible = false
 		$CanvasLayer/textoGui.visible = false
 		$CanvasLayer/fundo.visible = false
+		#fala do vendedor aparece
+	if areaVendedor == true and vendedor % 2 == 1:
+		$CanvasLayer/vendedor.visible = true
+		$CanvasLayer/fundo.visible = true
+		$CanvasLayer/textoVendedor.visible = true
+		$CanvasLayer/nomeVendedor.visible = true
+		$CanvasLayer/fundoNome.visible = true
+	elif areaVendedor == false or vendedor % 2 == 0:
+		$CanvasLayer/vendedor.visible = false
+		$CanvasLayer/fundo.visible = false
+		$CanvasLayer/textoVendedor.visible = false
+		$CanvasLayer/nomeVendedor.visible = false
+		$CanvasLayer/fundoNome.visible = false
 #entra no computador
 func _on_botaoPC_pressed():
 	get_tree().change_scene("res://Cena_computador.tscn")
@@ -269,6 +283,10 @@ var gui = 0
 func _on_botaoGui_pressed():
 	gui += 1
 
+var vendedor = 0 
+func _on_botaoVendedor_pressed():
+	vendedor += 1
+	
 #mostra a notificação
 func _on_areaNotiicacao_body_entered(body):
 	yield(get_tree().create_timer(2.6), "timeout")
@@ -281,9 +299,13 @@ func _on_caixaTextoGui_body_entered(body):
 func _on_caixaTextoGui_body_exited(body):
 	areaGui = false
 
+var areaVendedor = false
+func _on_areaVendedor_body_entered(body):
+	areaVendedor = true
+func _on_areaVendedor_body_exited(body):
+	areaVendedor = false
 
 
-	
 func _on_botaoLivro_pressed():
 	cont += 1
 	if cont == 1:
@@ -315,6 +337,12 @@ func _on_botaoLivro_pressed():
 		$CanvasLayer/next.visible = false
 		$CanvasLayer/nextLivro.visible = false
 
-
 func _on_nextLivro_pressed():
 	cont += 1
+
+
+
+
+
+
+

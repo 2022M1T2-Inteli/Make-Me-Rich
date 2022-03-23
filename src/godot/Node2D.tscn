@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=90 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -52,6 +52,8 @@
 [ext_resource path="res://assets/investimentos.png" type="Texture" id=50]
 [ext_resource path="res://assets/jurosCompostos.png" type="Texture" id=51]
 [ext_resource path="res://assets/incentivados.png" type="Texture" id=52]
+[ext_resource path="res://assets/2492741-cara-feliz-emoji-social-media-grátis-vetor.png" type="Texture" id=53]
+[ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=54]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -123,40 +125,40 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "walk.frente",
+"name": "idle.esquerda",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "idle.esquerda",
+"name": "walk.frente",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -182,6 +184,27 @@ animations = [ {
 "name": "idle.frente",
 "speed": 5.0
 } ]
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0.4, 0.831373, 0.243137, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 0.556863, 0.0901961, 0.0901961, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="DynamicFont" id=44]
+size = 23
+font_data = ExtResource( 24 )
+
+[sub_resource type="DynamicFont" id=43]
+font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=40]
 size = 18
@@ -456,6 +479,15 @@ texture = ExtResource( 39 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BancoJudite/caixaTextoGui"]
 polygon = PoolVector2Array( -67.85, 56.8738, -66.8523, 161.143, 41.9074, 162.64, 46.3975, 55.876 )
 
+[node name="botaoVendedor" type="Button" parent="."]
+margin_left = 1306.0
+margin_top = -4439.0
+margin_right = 1391.0
+margin_bottom = -4352.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MercadoJudite" type="Sprite" parent="."]
 position = Vector2( 1070, -4320 )
 scale = Vector2( 0.815495, 0.815495 )
@@ -476,6 +508,11 @@ polygon = PoolVector2Array( 31.8826, 426.735, 31.8826, 339.671, 95.6475, 339.671
 position = Vector2( 343.35, -95.6484 )
 scale = Vector2( 0.0570203, 0.0570203 )
 texture = ExtResource( 40 )
+
+[node name="areaVendedor" type="Area2D" parent="MercadoJudite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MercadoJudite/areaVendedor"]
+polygon = PoolVector2Array( 38.0138, 39.2402, 36.7875, 95.6475, 489.273, 95.6475, 485.595, -127.53, 391.173, -126.304, 393.626, -52.7285, 434.092, -51.5024, 436.545, 44.145 )
 
 [node name="Fundo2" type="Sprite" parent="."]
 position = Vector2( 1330, -4726.5 )
@@ -631,6 +668,24 @@ script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="personagem"]
 
+[node name="happyBar" type="ProgressBar" parent="personagem/CanvasLayer"]
+margin_left = 422.0
+margin_top = 26.0
+margin_right = 602.0
+margin_bottom = 51.0
+custom_styles/fg = SubResource( 41 )
+custom_styles/bg = SubResource( 42 )
+step = 1.0
+value = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="caraFeliz" type="Sprite" parent="personagem/CanvasLayer/happyBar"]
+position = Vector2( 202, 13 )
+scale = Vector2( 0.0278061, 0.0278061 )
+texture = ExtResource( 53 )
+
 [node name="fundo" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
 modulate = Color( 0, 0, 0, 0.588235 )
@@ -638,6 +693,15 @@ show_behind_parent = true
 light_mask = 0
 position = Vector2( 547, 544 )
 scale = Vector2( 0.415953, 0.191235 )
+texture = ExtResource( 20 )
+
+[node name="fundoNome" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+modulate = Color( 0, 0, 0, 0.588235 )
+show_behind_parent = true
+light_mask = 0
+position = Vector2( 341, 482 )
+scale = Vector2( 0.0950388, 0.0438247 )
 texture = ExtResource( 20 )
 
 [node name="Movi_S" type="Button" parent="personagem/CanvasLayer"]
@@ -704,17 +768,46 @@ position = Vector2( 143, 449 )
 scale = Vector2( 0.805, 0.81 )
 texture = ExtResource( 26 )
 
-[node name="guilherme" type="Sprite" parent="personagem/CanvasLayer"]
+[node name="nomeVendedor" type="Label" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 1168, 600 )
-texture = ExtResource( 37 )
+margin_left = 286.0
+margin_top = 474.0
+margin_right = 346.0
+margin_bottom = 488.0
+custom_fonts/font = SubResource( 44 )
+text = "MARIO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="textoVendedor" type="Label" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 286.0
+margin_top = 504.0
+margin_right = 741.0
+margin_bottom = 603.0
+custom_fonts/font = SubResource( 43 )
+text = "Olá Cris sou o Mario e trabalho aqui no mercado!
+
+Vá até a prateleira indicada para realizar suas compras!
+
+Não se esqueça de observar os preços e as vantagens de cada produto!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vendedor" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 1168, 598 )
+texture = ExtResource( 54 )
 
 [node name="textoGui" type="Label" parent="personagem/CanvasLayer"]
 visible = false
 margin_left = 289.0
 margin_top = 500.0
 margin_right = 767.0
-margin_bottom = 565.0
+margin_bottom = 593.0
 custom_fonts/font = SubResource( 40 )
 text = "Olá “nome inserido”, sou o Guilherme e irei te ajudar aqui no banco!
 Você pode ir no caixa indicado para pagar suas 
@@ -726,17 +819,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="professora" type="Sprite" parent="personagem/CanvasLayer"]
+[node name="nomeGui" type="Label" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 1170, 602 )
-texture = ExtResource( 29 )
+margin_left = 1168.0
+margin_top = 600.0
+margin_right = 1208.0
+margin_bottom = 614.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="guilherme" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 1168, 600 )
+texture = ExtResource( 37 )
 
 [node name="textoProf" type="Label" parent="personagem/CanvasLayer"]
 visible = false
 margin_left = 289.0
 margin_top = 500.0
 margin_right = 767.0
-margin_bottom = 565.0
+margin_bottom = 581.0
 custom_fonts/font = SubResource( 22 )
 text = "Olá (player), seja bem vindo à sua aula inaugural de economia!!!
 Alguns dos pré-requisitos para a sua formação financeira são os
@@ -745,6 +848,21 @@ respectivamente pelas fórmulas J = C.i.t e M = C(1+i)^t!!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="nomeProf" type="Label" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 1170.0
+margin_top = 602.0
+margin_right = 1210.0
+margin_bottom = 616.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="professora" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 1170, 602 )
+texture = ExtResource( 29 )
 
 [node name="celIcon" type="Button" parent="personagem/CanvasLayer"]
 margin_left = 923.0
@@ -1007,8 +1125,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
@@ -1020,7 +1138,10 @@ __meta__ = {
 [connection signal="body_entered" from="BancoJudite/dentroBanco" to="personagem" method="_on_dentroBanco_body_entered"]
 [connection signal="body_entered" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_entered"]
 [connection signal="body_exited" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_exited"]
+[connection signal="pressed" from="botaoVendedor" to="personagem" method="_on_botaoVendedor_pressed"]
 [connection signal="body_entered" from="MercadoJudite/dentroMercado" to="personagem" method="_on_dentroMercado_body_entered"]
+[connection signal="body_entered" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_entered"]
+[connection signal="body_exited" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_exited"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
 [connection signal="pressed" from="casa/pagarBoleto" to="personagem" method="_on_pagarBoleto_pressed"]
 [connection signal="pressed" from="botaoProf" to="personagem" method="_on_botaoProf_pressed"]

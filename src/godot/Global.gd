@@ -7,3 +7,4 @@ var dia = 1
 var minutos = 0
 var contador = 0
 var selecPersonagem
+var menosFeliz = 100

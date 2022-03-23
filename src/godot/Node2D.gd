@@ -8,7 +8,7 @@ func _ready():
 func _process(delta):
 	$personagem/CanvasLayer/dia.text = String("DIA " + str(Global.dia))
 	$personagem/CanvasLayer/hora.text = String(str(Global.horas) + "h" + str(Global.minutos) + "min")
-	
+	$personagem/CanvasLayer/happyBar.value = Global.menosFeliz
 	#roda o relogio
 	Global.sent += delta
 	
@@ -19,6 +19,7 @@ func _process(delta):
 	if Global.minutos == 60:
 		Global.horas += 1
 		Global.minutos = 00
+		Global.menosFeliz -= 4.17
 		
 	if Global.horas == 24:
 		Global.minutos = 00
