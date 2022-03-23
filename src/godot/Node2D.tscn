@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -194,6 +194,10 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
 }
+
+[sub_resource type="DynamicFont" id=39]
+size = 176
+font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=32]
 font_data = ExtResource( 24 )
@@ -764,6 +768,7 @@ __meta__ = {
 }
 
 [node name="boasVindas" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
 position = Vector2( 512, 309 )
 scale = Vector2( 0.320338, 0.320338 )
 texture = ExtResource( 32 )
@@ -799,6 +804,17 @@ visible = false
 position = Vector2( 511, 307 )
 scale = Vector2( 0.318998, 0.318998 )
 texture = ExtResource( 36 )
+
+[node name="nomePlayer" type="TextEdit" parent="personagem/CanvasLayer/inserirNome"]
+margin_left = -473.0
+margin_top = -270.0
+margin_right = 473.0
+margin_bottom = -122.0
+custom_fonts/font = SubResource( 39 )
+text = "CRIS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="escolherPersonagem" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
