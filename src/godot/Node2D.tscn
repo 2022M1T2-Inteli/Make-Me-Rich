@@ -130,6 +130,11 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
@@ -140,25 +145,20 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -184,6 +184,10 @@ animations = [ {
 "name": "idle.frente",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFont" id=15]
+size = 26
+font_data = ExtResource( 24 )
 
 [sub_resource type="StyleBoxFlat" id=41]
 bg_color = Color( 0.4, 0.831373, 0.243137, 1 )
@@ -239,10 +243,6 @@ font_data = ExtResource( 24 )
 font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=33]
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=15]
-size = 26
 font_data = ExtResource( 24 )
 
 [sub_resource type="RectangleShape2D" id=7]
@@ -519,6 +519,15 @@ position = Vector2( 1330, -4726.5 )
 scale = Vector2( 2.92802, 0.113546 )
 texture = ExtResource( 20 )
 
+[node name="botaoBoaNoite" type="Button" parent="."]
+margin_left = 1245.0
+margin_top = 482.0
+margin_right = 1334.0
+margin_bottom = 637.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="casa" type="Sprite" parent="."]
 position = Vector2( 948, 623 )
 scale = Vector2( 1.52095, 1.45868 )
@@ -558,6 +567,11 @@ margin_bottom = 95.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="areaCama" type="Area2D" parent="casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/areaCama"]
+polygon = PoolVector2Array( 168.973, -41.1331, 170.288, 37.7053, 249.186, 39.0764, 248.529, 14.3966, 190.013, 15.0821, 188.04, -39.762 )
 
 [node name="botaoProf" type="Button" parent="."]
 margin_left = 840.0
@@ -665,6 +679,24 @@ limit_right = 2233
 limit_bottom = 4344
 editor_draw_limits = true
 script = ExtResource( 2 )
+
+[node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
+
+[node name="Sprite" type="Sprite" parent="personagem/CanvasLayerDinheiro"]
+position = Vector2( 70, 33.5 )
+scale = Vector2( 0.0949416, 0.0577689 )
+texture = ExtResource( 25 )
+
+[node name="DinheiroPlayer" type="Label" parent="personagem/CanvasLayerDinheiro"]
+margin_left = 18.0
+margin_top = 24.0
+margin_right = 134.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 15 )
+text = "DINHEIRO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CanvasLayer" type="CanvasLayer" parent="personagem"]
 
@@ -1071,24 +1103,6 @@ position = Vector2( 676.444, 445 )
 scale = Vector2( 0.277778, 0.277778 )
 texture = ExtResource( 45 )
 
-[node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
-
-[node name="Sprite" type="Sprite" parent="personagem/CanvasLayerDinheiro"]
-position = Vector2( 70, 33.5 )
-scale = Vector2( 0.0949416, 0.0577689 )
-texture = ExtResource( 25 )
-
-[node name="DinheiroPlayer" type="Label" parent="personagem/CanvasLayerDinheiro"]
-margin_left = 18.0
-margin_top = 24.0
-margin_right = 134.0
-margin_bottom = 46.0
-custom_fonts/font = SubResource( 15 )
-text = "DINHEIRO"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="personagem/areaNotiicacao"]
@@ -1143,8 +1157,11 @@ __meta__ = {
 [connection signal="body_entered" from="MercadoJudite/dentroMercado" to="personagem" method="_on_dentroMercado_body_entered"]
 [connection signal="body_entered" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_entered"]
 [connection signal="body_exited" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_exited"]
+[connection signal="pressed" from="botaoBoaNoite" to="personagem" method="_on_botaoBoaNoite_pressed"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
 [connection signal="pressed" from="casa/pagarBoleto" to="personagem" method="_on_pagarBoleto_pressed"]
+[connection signal="body_entered" from="casa/areaCama" to="personagem" method="_on_areaCama_body_entered"]
+[connection signal="body_exited" from="casa/areaCama" to="personagem" method="_on_areaCama_body_exited"]
 [connection signal="pressed" from="botaoProf" to="personagem" method="_on_botaoProf_pressed"]
 [connection signal="body_entered" from="UniversidadeJudite/dentroUniversidade" to="personagem" method="_on_dentroUniversidade_body_entered"]
 [connection signal="body_entered" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_entered"]

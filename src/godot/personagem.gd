@@ -83,6 +83,9 @@ func _process(delta):
 		$CanvasLayer/textoVendedor.visible = false
 		$CanvasLayer/nomeVendedor.visible = false
 		$CanvasLayer/fundoNome.visible = false
+		
+	if boaNoite == true and areaCama == true:
+		get_tree().change_scene("res://boaNoite.tscn")
 #entra no computador
 func _on_botaoPC_pressed():
 	get_tree().change_scene("res://Cena_computador.tscn")
@@ -340,9 +343,16 @@ func _on_nextLivro_pressed():
 
 
 
+var boaNoite = false
+func _on_botaoBoaNoite_pressed():
+	boaNoite = true  
+	
+var areaCama = false
+func _on_areaCama_body_entered(body):
+	areaCama = true
 
-
-
+func _on_areaCama_body_exited(body):
+	areaCama = false
 
 
 
