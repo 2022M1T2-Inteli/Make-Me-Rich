@@ -308,15 +308,14 @@ func _on_areaVendedor_body_exited(body):
 
 func _on_botaoLivro_pressed():
 	cont += 1
-	if cont == 1:
-		$CanvasLayer/matFinanceira.visible = true
-		$CanvasLayer/next.visible = true
-		$CanvasLayer/nextLivro.visible = true
-	elif cont == 2:
+	$CanvasLayer/matFinanceira.visible = true
+	$CanvasLayer/next.visible = true
+	$CanvasLayer/nextLivro.visible = true
+func _on_nextLivro_pressed():
+	cont += 1
+	if cont == 2:
 		$CanvasLayer/matFinanceira.visible = false
 		$CanvasLayer/inflacao.visible = true
-		$CanvasLayer/nextLivro.visible = true
-		print("oi")
 	elif cont == 3:
 		$CanvasLayer/inflacao.visible = false
 		$CanvasLayer/jurosSimples.visible = true
@@ -336,9 +335,10 @@ func _on_botaoLivro_pressed():
 		$CanvasLayer/incentivados.visible = false
 		$CanvasLayer/next.visible = false
 		$CanvasLayer/nextLivro.visible = false
+		cont = 0
+		
 
-func _on_nextLivro_pressed():
-	cont += 1
+
 
 
 

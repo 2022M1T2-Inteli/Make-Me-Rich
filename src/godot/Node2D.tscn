@@ -125,14 +125,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
@@ -140,15 +140,10 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"name": "idle.direita",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
@@ -159,6 +154,11 @@ animations = [ {
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -1018,6 +1018,7 @@ margin_left = 643.0
 margin_top = 419.0
 margin_right = 769.0
 margin_bottom = 473.0
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
