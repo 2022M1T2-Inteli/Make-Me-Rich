@@ -10,7 +10,7 @@ var velocidade = Vector2.ZERO
 var abrirEnter = false
 var dinheiro = 2000
 var pagarBoleto = false
-var contador = 0
+
 var selecPersonagem
 var cont = 0
 #mostra o dinheiro no canto superior esquerdo
@@ -27,26 +27,26 @@ func _ready():
 		$AnimatedSpriteD.visible = true
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
-	contador += 1
+	Global.contador += 1
 # delta é um método que faz o codigo ser executado a cada frame
 func _process(delta):
 		#tutorial aparece
-	if contador == 0 :
+	if Global.contador == 0 :
 		$CanvasLayer/boasVindas.visible = true
 		$CanvasLayer/botaoTutorial.visible = true
 		#tutorial sai
-	if contador == 1:
+	if Global.contador == 1:
 		$CanvasLayer/boasVindas.visible = false
 		$CanvasLayer/botaoTutorial.visible = false
 		$CanvasLayer/instrucNpc.visible = true
 		$CanvasLayer/botaoNpc.visible = true
 
-	if contador == 2:
+	if Global.contador == 2:
 		$CanvasLayer/botaoNome.visible = true
 		$CanvasLayer/inserirNome.visible = true
 		$CanvasLayer/instrucNpc.visible = false
 		$CanvasLayer/botaoNpc.visible = false
-	if contador >= 3:
+	if Global.contador >= 3:
 		$CanvasLayer/botaoNome.visible = false
 		$CanvasLayer/inserirNome.visible = false
 
@@ -252,13 +252,13 @@ func _on_pagarBoleto_pressed():
 
 #Adicionar um ao cont com os botões sendo pressionados
 func _on_botaoNpc_pressed():
-	contador += 1
+	Global.contador += 1
 
 func _on_botaoNome_pressed():
-	contador += 1
+	Global.contador += 1
 
 func _on_botaoPersonagem_pressed():
-	contador += 1
+	Global.contador += 1
 	
 #botao que foca atras da professora
 var prof = 0
