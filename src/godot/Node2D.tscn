@@ -130,11 +130,6 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
@@ -159,6 +154,11 @@ animations = [ {
 "loop": false,
 "name": "idle.costas",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
