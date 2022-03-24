@@ -356,3 +356,14 @@ func _on_areaCama_body_exited(body):
 
 
 
+
+
+func _on_botaoMercado_pressed():
+	$CanvasLayer/mercado.visible = true
+	$CanvasLayer/setaVolta.visible = true
+	$CanvasLayer/sairMercado.visible = true
+
+func _on_sairMercado_pressed():
+	$CanvasLayer/mercado.visible = false
+	$CanvasLayer/setaVolta.visible = false
+	$CanvasLayer/sairMercado.visible = false

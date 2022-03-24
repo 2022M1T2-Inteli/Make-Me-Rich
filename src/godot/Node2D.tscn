@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=92 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -54,6 +54,8 @@
 [ext_resource path="res://assets/incentivados.png" type="Texture" id=52]
 [ext_resource path="res://assets/2492741-cara-feliz-emoji-social-media-grátis-vetor.png" type="Texture" id=53]
 [ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=54]
+[ext_resource path="res://assets/mercado.png" type="Texture" id=55]
+[ext_resource path="res://assets/comida (7).png" type="Texture" id=56]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -125,19 +127,19 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.direita",
-"speed": 10.0
+"name": "idle.direita",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
@@ -145,20 +147,20 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
 "name": "idle.costas",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "idle.direita",
-"speed": 5.0
+"name": "walk.direita",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -256,7 +258,7 @@ __meta__ = {
 }
 
 [node name="Fundo" type="Sprite" parent="."]
-position = Vector2( 1416.75, -2055 )
+position = Vector2( 1458, -2119 )
 scale = Vector2( 2.92802, 26.5777 )
 texture = ExtResource( 20 )
 
@@ -1103,6 +1105,25 @@ position = Vector2( 676.444, 445 )
 scale = Vector2( 0.277778, 0.277778 )
 texture = ExtResource( 45 )
 
+[node name="sairMercado" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 250.0
+margin_top = 135.0
+margin_right = 290.0
+margin_bottom = 175.0
+
+[node name="mercado" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 536, 339 )
+scale = Vector2( 0.208583, 0.208583 )
+texture = ExtResource( 55 )
+
+[node name="setaVolta" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 273, 152 )
+scale = Vector2( 0.0347501, 0.0347501 )
+texture = ExtResource( 56 )
+
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="personagem/areaNotiicacao"]
@@ -1136,12 +1157,15 @@ margin_left = 855.0
 margin_top = -2502.0
 margin_right = 908.0
 margin_bottom = -2462.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
+[node name="botaoMercado" type="Button" parent="."]
+margin_left = 672.0
+margin_top = -4244.0
+margin_right = 936.0
+margin_bottom = -4147.0
+
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
@@ -1181,8 +1205,10 @@ __meta__ = {
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/nextLivro" to="personagem" method="_on_nextLivro_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/sairMercado" to="personagem" method="_on_sairMercado_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
 [connection signal="pressed" from="botaoPC" to="personagem" method="_on_botaoPC_pressed"]
 [connection signal="pressed" from="botaoLivro" to="personagem" method="_on_botaoLivro_pressed"]
+[connection signal="pressed" from="botaoMercado" to="personagem" method="_on_botaoMercado_pressed"]
