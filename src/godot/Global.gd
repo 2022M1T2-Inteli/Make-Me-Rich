@@ -8,3 +8,4 @@ var minutos = 0
 var contador = 0
 var selecPersonagem
 var menosFeliz = 100
+var conta = 0
