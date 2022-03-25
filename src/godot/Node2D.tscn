@@ -122,34 +122,14 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
@@ -160,6 +140,26 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
 "speed": 5.0
 } ]
 
@@ -560,15 +560,6 @@ polygon = PoolVector2Array( 143.331, 150.821, 197.245, 150.136, 197.245, 137.796
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/computer"]
 position = Vector2( -3.94495, -2.74219 )
 polygon = PoolVector2Array( -2.62994, -12.3399, -1.97247, -35.6487, -54.5712, -37.7053, -50.6263, -16.4532 )
-
-[node name="pagarBoleto" type="Button" parent="casa"]
-margin_left = 159.0
-margin_top = 58.0
-margin_right = 241.0
-margin_bottom = 95.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="areaCama" type="Area2D" parent="casa"]
 
@@ -1201,7 +1192,6 @@ margin_bottom = -4147.0
 [connection signal="body_exited" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_exited"]
 [connection signal="pressed" from="botaoBoaNoite" to="personagem" method="_on_botaoBoaNoite_pressed"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
-[connection signal="pressed" from="casa/pagarBoleto" to="personagem" method="_on_pagarBoleto_pressed"]
 [connection signal="body_entered" from="casa/areaCama" to="personagem" method="_on_areaCama_body_entered"]
 [connection signal="body_exited" from="casa/areaCama" to="personagem" method="_on_areaCama_body_exited"]
 [connection signal="pressed" from="botaoProf" to="personagem" method="_on_botaoProf_pressed"]

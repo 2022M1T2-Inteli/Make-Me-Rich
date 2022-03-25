@@ -73,7 +73,7 @@ func _process(delta):
 		#fala do vendedor aparece
 	if areaVendedor == true and vendedor % 2 == 1:
 		$CanvasLayer/vendedor.visible = true
-		$CanvasLayer/fundo.visible = true
+		$CanvasLayer/fundoMario.visible = true
 		$CanvasLayer/textoVendedor.visible = true
 		$CanvasLayer/nomeVendedor.visible = true
 		$CanvasLayer/fundoNome.visible = true
