@@ -9,3 +9,4 @@ var contador = 0
 var selecPersonagem
 var menosFeliz = 100
 var conta = 0
+var notificacao = true

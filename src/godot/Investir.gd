@@ -11,6 +11,7 @@ func _ready():
 func _on_ganharDinheiro_pressed():
 	Global.conta += float($computador/extrairDinheiro.text)
 	Global.dinheiro -= float($computador/extrairDinheiro.text)
+	Global.conta += J
 	$computador/dinheiroPC.text = "R$" + str(Global.dinheiro)
 	$computador/conta.text = "R$" + str(Global.conta)
 	#dinheiro volta pra mao

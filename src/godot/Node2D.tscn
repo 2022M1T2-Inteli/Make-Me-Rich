@@ -127,15 +127,15 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
@@ -147,20 +147,20 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
 "name": "idle.costas",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "walk.direita",
-"speed": 10.0
+"name": "walk.frente",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]

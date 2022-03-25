@@ -294,6 +294,7 @@ func _on_botaoVendedor_pressed():
 func _on_areaNotiicacao_body_entered(body):
 	yield(get_tree().create_timer(2.6), "timeout")
 	$CanvasLayer/celIconn/Panel/AnimationPlayer.play("popUp")
+	#Global.notificacao = false
 
 #detecta se esta perto do guilherme
 var areaGui = false
