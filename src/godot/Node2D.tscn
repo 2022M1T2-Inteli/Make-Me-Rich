@@ -127,10 +127,15 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "idle.direita",
-"speed": 5.0
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
@@ -142,15 +147,10 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
+"name": "idle.direita",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
@@ -576,10 +576,10 @@ __meta__ = {
 polygon = PoolVector2Array( 168.973, -41.1331, 170.288, 37.7053, 249.186, 39.0764, 248.529, 14.3966, 190.013, 15.0821, 188.04, -39.762 )
 
 [node name="botaoProf" type="Button" parent="."]
-margin_left = 840.0
-margin_top = -2741.0
-margin_right = 889.0
-margin_bottom = -2677.0
+margin_left = 472.0
+margin_top = -2711.0
+margin_right = 510.0
+margin_bottom = -2641.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -637,7 +637,7 @@ polygon = PoolVector2Array( 163.403, 300.617, 203.578, 303.419, 204.513, 247.36,
 polygon = PoolVector2Array( 282.061, 303.419, 284.864, 251.098, 273.652, 249.229, 270.849, 199.71, 282.995, 198.776, 287.667, 127.768, 273.652, 124.965, 275.521, 78.249, 282.995, 78.249, 284.864, 10.0437, 272.718, 9.10938, 271.784, -44.1467, 327.843, -44.1467, 330.646, 7.24097, 317.565, 5.37231, 321.302, 78.249, 334.383, 77.3147, 332.514, 124.965, 320.368, 124.965, 323.171, 193.17, 332.514, 195.973, 332.514, 253.901, 320.368, 252.032, 322.237, 301.551 )
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 964, 575 )
+position = Vector2( 962, 584 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
@@ -720,13 +720,28 @@ position = Vector2( 202, 13 )
 scale = Vector2( 0.0278061, 0.0278061 )
 texture = ExtResource( 53 )
 
-[node name="fundo" type="Sprite" parent="personagem/CanvasLayer"]
+[node name="fundoMario" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
 modulate = Color( 0, 0, 0, 0.588235 )
 show_behind_parent = true
 light_mask = 0
 position = Vector2( 547, 544 )
 scale = Vector2( 0.415953, 0.191235 )
+texture = ExtResource( 20 )
+
+[node name="fundoProfessora" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+modulate = Color( 1, 0, 0, 0.588235 )
+position = Vector2( 548, 544 )
+scale = Vector2( 0.415564, 0.195219 )
+texture = ExtResource( 20 )
+
+[node name="fundoGui" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+modulate = Color( 0, 0, 0, 0.588235 )
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 548.875, 543.5 )
+scale = Vector2( 0.420039, 0.189243 )
 texture = ExtResource( 20 )
 
 [node name="fundoNome" type="Sprite" parent="personagem/CanvasLayer"]
@@ -1157,6 +1172,9 @@ margin_left = 855.0
 margin_top = -2502.0
 margin_right = 908.0
 margin_bottom = -2462.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="botaoMercado" type="Button" parent="."]
 margin_left = 672.0
@@ -1164,8 +1182,8 @@ margin_top = -4244.0
 margin_right = 936.0
 margin_bottom = -4147.0
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]

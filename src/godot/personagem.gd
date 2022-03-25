@@ -52,24 +52,24 @@ func _process(delta):
 		$CanvasLayer/inserirNome.visible = false
 
 	#fala da professora aparece
-	if areaProf == true and prof % 2 == 0:
+	if areaProf == true and prof % 2 == 1:
 		$CanvasLayer/professora.visible = true
-		$CanvasLayer/fundo.visible = true
+		$CanvasLayer/fundoProfessora.visible = true
 		$CanvasLayer/textoProf.visible = true
 		#fala da professora sai
-	elif areaProf == false or prof % 2 == 1:
+	elif areaProf == false or prof % 2 == 0:
 		$CanvasLayer/professora.visible = false
-		$CanvasLayer/fundo.visible = false
+		$CanvasLayer/fundoProfessora.visible = false
 		$CanvasLayer/textoProf.visible = false
 		#fala do guilherme aparece
 	if areaGui == true and gui % 2 == 1:
 		$CanvasLayer/guilherme.visible = true
 		$CanvasLayer/textoGui.visible = true
-		$CanvasLayer/fundo.visible = true
+		$CanvasLayer/fundoGui.visible = true
 	elif areaGui == false or gui % 2 == 0:
 		$CanvasLayer/guilherme.visible = false
 		$CanvasLayer/textoGui.visible = false
-		$CanvasLayer/fundo.visible = false
+		$CanvasLayer/fundoGui.visible = false
 		#fala do vendedor aparece
 	if areaVendedor == true and vendedor % 2 == 1:
 		$CanvasLayer/vendedor.visible = true
@@ -79,7 +79,7 @@ func _process(delta):
 		$CanvasLayer/fundoNome.visible = true
 	elif areaVendedor == false or vendedor % 2 == 0:
 		$CanvasLayer/vendedor.visible = false
-		$CanvasLayer/fundo.visible = false
+		$CanvasLayer/fundoMario.visible = false
 		$CanvasLayer/textoVendedor.visible = false
 		$CanvasLayer/nomeVendedor.visible = false
 		$CanvasLayer/fundoNome.visible = false
@@ -181,8 +181,8 @@ func _on_dentroBanco_body_entered(body):
 	position.y = 3097
 #entra na faculdade
 func _on_portaFaculdade_body_entered(body):
-	position.x = 1060
-	position.y = -2090
+	position.x = 688
+	position.y = -2074
 #de volta para a cidade, na frente da faculdade
 func _on_dentroUniversidade_body_entered(body):
 	position.x = 1582
