@@ -426,11 +426,10 @@ position = Vector2( 1.23059, 368.304 )
 shape = SubResource( 31 )
 
 [node name="setapopup" type="AnimatedSprite" parent="TrabalhoCenário"]
-position = Vector2( 190.314, -44.4063 )
+position = Vector2( -117.305, -234.313 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="botaoGui" type="Button" parent="."]
@@ -501,6 +500,7 @@ position = Vector2( -19.9551, 33.9248 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="botaoVendedor" type="Button" parent="."]
@@ -543,6 +543,7 @@ position = Vector2( 342.123, -183.938 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
@@ -608,6 +609,7 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="."]
@@ -676,6 +678,7 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -683,6 +686,7 @@ position = Vector2( -184.995, -284.031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
@@ -1077,7 +1081,7 @@ __meta__ = {
 }
 
 [node name="relogio" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 217.41, 31.75 )
+position = Vector2( 213, 31 )
 scale = Vector2( 0.470599, 0.428333 )
 texture = ExtResource( 38 )
 
@@ -1221,10 +1225,11 @@ margin_bottom = -4147.0
 flat = true
 
 [node name="botaoFabrica" type="Button" parent="."]
-margin_left = 1507.0
-margin_top = -8086.0
-margin_right = 1586.0
-margin_bottom = -8042.0
+margin_left = 1148.0
+margin_top = -8329.0
+margin_right = 1184.0
+margin_bottom = -7974.0
+flat = true
 
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
