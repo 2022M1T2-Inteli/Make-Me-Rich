@@ -497,6 +497,7 @@ position = Vector2( -19.8633, 26.9854 )
 scale = Vector2( 0.0259691, 0.0259691 )
 frames = SubResource( 45 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="BancoJudite"]
@@ -504,6 +505,7 @@ position = Vector2( 139.662, 6.03418 )
 scale = Vector2( 0.0259691, 0.0259691 )
 frames = SubResource( 45 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoVendedor" type="Button" parent="."]
@@ -546,7 +548,6 @@ position = Vector2( 339.645, -164.766 )
 scale = Vector2( 0.0301404, 0.0332096 )
 frames = SubResource( 45 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
@@ -554,6 +555,7 @@ position = Vector2( -330.605, 44.875 )
 scale = Vector2( 0.0356518, 0.0332234 )
 frames = SubResource( 45 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="Fundo2" type="Sprite" parent="."]
@@ -611,7 +613,6 @@ position = Vector2( -86.5371, -128.239 )
 scale = Vector2( 0.0259691, 0.0259691 )
 frames = SubResource( 45 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="."]
@@ -680,7 +681,6 @@ position = Vector2( -183.475, -269.664 )
 scale = Vector2( 0.0259691, 0.0259691 )
 frames = SubResource( 45 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -688,6 +688,7 @@ position = Vector2( 182.5, -76.2813 )
 scale = Vector2( 0.0259691, 0.0259691 )
 frames = SubResource( 45 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
@@ -958,17 +959,14 @@ position = Vector2( 1170, 602 )
 texture = ExtResource( 29 )
 
 [node name="celIcon" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 923.0
+margin_left = 900.0
 margin_top = 28.0
 margin_right = 946.0
-margin_bottom = 67.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 111.0
 
 [node name="celIconn" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 934, 48 )
-scale = Vector2( 0.0921054, 0.0921054 )
+position = Vector2( 919, 76 )
+scale = Vector2( 0.218371, 0.196598 )
 texture = ExtResource( 15 )
 
 [node name="Panel" type="Panel" parent="personagem/CanvasLayer/celIconn"]
