@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=2]
+[gd_scene load_steps=92 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -37,7 +37,7 @@
 [ext_resource path="res://assets/instrucaoNpc.png" type="Texture" id=35]
 [ext_resource path="res://assets/selecionarNome.png" type="Texture" id=36]
 [ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
-[ext_resource path="res://assets/RELOGIO.png" type="Texture" id=38]
+[ext_resource path="res://assets/faculdade.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
 [ext_resource path="res://assets/venderdor_npc.png" type="Texture" id=40]
 [ext_resource path="res://assets/notifcação.png" type="Texture" id=41]
@@ -56,8 +56,6 @@
 [ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=54]
 [ext_resource path="res://assets/mercado.png" type="Texture" id=55]
 [ext_resource path="res://assets/comida (7).png" type="Texture" id=56]
-[ext_resource path="res://assets/seta 1 (1).png" type="Texture" id=57]
-[ext_resource path="res://assets/seta 1.png" type="Texture" id=58]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -110,14 +108,6 @@ extents = Vector2( 37.3244, 12.2512 )
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 38.6645, 5.98115 )
 
-[sub_resource type="SpriteFrames" id=45]
-animations = [ {
-"frames": [ ExtResource( 58 ), ExtResource( 57 ) ],
-"loop": true,
-"name": "popup",
-"speed": 3.0
-} ]
-
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 28.2038, 20.8462 )
 
@@ -137,14 +127,9 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
+"name": "idle.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -157,12 +142,11 @@ animations = [ {
 "name": "idle.costas",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "idle.esquerda",
+"name": "walk.frente",
 "speed": 5.0
 }, {
-<<<<<<< HEAD
 "frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk.costas",
@@ -173,25 +157,10 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-=======
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
->>>>>>> ce6027fb18eeb54c12a782c19c681a18e7a35e39
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
-<<<<<<< HEAD
-=======
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
->>>>>>> ce6027fb18eeb54c12a782c19c681a18e7a35e39
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -283,7 +252,6 @@ extents = Vector2( 38, 15 )
 
 [node name="cidade" type="Node2D"]
 position = Vector2( 1, -4 )
-scale = Vector2( 1.00076, 1.00014 )
 script = ExtResource( 23 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
@@ -513,22 +481,6 @@ texture = ExtResource( 39 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BancoJudite/caixaTextoGui"]
 polygon = PoolVector2Array( -67.85, 56.8738, -66.8523, 161.143, 41.9074, 162.64, 46.3975, 55.876 )
 
-[node name="setapopup" type="AnimatedSprite" parent="BancoJudite"]
-position = Vector2( -19.8633, 26.9854 )
-scale = Vector2( 0.0259691, 0.0259691 )
-frames = SubResource( 45 )
-animation = "popup"
-frame = 1
-playing = true
-
-[node name="setapopup2" type="AnimatedSprite" parent="BancoJudite"]
-position = Vector2( 139.662, 6.03418 )
-scale = Vector2( 0.0259691, 0.0259691 )
-frames = SubResource( 45 )
-animation = "popup"
-frame = 1
-playing = true
-
 [node name="botaoVendedor" type="Button" parent="."]
 margin_left = 1306.0
 margin_top = -4439.0
@@ -563,21 +515,6 @@ texture = ExtResource( 40 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MercadoJudite/areaVendedor"]
 polygon = PoolVector2Array( 38.0138, 39.2402, 36.7875, 95.6475, 489.273, 95.6475, 485.595, -127.53, 391.173, -126.304, 393.626, -52.7285, 434.092, -51.5024, 436.545, 44.145 )
-
-[node name="setapopup" type="AnimatedSprite" parent="MercadoJudite"]
-position = Vector2( 339.645, -164.766 )
-scale = Vector2( 0.0301404, 0.0332096 )
-frames = SubResource( 45 )
-animation = "popup"
-playing = true
-
-[node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
-position = Vector2( -330.605, 44.875 )
-scale = Vector2( 0.0356518, 0.0332234 )
-frames = SubResource( 45 )
-animation = "popup"
-frame = 1
-playing = true
 
 [node name="Fundo2" type="Sprite" parent="."]
 position = Vector2( 1330, -4726.5 )
@@ -628,13 +565,6 @@ polygon = PoolVector2Array( -2.62994, -12.3399, -1.97247, -35.6487, -54.5712, -3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="casa/areaCama"]
 polygon = PoolVector2Array( 168.973, -41.1331, 170.288, 37.7053, 249.186, 39.0764, 248.529, 14.3966, 190.013, 15.0821, 188.04, -39.762 )
-
-[node name="setapopup" type="AnimatedSprite" parent="casa"]
-position = Vector2( -86.5371, -128.239 )
-scale = Vector2( 0.0259691, 0.0259691 )
-frames = SubResource( 45 )
-animation = "popup"
-playing = true
 
 [node name="botaoProf" type="Button" parent="."]
 margin_left = 472.0
@@ -697,21 +627,6 @@ polygon = PoolVector2Array( 163.403, 300.617, 203.578, 303.419, 204.513, 247.36,
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
 polygon = PoolVector2Array( 282.061, 303.419, 284.864, 251.098, 273.652, 249.229, 270.849, 199.71, 282.995, 198.776, 287.667, 127.768, 273.652, 124.965, 275.521, 78.249, 282.995, 78.249, 284.864, 10.0437, 272.718, 9.10938, 271.784, -44.1467, 327.843, -44.1467, 330.646, 7.24097, 317.565, 5.37231, 321.302, 78.249, 334.383, 77.3147, 332.514, 124.965, 320.368, 124.965, 323.171, 193.17, 332.514, 195.973, 332.514, 253.901, 320.368, 252.032, 322.237, 301.551 )
 
-[node name="setapopup" type="AnimatedSprite" parent="UniversidadeJudite"]
-position = Vector2( -183.475, -269.664 )
-scale = Vector2( 0.0259691, 0.0259691 )
-frames = SubResource( 45 )
-animation = "popup"
-playing = true
-
-[node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
-position = Vector2( 182.5, -76.2813 )
-scale = Vector2( 0.0259691, 0.0259691 )
-frames = SubResource( 45 )
-animation = "popup"
-frame = 1
-playing = true
-
 [node name="personagem" type="KinematicBody2D" parent="."]
 position = Vector2( 962, 584 )
 script = ExtResource( 5 )
@@ -760,6 +675,11 @@ script = ExtResource( 2 )
 
 [node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
 
+[node name="Sprite" type="Sprite" parent="personagem/CanvasLayerDinheiro"]
+position = Vector2( 70, 33.5 )
+scale = Vector2( 0.0949416, 0.0577689 )
+texture = ExtResource( 25 )
+
 [node name="DinheiroPlayer" type="Label" parent="personagem/CanvasLayerDinheiro"]
 margin_left = 18.0
 margin_top = 24.0
@@ -785,6 +705,11 @@ value = 50.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="caraFeliz" type="Sprite" parent="personagem/CanvasLayer/happyBar"]
+position = Vector2( 202, 13 )
+scale = Vector2( 0.0278061, 0.0278061 )
+texture = ExtResource( 53 )
 
 [node name="fundoMario" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
@@ -980,14 +905,17 @@ position = Vector2( 1170, 602 )
 texture = ExtResource( 29 )
 
 [node name="celIcon" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 900.0
+margin_left = 923.0
 margin_top = 28.0
 margin_right = 946.0
-margin_bottom = 111.0
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="celIconn" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 919, 76 )
-scale = Vector2( 0.218371, 0.196598 )
+position = Vector2( 934, 48 )
+scale = Vector2( 0.0921054, 0.0921054 )
 texture = ExtResource( 15 )
 
 [node name="Panel" type="Panel" parent="personagem/CanvasLayer/celIconn"]
@@ -1097,6 +1025,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="relogio" type="Sprite" parent="personagem/CanvasLayer"]
+position = Vector2( 89, 132 )
+scale = Vector2( 0.0890625, 0.0890625 )
+texture = ExtResource( 38 )
+
+[node name="dia" type="Label" parent="personagem/CanvasLayer"]
+margin_left = 73.0
+margin_top = 111.0
+margin_right = 113.0
+margin_bottom = 125.0
+custom_fonts/font = SubResource( 32 )
+text = "dia"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hora" type="Label" parent="personagem/CanvasLayer"]
+margin_left = 67.0
+margin_top = 134.0
+margin_right = 107.0
+margin_bottom = 148.0
+custom_fonts/font = SubResource( 33 )
+text = "hora"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="nextLivro" type="Button" parent="personagem/CanvasLayer"]
 visible = false
 margin_left = 643.0
@@ -1175,43 +1130,10 @@ position = Vector2( 273, 152 )
 scale = Vector2( 0.0347501, 0.0347501 )
 texture = ExtResource( 56 )
 
-[node name="Relogio" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 247, 44 )
-scale = Vector2( 0.447047, 0.466737 )
-texture = ExtResource( 38 )
-
-[node name="dia" type="Label" parent="personagem/CanvasLayer/Relogio"]
-margin_left = -51.4488
-margin_top = -42.8507
-margin_right = -33.4488
-margin_bottom = -28.8507
-rect_scale = Vector2( 3.35402, 1.70614 )
-custom_fonts/font = SubResource( 32 )
-text = "dia"
-
-[node name="hora" type="Label" parent="personagem/CanvasLayer/Relogio"]
-margin_left = -53.6857
-margin_top = -4.28507
-margin_right = -26.6857
-margin_bottom = 7.71493
-rect_scale = Vector2( 2.72176, 1.94956 )
-custom_fonts/font = SubResource( 33 )
-text = "hora"
-
-[node name="caraFeliz" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 624, 39 )
-scale = Vector2( 0.0278061, 0.0278061 )
-texture = ExtResource( 53 )
-
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="personagem/areaNotiicacao"]
 polygon = PoolVector2Array( -17, 23, 21, 22, 21, -34, -17, -33 )
-
-[node name="Sprite" type="Sprite" parent="personagem"]
-position = Vector2( -893.052, -546.505 )
-scale = Vector2( 0.0948695, 0.0577608 )
-texture = ExtResource( 25 )
 
 [node name="portaDentro" type="Area2D" parent="."]
 position = Vector2( 1025, 1141 )
