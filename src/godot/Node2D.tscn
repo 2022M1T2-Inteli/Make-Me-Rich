@@ -137,26 +137,6 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
@@ -167,9 +147,29 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
 "speed": 5.0
 } ]
 
@@ -505,6 +505,7 @@ position = Vector2( 139.662, 6.03418 )
 scale = Vector2( 0.0259691, 0.0259691 )
 frames = SubResource( 45 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoVendedor" type="Button" parent="."]
@@ -547,7 +548,6 @@ position = Vector2( 339.645, -164.766 )
 scale = Vector2( 0.0301404, 0.0332096 )
 frames = SubResource( 45 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
@@ -613,7 +613,6 @@ position = Vector2( -86.5371, -128.239 )
 scale = Vector2( 0.0259691, 0.0259691 )
 frames = SubResource( 45 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="."]
