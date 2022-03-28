@@ -10,3 +10,7 @@ var selecPersonagem
 var menosFeliz = 100
 var conta = 0
 var notificacao = true
+var score = 0
+var valor = 0
+var tempo = 0
+var meta = 50

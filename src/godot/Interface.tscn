@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://interface.png" type="Texture" id=1]
+[ext_resource path="res://Interface.gd" type="Script" id=2]
+
+[node name="Interface" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="MessageConteiner" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MessageConteiner"]
+margin_left = 363.0
+margin_top = 52.0
+margin_right = 651.0
+margin_bottom = 564.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="MessageConteiner"]
+anchor_left = 0.503
+anchor_top = 0.831
+anchor_right = 0.503
+anchor_bottom = 0.831
+margin_left = -34.072
+margin_top = -73.6
+margin_right = 32.928
+margin_bottom = 8.40002
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="Button" parent="MessageConteiner"]
+visible = false
+margin_right = 12.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreConteiner" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ScoreConteiner"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -60.0
+margin_right = 60.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 120, 60 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "12
+
+
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

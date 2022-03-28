@@ -368,3 +368,7 @@ func _on_sairMercado_pressed():
 	$CanvasLayer/mercado.visible = false
 	$CanvasLayer/setaVolta.visible = false
 	$CanvasLayer/sairMercado.visible = false
+
+
+func _on_botaoFabrica_pressed():
+	get_tree().change_scene("res://Interface.tscn")

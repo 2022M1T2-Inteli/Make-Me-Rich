@@ -132,6 +132,11 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
 "name": "idle.costas",
@@ -142,25 +147,20 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -1173,6 +1173,15 @@ margin_top = -4244.0
 margin_right = 936.0
 margin_bottom = -4147.0
 
+[node name="botaoFabrica" type="Button" parent="."]
+margin_left = 1470.0
+margin_top = -8115.0
+margin_right = 1637.0
+margin_bottom = -8005.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
@@ -1220,3 +1229,4 @@ margin_bottom = -4147.0
 [connection signal="pressed" from="botaoPC" to="personagem" method="_on_botaoPC_pressed"]
 [connection signal="pressed" from="botaoLivro" to="personagem" method="_on_botaoLivro_pressed"]
 [connection signal="pressed" from="botaoMercado" to="personagem" method="_on_botaoMercado_pressed"]
+[connection signal="pressed" from="botaoFabrica" to="personagem" method="_on_botaoFabrica_pressed"]
