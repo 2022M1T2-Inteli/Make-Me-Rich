@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/comp investimento.png" type="Texture" id=1]
 [ext_resource path="res://assets/fundo.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Investir.gd" type="Script" id=4]
 [ext_resource path="res://Captura de tela 2022-02-22 144254.png" type="Texture" id=5]
 [ext_resource path="res://assets/comida (7).png" type="Texture" id=6]
+[ext_resource path="res://assets/depositar.png" type="Texture" id=7]
+[ext_resource path="res://assets/sacar.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 41
@@ -27,10 +29,10 @@ scale = Vector2( 1, 1.65737 )
 texture = ExtResource( 2 )
 
 [node name="voltar" type="Button" parent="."]
-margin_left = 179.0
-margin_top = 94.0
-margin_right = 218.0
-margin_bottom = 129.0
+margin_left = 136.0
+margin_top = 114.0
+margin_right = 185.0
+margin_bottom = 160.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -41,10 +43,10 @@ scale = Vector2( 0.497446, 0.478451 )
 texture = ExtResource( 1 )
 
 [node name="ganharDinheiro" type="Button" parent="computador"]
-margin_left = 257.314
-margin_top = -64.7925
-margin_right = 504.314
-margin_bottom = 32.2075
+margin_left = 253.0
+margin_top = -52.0
+margin_right = 519.0
+margin_bottom = 88.0
 text = "depositar"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -61,6 +63,9 @@ margin_top = 277.98
 margin_right = -293.619
 margin_bottom = 328.98
 custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="extrairDinheiro" type="LineEdit" parent="computador"]
 margin_left = 235.201
@@ -69,6 +74,9 @@ margin_right = 528.201
 margin_bottom = -111.107
 custom_fonts/font = SubResource( 2 )
 text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CapturaDeTela2022-02-22144255" type="Sprite" parent="computador"]
 position = Vector2( 369.889, 305.151 )
@@ -83,12 +91,15 @@ margin_bottom = 330.0
 rect_scale = Vector2( 1.00163, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "conta"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="perderDinheiro" type="Button" parent="computador"]
-margin_left = -502.567
-margin_top = -52.2521
-margin_right = -261.567
-margin_bottom = 42.7479
+margin_left = -507.0
+margin_top = -61.0
+margin_right = -262.0
+margin_bottom = 73.0
 text = "sacar"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -99,6 +110,20 @@ margin_left = -530.711
 margin_top = -200.648
 margin_right = -233.711
 margin_bottom = -115.648
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sacar" type="Sprite" parent="computador"]
+position = Vector2( -383.961, 6.27026 )
+scale = Vector2( 0.190334, 0.190334 )
+texture = ExtResource( 8 )
+
+[node name="Depositar" type="Sprite" parent="computador"]
+position = Vector2( 385.972, 16.7206 )
+scale = Vector2( 0.199241, 0.199241 )
+texture = ExtResource( 7 )
 
 [node name="setaVoltar" type="Sprite" parent="."]
 position = Vector2( 164, 135 )
@@ -106,5 +131,9 @@ scale = Vector2( 0.057033, 0.057033 )
 texture = ExtResource( 6 )
 
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
+[connection signal="mouse_entered" from="computador/ganharDinheiro" to="." method="_on_ganharDinheiro_mouse_entered"]
+[connection signal="mouse_exited" from="computador/ganharDinheiro" to="." method="_on_ganharDinheiro_mouse_exited"]
 [connection signal="pressed" from="computador/ganharDinheiro" to="." method="_on_ganharDinheiro_pressed"]
+[connection signal="mouse_entered" from="computador/perderDinheiro" to="." method="_on_perderDinheiro_mouse_entered"]
+[connection signal="mouse_exited" from="computador/perderDinheiro" to="." method="_on_perderDinheiro_mouse_exited"]
 [connection signal="pressed" from="computador/perderDinheiro" to="." method="_on_perderDinheiro_pressed"]

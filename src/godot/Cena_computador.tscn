@@ -156,8 +156,8 @@ __meta__ = {
 [node name="sair_pc" type="Button" parent="."]
 margin_left = 225.0
 margin_top = 147.0
-margin_right = 255.0
-margin_bottom = 173.0
+margin_right = 263.0
+margin_bottom = 169.0
 script = ExtResource( 10 )
 
 [node name="SetaVoltar" type="Sprite" parent="sair_pc"]
