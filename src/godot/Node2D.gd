@@ -6,8 +6,8 @@ func _ready():
 	pass
 #mostra o horario
 func _process(delta):
-	$personagem/CanvasLayer/dia.text = String("DIA " + str(Global.dia))
-	$personagem/CanvasLayer/hora.text = String(str(Global.horas) + "h" + str(Global.minutos) + "min")
+	$personagem/CanvasLayer/Relogio/dia.text = String("DIA " + str(Global.dia))
+	$personagem/CanvasLayer/Relogio/hora.text = String(str(Global.horas) + "h" + str(Global.minutos) + "min")
 	$personagem/CanvasLayer/happyBar.value = Global.menosFeliz
 	#roda o relogio
 	Global.sent += delta
