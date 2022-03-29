@@ -14,24 +14,9 @@ extents = Vector2( 36, 36 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "Produto2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "Produto6",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Produto3",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "Produto5",
+"name": "Produto1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -39,9 +24,24 @@ animations = [ {
 "name": "Produto4",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "Produto1",
+"name": "Produto6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Produto5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Produto2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Produto3",
 "speed": 5.0
 } ]
 
@@ -62,7 +62,6 @@ shape = SubResource( 2 )
 
 [node name="produto" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "Embalagem"
 
 [node name="embalagem" type="Sprite" parent="."]
 visible = false

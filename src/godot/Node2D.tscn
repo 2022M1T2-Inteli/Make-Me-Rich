@@ -137,16 +137,6 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
@@ -157,15 +147,25 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "idle.esquerda",
+"name": "walk.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
@@ -431,6 +431,8 @@ scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
 playing = true
+
+[node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
 
 [node name="botaoGui" type="Button" parent="."]
 margin_left = 1037.0
@@ -761,9 +763,6 @@ custom_styles/fg = SubResource( 41 )
 custom_styles/bg = SubResource( 42 )
 step = 1.0
 value = 50.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="caraFeliz" type="Sprite" parent="personagem/CanvasLayer/happyBar"]
 position = Vector2( 202, 13 )
@@ -886,7 +885,7 @@ margin_top = 504.0
 margin_right = 741.0
 margin_bottom = 603.0
 custom_fonts/font = SubResource( 43 )
-text = "Olá Cris sou o Mario e trabalho aqui no mercado!
+text = "Olá, meu nome é Mario e trabalho aqui no mercado!
 
 Vá até a prateleira indicada para realizar suas compras!
 
@@ -908,7 +907,7 @@ margin_top = 500.0
 margin_right = 767.0
 margin_bottom = 593.0
 custom_fonts/font = SubResource( 40 )
-text = "Olá “nome inserido”, sou o Guilherme e irei te ajudar aqui no banco!
+text = "Olá, sou o Guilherme e irei te ajudar aqui no banco!
 Você pode ir no caixa indicado para pagar suas 
 contas e retirar seu salário!
 Você também pode colocar seu dinheiro na poupança, 
@@ -940,7 +939,9 @@ margin_top = 500.0
 margin_right = 767.0
 margin_bottom = 581.0
 custom_fonts/font = SubResource( 22 )
-text = "Olá, seja bem vindo a aula inaugural de Economia, onde você irá aprender sobre educação financeira! Meu nome é Diana e serei sua professora. 
+text = "Olá, seja bem vindo a aula inaugural de Economia, onde você irá aprender 
+sobre educação financeira!
+ Meu nome é Diana e serei sua professora. 
 Vá até a mesa indicada para realizar seu primeiro estudo! 
 "
 __meta__ = {
@@ -1170,17 +1171,89 @@ margin_top = 135.0
 margin_right = 290.0
 margin_bottom = 175.0
 
+[node name="botaoBife" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 288.0
+margin_top = 183.0
+margin_right = 394.0
+margin_bottom = 314.0
+flat = true
+
 [node name="mercado" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 536, 339 )
+position = Vector2( 623, 245 )
 scale = Vector2( 0.208583, 0.208583 )
 texture = ExtResource( 55 )
+offset = Vector2( -417.1, 450.66 )
 
 [node name="setaVolta" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
 position = Vector2( 273, 152 )
 scale = Vector2( 0.0347501, 0.0347501 )
 texture = ExtResource( 56 )
+
+[node name="botaoMacarrao" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 416.0
+margin_top = 178.0
+margin_right = 527.0
+margin_bottom = 318.0
+rect_pivot_offset = Vector2( 176, 38 )
+flat = true
+
+[node name="botaoSushi" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 550.0
+margin_top = 182.0
+margin_right = 654.0
+margin_bottom = 316.0
+rect_pivot_offset = Vector2( 176, 38 )
+flat = true
+
+[node name="botaoLeite" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 420.0
+margin_top = 344.0
+margin_right = 525.0
+margin_bottom = 472.0
+rect_pivot_offset = Vector2( 176, 38 )
+flat = true
+
+[node name="botaoBolo" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 278.0
+margin_top = 344.0
+margin_right = 383.0
+margin_bottom = 472.0
+rect_pivot_offset = Vector2( 176, 38 )
+flat = true
+
+[node name="botaoHamb" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 675.0
+margin_top = 181.0
+margin_right = 784.0
+margin_bottom = 317.0
+rect_pivot_offset = Vector2( 176, 38 )
+flat = true
+
+[node name="botaoRosquinha" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 675.0
+margin_top = 345.0
+margin_right = 780.0
+margin_bottom = 473.0
+rect_pivot_offset = Vector2( 176, 38 )
+flat = true
+
+[node name="botaoMaca" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 549.0
+margin_top = 347.0
+margin_right = 654.0
+margin_bottom = 475.0
+rect_pivot_offset = Vector2( 176, 38 )
+flat = true
 
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
@@ -1272,6 +1345,14 @@ flat = true
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/nextLivro" to="personagem" method="_on_nextLivro_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/sairMercado" to="personagem" method="_on_sairMercado_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoBife" to="personagem" method="_on_botaoBife_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoMacarrao" to="personagem" method="_on_botaoMacarrao_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoSushi" to="personagem" method="_on_botaoSushi_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoLeite" to="personagem" method="_on_botaoLeite_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoBolo" to="personagem" method="_on_botaoBolo_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoHamb" to="personagem" method="_on_botaoHamb_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoRosquinha" to="personagem" method="_on_botaoRosquinha_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoMaca" to="personagem" method="_on_botaoMaca_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]

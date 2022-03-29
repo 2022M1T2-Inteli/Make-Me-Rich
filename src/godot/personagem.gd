@@ -355,20 +355,72 @@ func _on_areaCama_body_entered(body):
 func _on_areaCama_body_exited(body):
 	areaCama = false
 
-
-
-
-
 func _on_botaoMercado_pressed():
 	$CanvasLayer/mercado.visible = true
 	$CanvasLayer/setaVolta.visible = true
 	$CanvasLayer/sairMercado.visible = true
+	$CanvasLayer/botaoBife.visible = true
+	$CanvasLayer/botaoMacarrao.visible = true
+	$CanvasLayer/botaoSushi.visible = true
+	$CanvasLayer/botaoLeite.visible = true
+	$CanvasLayer/botaoBolo.visible = true
+	$CanvasLayer/botaoHamb.visible = true
+	$CanvasLayer/botaoRosquinha.visible = true
+	$CanvasLayer/botaoMaca.visible = true
 
 func _on_sairMercado_pressed():
 	$CanvasLayer/mercado.visible = false
 	$CanvasLayer/setaVolta.visible = false
 	$CanvasLayer/sairMercado.visible = false
+	$CanvasLayer/botaoBife.visible = false
+	$CanvasLayer/botaoMacarrao.visible = false
+	$CanvasLayer/botaoSushi.visible = false
+	$CanvasLayer/botaoLeite.visible = false
+	$CanvasLayer/botaoBolo.visible = false
+	$CanvasLayer/botaoHamb.visible = false
+	$CanvasLayer/botaoRosquinha.visible = false
+	$CanvasLayer/botaoMaca.visible = false
 
 
 func _on_botaoFabrica_pressed():
 	get_tree().change_scene("res://Interface.tscn")
+
+func _on_botaoBife_pressed():
+	Global.dinheiro -= 20
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 16.68
+
+func _on_botaoMacarrao_pressed():
+	Global.dinheiro -= 15
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 12.51
+
+func _on_botaoSushi_pressed():
+	Global.dinheiro -= 15
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 12.51
+
+func _on_botaoLeite_pressed():
+	Global.dinheiro -= 5
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 4.17
+
+func _on_botaoBolo_pressed():
+	Global.dinheiro -= 10
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 8.34
+
+func _on_botaoHamb_pressed():
+	Global.dinheiro -= 10
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 8.34
+
+func _on_botaoRosquinha_pressed():
+	Global.dinheiro -= 5
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 4.17
+
+func _on_botaoMaca_pressed():
+	Global.dinheiro -= 5
+	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
+	Global.menosFeliz += 4.17
