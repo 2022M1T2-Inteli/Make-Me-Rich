@@ -86,10 +86,19 @@ func _process(delta):
 		
 	if boaNoite == true and areaCama == true:
 		get_tree().change_scene("res://boaNoite.tscn")
-#entra no computador
-func _on_botaoPC_pressed():
-	get_tree().change_scene("res://Cena_computador.tscn")
-
+		Global.posicao = "casa"
+	#faz spawnar no banco
+	if Global.posicao == "banco":
+		position.x = 1400
+		position.y = -468
+	#faz spawnar na fabrica
+	if Global.posicao == "fabrica":
+		position.x = 1252
+		position.y = -8218
+	#faz spawnar em casa
+	if Global.posicao == "casa":
+		position.x = 964
+		position.y = 599
 #abre o celular
 func _on_celIcon_pressed():
 	$CanvasLayer/celAberto.visible = true
@@ -424,3 +433,7 @@ func _on_botaoMaca_pressed():
 	Global.dinheiro -= 5
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 4.17
+
+
+func _on_caixaInvestir_pressed():
+	get_tree().change_scene("res://Cena_computador.tscn")

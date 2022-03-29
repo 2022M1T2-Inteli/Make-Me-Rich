@@ -23,3 +23,4 @@ func _on_Button_pressed():
 	Global.score = 0
 	Global.dinheiro += Global.valor
 	Global.valor = 0
+	Global.posicao = "fabrica"

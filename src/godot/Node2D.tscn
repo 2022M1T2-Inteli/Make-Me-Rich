@@ -132,29 +132,9 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 18 ) ],
 "loop": false,
-"name": "idle.frente",
+"name": "idle.costas",
 "speed": 0.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -162,15 +142,35 @@ animations = [ {
 "name": "idle.direita",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -505,6 +505,15 @@ animation = "SETAPOPUP"
 frame = 1
 playing = true
 
+[node name="caixaInvestir" type="Button" parent="BancoJudite"]
+margin_left = 127.219
+margin_top = 57.8716
+margin_right = 155.219
+margin_bottom = 77.8716
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="botaoVendedor" type="Button" parent="."]
 margin_left = 1306.0
 margin_top = -4439.0
@@ -692,8 +701,11 @@ frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 962, 584 )
+position = Vector2( 964, 599 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
 position = Vector2( 1, 10 )
@@ -1303,6 +1315,9 @@ margin_top = -8329.0
 margin_right = 1184.0
 margin_bottom = -7974.0
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
@@ -1317,6 +1332,7 @@ flat = true
 [connection signal="body_entered" from="BancoJudite/dentroBanco" to="personagem" method="_on_dentroBanco_body_entered"]
 [connection signal="body_entered" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_entered"]
 [connection signal="body_exited" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_exited"]
+[connection signal="pressed" from="BancoJudite/caixaInvestir" to="personagem" method="_on_caixaInvestir_pressed"]
 [connection signal="pressed" from="botaoVendedor" to="personagem" method="_on_botaoVendedor_pressed"]
 [connection signal="body_entered" from="MercadoJudite/dentroMercado" to="personagem" method="_on_dentroMercado_body_entered"]
 [connection signal="body_entered" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_entered"]
@@ -1356,7 +1372,6 @@ flat = true
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
-[connection signal="pressed" from="botaoPC" to="personagem" method="_on_botaoPC_pressed"]
 [connection signal="pressed" from="botaoLivro" to="personagem" method="_on_botaoLivro_pressed"]
 [connection signal="pressed" from="botaoMercado" to="personagem" method="_on_botaoMercado_pressed"]
 [connection signal="pressed" from="botaoFabrica" to="personagem" method="_on_botaoFabrica_pressed"]
