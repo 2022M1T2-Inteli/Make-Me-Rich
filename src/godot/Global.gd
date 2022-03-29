@@ -14,4 +14,4 @@ var score = 0
 var valor = 0
 var tempo = 0
 var meta = 50
-var posicao = "casa"
+var posicao 
