@@ -99,6 +99,10 @@ func _process(delta):
 	if Global.posicao == "casa":
 		position.x = 964
 		position.y = 599
+	#faz spawnar no cassino
+	if Global.posicao == "cassino":
+		position.x = 1348
+		position.y = -5891
 #abre o celular
 func _on_celIcon_pressed():
 	$CanvasLayer/celAberto.visible = true
@@ -434,6 +438,14 @@ func _on_botaoMaca_pressed():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 4.17
 
-
+#muda para a tela de investimentos
 func _on_caixaInvestir_pressed():
 	get_tree().change_scene("res://Cena_computador.tscn")
+
+#muda para o caça niquel
+func _on_botaoCassino1_pressed():
+	get_tree().change_scene("res://GameCassino.tscn.tscn")
+
+#muda para o caça niquel
+func _on_botaoCassino2_pressed():
+	get_tree().change_scene("res://GameCassino.tscn.tscn")

@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Wheel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://sair.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Slotmachine.gd" type="Script" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="CanvasLayer" parent="."]
+
+[node name="Slotmachine" type="Panel" parent="Control"]
+margin_left = 39.0
+margin_top = 14.0
+margin_right = 971.0
+margin_bottom = 586.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wheel" parent="Control/Slotmachine" instance=ExtResource( 1 )]
+margin_left = 113.0
+margin_top = 141.0
+margin_right = 197.0
+margin_bottom = 253.0
+
+[node name="Wheel3" parent="Control/Slotmachine" instance=ExtResource( 1 )]
+margin_left = 376.0
+margin_top = 148.0
+margin_right = 376.0
+margin_bottom = 148.0
+
+[node name="Wheel2" parent="Control/Slotmachine" instance=ExtResource( 1 )]
+anchor_right = 0.982
+anchor_bottom = 1.0
+margin_left = 215.0
+margin_top = 141.0
+margin_right = -700.224
+margin_bottom = -431.0
+
+[node name="Wheel4" parent="Control/Slotmachine" instance=ExtResource( 1 )]
+margin_left = 503.0
+margin_top = 155.0
+margin_right = 503.0
+margin_bottom = 155.0
+
+[node name="StartButton" type="Button" parent="Control/Slotmachine"]
+margin_left = 192.0
+margin_top = 424.0
+margin_right = 286.0
+margin_bottom = 452.0
+text = "START"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sair" type="Button" parent="Control/Slotmachine"]
+margin_left = 654.0
+margin_top = 485.0
+margin_right = 920.0
+margin_bottom = 566.0
+text = "sair"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="Panel" parent="Control"]
+material = SubResource( 1 )
+margin_left = 811.0
+margin_top = 45.0
+margin_right = 904.199
+margin_bottom = 85.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/Player"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 3.0
+margin_right = -0.199463
+margin_bottom = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/Player/CenterContainer"]
+margin_left = 47.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 27.0
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Control/Slotmachine/StartButton" to="Control/Slotmachine" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Control/Slotmachine/sair" to="Control/Slotmachine/sair" method="_on_sair_pressed"]

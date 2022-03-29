@@ -147,20 +147,10 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
@@ -171,6 +161,16 @@ animations = [ {
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -701,7 +701,7 @@ frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 964, 599 )
+position = Vector2( 1348, -5891 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -1319,6 +1319,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="botaoCassino1" type="Button" parent="."]
+margin_left = 1570.0
+margin_top = -5930.0
+margin_right = 1765.0
+margin_bottom = -5882.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="botaoCassino2" type="Button" parent="."]
+margin_left = 932.0
+margin_top = -5926.0
+margin_right = 1133.0
+margin_bottom = -5876.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="botaoFios" type="Button" parent="."]
+margin_left = 1483.0
+margin_top = -8100.0
+margin_right = 1621.0
+margin_bottom = -7994.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
@@ -1375,3 +1402,5 @@ __meta__ = {
 [connection signal="pressed" from="botaoLivro" to="personagem" method="_on_botaoLivro_pressed"]
 [connection signal="pressed" from="botaoMercado" to="personagem" method="_on_botaoMercado_pressed"]
 [connection signal="pressed" from="botaoFabrica" to="personagem" method="_on_botaoFabrica_pressed"]
+[connection signal="pressed" from="botaoCassino1" to="personagem" method="_on_botaoCassino1_pressed"]
+[connection signal="pressed" from="botaoCassino2" to="personagem" method="_on_botaoCassino2_pressed"]
