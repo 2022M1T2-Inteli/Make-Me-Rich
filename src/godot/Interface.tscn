@@ -9,9 +9,6 @@ script = ExtResource( 2 )
 [node name="MessageConteiner" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="MessageConteiner"]
 margin_left = 363.0
@@ -46,12 +43,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MessageConteiner"]
-margin_left = 251.0
-margin_top = 245.0
-margin_right = 775.0
-margin_bottom = 368.0
+margin_left = 327.0
+margin_top = 246.0
+margin_right = 690.0
+margin_bottom = 369.0
 text = "Clique nos produtos para embalá-los, 
-quanto mais embalar mais recursos ganhará"
+quanto mais embalar
+ mais recursos ganhará"
 align = 1
 valign = 1
 
@@ -83,9 +81,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 margin_left = 385.0
-margin_top = 79.0
+margin_top = 86.0
 margin_right = 630.0
-margin_bottom = 197.0
+margin_bottom = 204.0
 text = "Meta: Embalar 50 produtos
 "
 align = 1

@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Wheel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://sair.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Slotmachine.gd" type="Script" id=4]
+[ext_resource path="res://assets/slot (1).png" type="Texture" id=5]
+[ext_resource path="res://assets/seta_voltar.png" type="Texture" id=6]
+[ext_resource path="res://assets/slot.png" type="Texture" id=7]
+[ext_resource path="res://assets/botao verde.png" type="Texture" id=8]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
@@ -18,61 +22,75 @@ __meta__ = {
 [node name="Control" type="CanvasLayer" parent="."]
 
 [node name="Slotmachine" type="Panel" parent="Control"]
-margin_left = 39.0
-margin_top = 14.0
-margin_right = 971.0
-margin_bottom = 586.0
+margin_left = -50.0
+margin_top = 3.0
+margin_right = 1094.0
+margin_bottom = 641.0
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="SetaVoltar" type="Sprite" parent="Control/Slotmachine"]
+position = Vector2( 146, 84 )
+scale = Vector2( 0.0465, 0.03775 )
+texture = ExtResource( 6 )
+
+[node name="Slot" type="Sprite" parent="Control/Slotmachine"]
+position = Vector2( 543, 331 )
+scale = Vector2( 0.3025, 0.305375 )
+texture = ExtResource( 7 )
 
 [node name="Wheel" parent="Control/Slotmachine" instance=ExtResource( 1 )]
-margin_left = 113.0
-margin_top = 141.0
-margin_right = 197.0
-margin_bottom = 253.0
+margin_left = 413.0
+margin_top = 331.0
+margin_right = 497.0
+margin_bottom = 443.0
 
 [node name="Wheel3" parent="Control/Slotmachine" instance=ExtResource( 1 )]
-margin_left = 376.0
-margin_top = 148.0
-margin_right = 376.0
-margin_bottom = 148.0
+margin_left = 508.0
+margin_top = 331.0
+margin_right = 508.0
+margin_bottom = 331.0
 
 [node name="Wheel2" parent="Control/Slotmachine" instance=ExtResource( 1 )]
 anchor_right = 0.982
 anchor_bottom = 1.0
-margin_left = 215.0
-margin_top = 141.0
-margin_right = -700.224
-margin_bottom = -431.0
+margin_left = 602.0
+margin_top = 331.0
+margin_right = -313.224
+margin_bottom = -241.0
 
 [node name="Wheel4" parent="Control/Slotmachine" instance=ExtResource( 1 )]
-margin_left = 503.0
-margin_top = 155.0
-margin_right = 503.0
-margin_bottom = 155.0
+margin_left = 695.0
+margin_top = 333.0
+margin_right = 695.0
+margin_bottom = 333.0
 
 [node name="StartButton" type="Button" parent="Control/Slotmachine"]
-margin_left = 192.0
-margin_top = 424.0
-margin_right = 286.0
-margin_bottom = 452.0
+margin_left = 497.0
+margin_top = 454.0
+margin_right = 623.0
+margin_bottom = 495.0
 text = "START"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="BotaoVerde" type="Sprite" parent="Control/Slotmachine/StartButton"]
+position = Vector2( 63, 26 )
+scale = Vector2( 0.14475, 0.0975 )
+texture = ExtResource( 8 )
 
 [node name="sair" type="Button" parent="Control/Slotmachine"]
-margin_left = 654.0
-margin_top = 485.0
-margin_right = 920.0
-margin_bottom = 566.0
-text = "sair"
+margin_left = 129.0
+margin_top = 75.0
+margin_right = 167.0
+margin_bottom = 97.0
+flat = true
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Label" type="Label" parent="Control/Slotmachine"]
+margin_left = 525.0
+margin_top = 467.0
+margin_right = 588.0
+margin_bottom = 481.0
+rect_scale = Vector2( 1.30232, 1.19787 )
+text = "COMEÇAR"
 
 [node name="Player" type="Panel" parent="Control"]
 material = SubResource( 1 )
@@ -81,26 +99,25 @@ margin_top = 45.0
 margin_right = 904.199
 margin_bottom = 85.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="INSTRUÇÕES" type="Sprite" parent="Control/Player"]
+position = Vector2( 65, 168 )
+scale = Vector2( 0.249875, 0.23125 )
+texture = ExtResource( 5 )
 
 [node name="CenterContainer" type="CenterContainer" parent="Control/Player"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2.0
-margin_top = 3.0
-margin_right = -0.199463
-margin_bottom = 3.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 94.0
+margin_top = 61.0
+margin_right = 72.801
+margin_bottom = 55.0
 
 [node name="Label" type="Label" parent="Control/Player/CenterContainer"]
-margin_left = 47.0
-margin_top = 13.0
-margin_right = 47.0
-margin_bottom = 27.0
+margin_left = 36.0
+margin_top = 10.0
+margin_right = 36.0
+margin_bottom = 24.0
 align = 1
 valign = 1
 

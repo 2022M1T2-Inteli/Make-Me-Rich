@@ -1,14 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Sprites/maca.png" type="Texture" id=1]
+[ext_resource path="res://assets/coração icon.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Wheel.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/cereja.jpg" type="Texture" id=3]
-[ext_resource path="res://Sprites/banana.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/uva.png" type="Texture" id=5]
+[ext_resource path="res://assets/raio icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/pixil-frame-0 (15).png" type="Texture" id=4]
+[ext_resource path="res://assets/slot (2).png" type="Texture" id=5]
+[ext_resource path="res://assets/diamante icon.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Rolling",
 "speed": 5.0
@@ -20,13 +21,10 @@ margin_top = 142.635
 margin_right = 112.118
 margin_bottom = 142.635
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 5.88202, -18.635 )
-scale = Vector2( 0.139042, 0.182159 )
+position = Vector2( -0.11792, -84.635 )
+scale = Vector2( 0.039021, 0.0410795 )
 frames = SubResource( 6 )
 animation = "Rolling"
 frame = 2
@@ -40,5 +38,19 @@ text = "STOP"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.88202, 20.365 )
+scale = Vector2( 0.205714, 0.177143 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -36.118
+margin_top = 7.36501
+margin_right = 27.882
+margin_bottom = 21.365
+rect_scale = Vector2( 1.33817, 1.52868 )
+text = "STOP"
+align = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
