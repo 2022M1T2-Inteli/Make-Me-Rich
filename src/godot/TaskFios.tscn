@@ -1,0 +1,242 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Ponta_de_fio.png" type="Texture" id=1]
+[ext_resource path="res://Fio 1.gd" type="Script" id=2]
+[ext_resource path="res://Fio 2.gd" type="Script" id=3]
+[ext_resource path="res://Fio 3.gd" type="Script" id=4]
+[ext_resource path="res://Fio 4.gd" type="Script" id=5]
+[ext_resource path="res://Fundo_among_1.webp" type="Texture" id=6]
+[ext_resource path="res://Fio_amarelo.png" type="Texture" id=7]
+[ext_resource path="res://Area_Fio1.gd" type="Script" id=8]
+[ext_resource path="res://Fio_azul.png" type="Texture" id=9]
+[ext_resource path="res://Fio_vermelho.png" type="Texture" id=10]
+[ext_resource path="res://Fio_roxo.png" type="Texture" id=11]
+[ext_resource path="res://Verde_claro.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 45.5, 13 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 36.5, 12.5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 51, 11.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 47, 12.5 )
+
+[node name="taskFios" type="Node2D"]
+position = Vector2( 0, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -4.0
+margin_top = -7.0
+margin_right = 1019.0
+margin_bottom = 597.0
+
+[node name="FundoAmong1" type="Sprite" parent="TextureRect"]
+position = Vector2( 513, 319 )
+scale = Vector2( 1.0859, 0.661718 )
+texture = ExtResource( 6 )
+
+[node name="Area_Fio1" type="Area2D" parent="."]
+position = Vector2( 896, 386 )
+script = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio1"]
+polygon = PoolVector2Array( -44, -17, -47, 13, 64, 12, 65, -16 )
+
+[node name="Area_Fio2" type="Area2D" parent="."]
+position = Vector2( 896, 251 )
+scale = Vector2( 1.03366, 1 )
+script = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio2"]
+scale = Vector2( 0.971425, -0.866032 )
+polygon = PoolVector2Array( -45, -19, -47, 13, 64, 12, 67, -19 )
+
+[node name="Area_Fio3" type="Area2D" parent="."]
+position = Vector2( 891, 139 )
+script = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio3"]
+polygon = PoolVector2Array( -45, -19, -47, 13, 64, 12, 67, -19 )
+
+[node name="Area_Fio4" type="Area2D" parent="."]
+position = Vector2( 896, 517 )
+script = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio4"]
+polygon = PoolVector2Array( -45, -19, -47, 13, -6, 14, 64, 12, 67, -19 )
+
+[node name="Fio 1" type="KinematicBody2D" parent="."]
+position = Vector2( 117, 124 )
+script = ExtResource( 2 )
+
+[node name="Button1" type="Button" parent="Fio 1"]
+margin_left = -40.0
+margin_top = -31.0
+margin_right = 48.0
+margin_bottom = 46.0
+action_mode = 0
+keep_pressed_outside = true
+flat = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fio 1"]
+position = Vector2( 5.5, 6 )
+shape = SubResource( 5 )
+
+[node name="FioAmarelo" type="Sprite" parent="Fio 1"]
+position = Vector2( 7, 5 )
+scale = Vector2( 0.0807292, 0.0354938 )
+texture = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Fio 1"]
+
+[node name="FioAmarelo2" type="Sprite" parent="Fio 1/CanvasLayer"]
+visible = false
+position = Vector2( 478.131, 258.707 )
+rotation = 0.310669
+scale = Vector2( 0.748338, -0.0331014 )
+texture = ExtResource( 7 )
+
+[node name="PontaDeFio" type="Sprite" parent="Fio 1/CanvasLayer"]
+visible = false
+position = Vector2( 869.917, 384.259 )
+rotation = 0.310669
+scale = Vector2( 0.0371632, -0.0324765 )
+texture = ExtResource( 1 )
+
+[node name="VerdeClaro" type="Sprite" parent="Fio 1/CanvasLayer"]
+visible = false
+position = Vector2( 983, 364 )
+scale = Vector2( 0.057129, -0.0150889 )
+texture = ExtResource( 12 )
+
+[node name="Fio 2" type="KinematicBody2D" parent="."]
+position = Vector2( 126, 244 )
+script = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="Fio 2"]
+margin_left = -39.0
+margin_top = -36.0
+margin_right = 43.0
+margin_bottom = 42.0
+action_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fio 2"]
+position = Vector2( -14.5, 10.5 )
+shape = SubResource( 6 )
+
+[node name="FioAzul" type="Sprite" parent="Fio 2"]
+position = Vector2( -1.375, 14.3125 )
+scale = Vector2( 0.0857205, 0.0441744 )
+texture = ExtResource( 9 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Fio 2"]
+
+[node name="FioAzul2" type="Sprite" parent="Fio 2/CanvasLayer"]
+visible = false
+position = Vector2( 477.75, 259 )
+scale = Vector2( 0.719184, 0.0401235 )
+texture = ExtResource( 9 )
+
+[node name="VerdeClaro" type="Sprite" parent="Fio 2/CanvasLayer"]
+visible = false
+position = Vector2( 984, 236 )
+scale = Vector2( 0.0571288, -0.0141123 )
+texture = ExtResource( 12 )
+
+[node name="Fio 3" type="KinematicBody2D" parent="."]
+position = Vector2( 122, 389 )
+script = ExtResource( 4 )
+
+[node name="Button3" type="Button" parent="Fio 3"]
+margin_left = -54.0
+margin_top = -18.0
+margin_right = 52.0
+margin_bottom = 13.0
+action_mode = 0
+flat = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fio 3"]
+position = Vector2( -4, -5.5 )
+shape = SubResource( 7 )
+
+[node name="FioVermelho" type="Sprite" parent="Fio 3"]
+position = Vector2( -3, -4.5 )
+scale = Vector2( 0.0868055, 0.0385803 )
+texture = ExtResource( 10 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Fio 3"]
+
+[node name="VerdeClaro" type="Sprite" parent="Fio 3/CanvasLayer"]
+visible = false
+position = Vector2( 983, 107 )
+scale = Vector2( 0.0576172, -0.0165059 )
+texture = ExtResource( 12 )
+
+[node name="FioVermelho" type="Sprite" parent="Fio 3/CanvasLayer"]
+visible = false
+position = Vector2( 472.38, 254.162 )
+rotation = -0.310669
+scale = Vector2( 0.738038, -0.0353156 )
+texture = ExtResource( 10 )
+
+[node name="PontaDeFio" type="Sprite" parent="Fio 3/CanvasLayer"]
+visible = false
+position = Vector2( 869.137, 128.525 )
+rotation = -0.181514
+scale = Vector2( 0.0376473, -0.0342409 )
+texture = ExtResource( 1 )
+
+[node name="Fio 4" type="KinematicBody2D" parent="."]
+position = Vector2( 110, 506 )
+script = ExtResource( 5 )
+
+[node name="FioRoxo" type="Sprite" parent="Fio 4"]
+position = Vector2( 6.25, 4.99997 )
+scale = Vector2( 0.0863715, 0.0401235 )
+texture = ExtResource( 11 )
+
+[node name="Button4" type="Button" parent="Fio 4"]
+margin_left = -31.0
+margin_top = -50.0
+margin_right = 44.0
+margin_bottom = 31.0
+action_mode = 0
+flat = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fio 4"]
+position = Vector2( 5, 5.5 )
+shape = SubResource( 8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Fio 4"]
+
+[node name="FioRoxo2" type="Sprite" parent="Fio 4/CanvasLayer"]
+visible = false
+position = Vector2( 478.25, 514 )
+scale = Vector2( 0.711372, 0.0401234 )
+texture = ExtResource( 11 )
+
+[node name="VerdeClaro" type="Sprite" parent="Fio 4/CanvasLayer"]
+visible = false
+position = Vector2( 984, 491 )
+scale = Vector2( 0.057129, -0.0150889 )
+texture = ExtResource( 12 )
+
+[connection signal="body_entered" from="Area_Fio1" to="Fio 1" method="_on_Area_Fio1_body_entered"]
+[connection signal="body_entered" from="Area_Fio2" to="Fio 2" method="_on_Area_Fio2_body_entered"]
+[connection signal="body_entered" from="Area_Fio3" to="Fio 3" method="_on_Area_Fio3_body_entered"]
+[connection signal="body_entered" from="Area_Fio4" to="Fio 4" method="_on_Area_Fio4_body_entered"]
+[connection signal="pressed" from="Fio 1/Button1" to="Fio 1" method="_on_Button_1_pressed"]
+[connection signal="pressed" from="Fio 2/Button2" to="Fio 2" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Fio 3/Button3" to="Fio 3" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Fio 4/Button4" to="Fio 4" method="_on_Button4_pressed"]
