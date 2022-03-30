@@ -83,6 +83,12 @@ func _process(delta):
 		$CanvasLayer/textoVendedor.visible = false
 		$CanvasLayer/nomeVendedor.visible = false
 		$CanvasLayer/fundoNome.visible = false
+	if areaLucas == true and lucas % 2 == 1:
+		$CanvasLayer/fundoLucas.visible = true
+		$CanvasLayer/falalucas.visible = true
+	elif areaLucas == false or lucas % 2 == 0:
+		$CanvasLayer/fundoLucas.visible = false
+		$CanvasLayer/falalucas.visible = false 
 		
 	if boaNoite == true and areaCama == true:
 		get_tree().change_scene("res://boaNoite.tscn")
@@ -453,3 +459,27 @@ func _on_botaoCassino1_pressed():
 #muda para o caça niquel
 func _on_botaoCassino2_pressed():
 	get_tree().change_scene("res://GameCassino.tscn.tscn")
+
+
+
+var lucas = 0
+
+func _on_lucasnpc_pressed():
+		lucas += 1
+
+
+func _on_botaoPC_pressed():
+	$CanvasLayer/computador.visible = true
+	
+func _on_setasairpc_pressed():
+	$CanvasLayer/computador.visible = false 
+
+var areaLucas = false
+func _on_areaLucas_body_entered(body):
+	areaLucas = true 
+	
+
+
+func _on_areaLucas_body_exited(body):
+	areaLucas = false
+	
