@@ -100,8 +100,8 @@ func _process(delta):
 		Global.posicao = null
 	#faz spawnar na fabrica
 	if Global.posicao == "fabrica":
-		position.x = 1252
-		position.y = -8218
+		position.x = 1320
+		position.y = -8062
 		Global.posicao = null
 	#faz spawnar em casa
 	if Global.posicao == "casa":
@@ -364,13 +364,11 @@ func _on_nextLivro_pressed():
 		$CanvasLayer/nextLivro.visible = false
 		cont = 0
 		
-
-
-
+#Cria uma váriavel booleana que muda quando o botão da cama é pressionado, volta ao normal quando muda de cena
 var boaNoite = false
 func _on_botaoBoaNoite_pressed():
 	boaNoite = true  
-	
+#Cria uma variável booleana que muda quando entra em uma área perto da cama, e muda de novo qando sai
 var areaCama = false
 func _on_areaCama_body_entered(body):
 	areaCama = true
@@ -403,7 +401,6 @@ func _on_sairMercado_pressed():
 	$CanvasLayer/botaoHamb.visible = false
 	$CanvasLayer/botaoRosquinha.visible = false
 	$CanvasLayer/botaoMaca.visible = false
-
 
 func _on_botaoFabrica_pressed():
 	get_tree().change_scene("res://Interface.tscn")
@@ -450,7 +447,7 @@ func _on_botaoMaca_pressed():
 
 #muda para a tela de investimentos
 func _on_caixaInvestir_pressed():
-	get_tree().change_scene("res://GameCassino.tscn")
+	get_tree().change_scene("res://Cena_computador.tscn")
 
 #muda para o caça niquel
 func _on_botaoCassino1_pressed():
@@ -460,13 +457,9 @@ func _on_botaoCassino1_pressed():
 func _on_botaoCassino2_pressed():
 	get_tree().change_scene("res://GameCassino.tscn.tscn")
 
-
-
 var lucas = 0
-
 func _on_lucasnpc_pressed():
 		lucas += 1
-
 
 func _on_botaoPC_pressed():
 	$CanvasLayer/computador.visible = true
@@ -478,8 +471,8 @@ var areaLucas = false
 func _on_areaLucas_body_entered(body):
 	areaLucas = true 
 	
-
-
 func _on_areaLucas_body_exited(body):
 	areaLucas = false
 	
+func _on_botaoFios_pressed():
+	get_tree().change_scene("res://TaskFios.tscn")

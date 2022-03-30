@@ -143,40 +143,40 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.frente",
+"name": "idle.direita",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -442,6 +442,7 @@ position = Vector2( -117.305, -234.313 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
@@ -460,7 +461,6 @@ polygon = PoolVector2Array( 53.3207, 199.083, 187.853, 196.785, 187.032, 330.018
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrabalhoCenário/StaticBody2D2"]
 position = Vector2( 117.266, 258.052 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 46 )
 
 [node name="botaoGui" type="Button" parent="."]
@@ -531,7 +531,6 @@ position = Vector2( -19.9551, 33.9248 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -583,7 +582,6 @@ position = Vector2( 342.123, -183.938 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
@@ -591,7 +589,6 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="Fundo2" type="Sprite" parent="."]
@@ -649,7 +646,6 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="."]
@@ -718,7 +714,6 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -726,11 +721,10 @@ position = Vector2( -184.995, -284.031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 1056, 604 )
+position = Vector2( 1055, 574 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -1467,3 +1461,4 @@ margin_bottom = -7994.0
 [connection signal="pressed" from="botaoFabrica" to="personagem" method="_on_botaoFabrica_pressed"]
 [connection signal="pressed" from="botaoCassino1" to="personagem" method="_on_botaoCassino1_pressed"]
 [connection signal="pressed" from="botaoCassino2" to="personagem" method="_on_botaoCassino2_pressed"]
+[connection signal="pressed" from="botaoFios" to="personagem" method="_on_botaoFios_pressed"]
