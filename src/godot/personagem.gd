@@ -463,9 +463,16 @@ func _on_lucasnpc_pressed():
 
 func _on_botaoPC_pressed():
 	$CanvasLayer/computador.visible = true
-	
+	$CanvasLayer/botaoEmail.visible = true
+	$CanvasLayer/computador/Cartapcicon.visible = true
+func _on_botaoEmail_pressed():
+	$CanvasLayer/computador/Cartapcicon.visible = false
+	$CanvasLayer/botaoEmail.visible = false
+	$CanvasLayer/computador/obj1.visible = true
+	$CanvasLayer/computador/Emailpc.visible = true
 func _on_setasairpc_pressed():
 	$CanvasLayer/computador.visible = false 
+	
 
 var areaLucas = false
 func _on_areaLucas_body_entered(body):
@@ -476,3 +483,6 @@ func _on_areaLucas_body_exited(body):
 	
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
+
+
+

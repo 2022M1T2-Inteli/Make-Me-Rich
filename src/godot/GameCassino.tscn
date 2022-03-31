@@ -114,9 +114,9 @@ margin_right = 72.801
 margin_bottom = 55.0
 
 [node name="Label" type="Label" parent="Control/Player/CenterContainer"]
-margin_left = 36.0
+margin_left = 35.0
 margin_top = 10.0
-margin_right = 36.0
+margin_right = 35.0
 margin_bottom = 24.0
 align = 1
 valign = 1
