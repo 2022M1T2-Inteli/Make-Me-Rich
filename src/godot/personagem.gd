@@ -30,6 +30,8 @@ func _ready():
 	yield (get_tree().create_timer(1),"timeout")
 	$CanvasLayer/storyTelling.visible = true
 	$CanvasLayer/storyTelling/AnimationPlayer.play("storytelling")
+	if Global.contador > 1:
+		$CanvasLayer/storyTelling.visible = false
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	Global.contador += 1
@@ -90,9 +92,11 @@ func _process(delta):
 	if areaLucas == true and lucas % 2 == 1:
 		$CanvasLayer/fundoLucas.visible = true
 		$CanvasLayer/falalucas.visible = true
+		$CanvasLayer/rostoLucas.visible = true
 	elif areaLucas == false or lucas % 2 == 0:
 		$CanvasLayer/fundoLucas.visible = false
 		$CanvasLayer/falalucas.visible = false 
+		$CanvasLayer/rostoLucas.visible = false
 		
 	if boaNoite == true and areaCama == true:
 		get_tree().change_scene("res://boaNoite.tscn")
@@ -459,7 +463,7 @@ func _on_botaoCassino1_pressed():
 
 #muda para o caça niquel
 func _on_botaoCassino2_pressed():
-	get_tree().change_scene("res://GameCassino.tscn.tscn")
+	get_tree().change_scene("res://GameCassino.tscn")
 
 var lucas = 0
 func _on_lucasnpc_pressed():
@@ -476,7 +480,7 @@ func _on_botaoEmail_pressed():
 	$CanvasLayer/computador/Emailpc.visible = true
 func _on_setasairpc_pressed():
 	$CanvasLayer/computador.visible = false 
-	
+	$CanvasLayer/botaoEmail.visible = false
 
 var areaLucas = false
 func _on_areaLucas_body_entered(body):

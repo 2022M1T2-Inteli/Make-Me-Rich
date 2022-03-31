@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Wheel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -8,9 +8,13 @@
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=6]
 [ext_resource path="res://assets/slot.png" type="Texture" id=7]
 [ext_resource path="res://assets/botao verde.png" type="Texture" id=8]
+[ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 9 )
 
 [node name="Game" type="Control"]
 anchor_right = 1.0
@@ -108,16 +112,23 @@ texture = ExtResource( 5 )
 [node name="CenterContainer" type="CenterContainer" parent="Control/Player"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 94.0
-margin_top = 61.0
-margin_right = 72.801
-margin_bottom = 55.0
+margin_left = 92.0
+margin_top = 57.0
+margin_right = 70.801
+margin_bottom = 51.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Control/Player/CenterContainer"]
-margin_left = 35.0
-margin_top = 10.0
-margin_right = 35.0
-margin_bottom = 24.0
+margin_left = 11.0
+margin_top = 14.0
+margin_right = 59.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "dinheiro"
 align = 1
 valign = 1
 

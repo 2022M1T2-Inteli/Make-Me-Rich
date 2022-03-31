@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -64,6 +64,7 @@
 [ext_resource path="res://assets/cartapcicon.png" type="Texture" id=62]
 [ext_resource path="res://assets/emailpc.png" type="Texture" id=63]
 [ext_resource path="res://assets/lousaHistoria.jpg" type="Texture" id=64]
+[ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -146,35 +147,35 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
@@ -267,7 +268,8 @@ font_data = ExtResource( 24 )
 font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=47]
-size = 38
+size = 52
+extra_spacing_top = 19
 font_data = ExtResource( 24 )
 
 [sub_resource type="Animation" id=48]
@@ -1353,7 +1355,6 @@ __meta__ = {
 }
 
 [node name="Cartapcicon" type="Sprite" parent="personagem/CanvasLayer/computador"]
-visible = false
 position = Vector2( 9.39526, -180.531 )
 scale = Vector2( 0.309747, 0.309747 )
 texture = ExtResource( 62 )
@@ -1366,10 +1367,10 @@ texture = ExtResource( 63 )
 
 [node name="obj1" type="Label" parent="personagem/CanvasLayer/computador"]
 visible = false
-margin_left = -300.646
-margin_top = -277.533
-margin_right = 507.354
-margin_bottom = -5.53302
+margin_left = -342.924
+margin_top = -293.7
+margin_right = 465.076
+margin_bottom = 39.3
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 47 )
 text = "1. Vá à faculdade e tenha sua
@@ -1383,6 +1384,11 @@ execute sua primeira função!
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="rostoLucas" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 1167, 600 )
+texture = ExtResource( 65 )
 
 [node name="fundoLucas" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
@@ -1468,8 +1474,8 @@ stream = ExtResource( 21 )
 
 [node name="botaoPC" type="Button" parent="."]
 margin_left = 796.0
-margin_top = 476.0
-margin_right = 838.0
+margin_top = 474.0
+margin_right = 839.0
 margin_bottom = 498.0
 __meta__ = {
 "_edit_use_anchors_": false

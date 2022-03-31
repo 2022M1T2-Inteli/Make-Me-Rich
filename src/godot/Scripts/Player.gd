@@ -5,7 +5,7 @@ func _ready():
 
 
 func refresh_label():
-	get_node("CenterContainer/Label").text = ("Money: " + String(Global.dinheiro))
+	get_node("CenterContainer/Label").text = ("R$ " + String(Global.dinheiro))
 
 func add_money(gain):
 	Global.dinheiro += gain

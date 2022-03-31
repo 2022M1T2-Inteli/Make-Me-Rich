@@ -26,6 +26,3 @@ func _process(delta):
 		Global.horas = 00
 		Global.dia += 1
 		
-	
-	
-
