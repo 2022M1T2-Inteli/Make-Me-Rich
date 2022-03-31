@@ -26,6 +26,10 @@ func _ready():
 	if Global.selecPersonagem == 4:
 		$AnimatedSpriteD.visible = true
 	$CanvasLayer/happyBar.percent_visible = false 
+	
+	yield (get_tree().create_timer(1),"timeout")
+	$CanvasLayer/storyTelling.visible = true
+	$CanvasLayer/storyTelling/AnimationPlayer.play("storytelling")
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	Global.contador += 1
@@ -484,5 +488,5 @@ func _on_areaLucas_body_exited(body):
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
 
-
-
+func _on_botaoOk_pressed():
+	$CanvasLayer/storyTelling/AnimationPlayer.play_backwards("storytelling")
