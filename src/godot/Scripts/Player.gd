@@ -1,21 +1,23 @@
 extends Panel
 
+var money = Global.dinheiro
+
 func _ready():
 	refresh_label()
 
 
 func refresh_label():
-	$CenterContainer/Label.text = ("Money: " + String(Global.dinheiro))
+	get_node("CenterContainer/Label").text = ("Money: " + String(money))
 
 func add_money(gain):
-	Global.dinheiro += gain
+	money += gain
 	refresh_label()
 
 func sub_money(loss):
-	Global.dinheiro -= loss
-	if Global.dinheiro < 0: Global.dinheiro = 0
+	money -= loss
+	if money < 0: money = 0
 	refresh_label()
 
 func can_pay(cost):
-	var can = (Global.dinheiro - cost) >= 0
+	var can = (money - cost) >= 0
 	return can

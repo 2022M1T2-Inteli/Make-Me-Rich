@@ -27,9 +27,6 @@ margin_top = 3.0
 margin_right = 1094.0
 margin_bottom = 641.0
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SetaVoltar" type="Sprite" parent="Control/Slotmachine"]
 position = Vector2( 146, 84 )
@@ -86,9 +83,6 @@ margin_right = 167.0
 margin_bottom = 97.0
 flat = true
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Control/Slotmachine"]
 margin_left = 525.0
@@ -97,9 +91,6 @@ margin_right = 588.0
 margin_bottom = 481.0
 rect_scale = Vector2( 1.30232, 1.19787 )
 text = "COMEÇAR"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Player" type="Panel" parent="Control"]
 material = SubResource( 1 )
@@ -121,14 +112,11 @@ margin_left = 94.0
 margin_top = 61.0
 margin_right = 72.801
 margin_bottom = 55.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Control/Player/CenterContainer"]
-margin_left = 35.0
+margin_left = 36.0
 margin_top = 10.0
-margin_right = 35.0
+margin_right = 36.0
 margin_bottom = 24.0
 align = 1
 valign = 1
