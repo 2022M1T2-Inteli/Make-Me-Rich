@@ -21,6 +21,9 @@ margin_top = 142.635
 margin_right = 112.118
 margin_bottom = 142.635
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.11792, -84.635 )
@@ -52,5 +55,8 @@ margin_bottom = 21.365
 rect_scale = Vector2( 1.33817, 1.52868 )
 text = "STOP"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
