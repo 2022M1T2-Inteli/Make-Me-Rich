@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=107 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -14,7 +14,7 @@
 [ext_resource path="res://sprites_player/andando.costas_2.png" type="Texture" id=12]
 [ext_resource path="res://sprites_player/andando.direita_2.png" type="Texture" id=13]
 [ext_resource path="res://sprites_player/parado.direita.png" type="Texture" id=14]
-[ext_resource path="res://assets/celIcon.png" type="Texture" id=15]
+[ext_resource path="res://assets/iconemapa1.png" type="Texture" id=15]
 [ext_resource path="res://assets/banco_judite.jpg" type="Texture" id=16]
 [ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
 [ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
@@ -24,20 +24,20 @@
 [ext_resource path="res://assets/universidade_judite.jpg" type="Texture" id=22]
 [ext_resource path="res://Node2D.gd" type="Script" id=23]
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=24]
-[ext_resource path="res://Captura de tela 2022-02-22 144254.png" type="Texture" id=25]
-[ext_resource path="res://assets/seta.png" type="Texture" id=26]
+[ext_resource path="res://assets/fundoRelogio.png" type="Texture" id=25]
+[ext_resource path="res://assets/RELOGIO.png" type="Texture" id=26]
 [ext_resource path="res://assets/npc professora.png" type="Texture" id=27]
 [ext_resource path="res://assets/Cenário do mercado.jpeg" type="Texture" id=28]
 [ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=29]
-[ext_resource path="res://assets/celMapa.png" type="Texture" id=30]
-[ext_resource path="res://assets/celAberto.png" type="Texture" id=31]
+[ext_resource path="res://assets/mapamovi1.png" type="Texture" id=30]
+[ext_resource path="res://assets/MAPA ABERTO.png" type="Texture" id=31]
 [ext_resource path="res://assets/oLÁ, SEJA BEM VINDO A SANTA MÔNICA JUDITHY, MEU NOME É.png" type="Texture" id=32]
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
 [ext_resource path="res://assets/instrucaoNpc.png" type="Texture" id=35]
 [ext_resource path="res://assets/selecionarNome.png" type="Texture" id=36]
 [ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
-[ext_resource path="res://assets/fundo relogio.png" type="Texture" id=38]
+[ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
 [ext_resource path="res://assets/venderdor_npc.png" type="Texture" id=40]
 [ext_resource path="res://assets/notifcação.png" type="Texture" id=41]
@@ -52,7 +52,7 @@
 [ext_resource path="res://assets/investimentos.png" type="Texture" id=50]
 [ext_resource path="res://assets/jurosCompostos.png" type="Texture" id=51]
 [ext_resource path="res://assets/incentivados.png" type="Texture" id=52]
-[ext_resource path="res://assets/2492741-cara-feliz-emoji-social-media-grátis-vetor.png" type="Texture" id=53]
+[ext_resource path="res://assets/rostofeliz.png" type="Texture" id=53]
 [ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=54]
 [ext_resource path="res://assets/mercado.png" type="Texture" id=55]
 [ext_resource path="res://assets/comida (7).png" type="Texture" id=56]
@@ -65,6 +65,7 @@
 [ext_resource path="res://assets/emailpc.png" type="Texture" id=63]
 [ext_resource path="res://assets/lousaHistoria.jpg" type="Texture" id=64]
 [ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
+[ext_resource path="res://assets/fundobarrafunções.png" type="Texture" id=66]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -142,14 +143,24 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "idle.esquerda",
+"name": "walk.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -157,9 +168,9 @@ animations = [ {
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "walk.frente",
+"name": "idle.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
@@ -171,16 +182,6 @@ animations = [ {
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -212,14 +213,14 @@ size = 26
 font_data = ExtResource( 24 )
 
 [sub_resource type="StyleBoxFlat" id=41]
-bg_color = Color( 0.4, 0.831373, 0.243137, 1 )
+bg_color = Color( 0.168627, 0.152941, 0.239216, 1 )
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id=42]
-bg_color = Color( 0.556863, 0.0901961, 0.0901961, 1 )
+bg_color = Color( 0.647059, 0.290196, 0.305882, 1 )
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -303,7 +304,7 @@ __meta__ = {
 }
 
 [node name="Fundo" type="Sprite" parent="."]
-position = Vector2( 1460, -2129 )
+position = Vector2( 1481, -2111 )
 scale = Vector2( 2.92802, 26.5777 )
 texture = ExtResource( 20 )
 
@@ -806,33 +807,44 @@ script = ExtResource( 2 )
 [node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
 
 [node name="Sprite" type="Sprite" parent="personagem/CanvasLayerDinheiro"]
-position = Vector2( 70, 33.5 )
-scale = Vector2( 0.0949416, 0.0577689 )
+position = Vector2( 95, 57 )
+scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 25 )
 
 [node name="DinheiroPlayer" type="Label" parent="personagem/CanvasLayerDinheiro"]
-margin_left = 18.0
-margin_top = 24.0
-margin_right = 134.0
-margin_bottom = 46.0
+margin_left = 64.0
+margin_top = 18.0
+margin_right = 129.0
+margin_bottom = 41.0
 custom_fonts/font = SubResource( 15 )
-text = "DINHEIRO"
+text = "MONEY
+"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="personagem"]
 
+[node name="Moneysimb" type="Sprite" parent="personagem/CanvasLayer"]
+position = Vector2( 23, 27 )
+scale = Vector2( 0.030125, 0.0324167 )
+texture = ExtResource( 38 )
+
+[node name="Relogio" type="Sprite" parent="personagem/CanvasLayer"]
+position = Vector2( 194, 32 )
+scale = Vector2( 0.0227677, 0.0210425 )
+texture = ExtResource( 26 )
+
 [node name="happyBar" type="ProgressBar" parent="personagem/CanvasLayer"]
-margin_left = 422.0
-margin_top = 26.0
-margin_right = 602.0
-margin_bottom = 51.0
+margin_left = 424.0
+margin_top = 15.0
+margin_right = 604.0
+margin_bottom = 35.0
 custom_styles/fg = SubResource( 41 )
 custom_styles/bg = SubResource( 42 )
 step = 1.0
 value = 50.0
 
 [node name="caraFeliz" type="Sprite" parent="personagem/CanvasLayer/happyBar"]
-position = Vector2( 202, 13 )
-scale = Vector2( 0.0278061, 0.0278061 )
+position = Vector2( -25, 13 )
+scale = Vector2( 0.0173333, 0.0158629 )
 texture = ExtResource( 53 )
 
 [node name="fundoMario" type="Sprite" parent="personagem/CanvasLayer"]
@@ -873,65 +885,58 @@ scale = Vector2( 0.0950388, 0.0438247 )
 texture = ExtResource( 20 )
 
 [node name="Movi_S" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 120.0
-margin_top = 530.0
-margin_right = 165.0
-margin_bottom = 575.0
-text = "S"
+margin_left = 122.0
+margin_top = 517.0
+margin_right = 167.0
+margin_bottom = 562.0
+flat = true
 
 [node name="Movi_W" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 120.0
-margin_top = 410.0
-margin_right = 165.0
-margin_bottom = 455.0
-text = "W"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 124.0
+margin_top = 429.0
+margin_right = 169.0
+margin_bottom = 474.0
+flat = true
 
 [node name="Movi_D" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 180.0
-margin_top = 475.0
-margin_right = 225.0
-margin_bottom = 520.0
-text = "D"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 169.0
+margin_top = 473.0
+margin_right = 214.0
+margin_bottom = 518.0
+flat = true
 
 [node name="Movi_A" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 60.0
-margin_top = 475.0
-margin_right = 105.0
-margin_bottom = 520.0
-text = "A"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 77.0
+margin_top = 473.0
+margin_right = 122.0
+margin_bottom = 518.0
+flat = true
 
 [node name="botaoEsquerdo" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 97, 497 )
-rotation = 1.5708
-scale = Vector2( 0.805, 0.745 )
-texture = ExtResource( 26 )
+position = Vector2( 101, 493 )
+rotation = 3.14464
+scale = Vector2( 0.038, 0.038 )
+texture = ExtResource( 30 )
 flip_v = true
 
 [node name="botaoBaixo" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 144, 539 )
-scale = Vector2( 0.79, 0.78 )
-texture = ExtResource( 26 )
+position = Vector2( 143, 538 )
+rotation = 1.56864
+scale = Vector2( 0.038, 0.038 )
+texture = ExtResource( 30 )
 flip_v = true
 
 [node name="botaoDireita" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 188, 499 )
-rotation = 1.5708
-scale = Vector2( 0.805, 0.745 )
-texture = ExtResource( 26 )
+position = Vector2( 190, 494 )
+rotation = -0.0110049
+scale = Vector2( 0.038, 0.038 )
+texture = ExtResource( 30 )
 
 [node name="botaoCima" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 143, 449 )
-scale = Vector2( 0.805, 0.81 )
-texture = ExtResource( 26 )
+position = Vector2( 144, 453 )
+rotation = -1.57695
+scale = Vector2( 0.038, 0.038 )
+texture = ExtResource( 30 )
 
 [node name="nomeVendedor" type="Label" parent="personagem/CanvasLayer"]
 visible = false
@@ -1030,18 +1035,13 @@ visible = false
 position = Vector2( 1170, 602 )
 texture = ExtResource( 29 )
 
-[node name="celIcon" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 911.0
-margin_top = 28.0
-margin_right = 946.0
-margin_bottom = 96.0
-
 [node name="celIconn" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 926, 61 )
-scale = Vector2( 0.163715, 0.177312 )
+position = Vector2( 992, 25 )
+scale = Vector2( 0.0365391, 0.0364193 )
 texture = ExtResource( 15 )
 
 [node name="Panel" type="Panel" parent="personagem/CanvasLayer/celIconn"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_scale = Vector2( 1e-05, 1e-05 )
@@ -1053,41 +1053,35 @@ __meta__ = {
 anims/popUp = SubResource( 34 )
 
 [node name="notificação" type="Sprite" parent="personagem/CanvasLayer/celIconn/Panel"]
+visible = false
 position = Vector2( 0, -21.7144 )
 scale = Vector2( 0.189906, 0.189906 )
 texture = ExtResource( 41 )
 
-[node name="sairMapa" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 456.0
-margin_top = 484.0
-margin_right = 519.0
-margin_bottom = 525.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="boaoMapa" type="Button" parent="personagem/CanvasLayer"]
+margin_left = 975.0
+margin_top = 7.0
+margin_right = 1012.0
+margin_bottom = 49.0
+flat = true
 
-[node name="celCamMapa" type="Button" parent="personagem/CanvasLayer"]
+[node name="mapaAberto" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-margin_left = 411.0
-margin_top = 169.0
-margin_right = 574.0
-margin_bottom = 230.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="celMapa" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 443, 247 )
-scale = Vector2( 0.338355, 0.338355 )
-texture = ExtResource( 30 )
-
-[node name="celAberto" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 444, 249 )
-scale = Vector2( 0.345207, 0.345207 )
+position = Vector2( 492, 310 )
+scale = Vector2( 0.186604, 0.158937 )
 texture = ExtResource( 31 )
+
+[node name="sairMapa" type="Button" parent="personagem/CanvasLayer/mapaAberto"]
+margin_left = -1077.0
+margin_top = -1158.0
+margin_right = -975.0
+margin_bottom = -1019.0
+flat = true
+
+[node name="SetaVoltar" type="Sprite" parent="personagem/CanvasLayer/mapaAberto"]
+position = Vector2( -1028.92, -1094.77 )
+scale = Vector2( 0.0870828, 0.0998824 )
+texture = ExtResource( 61 )
 
 [node name="botaoTutorial" type="Button" parent="personagem/CanvasLayer"]
 visible = false
@@ -1149,28 +1143,30 @@ __meta__ = {
 }
 
 [node name="relogio" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 213, 31 )
-scale = Vector2( 0.470599, 0.428333 )
-texture = ExtResource( 38 )
+position = Vector2( 266, 56 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 25 )
 
 [node name="dia" type="Label" parent="personagem/CanvasLayer"]
-margin_left = 198.0
-margin_top = 13.0
-margin_right = 238.0
-margin_bottom = 27.0
+margin_left = 243.0
+margin_top = 15.0
+margin_right = 283.0
+margin_bottom = 29.0
 custom_fonts/font = SubResource( 32 )
 text = "dia"
 
 [node name="hora" type="Label" parent="personagem/CanvasLayer"]
-margin_left = 198.0
+margin_left = 242.0
 margin_top = 29.0
-margin_right = 238.0
+margin_right = 282.0
 margin_bottom = 43.0
 custom_fonts/font = SubResource( 33 )
 text = "hora"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Fundobarrafunções" type="Sprite" parent="personagem/CanvasLayer"]
+position = Vector2( 476, 29 )
+scale = Vector2( 1.07129, 0.916667 )
+texture = ExtResource( 66 )
 
 [node name="nextLivro" type="Button" parent="personagem/CanvasLayer"]
 visible = false
@@ -1566,9 +1562,8 @@ margin_bottom = -7994.0
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_D" to="personagem" method="_on_Movi_D_button_up"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_down"]
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_up"]
-[connection signal="pressed" from="personagem/CanvasLayer/celIcon" to="personagem" method="_on_celIcon_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/sairMapa" to="personagem" method="_on_sairMapa_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/celCamMapa" to="personagem" method="_on_celCamMapa_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/boaoMapa" to="personagem" method="_on_boaoMapa_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/mapaAberto/sairMapa" to="personagem" method="_on_sairMapa_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoTutorial" to="personagem" method="_on_botaoTutorial_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]

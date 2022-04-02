@@ -121,23 +121,7 @@ func _process(delta):
 		position.x = 1348
 		position.y = -5891
 		Global.posicao = null
-#abre o celular
-func _on_celIcon_pressed():
-	$CanvasLayer/celAberto.visible = true
-	$CanvasLayer/celCamMapa.visible = true
-	$CanvasLayer/sairMapa.visible = true
-	$CanvasLayer/celIconn/Panel/AnimationPlayer.play_backwards("popUp")
-#abre o mapa do celular 
-func _on_celCamMapa_pressed():
-	$CanvasLayer/celAberto.visible = false
-	$CanvasLayer/celMapa.visible = true
 
-#fecha o mapa e o celular
-func _on_sairMapa_pressed():
-	$CanvasLayer/celMapa.visible = false
-	$CanvasLayer/celAberto.visible = false
-	$CanvasLayer/celCamMapa.visible = false
-	$CanvasLayer/sairMapa.visible = false
 
 
 func _physics_process(delta):
@@ -494,3 +478,13 @@ func _on_botaoFios_pressed():
 
 func _on_botaoOk_pressed():
 	$CanvasLayer/storyTelling/AnimationPlayer.play_backwards("storytelling")
+	
+
+
+
+func _on_boaoMapa_pressed():
+	$CanvasLayer/mapaAberto.visible = true
+
+
+func _on_sairMapa_pressed():
+	$CanvasLayer/mapaAberto.visible = false
