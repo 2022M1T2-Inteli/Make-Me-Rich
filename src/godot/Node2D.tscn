@@ -31,10 +31,10 @@
 [ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=29]
 [ext_resource path="res://assets/mapamovi1.png" type="Texture" id=30]
 [ext_resource path="res://assets/MAPA ABERTO.png" type="Texture" id=31]
-[ext_resource path="res://assets/oLÁ, SEJA BEM VINDO A SANTA MÔNICA JUDITHY, MEU NOME É.png" type="Texture" id=32]
+[ext_resource path="res://assets/instrução.2.png" type="Texture" id=32]
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
-[ext_resource path="res://assets/instrucaoNpc.png" type="Texture" id=35]
+[ext_resource path="res://assets/instrução.1.png" type="Texture" id=35]
 [ext_resource path="res://assets/selecionarNome.png" type="Texture" id=36]
 [ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
 [ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=38]
@@ -158,14 +158,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
@@ -178,10 +178,10 @@ animations = [ {
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"name": "idle.direita",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -1085,9 +1085,9 @@ texture = ExtResource( 61 )
 
 [node name="botaoTutorial" type="Button" parent="personagem/CanvasLayer"]
 visible = false
-margin_left = 612.0
-margin_top = 558.0
-margin_right = 712.0
+margin_left = 816.0
+margin_top = 471.0
+margin_right = 1013.0
 margin_bottom = 591.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1095,25 +1095,25 @@ __meta__ = {
 
 [node name="boasVindas" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 512, 309 )
-scale = Vector2( 0.320338, 0.320338 )
-texture = ExtResource( 32 )
+position = Vector2( 512, 300 )
+scale = Vector2( 0.533333, 0.559259 )
+texture = ExtResource( 35 )
 
 [node name="botaoNpc" type="Button" parent="personagem/CanvasLayer"]
 visible = false
-margin_left = 634.0
-margin_top = 566.0
-margin_right = 701.0
-margin_bottom = 595.0
+margin_left = 817.0
+margin_top = 474.0
+margin_right = 1011.0
+margin_bottom = 589.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="instrucNpc" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 512, 306 )
-scale = Vector2( 0.324197, 0.324197 )
-texture = ExtResource( 35 )
+position = Vector2( 512, 303 )
+scale = Vector2( 0.534375, 0.561111 )
+texture = ExtResource( 32 )
 
 [node name="botaoNome" type="Button" parent="personagem/CanvasLayer"]
 visible = false
