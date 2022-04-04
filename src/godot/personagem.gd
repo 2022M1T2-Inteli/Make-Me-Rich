@@ -453,12 +453,13 @@ func _on_lucasnpc_pressed():
 func _on_botaoPC_pressed():
 	$CanvasLayer/computador.visible = true
 	$CanvasLayer/botaoEmail.visible = true
-	$CanvasLayer/computador/Cartapcicon.visible = true
+	
 func _on_botaoEmail_pressed():
-	$CanvasLayer/computador/Cartapcicon.visible = false
+	
 	$CanvasLayer/botaoEmail.visible = false
 	$CanvasLayer/computador/obj1.visible = true
 	$CanvasLayer/computador/Emailpc.visible = true
+	
 func _on_setasairpc_pressed():
 	$CanvasLayer/computador.visible = false 
 	$CanvasLayer/botaoEmail.visible = false
@@ -491,3 +492,15 @@ func _on_sairMapa_pressed():
 
 func _on_VideoPlayer_finished():
 	Global.contador += 1
+
+
+func _on_botaoEmanil_pressed():
+	$CanvasLayer/Emailpc.visible = true
+	
+	
+
+
+func _on_botaovoltar_pressed():
+	$CanvasLayer/computador.visible = true
+	$CanvasLayer/Emailpc.visible = false
+	

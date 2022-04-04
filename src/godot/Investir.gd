@@ -7,7 +7,7 @@ var investir = 0
 
 func _ready():
 	$computador/dinheiroPC.text = "R$" + str(Global.dinheiro)
-	$computador/conta.text = "R$" + str(Global.conta)
+	$computador/conta.text = "R$" + str(Global.conta + J)
 
 
 #ganha dinheiro

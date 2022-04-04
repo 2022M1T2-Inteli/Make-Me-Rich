@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -59,10 +59,9 @@
 [ext_resource path="res://assets/seta01.png" type="Texture" id=57]
 [ext_resource path="res://assets/teste-_1_.ogv" type="VideoStream" id=58]
 [ext_resource path="res://assets/lucas npc.png" type="Texture" id=59]
-[ext_resource path="res://assets/tela pc.png" type="Texture" id=60]
+[ext_resource path="res://assets/COMPUTADOR1.png" type="Texture" id=60]
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=61]
-[ext_resource path="res://assets/cartapcicon.png" type="Texture" id=62]
-[ext_resource path="res://assets/emailpc.png" type="Texture" id=63]
+[ext_resource path="res://assets/COMPUTADOR ABERTO.png" type="Texture" id=62]
 [ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
 [ext_resource path="res://assets/fundobarrafunções.png" type="Texture" id=66]
 
@@ -535,6 +534,7 @@ position = Vector2( -19.9551, 33.9248 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -586,6 +586,7 @@ position = Vector2( 342.123, -183.938 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
@@ -593,6 +594,7 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="Fundo2" type="Sprite" parent="."]
@@ -650,6 +652,7 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="."]
@@ -718,6 +721,7 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -725,6 +729,7 @@ position = Vector2( -184.995, -284.031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
@@ -1270,36 +1275,17 @@ __meta__ = {
 
 [node name="computador" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
-position = Vector2( 528, 316 )
-scale = Vector2( 0.42575, 0.371127 )
+position = Vector2( 497, 284 )
+scale = Vector2( 0.270219, 0.235058 )
 texture = ExtResource( 60 )
 
-[node name="SetaVoltar" type="Sprite" parent="personagem/CanvasLayer/computador"]
-position = Vector2( -427.48, -396.094 )
-scale = Vector2( 0.0416415, 0.0475606 )
-texture = ExtResource( 61 )
-
 [node name="setasairpc" type="Button" parent="personagem/CanvasLayer/computador"]
-margin_left = -413.388
-margin_top = -379.924
-margin_right = -401.388
-margin_bottom = -359.924
+margin_left = -647.624
+margin_top = 438.191
+margin_right = -598.624
+margin_bottom = 505.191
 rect_scale = Vector2( -2.15068, -1.2916 )
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Cartapcicon" type="Sprite" parent="personagem/CanvasLayer/computador"]
-position = Vector2( 9.39526, -180.531 )
-scale = Vector2( 0.309747, 0.309747 )
-texture = ExtResource( 62 )
-
-[node name="Emailpc" type="Sprite" parent="personagem/CanvasLayer/computador"]
-visible = false
-position = Vector2( -30.5344, -121.252 )
-scale = Vector2( 0.287972, 0.287972 )
-texture = ExtResource( 63 )
 
 [node name="obj1" type="Label" parent="personagem/CanvasLayer/computador"]
 visible = false
@@ -1320,6 +1306,26 @@ execute sua primeira função!
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="botaoEmanil" type="Button" parent="personagem/CanvasLayer/computador"]
+margin_left = -592.113
+margin_top = 353.105
+margin_right = -474.113
+margin_bottom = 442.105
+flat = true
+
+[node name="Emailpc" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 496.5, 284.5 )
+scale = Vector2( 0.269667, 0.233 )
+texture = ExtResource( 62 )
+
+[node name="botaovoltar" type="Button" parent="personagem/CanvasLayer/Emailpc"]
+margin_left = -721.261
+margin_top = 336.91
+margin_right = -641.261
+margin_bottom = 426.91
+flat = true
 
 [node name="rostoLucas" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
@@ -1472,6 +1478,8 @@ margin_bottom = -7994.0
 [connection signal="pressed" from="personagem/CanvasLayer/botaoMaca" to="personagem" method="_on_botaoMaca_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoEmail" to="personagem" method="_on_botaoEmail_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/computador/setasairpc" to="personagem" method="_on_setasairpc_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/computador/botaoEmanil" to="personagem" method="_on_botaoEmanil_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/Emailpc/botaovoltar" to="personagem" method="_on_botaovoltar_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
