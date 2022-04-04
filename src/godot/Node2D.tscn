@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=2]
+[gd_scene load_steps=103 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -35,6 +35,7 @@
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
 [ext_resource path="res://assets/INSTRUÇÕES.png" type="Texture" id=35]
+[ext_resource path="res://assets/teste-_1_.ogv" type="VideoStream" id=36]
 [ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
 [ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
@@ -62,7 +63,6 @@
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=61]
 [ext_resource path="res://assets/cartapcicon.png" type="Texture" id=62]
 [ext_resource path="res://assets/emailpc.png" type="Texture" id=63]
-[ext_resource path="res://assets/lousaHistoria.jpg" type="Texture" id=64]
 [ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
 [ext_resource path="res://assets/fundobarrafunções.png" type="Texture" id=66]
 
@@ -266,26 +266,6 @@ font_data = ExtResource( 24 )
 [sub_resource type="DynamicFont" id=47]
 size = 52
 extra_spacing_top = 19
-font_data = ExtResource( 24 )
-
-[sub_resource type="Animation" id=48]
-resource_name = "storytelling"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
-}
-
-[sub_resource type="DynamicFont" id=49]
-size = 22
-extra_spacing_top = 26
 font_data = ExtResource( 24 )
 
 [sub_resource type="RectangleShape2D" id=7]
@@ -1064,16 +1044,6 @@ position = Vector2( -1028.92, -1094.77 )
 scale = Vector2( 0.0870828, 0.0998824 )
 texture = ExtResource( 61 )
 
-[node name="botaoTutorial" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 816.0
-margin_top = 471.0
-margin_right = 1013.0
-margin_bottom = 591.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="botaoNpc" type="Button" parent="personagem/CanvasLayer"]
 visible = false
 margin_left = 817.0
@@ -1084,15 +1054,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="botaoTutorial" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 884.994
+margin_top = 467.967
+margin_right = 1059.99
+margin_bottom = 607.967
+
 [node name="botaoNome" type="Button" parent="personagem/CanvasLayer"]
 visible = false
 margin_left = 623.0
 margin_top = 554.0
 margin_right = 707.0
 margin_bottom = 586.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="relogio" type="Sprite" parent="personagem/CanvasLayer"]
 position = Vector2( 266, 56 )
@@ -1131,6 +1105,14 @@ visible = false
 position = Vector2( 512, 300 )
 scale = Vector2( 0.533333, 0.559259 )
 texture = ExtResource( 35 )
+
+[node name="videoStorytelling" type="VideoPlayer" parent="personagem/CanvasLayer"]
+margin_left = -6.10352e-05
+margin_top = -3.05176e-05
+margin_right = 1023.0
+margin_bottom = 599.0
+stream = ExtResource( 36 )
+autoplay = true
 
 [node name="nextLivro" type="Button" parent="personagem/CanvasLayer"]
 visible = false
@@ -1365,54 +1347,6 @@ margin_right = 801.0
 margin_bottom = 580.0
 text = "ola seja bem vindo a cassino (teste)ijdisajdioasjdioasjdioajsiod"
 
-[node name="storyTelling" type="Panel" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 517.0
-margin_top = 287.0
-margin_right = 557.0
-margin_bottom = 327.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="personagem/CanvasLayer/storyTelling"]
-anims/storytelling = SubResource( 48 )
-
-[node name="botaoOk" type="Button" parent="personagem/CanvasLayer/storyTelling"]
-margin_left = -252.0
-margin_top = 178.0
-margin_right = -143.0
-margin_bottom = 228.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="personagem/CanvasLayer/storyTelling"]
-position = Vector2( 38, 19 )
-texture = ExtResource( 64 )
-
-[node name="historia" type="Label" parent="personagem/CanvasLayer/storyTelling"]
-margin_left = -245.0
-margin_top = -211.0
-margin_right = 315.0
-margin_bottom = 215.0
-custom_fonts/font = SubResource( 49 )
-text = "Cris é estudante e passou em uma faculdade de economia 
-da região de Santa Mônica Judith. Para pagar a faculdade, 
-começou a trabalhar empacotando 
-produtos da empresa Judith Company. Assim, Cris precisa 
-aprender a administrar suas finanças e aprender melhor 
-sobre educação financeira para ganhar mais dinheiro, 
-pagar a faculdade e quem sabe tornar-se
-rico!!! ISSO DEPENDE DE VOCÊ!!!
-
-
-																										OK>>"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="personagem/areaNotiicacao"]
@@ -1528,9 +1462,10 @@ margin_bottom = -7994.0
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_up"]
 [connection signal="pressed" from="personagem/CanvasLayer/boaoMapa" to="personagem" method="_on_boaoMapa_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/mapaAberto/sairMapa" to="personagem" method="_on_sairMapa_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoTutorial" to="personagem" method="_on_botaoTutorial_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoTutorial" to="personagem" method="_on_botaoTutorial_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
+[connection signal="finished" from="personagem/CanvasLayer/videoStorytelling" to="personagem" method="_on_videoStorytelling_finished"]
 [connection signal="pressed" from="personagem/CanvasLayer/nextLivro" to="personagem" method="_on_nextLivro_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/sairMercado" to="personagem" method="_on_sairMercado_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoBife" to="personagem" method="_on_botaoBife_pressed"]
@@ -1543,7 +1478,6 @@ margin_bottom = -7994.0
 [connection signal="pressed" from="personagem/CanvasLayer/botaoMaca" to="personagem" method="_on_botaoMaca_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoEmail" to="personagem" method="_on_botaoEmail_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/computador/setasairpc" to="personagem" method="_on_setasairpc_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/storyTelling/botaoOk" to="personagem" method="_on_botaoOk_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]

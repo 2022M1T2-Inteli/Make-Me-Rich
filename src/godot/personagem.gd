@@ -28,10 +28,9 @@ func _ready():
 	$CanvasLayer/happyBar.percent_visible = false 
 	
 	yield (get_tree().create_timer(1),"timeout")
-	$CanvasLayer/storyTelling.visible = true
-	$CanvasLayer/storyTelling/AnimationPlayer.play("storytelling")
-	if Global.contador > 1:
-		$CanvasLayer/storyTelling.visible = false
+	
+	
+	
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	Global.contador += 1
@@ -471,9 +470,7 @@ func _on_areaLucas_body_exited(body):
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
 
-func _on_botaoOk_pressed():
-	$CanvasLayer/storyTelling/AnimationPlayer.play_backwards("storytelling")
-	
+
 
 
 
@@ -483,3 +480,7 @@ func _on_boaoMapa_pressed():
 
 func _on_sairMapa_pressed():
 	$CanvasLayer/mapaAberto.visible = false 
+
+
+func _on_videoStorytelling_finished():
+	$CanvasLayer/videoStorytelling.visible = false 
