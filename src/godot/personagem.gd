@@ -12,6 +12,7 @@ var dinheiro = 2000
 var pagarBoleto = false
 var selecPersonagem
 var cont = 0
+var contVideo
 
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
@@ -28,7 +29,6 @@ func _ready():
 	$CanvasLayer/happyBar.percent_visible = false 
 	
 	yield (get_tree().create_timer(1),"timeout")
-	
 	
 	
 #faz o botao next sumir com o tutorial
@@ -50,7 +50,10 @@ func _process(delta):
 	if Global.contador == 2:
 		$CanvasLayer/instrucNpc.visible = false
 		$CanvasLayer/botaoNpc.visible = false
-
+		
+	if Global.contador == 3:
+		$CanvasLayer/VideoPlayer.visible = false
+ 
 	#fala da professora aparece
 	if areaProf == true and prof % 2 == 1:
 		$CanvasLayer/professora.visible = true
@@ -483,5 +486,8 @@ func _on_sairMapa_pressed():
 
 
 
+
+
+
 func _on_VideoPlayer_finished():
-	$CanvasLayer/VideoPlayer.visible = false
+	Global.contador += 1

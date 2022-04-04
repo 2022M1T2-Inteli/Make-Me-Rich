@@ -447,7 +447,6 @@ position = Vector2( -117.305, -234.313 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
@@ -536,7 +535,6 @@ position = Vector2( -19.9551, 33.9248 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -588,7 +586,6 @@ position = Vector2( 342.123, -183.938 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
@@ -596,7 +593,6 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="Fundo2" type="Sprite" parent="."]
@@ -654,7 +650,6 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="."]
@@ -723,7 +718,6 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -731,7 +725,6 @@ position = Vector2( -184.995, -284.031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
