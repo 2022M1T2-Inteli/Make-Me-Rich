@@ -49,13 +49,8 @@ func _process(delta):
 		$CanvasLayer/botaoNpc.visible = true
 
 	if Global.contador == 2:
-		$CanvasLayer/botaoNome.visible = true
-		$CanvasLayer/inserirNome.visible = true
 		$CanvasLayer/instrucNpc.visible = false
 		$CanvasLayer/botaoNpc.visible = false
-	if Global.contador >= 3:
-		$CanvasLayer/botaoNome.visible = false
-		$CanvasLayer/inserirNome.visible = false
 
 	#fala da professora aparece
 	if areaProf == true and prof % 2 == 1:
@@ -82,13 +77,13 @@ func _process(delta):
 		$CanvasLayer/fundoMario.visible = true
 		$CanvasLayer/textoVendedor.visible = true
 		$CanvasLayer/nomeVendedor.visible = true
-		$CanvasLayer/fundoNome.visible = true
+		
 	elif areaVendedor == false or vendedor % 2 == 0:
 		$CanvasLayer/vendedor.visible = false
 		$CanvasLayer/fundoMario.visible = false
 		$CanvasLayer/textoVendedor.visible = false
 		$CanvasLayer/nomeVendedor.visible = false
-		$CanvasLayer/fundoNome.visible = false
+		
 	if areaLucas == true and lucas % 2 == 1:
 		$CanvasLayer/fundoLucas.visible = true
 		$CanvasLayer/falalucas.visible = true
@@ -487,4 +482,4 @@ func _on_boaoMapa_pressed():
 
 
 func _on_sairMapa_pressed():
-	$CanvasLayer/mapaAberto.visible = false
+	$CanvasLayer/mapaAberto.visible = false 

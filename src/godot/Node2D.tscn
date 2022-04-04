@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -31,11 +31,10 @@
 [ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=29]
 [ext_resource path="res://assets/mapamovi1.png" type="Texture" id=30]
 [ext_resource path="res://assets/MAPA ABERTO.png" type="Texture" id=31]
-[ext_resource path="res://assets/instrução.2.png" type="Texture" id=32]
+[ext_resource path="res://assets/tutorialbarra.png" type="Texture" id=32]
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
-[ext_resource path="res://assets/instrução.1.png" type="Texture" id=35]
-[ext_resource path="res://assets/selecionarNome.png" type="Texture" id=36]
+[ext_resource path="res://assets/INSTRUÇÕES.png" type="Texture" id=35]
 [ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
 [ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
@@ -143,19 +142,19 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "walk.costas",
+"name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
@@ -163,9 +162,9 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "walk.frente",
+"name": "walk.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
@@ -178,10 +177,10 @@ animations = [ {
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -257,10 +256,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
 }
-
-[sub_resource type="DynamicFont" id=39]
-size = 176
-font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=32]
 font_data = ExtResource( 24 )
@@ -875,15 +870,6 @@ position = Vector2( 548.875, 543.5 )
 scale = Vector2( 0.420039, 0.189243 )
 texture = ExtResource( 20 )
 
-[node name="fundoNome" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-modulate = Color( 0, 0, 0, 0.588235 )
-show_behind_parent = true
-light_mask = 0
-position = Vector2( 341, 482 )
-scale = Vector2( 0.0950388, 0.0438247 )
-texture = ExtResource( 20 )
-
 [node name="Movi_S" type="Button" parent="personagem/CanvasLayer"]
 margin_left = 122.0
 margin_top = 517.0
@@ -1093,12 +1079,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="boasVindas" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 512, 300 )
-scale = Vector2( 0.533333, 0.559259 )
-texture = ExtResource( 35 )
-
 [node name="botaoNpc" type="Button" parent="personagem/CanvasLayer"]
 visible = false
 margin_left = 817.0
@@ -1109,35 +1089,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="instrucNpc" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 512, 303 )
-scale = Vector2( 0.534375, 0.561111 )
-texture = ExtResource( 32 )
-
 [node name="botaoNome" type="Button" parent="personagem/CanvasLayer"]
 visible = false
 margin_left = 623.0
 margin_top = 554.0
 margin_right = 707.0
 margin_bottom = 586.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="inserirNome" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 511, 307 )
-scale = Vector2( 0.318998, 0.318998 )
-texture = ExtResource( 36 )
-
-[node name="nomePlayer" type="TextEdit" parent="personagem/CanvasLayer/inserirNome"]
-margin_left = -473.0
-margin_top = -270.0
-margin_right = 473.0
-margin_bottom = -122.0
-custom_fonts/font = SubResource( 39 )
-text = "CRIS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1167,6 +1124,18 @@ text = "hora"
 position = Vector2( 476, 29 )
 scale = Vector2( 1.07129, 0.916667 )
 texture = ExtResource( 66 )
+
+[node name="instrucNpc" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 512, 303 )
+scale = Vector2( 0.534375, 0.561111 )
+texture = ExtResource( 32 )
+
+[node name="boasVindas" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 512, 300 )
+scale = Vector2( 0.533333, 0.559259 )
+texture = ExtResource( 35 )
 
 [node name="nextLivro" type="Button" parent="personagem/CanvasLayer"]
 visible = false
