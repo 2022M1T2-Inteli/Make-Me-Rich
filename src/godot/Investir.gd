@@ -1,7 +1,7 @@
 extends Node2D
-var C = Global.dinheiro
+var C = Global.conta
 var i = 0.25
-var J = C*i*(Global.dia - 1)
+var J = (C*i*(Global.dia - 1)) 
 var investir = 0
 #mostra o dinheiro na tela 
 
