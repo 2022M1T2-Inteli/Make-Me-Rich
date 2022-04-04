@@ -482,5 +482,6 @@ func _on_sairMapa_pressed():
 	$CanvasLayer/mapaAberto.visible = false 
 
 
-func _on_videoStorytelling_finished():
-	$CanvasLayer/videoStorytelling.visible = false 
+
+func _on_VideoPlayer_finished():
+	$CanvasLayer/VideoPlayer.visible = false

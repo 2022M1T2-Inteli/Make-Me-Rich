@@ -35,7 +35,7 @@
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
 [ext_resource path="res://assets/INSTRUÇÕES.png" type="Texture" id=35]
-[ext_resource path="res://assets/teste-_1_.ogv" type="VideoStream" id=36]
+[ext_resource path="res://assets/seta02.png" type="Texture" id=36]
 [ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
 [ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
@@ -56,8 +56,8 @@
 [ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=54]
 [ext_resource path="res://assets/mercado.png" type="Texture" id=55]
 [ext_resource path="res://assets/comida (7).png" type="Texture" id=56]
-[ext_resource path="res://assets/seta 1 (1).png" type="Texture" id=57]
-[ext_resource path="res://assets/seta 1.png" type="Texture" id=58]
+[ext_resource path="res://assets/seta01.png" type="Texture" id=57]
+[ext_resource path="res://assets/teste-_1_.ogv" type="VideoStream" id=58]
 [ext_resource path="res://assets/lucas npc.png" type="Texture" id=59]
 [ext_resource path="res://assets/tela pc.png" type="Texture" id=60]
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=61]
@@ -116,7 +116,7 @@ extents = Vector2( 37.3244, 12.2512 )
 
 [sub_resource type="SpriteFrames" id=45]
 animations = [ {
-"frames": [ ExtResource( 58 ), ExtResource( 57 ) ],
+"frames": [ ExtResource( 57 ), ExtResource( 36 ) ],
 "loop": true,
 "name": "SETAPOPUP",
 "speed": 3.0
@@ -536,6 +536,7 @@ position = Vector2( -19.9551, 33.9248 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -587,6 +588,7 @@ position = Vector2( 342.123, -183.938 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
@@ -594,6 +596,7 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="Fundo2" type="Sprite" parent="."]
@@ -651,6 +654,7 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="."]
@@ -719,6 +723,7 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -726,6 +731,7 @@ position = Vector2( -184.995, -284.031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
@@ -1044,30 +1050,6 @@ position = Vector2( -1028.92, -1094.77 )
 scale = Vector2( 0.0870828, 0.0998824 )
 texture = ExtResource( 61 )
 
-[node name="botaoNpc" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 817.0
-margin_top = 474.0
-margin_right = 1011.0
-margin_bottom = 589.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="botaoTutorial" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 884.994
-margin_top = 467.967
-margin_right = 1059.99
-margin_bottom = 607.967
-
-[node name="botaoNome" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 623.0
-margin_top = 554.0
-margin_right = 707.0
-margin_bottom = 586.0
-
 [node name="relogio" type="Sprite" parent="personagem/CanvasLayer"]
 position = Vector2( 266, 56 )
 scale = Vector2( 0.06, 0.06 )
@@ -1089,8 +1071,35 @@ margin_bottom = 43.0
 custom_fonts/font = SubResource( 33 )
 text = "hora"
 
+[node name="VideoPlayer" type="VideoPlayer" parent="personagem/CanvasLayer"]
+margin_right = 1026.0
+margin_bottom = 601.0
+stream = ExtResource( 58 )
+autoplay = true
+
+[node name="botaoNpc" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 817.0
+margin_top = 474.0
+margin_right = 1011.0
+margin_bottom = 589.0
+
+[node name="botaoTutorial" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 884.994
+margin_top = 467.967
+margin_right = 1059.99
+margin_bottom = 607.967
+
+[node name="botaoNome" type="Button" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 623.0
+margin_top = 554.0
+margin_right = 707.0
+margin_bottom = 586.0
+
 [node name="Fundobarrafunções" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 475, 27 )
+position = Vector2( 477, 29 )
 scale = Vector2( 1.07129, 0.916667 )
 texture = ExtResource( 66 )
 
@@ -1105,14 +1114,6 @@ visible = false
 position = Vector2( 512, 300 )
 scale = Vector2( 0.533333, 0.559259 )
 texture = ExtResource( 35 )
-
-[node name="videoStorytelling" type="VideoPlayer" parent="personagem/CanvasLayer"]
-margin_left = -6.10352e-05
-margin_top = -3.05176e-05
-margin_right = 1023.0
-margin_bottom = 599.0
-stream = ExtResource( 36 )
-autoplay = true
 
 [node name="nextLivro" type="Button" parent="personagem/CanvasLayer"]
 visible = false
@@ -1462,10 +1463,10 @@ margin_bottom = -7994.0
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_up"]
 [connection signal="pressed" from="personagem/CanvasLayer/boaoMapa" to="personagem" method="_on_boaoMapa_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/mapaAberto/sairMapa" to="personagem" method="_on_sairMapa_pressed"]
+[connection signal="finished" from="personagem/CanvasLayer/VideoPlayer" to="personagem" method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoTutorial" to="personagem" method="_on_botaoTutorial_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
-[connection signal="finished" from="personagem/CanvasLayer/videoStorytelling" to="personagem" method="_on_videoStorytelling_finished"]
 [connection signal="pressed" from="personagem/CanvasLayer/nextLivro" to="personagem" method="_on_nextLivro_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/sairMercado" to="personagem" method="_on_sairMercado_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoBife" to="personagem" method="_on_botaoBife_pressed"]
