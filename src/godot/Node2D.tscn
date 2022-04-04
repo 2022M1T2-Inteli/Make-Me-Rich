@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -35,7 +35,7 @@
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
 [ext_resource path="res://assets/INSTRUÇÕES.png" type="Texture" id=35]
-[ext_resource path="res://assets/seta02.png" type="Texture" id=36]
+[ext_resource path="res://assets/exclam1.png" type="Texture" id=36]
 [ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
 [ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
@@ -56,12 +56,14 @@
 [ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=54]
 [ext_resource path="res://assets/mercado.png" type="Texture" id=55]
 [ext_resource path="res://assets/comida (7).png" type="Texture" id=56]
-[ext_resource path="res://assets/seta01.png" type="Texture" id=57]
+[ext_resource path="res://assets/exclam2.png" type="Texture" id=57]
 [ext_resource path="res://assets/teste-_1_.ogv" type="VideoStream" id=58]
 [ext_resource path="res://assets/lucas npc.png" type="Texture" id=59]
 [ext_resource path="res://assets/COMPUTADOR1.png" type="Texture" id=60]
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=61]
 [ext_resource path="res://assets/COMPUTADOR ABERTO.png" type="Texture" id=62]
+[ext_resource path="res://assets/seta002.png" type="Texture" id=63]
+[ext_resource path="res://assets/seta001.png" type="Texture" id=64]
 [ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
 [ext_resource path="res://assets/fundobarrafunções.png" type="Texture" id=66]
 
@@ -110,19 +112,27 @@ height = 9.54919
 radius = 7.50287
 height = 13.6406
 
+[sub_resource type="SpriteFrames" id=45]
+animations = [ {
+"frames": [ ExtResource( 64 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "SETAPOPUP",
+"speed": 4.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 37.3244, 12.2512 )
 
-[sub_resource type="SpriteFrames" id=45]
-animations = [ {
-"frames": [ ExtResource( 57 ), ExtResource( 36 ) ],
-"loop": true,
-"name": "SETAPOPUP",
-"speed": 3.0
-} ]
-
 [sub_resource type="RectangleShape2D" id=46]
 extents = Vector2( 26.2892, 32.9369 )
+
+[sub_resource type="SpriteFrames" id=48]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "popup",
+"speed": 4.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 38.6645, 5.98115 )
@@ -278,7 +288,7 @@ __meta__ = {
 }
 
 [node name="Fundo" type="Sprite" parent="."]
-position = Vector2( 1481, -2111 )
+position = Vector2( 1480, -2112 )
 scale = Vector2( 2.92802, 26.5777 )
 texture = ExtResource( 20 )
 
@@ -417,6 +427,21 @@ position = Vector2( -21.1443, -113.906 )
 position = Vector2( 20.4622, 115.952 )
 polygon = PoolVector2Array( -14.8643, 441.679, 15.147, 440.998, 15.147, 411.668, -10.7719, 410.986 )
 
+[node name="setapopup2" type="AnimatedSprite" parent="Cassino"]
+position = Vector2( -217.584, -49.1094 )
+scale = Vector2( 0.042211, 0.034979 )
+frames = SubResource( 45 )
+animation = "SETAPOPUP"
+playing = true
+
+[node name="setapopup3" type="AnimatedSprite" parent="Cassino"]
+position = Vector2( 215.535, -55.9297 )
+scale = Vector2( 0.042211, 0.034979 )
+frames = SubResource( 45 )
+animation = "SETAPOPUP"
+frame = 1
+playing = true
+
 [node name="lucasnpc" type="Button" parent="."]
 margin_left = 1442.22
 margin_top = -7781.48
@@ -442,10 +467,11 @@ position = Vector2( 1.23059, 368.304 )
 shape = SubResource( 31 )
 
 [node name="setapopup" type="AnimatedSprite" parent="TrabalhoCenário"]
-position = Vector2( -117.305, -234.313 )
+position = Vector2( 187.854, -46.7031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
@@ -458,13 +484,30 @@ texture = ExtResource( 59 )
 [node name="areaLucas" type="Area2D" parent="TrabalhoCenário"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TrabalhoCenário/areaLucas"]
-polygon = PoolVector2Array( 53.3207, 199.083, 187.853, 196.785, 187.032, 330.018, 51.6801, 333.846 )
+polygon = PoolVector2Array( 19.6876, 163.86, 199.337, 160.797, 205.9, 331.549, 22.9689, 331.549 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="TrabalhoCenário"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrabalhoCenário/StaticBody2D2"]
 position = Vector2( 117.266, 258.052 )
 shape = SubResource( 46 )
+
+[node name="setapopup2" type="AnimatedSprite" parent="TrabalhoCenário"]
+position = Vector2( -43.5625, 34.3145 )
+rotation = 1.5646
+scale = Vector2( 0.0558588, 0.0430038 )
+frames = SubResource( 45 )
+animation = "SETAPOPUP"
+frame = 1
+playing = true
+
+[node name="popupnpc" type="AnimatedSprite" parent="TrabalhoCenário"]
+position = Vector2( 114.025, 205.203 )
+scale = Vector2( 0.0391785, 0.0338659 )
+frames = SubResource( 48 )
+animation = "popup"
+frame = 1
+playing = true
 
 [node name="botaoGui" type="Button" parent="."]
 margin_left = 1037.0
@@ -530,11 +573,10 @@ texture = ExtResource( 39 )
 polygon = PoolVector2Array( -67.85, 56.8738, -66.8523, 161.143, 41.9074, 162.64, 46.3975, 55.876 )
 
 [node name="setapopup2" type="AnimatedSprite" parent="BancoJudite"]
-position = Vector2( -19.9551, 33.9248 )
+position = Vector2( 139.193, 4.98828 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -546,14 +588,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="botaoVendedor" type="Button" parent="."]
-margin_left = 1306.0
-margin_top = -4439.0
-margin_right = 1391.0
-margin_bottom = -4352.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="popupnpc" type="AnimatedSprite" parent="BancoJudite"]
+position = Vector2( -20.9536, 35.4211 )
+scale = Vector2( 0.0311811, 0.0268573 )
+frames = SubResource( 48 )
+animation = "popup"
+playing = true
 
 [node name="MercadoJudite" type="Sprite" parent="."]
 position = Vector2( 1070, -4320 )
@@ -572,7 +612,7 @@ shape = SubResource( 21 )
 polygon = PoolVector2Array( 31.8826, 426.735, 31.8826, 339.671, 95.6475, 339.671, 95.6475, 207.236, 436.545, 210.915, 436.545, 343.35, 492.952, 343.35, 490.5, -242.797, 431.64, -242.797, 432.866, -179.032, 149.602, -179.032, 148.376, -242.797, 104.231, -244.023, 105.458, -53.9546, 230.535, -52.7285, 228.082, -120.172, 300.431, -120.172, 304.11, -47.8237, 432.866, -47.8237, 432.866, 34.335, 31.8826, 34.335, 30.6563, -248.928, -163.091, -244.023, -160.639, -177.806, -488.047, -177.806, -486.821, -117.72, -164.317, -116.494, -160.639, 22.0728, -492.952, 20.8462, -490.5, 83.3853, -159.412, 83.3853, -160.639, 221.951, -490.5, 220.725, -491.726, 273.454, -159.412, 275.906, -159.412, 344.576, -34.335, 347.029, -34.335, 427.961, -93.1949, 427.961, -96.8737, 402.21, -549.36, 397.305, -546.907, -440.223, 554.265, -432.866, 562.848, 405.889, 90.7424, 403.436, 90.7424, 423.056 )
 
 [node name="VenderdorNpc" type="Sprite" parent="MercadoJudite"]
-position = Vector2( 348.254, -91.9688 )
+position = Vector2( 267.322, -106.688 )
 scale = Vector2( 0.0570203, 0.0570203 )
 texture = ExtResource( 40 )
 
@@ -581,21 +621,26 @@ texture = ExtResource( 40 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MercadoJudite/areaVendedor"]
 polygon = PoolVector2Array( 38.0138, 39.2402, 36.7875, 95.6475, 489.273, 95.6475, 485.595, -127.53, 391.173, -126.304, 393.626, -52.7285, 434.092, -51.5024, 436.545, 44.145 )
 
-[node name="setapopup" type="AnimatedSprite" parent="MercadoJudite"]
-position = Vector2( 342.123, -183.938 )
-scale = Vector2( 0.0558588, 0.0430038 )
-frames = SubResource( 45 )
-animation = "SETAPOPUP"
-frame = 1
-playing = true
-
 [node name="setapopup2" type="AnimatedSprite" parent="MercadoJudite"]
 position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
+
+[node name="popupnpc" type="AnimatedSprite" parent="MercadoJudite"]
+position = Vector2( 264.869, -181.484 )
+scale = Vector2( 0.0405601, 0.0432207 )
+frames = SubResource( 48 )
+animation = "popup"
+playing = true
+
+[node name="botaoVendedor" type="Button" parent="MercadoJudite"]
+margin_left = 221.951
+margin_top = -144.697
+margin_right = 306.951
+margin_bottom = -57.6973
+flat = true
 
 [node name="Fundo2" type="Sprite" parent="."]
 position = Vector2( 1330, -4726.5 )
@@ -607,9 +652,6 @@ margin_left = 1245.0
 margin_top = 482.0
 margin_right = 1334.0
 margin_bottom = 637.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="casa" type="Sprite" parent="."]
 position = Vector2( 949, 620 )
@@ -652,17 +694,7 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
-
-[node name="botaoProf" type="Button" parent="."]
-margin_left = 472.0
-margin_top = -2711.0
-margin_right = 510.0
-margin_bottom = -2641.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="UniversidadeJudite" type="Sprite" parent="."]
 position = Vector2( 687, -2451 )
@@ -677,13 +709,14 @@ position = Vector2( 2.80298, 3.40894 )
 shape = SubResource( 17 )
 
 [node name="professora" type="Sprite" parent="UniversidadeJudite"]
-position = Vector2( -185.099, -209.521 )
+position = Vector2( -240.12, -211.156 )
 scale = Vector2( 1.28092, 1.28092 )
 texture = ExtResource( 27 )
 
 [node name="caixaTexto" type="Area2D" parent="UniversidadeJudite"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UniversidadeJudite/caixaTexto"]
+position = Vector2( -56.0591, -58.8621 )
 polygon = PoolVector2Array( -205.653, -176.82, -160.805, -178.688, -166.411, -123.564, -203.784, -123.564 )
 
 [node name="hitbox" type="StaticBody2D" parent="UniversidadeJudite"]
@@ -701,7 +734,7 @@ polygon = PoolVector2Array( -210.326, -115.155, -209.39, -175.885, -219.669, -17
 polygon = PoolVector2Array( -269.187, -41.344, -269.187, 4.4375, -282.268, 5.37183, -281.333, 74.5112, -269.187, 75.4456, -269.187, 126.833, -281.333, 125.898, -279.465, 196.906, -269.187, 197.841, -269.187, 245.491, -280.399, 245.491, -279.465, 305.287, -319.64, 305.287, -319.64, 251.097, -328.984, 249.228, -329.918, 197.841, -317.772, 198.775, -316.837, 127.767, -328.049, 124.964, -327.115, 74.5112, -316.837, 73.5769, -316.837, 5.37183, -328.984, 4.4375, -329.918, -42.2781 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UniversidadeJudite/hitbox"]
-position = Vector2( -184.632, -209.053 )
+position = Vector2( -239.185, -208.353 )
 shape = SubResource( 19 )
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="UniversidadeJudite/hitbox"]
@@ -721,16 +754,22 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+playing = true
+
+[node name="popupnpc" type="AnimatedSprite" parent="UniversidadeJudite"]
+position = Vector2( -237.811, -267.16 )
+scale = Vector2( 0.0320963, 0.0305576 )
+frames = SubResource( 48 )
+animation = "popup"
 frame = 1
 playing = true
 
-[node name="setapopup2" type="AnimatedSprite" parent="UniversidadeJudite"]
-position = Vector2( -184.995, -284.031 )
-scale = Vector2( 0.0558588, 0.0430038 )
-frames = SubResource( 45 )
-animation = "SETAPOPUP"
-frame = 1
-playing = true
+[node name="botaoProf" type="Button" parent="UniversidadeJudite"]
+margin_left = -258.806
+margin_top = -237.317
+margin_right = -220.806
+margin_bottom = -167.317
+flat = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
 position = Vector2( 1055, 574 )
@@ -1400,28 +1439,28 @@ __meta__ = {
 }
 
 [node name="botaoCassino1" type="Button" parent="."]
-margin_left = 1570.0
+margin_left = 1586.0
 margin_top = -5930.0
-margin_right = 1765.0
-margin_bottom = -5882.0
+margin_right = 1745.0
+margin_bottom = -5864.0
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="botaoCassino2" type="Button" parent="."]
-margin_left = 932.0
-margin_top = -5926.0
-margin_right = 1133.0
-margin_bottom = -5876.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 957.0
+margin_top = -5934.0
+margin_right = 1110.0
+margin_bottom = -5864.0
+flat = true
 
 [node name="botaoFios" type="Button" parent="."]
-margin_left = 1483.0
+margin_left = 1493.0
 margin_top = -8100.0
-margin_right = 1621.0
-margin_bottom = -7994.0
+margin_right = 1605.0
+margin_bottom = -8021.0
+flat = true
 
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
@@ -1440,18 +1479,18 @@ margin_bottom = -7994.0
 [connection signal="body_entered" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_entered"]
 [connection signal="body_exited" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_exited"]
 [connection signal="pressed" from="BancoJudite/caixaInvestir" to="personagem" method="_on_caixaInvestir_pressed"]
-[connection signal="pressed" from="botaoVendedor" to="personagem" method="_on_botaoVendedor_pressed"]
 [connection signal="body_entered" from="MercadoJudite/dentroMercado" to="personagem" method="_on_dentroMercado_body_entered"]
 [connection signal="body_entered" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_entered"]
 [connection signal="body_exited" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_exited"]
+[connection signal="pressed" from="MercadoJudite/botaoVendedor" to="personagem" method="_on_botaoVendedor_pressed"]
 [connection signal="pressed" from="botaoBoaNoite" to="personagem" method="_on_botaoBoaNoite_pressed"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
 [connection signal="body_entered" from="casa/areaCama" to="personagem" method="_on_areaCama_body_entered"]
 [connection signal="body_exited" from="casa/areaCama" to="personagem" method="_on_areaCama_body_exited"]
-[connection signal="pressed" from="botaoProf" to="personagem" method="_on_botaoProf_pressed"]
 [connection signal="body_entered" from="UniversidadeJudite/dentroUniversidade" to="personagem" method="_on_dentroUniversidade_body_entered"]
 [connection signal="body_entered" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_entered"]
 [connection signal="body_exited" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_exited"]
+[connection signal="pressed" from="UniversidadeJudite/botaoProf" to="personagem" method="_on_botaoProf_pressed"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_down"]
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_up"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_W" to="personagem" method="_on_Movi_W_button_down"]
