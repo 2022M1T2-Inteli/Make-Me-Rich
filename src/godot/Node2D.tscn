@@ -14,7 +14,7 @@
 [ext_resource path="res://sprites_player/andando.costas_2.png" type="Texture" id=12]
 [ext_resource path="res://sprites_player/andando.direita_2.png" type="Texture" id=13]
 [ext_resource path="res://sprites_player/parado.direita.png" type="Texture" id=14]
-[ext_resource path="res://assets/iconemapa1.png" type="Texture" id=15]
+[ext_resource path="res://assets/mapasimbolo.png" type="Texture" id=15]
 [ext_resource path="res://assets/banco_judite.jpg" type="Texture" id=16]
 [ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
 [ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
@@ -30,7 +30,7 @@
 [ext_resource path="res://assets/Cenário do mercado.jpeg" type="Texture" id=28]
 [ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=29]
 [ext_resource path="res://assets/mapamovi1.png" type="Texture" id=30]
-[ext_resource path="res://assets/MAPA ABERTO.png" type="Texture" id=31]
+[ext_resource path="res://assets/mapa2.png" type="Texture" id=31]
 [ext_resource path="res://assets/tutorialbarra.png" type="Texture" id=32]
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
@@ -1017,8 +1017,8 @@ position = Vector2( 1170, 602 )
 texture = ExtResource( 29 )
 
 [node name="celIconn" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 992, 25 )
-scale = Vector2( 0.0365391, 0.0364193 )
+position = Vector2( 988, 26 )
+scale = Vector2( 0.0269362, 0.026543 )
 texture = ExtResource( 15 )
 
 [node name="Panel" type="Panel" parent="personagem/CanvasLayer/celIconn"]
@@ -1040,10 +1040,10 @@ scale = Vector2( 0.189906, 0.189906 )
 texture = ExtResource( 41 )
 
 [node name="boaoMapa" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 975.0
-margin_top = 7.0
-margin_right = 1012.0
-margin_bottom = 49.0
+margin_left = 969.0
+margin_top = 6.0
+margin_right = 1006.0
+margin_bottom = 48.0
 flat = true
 
 [node name="mapaAberto" type="Sprite" parent="personagem/CanvasLayer"]
@@ -1116,7 +1116,7 @@ custom_fonts/font = SubResource( 33 )
 text = "hora"
 
 [node name="Fundobarrafunções" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 476, 29 )
+position = Vector2( 475, 27 )
 scale = Vector2( 1.07129, 0.916667 )
 texture = ExtResource( 66 )
 
