@@ -159,34 +159,34 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "idle.esquerda",
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
@@ -1152,6 +1152,7 @@ custom_fonts/font = SubResource( 33 )
 text = "hora"
 
 [node name="VideoPlayer" type="VideoPlayer" parent="personagem/CanvasLayer"]
+visible = false
 margin_right = 1026.0
 margin_bottom = 601.0
 stream = ExtResource( 58 )
@@ -1547,8 +1548,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
