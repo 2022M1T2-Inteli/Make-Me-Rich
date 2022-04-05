@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=110 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -67,6 +67,8 @@
 [ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
 [ext_resource path="res://assets/fundobarrafunções.png" type="Texture" id=66]
 [ext_resource path="res://assets/popupbloqueio.png" type="Texture" id=67]
+[ext_resource path="res://assets/npcRicardo.png" type="Texture" id=68]
+[ext_resource path="res://assets/cassino rosto.png" type="Texture" id=69]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -157,9 +159,14 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "walk.frente",
+"name": "walk.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
@@ -167,30 +174,25 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 18 ) ],
 "loop": false,
-"name": "idle.frente",
+"name": "idle.costas",
 "speed": 0.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -278,6 +280,16 @@ size = 52
 extra_spacing_top = 19
 font_data = ExtResource( 24 )
 
+[sub_resource type="DynamicFont" id=50]
+size = 18
+extra_spacing_top = 6
+font_data = ExtResource( 24 )
+
+[sub_resource type="DynamicFont" id=49]
+size = 21
+extra_spacing_top = 10
+font_data = ExtResource( 24 )
+
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 38, 15 )
 
@@ -356,6 +368,15 @@ polygon = PoolVector2Array( 215.199, -394.237, 215.199, -382.772, 228.869, -381.
 position = Vector2( -158.312, -391.15 )
 shape = SubResource( 30 )
 
+[node name="botaoRicardo" type="Button" parent="."]
+margin_left = 1359.0
+margin_top = -5750.0
+margin_right = 1408.0
+margin_bottom = -5685.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Cassino" type="Sprite" parent="."]
 position = Vector2( 1350, -5939 )
 scale = Vector2( 1.46611, 1.46611 )
@@ -383,7 +404,7 @@ position = Vector2( -234.493, 275.253 )
 shape = SubResource( 26 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cassino/StaticBody2D"]
-polygon = PoolVector2Array( 50.6149, 177.034, 50.6149, 225.462, -46.2397, 226.826, -52.3784, 209.092, -51.6964, 168.167, -46.9218, 164.757, -17.5926, 165.439, -5.99731, 172.942, 1.50555, 174.988 )
+polygon = PoolVector2Array( 49.7916, 175.976, 50.6149, 225.462, -46.2397, 226.826, -52.3784, 209.092, -51.6964, 168.167, -45.0171, 163.016, -21.8588, 164.069, -2.72833, 173.93, 8.867, 173.93, 8.18494, 163.016, 10.2311, 123.456, 36.8322, 122.774, 36.8322, 175.294 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cassino/StaticBody2D"]
 polygon = PoolVector2Array( -51.6964, 99.2776, -48.9681, 106.781, -47.6039, 119.058, 50.6149, 119.74, 51.297, 106.098, 50.6149, 71.3125, 45.8404, 67.2202, -1.90485, 66.5381, -16.2285, 57.6711, -48.9681, 57.6711, -52.3784, 61.7637 )
@@ -433,6 +454,7 @@ position = Vector2( -217.584, -49.1094 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup3" type="AnimatedSprite" parent="Cassino"]
@@ -440,8 +462,17 @@ position = Vector2( 215.535, -55.9297 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
+
+[node name="NpcRicardo" type="Sprite" parent="Cassino"]
+position = Vector2( 22.6364, 151.549 )
+scale = Vector2( 0.0240006, 0.0240006 )
+texture = ExtResource( 68 )
+
+[node name="Area2D" type="Area2D" parent="Cassino"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cassino/Area2D"]
+polygon = PoolVector2Array( 49.7916, 124.138, 75.7106, 122.774, 72.9822, 243.501, -72.3002, 247.594, -68.8898, 123.456, -2.04626, 126.184, 1.36414, 167.791, -52.52, 156.196, -52.52, 233.952, 55.9303, 229.86 )
 
 [node name="lucasnpc" type="Button" parent="."]
 margin_left = 1442.22
@@ -472,7 +503,6 @@ position = Vector2( 187.854, -46.7031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
@@ -499,7 +529,6 @@ rotation = 1.5646
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="TrabalhoCenário"]
@@ -507,7 +536,6 @@ position = Vector2( 114.025, 205.203 )
 scale = Vector2( 0.0391785, 0.0338659 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoGui" type="Button" parent="."]
@@ -515,6 +543,9 @@ margin_left = 1037.0
 margin_top = -605.0
 margin_right = 1113.0
 margin_bottom = -496.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="BancoJudite" type="Sprite" parent="."]
 position = Vector2( 1116, -696.999 )
@@ -578,6 +609,7 @@ position = Vector2( 139.193, 4.98828 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -594,6 +626,7 @@ position = Vector2( -20.9536, 35.4211 )
 scale = Vector2( 0.0311811, 0.0268573 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="MercadoJudite" type="Sprite" parent="."]
@@ -627,6 +660,7 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="MercadoJudite"]
@@ -634,6 +668,7 @@ position = Vector2( 264.869, -181.484 )
 scale = Vector2( 0.0405601, 0.0432207 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoVendedor" type="Button" parent="MercadoJudite"]
@@ -695,6 +730,7 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="UniversidadeJudite" type="Sprite" parent="."]
@@ -755,6 +791,7 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -762,7 +799,6 @@ position = Vector2( -237.811, -267.16 )
 scale = Vector2( 0.0320963, 0.0305576 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="UniversidadeJudite"]
@@ -773,7 +809,7 @@ margin_bottom = -167.317
 flat = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 1055, 574 )
+position = Vector2( 1068, 568 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
@@ -1120,6 +1156,9 @@ margin_right = 1026.0
 margin_bottom = 601.0
 stream = ExtResource( 58 )
 autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="botaoNpc" type="Button" parent="personagem/CanvasLayer"]
 visible = false
@@ -1381,8 +1420,8 @@ texture = ExtResource( 65 )
 [node name="fundoLucas" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
 modulate = Color( 1, 1, 1, 0.686275 )
-position = Vector2( 552.823, 540.769 )
-scale = Vector2( 0.41062, 0.192155 )
+position = Vector2( 558.823, 540.769 )
+scale = Vector2( 0.401281, 0.192155 )
 texture = ExtResource( 20 )
 
 [node name="falalucas" type="Label" parent="personagem/CanvasLayer"]
@@ -1391,7 +1430,43 @@ margin_left = 306.0
 margin_top = 499.0
 margin_right = 801.0
 margin_bottom = 580.0
-text = "ola seja bem vindo a cassino (teste)ijdisajdioasjdioasjdioajsiod"
+custom_fonts/font = SubResource( 50 )
+text = "Meu nome é Lucas, estou aqui para te ajudar nas suas tarefas. 
+Sua primeira tarefa está no setor de importações,
+vá até a esteira rolante indicada e comece a embalar
+ os produtos. Assim que acabar, venha falar comigo!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rostoRicardo" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 1168, 601 )
+texture = ExtResource( 69 )
+
+[node name="fundoRicardo" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+modulate = Color( 1, 1, 1, 0.666667 )
+position = Vector2( 558.5, 537.5 )
+scale = Vector2( 0.399222, 0.181275 )
+texture = ExtResource( 20 )
+
+[node name="falaRicardo" type="Label" parent="personagem/CanvasLayer"]
+visible = false
+margin_left = 305.0
+margin_top = 486.0
+margin_right = 786.0
+margin_bottom = 593.0
+custom_fonts/font = SubResource( 49 )
+text = "Olá Cris, meu nome é Ricardo e sou o funcionário do cassino.
+Vá até os lugares indicados para realizar apostas! 
+
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
@@ -1468,6 +1543,9 @@ margin_top = -8100.0
 margin_right = 1605.0
 margin_bottom = -8021.0
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
@@ -1476,7 +1554,10 @@ flat = true
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaCassino" to="personagem" method="_on_portaCassino_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaTrabalho" to="personagem" method="_on_portaTrabalho_body_entered"]
+[connection signal="pressed" from="botaoRicardo" to="personagem" method="_on_botaoRicardo_pressed"]
 [connection signal="body_entered" from="Cassino/dentroCassino" to="personagem" method="_on_dentroCassino_body_entered"]
+[connection signal="body_entered" from="Cassino/Area2D" to="personagem" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Cassino/Area2D" to="personagem" method="_on_Area2D_body_exited"]
 [connection signal="pressed" from="lucasnpc" to="personagem" method="_on_lucasnpc_pressed"]
 [connection signal="body_entered" from="TrabalhoCenário/dentroTrabalho" to="personagem" method="_on_dentroTrabalho_body_entered"]
 [connection signal="body_entered" from="TrabalhoCenário/areaLucas" to="personagem" method="_on_areaLucas_body_entered"]

@@ -94,6 +94,15 @@ func _process(delta):
 		$CanvasLayer/fundoLucas.visible = false
 		$CanvasLayer/falalucas.visible = false 
 		$CanvasLayer/rostoLucas.visible = false
+	
+	if areaRic == true and ricardo % 2 == 1:
+		$CanvasLayer/rostoRicardo.visible = true
+		$CanvasLayer/fundoRicardo.visible = true
+		$CanvasLayer/falaRicardo.visible = true
+	elif areaRic == false or ricardo % 2 == 0:
+		$CanvasLayer/rostoRicardo.visible = false
+		$CanvasLayer/fundoRicardo.visible = false
+		$CanvasLayer/falaRicardo.visible = false
 		
 	if boaNoite == true and areaCama == true:
 		get_tree().change_scene("res://boaNoite.tscn")
@@ -450,12 +459,29 @@ var lucas = 0
 func _on_lucasnpc_pressed():
 		lucas += 1
 
+var areaLucas = false
+func _on_areaLucas_body_entered(body):
+	areaLucas = true 
+	
+func _on_areaLucas_body_exited(body):
+	areaLucas = false
+	
+var ricardo = 0
+func _on_botaoRicardo_pressed():
+	ricardo += 1
+
+var areaRic = false 
+func _on_Area2D_body_entered(body):
+	areaRic  = true 
+	
+func _on_Area2D_body_exited(body):
+	areaRic = false
+
 func _on_botaoPC_pressed():
 	$CanvasLayer/computador.visible = true
 	$CanvasLayer/botaoEmail.visible = true
 	
 func _on_botaoEmail_pressed():
-	
 	$CanvasLayer/botaoEmail.visible = false
 	$CanvasLayer/computador/obj1.visible = true
 	$CanvasLayer/computador/Emailpc.visible = true
@@ -464,13 +490,6 @@ func _on_setasairpc_pressed():
 	$CanvasLayer/computador.visible = false 
 	$CanvasLayer/botaoEmail.visible = false
 
-var areaLucas = false
-func _on_areaLucas_body_entered(body):
-	areaLucas = true 
-	
-func _on_areaLucas_body_exited(body):
-	areaLucas = false
-	
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
 
@@ -487,9 +506,6 @@ func _on_sairMapa_pressed():
 
 
 
-
-
-
 func _on_VideoPlayer_finished():
 	Global.contador += 1
 
@@ -498,9 +514,12 @@ func _on_botaoEmanil_pressed():
 	$CanvasLayer/Emailpc.visible = true
 	
 	
-
-
 func _on_botaovoltar_pressed():
 	$CanvasLayer/computador.visible = true
 	$CanvasLayer/Emailpc.visible = false
 	
+
+
+
+
+
