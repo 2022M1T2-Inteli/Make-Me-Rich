@@ -261,37 +261,59 @@ func _on_dentroTrabalho_body_entered(body):
 func _on_Movi_A_button_down():
 	velocidade.x = -200
 	$AnimatedSpriteA.play("walk.esquerda")
-
+	$AnimatedSpriteB.play("walk.esquerda")
+	$AnimatedSpriteC.play("walk.esquerda")
+	$AnimatedSpriteD.play("walk.esquerda")
 func _on_Movi_A_button_up():
 	velocidade.x = 0
 	$AnimatedSpriteA.play("idle.esquerda")
-
+	$AnimatedSpriteB.play("idle.esquerda")
+	$AnimatedSpriteC.play("idle.esquerda")
+	$AnimatedSpriteD.play("idle.esquerda")
 
 func _on_Movi_D_button_down():
 	velocidade.x = 200
 	$AnimatedSpriteA.play("walk.direita")
+	$AnimatedSpriteB.play("walk.direita")
+	$AnimatedSpriteC.play("walk.direita")
+	$AnimatedSpriteD.play("walk.direita")
 
 func _on_Movi_D_button_up():
 	velocidade.x = 0
 	$AnimatedSpriteA.play("idle.direita")
+	$AnimatedSpriteB.play("idle.direita")
+	$AnimatedSpriteC.play("idle.direita")
+	$AnimatedSpriteD.play("idle.direita")
 
 
 func _on_Movi_W_button_down():
 	velocidade.y = -200
 	$AnimatedSpriteA.play("walk.costas")
+	$AnimatedSpriteB.play("walk.costas")
+	$AnimatedSpriteC.play("walk.costas")
+	$AnimatedSpriteD.play("walk.costas")
 
 func _on_Movi_W_button_up():
 	velocidade.y = 0
 	$AnimatedSpriteA.play("idle.costas")
+	$AnimatedSpriteB.play("idle.costas")
+	$AnimatedSpriteC.play("idle.costas")
+	$AnimatedSpriteD.play("idle.costas")
 
 
 func _on_Movi_S_button_down():
 	velocidade.y = 200
 	$AnimatedSpriteA.play("walk.frente")
+	$AnimatedSpriteB.play("walk.frente")
+	$AnimatedSpriteC.play("walk.frente")
+	$AnimatedSpriteD.play("walk.frente")
 
 func _on_Movi_S_button_up():
 	velocidade.y = 0
 	$AnimatedSpriteA.play("idle.frente")
+	$AnimatedSpriteB.play("idle.frente")
+	$AnimatedSpriteC.play("idle.frente")
+	$AnimatedSpriteD.play("idle.frente")
 
 var area2DPc = false
 #muda a variável quando fica do lado do computador
