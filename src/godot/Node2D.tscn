@@ -193,11 +193,6 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
@@ -208,24 +203,29 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
 }, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
@@ -234,11 +234,6 @@ animations = [ {
 "frames": [ ExtResource( 79 ), ExtResource( 77 ) ],
 "loop": true,
 "name": "walk.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 75 ) ],
-"loop": true,
-"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 70 ), ExtResource( 42 ) ],
@@ -251,24 +246,29 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 72 ) ],
 "loop": true,
 "name": "idle.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 74 ) ],
+"frames": [ ExtResource( 75 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 80 ) ],
 "loop": true,
 "name": "idle.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
@@ -277,11 +277,6 @@ animations = [ {
 "frames": [ ExtResource( 97 ), ExtResource( 94 ) ],
 "loop": true,
 "name": "walk.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 93 ) ],
-"loop": true,
-"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 92 ), ExtResource( 43 ) ],
@@ -294,24 +289,29 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 96 ) ],
 "loop": true,
 "name": "idle.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 98 ) ],
+"frames": [ ExtResource( 93 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 99 ) ],
 "loop": true,
 "name": "idle.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
@@ -320,11 +320,6 @@ animations = [ {
 "frames": [ ExtResource( 83 ), ExtResource( 84 ) ],
 "loop": true,
 "name": "walk.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 87 ) ],
-"loop": true,
-"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 85 ), ExtResource( 81 ) ],
@@ -337,24 +332,29 @@ animations = [ {
 "name": "walk.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 89 ) ],
 "loop": true,
 "name": "idle.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 91 ) ],
+"frames": [ ExtResource( 87 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 82 ) ],
 "loop": true,
 "name": "idle.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
@@ -593,6 +593,7 @@ position = Vector2( -217.584, -49.1094 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="setapopup3" type="AnimatedSprite" parent="Cassino"]
@@ -600,7 +601,6 @@ position = Vector2( 215.535, -55.9297 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="NpcRicardo" type="Sprite" parent="Cassino"]
@@ -613,11 +613,14 @@ texture = ExtResource( 68 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cassino/Area2D"]
 polygon = PoolVector2Array( 49.7916, 124.138, 75.7106, 122.774, 72.9822, 243.501, -72.3002, 247.594, -68.8898, 123.456, -2.04626, 126.184, 1.36414, 167.791, -52.52, 156.196, -52.52, 233.952, 55.9303, 229.86 )
 
-[node name="lucasnpc" type="Button" parent="."]
+[node name="lucasNpc" type="Button" parent="."]
 margin_left = 1442.22
 margin_top = -7781.48
 margin_right = 1461.22
 margin_bottom = -7734.48
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TrabalhoCenário" type="Sprite" parent="."]
 position = Vector2( 1313, -8091 )
@@ -642,7 +645,6 @@ position = Vector2( 187.854, -46.7031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
@@ -669,7 +671,6 @@ rotation = 1.5646
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="TrabalhoCenário"]
@@ -677,7 +678,6 @@ position = Vector2( 114.025, 205.203 )
 scale = Vector2( 0.0391785, 0.0338659 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoGui" type="Button" parent="."]
@@ -751,6 +751,7 @@ position = Vector2( 139.193, 4.98828 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -767,6 +768,7 @@ position = Vector2( -20.9536, 35.4211 )
 scale = Vector2( 0.0311811, 0.0268573 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="MercadoJudite" type="Sprite" parent="."]
@@ -800,6 +802,7 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="MercadoJudite"]
@@ -807,6 +810,7 @@ position = Vector2( 264.869, -181.484 )
 scale = Vector2( 0.0405601, 0.0432207 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoVendedor" type="Button" parent="MercadoJudite"]
@@ -815,6 +819,9 @@ margin_top = -144.697
 margin_right = 306.951
 margin_bottom = -57.6973
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Fundo2" type="Sprite" parent="."]
 position = Vector2( 1330, -4726.5 )
@@ -868,6 +875,7 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="UniversidadeJudite" type="Sprite" parent="."]
@@ -928,6 +936,7 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -935,7 +944,6 @@ position = Vector2( -237.811, -267.16 )
 scale = Vector2( 0.0320963, 0.0305576 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="UniversidadeJudite"]
@@ -1242,7 +1250,7 @@ position = Vector2( 0, -21.7144 )
 scale = Vector2( 0.189906, 0.189906 )
 texture = ExtResource( 41 )
 
-[node name="boaoMapa" type="Button" parent="personagem/CanvasLayer"]
+[node name="botaoMapa" type="Button" parent="personagem/CanvasLayer"]
 margin_left = 969.0
 margin_top = 6.0
 margin_right = 1006.0
@@ -1705,8 +1713,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
@@ -1716,7 +1724,7 @@ __meta__ = {
 [connection signal="body_entered" from="Cassino/dentroCassino" to="personagem" method="_on_dentroCassino_body_entered"]
 [connection signal="body_entered" from="Cassino/Area2D" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cassino/Area2D" to="personagem" method="_on_Area2D_body_exited"]
-[connection signal="pressed" from="lucasnpc" to="personagem" method="_on_lucasnpc_pressed"]
+[connection signal="pressed" from="lucasNpc" to="personagem" method="_on_lucasnpc_pressed"]
 [connection signal="body_entered" from="TrabalhoCenário/dentroTrabalho" to="personagem" method="_on_dentroTrabalho_body_entered"]
 [connection signal="body_entered" from="TrabalhoCenário/areaLucas" to="personagem" method="_on_areaLucas_body_entered"]
 [connection signal="body_exited" from="TrabalhoCenário/areaLucas" to="personagem" method="_on_areaLucas_body_exited"]
@@ -1745,7 +1753,7 @@ __meta__ = {
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_D" to="personagem" method="_on_Movi_D_button_up"]
 [connection signal="button_down" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_down"]
 [connection signal="button_up" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_up"]
-[connection signal="pressed" from="personagem/CanvasLayer/boaoMapa" to="personagem" method="_on_boaoMapa_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/botaoMapa" to="personagem" method="_on_boaoMapa_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/mapaAberto/sairMapa" to="personagem" method="_on_sairMapa_pressed"]
 [connection signal="finished" from="personagem/CanvasLayer/VideoPlayer" to="personagem" method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
