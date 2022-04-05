@@ -138,12 +138,14 @@ func _physics_process(delta):
 		if m:
 			velocidade.y = -200
 			$AnimatedSpriteA.play("walk.costas")
+			$AnimatedSpriteB.play("walk.costas")
 	#O código abaixo faz o personagem ficar parado na direção do seu ultimo movimento
 	elif Input.is_action_just_released("tecla_w"):
 		m = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.costas")
+		$AnimatedSpriteB.play("idle.costas")
 	#O exemplo acima se repete pra todas as direções 
 		
 		
@@ -152,11 +154,13 @@ func _physics_process(delta):
 		if	mu:
 			velocidade.y = 200
 			$AnimatedSpriteA.play("walk.frente")
+			$AnimatedSpriteB.play("walk.frente")
 	elif Input.is_action_just_released("tecla_s"):
 		mu = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.frente")
+		$AnimatedSpriteB.play("idle.frente")
 		
 		
 	elif Input.is_action_pressed("tecla_a"):
@@ -164,11 +168,13 @@ func _physics_process(delta):
 		if	mo:
 			velocidade.x = -200
 			$AnimatedSpriteA.play("walk.esquerda")
+			$AnimatedSpriteB.play("walk.esquerda")
 	elif Input.is_action_just_released("tecla_a"):
 		mo = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.esquerda")
+		$AnimatedSpriteB.play("idle.esquerda")
 
 
 	elif Input.is_action_pressed("tecla_d"):
@@ -176,11 +182,13 @@ func _physics_process(delta):
 		if	mi:
 			velocidade.x = 200
 			$AnimatedSpriteA.play("walk.direita")
+			$AnimatedSpriteB.play("walk.direita")
 	elif Input.is_action_just_released("tecla_d"):
 		mi = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.direita")
+		$AnimatedSpriteB.play("idle.direita")
 
 
 #função que faz o personagem entrar em um ambiente novo em uma area
