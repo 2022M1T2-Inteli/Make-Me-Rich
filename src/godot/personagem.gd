@@ -547,3 +547,13 @@ func _on_botaovoltar_pressed():
 
 
 
+
+
+func _on_botao_voltar_duvida_pressed():
+	$CanvasLayer/computador.visible = true
+	$CanvasLayer/duvidaPc.visible = false
+
+
+func _on_botao_duvida_pressed():
+	$CanvasLayer/computador.visible = false
+	$CanvasLayer/duvidaPc.visible = true 

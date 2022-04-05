@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=2]
+[gd_scene load_steps=144 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -61,7 +61,7 @@
 [ext_resource path="res://assets/lucas npc.png" type="Texture" id=59]
 [ext_resource path="res://assets/COMPUTADOR1.png" type="Texture" id=60]
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=61]
-[ext_resource path="res://assets/COMPUTADOR ABERTO.png" type="Texture" id=62]
+[ext_resource path="res://assets/tela pc nova.png" type="Texture" id=62]
 [ext_resource path="res://assets/seta002.png" type="Texture" id=63]
 [ext_resource path="res://assets/seta001.png" type="Texture" id=64]
 [ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
@@ -102,6 +102,7 @@
 [ext_resource path="res://assets/animação personagens/C/PERSO MASC OPC2 (3).png" type="Texture" id=100]
 [ext_resource path="res://assets/animação personagens/C/PERSO MASC OPC2 (5).png" type="Texture" id=101]
 [ext_resource path="res://assets/animação personagens/C/PERSO MASC OPC2 (11).png" type="Texture" id=102]
+[ext_resource path="res://assets/pc duvida.png" type="Texture" id=103]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -192,9 +193,24 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "idle.esquerda",
+"name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
@@ -202,30 +218,15 @@ animations = [ {
 "name": "idle.frente",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -235,19 +236,9 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 80 ) ],
+"frames": [ ExtResource( 75 ) ],
 "loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 72 ) ],
-"loop": true,
-"name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
-"loop": true,
-"name": "walk.esquerda",
+"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 70 ), ExtResource( 42 ) ],
@@ -255,9 +246,19 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
 "loop": true,
 "name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 72 ) ],
+"loop": true,
+"name": "idle.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 74 ) ],
@@ -265,9 +266,9 @@ animations = [ {
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 75 ) ],
+"frames": [ ExtResource( 80 ) ],
 "loop": true,
-"name": "idle.costas",
+"name": "idle.esquerda",
 "speed": 5.0
 } ]
 
@@ -278,19 +279,9 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 99 ) ],
+"frames": [ ExtResource( 93 ) ],
 "loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 96 ) ],
-"loop": true,
-"name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
-"loop": true,
-"name": "walk.esquerda",
+"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 92 ), ExtResource( 43 ) ],
@@ -298,9 +289,19 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
 "loop": true,
 "name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ) ],
+"loop": true,
+"name": "idle.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 98 ) ],
@@ -308,9 +309,9 @@ animations = [ {
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 93 ) ],
+"frames": [ ExtResource( 99 ) ],
 "loop": true,
-"name": "idle.costas",
+"name": "idle.esquerda",
 "speed": 5.0
 } ]
 
@@ -321,19 +322,9 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 82 ) ],
+"frames": [ ExtResource( 87 ) ],
 "loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 89 ) ],
-"loop": true,
-"name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
-"loop": true,
-"name": "walk.esquerda",
+"name": "idle.costas",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 85 ), ExtResource( 81 ) ],
@@ -341,9 +332,19 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
 "loop": true,
 "name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 89 ) ],
+"loop": true,
+"name": "idle.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 91 ) ],
@@ -351,9 +352,9 @@ animations = [ {
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 87 ) ],
+"frames": [ ExtResource( 82 ) ],
 "loop": true,
-"name": "idle.costas",
+"name": "idle.esquerda",
 "speed": 5.0
 } ]
 
@@ -439,7 +440,7 @@ __meta__ = {
 }
 
 [node name="Fundo" type="Sprite" parent="."]
-position = Vector2( 1480, -2112 )
+position = Vector2( 1480, -2158 )
 scale = Vector2( 2.92802, 26.5777 )
 texture = ExtResource( 20 )
 
@@ -1536,6 +1537,13 @@ margin_right = -474.113
 margin_bottom = 442.105
 flat = true
 
+[node name="botao duvida" type="Button" parent="personagem/CanvasLayer/computador"]
+margin_left = -740.0
+margin_top = -591.0
+margin_right = -673.0
+margin_bottom = -514.0
+flat = true
+
 [node name="Emailpc" type="Sprite" parent="personagem/CanvasLayer"]
 visible = false
 position = Vector2( 496.5, 284.5 )
@@ -1604,6 +1612,19 @@ Vá até os lugares indicados para realizar apostas!
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="duvidaPc" type="Sprite" parent="personagem/CanvasLayer"]
+visible = false
+position = Vector2( 496, 283.5 )
+scale = Vector2( 0.269333, 0.233 )
+texture = ExtResource( 103 )
+
+[node name="botao voltar duvida" type="Button" parent="personagem/CanvasLayer/duvidaPc"]
+margin_left = -742.574
+margin_top = 366.953
+margin_right = -671.574
+margin_bottom = 436.953
+flat = true
 
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
@@ -1743,7 +1764,9 @@ __meta__ = {
 [connection signal="pressed" from="personagem/CanvasLayer/botaoEmail" to="personagem" method="_on_botaoEmail_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/computador/setasairpc" to="personagem" method="_on_setasairpc_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/computador/botaoEmanil" to="personagem" method="_on_botaoEmanil_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/computador/botao duvida" to="personagem" method="_on_botao_duvida_pressed"]
 [connection signal="pressed" from="personagem/CanvasLayer/Emailpc/botaovoltar" to="personagem" method="_on_botaovoltar_pressed"]
+[connection signal="pressed" from="personagem/CanvasLayer/duvidaPc/botao voltar duvida" to="personagem" method="_on_botao_voltar_duvida_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
