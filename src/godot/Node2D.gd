@@ -12,7 +12,7 @@ func _process(delta):
 	#roda o relogio
 	Global.sent += delta
 	
-	if Global.sent >= 0.5:
+	if Global.sent >= 0.08:
 		Global.minutos += 1
 		Global.sent = 0
 		
@@ -27,4 +27,4 @@ func _process(delta):
 		Global.dia += 1
 		
 	if Global.menosFeliz <= 5:
-		print("Bloqueado")
+		$personagem/CanvasLayer/bloqueioPop.visible = true
