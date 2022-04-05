@@ -139,6 +139,7 @@ func _physics_process(delta):
 			velocidade.y = -200
 			$AnimatedSpriteA.play("walk.costas")
 			$AnimatedSpriteB.play("walk.costas")
+			$AnimatedSpriteC.play("walk.costas")
 			$AnimatedSpriteD.play("walk.costas")
 	#O código abaixo faz o personagem ficar parado na direção do seu ultimo movimento
 	elif Input.is_action_just_released("tecla_w"):
@@ -147,6 +148,7 @@ func _physics_process(delta):
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.costas")
 		$AnimatedSpriteB.play("idle.costas")
+		$AnimatedSpriteC.play("idle.costas")
 		$AnimatedSpriteD.play("idle.costas")
 	#O exemplo acima se repete pra todas as direções 
 		
@@ -157,6 +159,7 @@ func _physics_process(delta):
 			velocidade.y = 200
 			$AnimatedSpriteA.play("walk.frente")
 			$AnimatedSpriteB.play("walk.frente")
+			$AnimatedSpriteC.play("walk.frente")
 			$AnimatedSpriteD.play("walk.frente")
 	elif Input.is_action_just_released("tecla_s"):
 		mu = false
@@ -164,6 +167,7 @@ func _physics_process(delta):
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.frente")
 		$AnimatedSpriteB.play("idle.frente")
+		$AnimatedSpriteC.play("idle.frente")
 		$AnimatedSpriteD.play("idle.frente")
 		
 		
@@ -173,6 +177,7 @@ func _physics_process(delta):
 			velocidade.x = -200
 			$AnimatedSpriteA.play("walk.esquerda")
 			$AnimatedSpriteB.play("walk.esquerda")
+			$AnimatedSpriteC.play("walk.esquerda")
 			$AnimatedSpriteD.play("walk.esquerda")
 	elif Input.is_action_just_released("tecla_a"):
 		mo = false
@@ -180,6 +185,7 @@ func _physics_process(delta):
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.esquerda")
 		$AnimatedSpriteB.play("idle.esquerda")
+		$AnimatedSpriteC.play("idle.esquerda")
 		$AnimatedSpriteD.play("idle.esquerda")
 
 
@@ -189,6 +195,7 @@ func _physics_process(delta):
 			velocidade.x = 200
 			$AnimatedSpriteA.play("walk.direita")
 			$AnimatedSpriteB.play("walk.direita")
+			$AnimatedSpriteC.play("walk.direita")
 			$AnimatedSpriteD.play("walk.direita")
 	elif Input.is_action_just_released("tecla_d"):
 		mi = false
@@ -196,6 +203,7 @@ func _physics_process(delta):
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.direita")
 		$AnimatedSpriteB.play("idle.direita")
+		$AnimatedSpriteC.play("idle.direita")
 		$AnimatedSpriteD.play("idle.direita")
 
 
