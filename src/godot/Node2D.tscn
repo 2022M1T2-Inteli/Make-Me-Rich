@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -14,7 +14,7 @@
 [ext_resource path="res://sprites_player/andando.costas_2.png" type="Texture" id=12]
 [ext_resource path="res://sprites_player/andando.direita_2.png" type="Texture" id=13]
 [ext_resource path="res://sprites_player/parado.direita.png" type="Texture" id=14]
-[ext_resource path="res://assets/mapasimbolo.png" type="Texture" id=15]
+[ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/banco_judite.jpg" type="Texture" id=16]
 [ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
 [ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
@@ -25,50 +25,21 @@
 [ext_resource path="res://Node2D.gd" type="Script" id=23]
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=24]
 [ext_resource path="res://assets/fundoRelogio.png" type="Texture" id=25]
-[ext_resource path="res://assets/RELOGIO.png" type="Texture" id=26]
 [ext_resource path="res://assets/npc professora.png" type="Texture" id=27]
 [ext_resource path="res://assets/Cenário do mercado.jpeg" type="Texture" id=28]
-[ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=29]
-[ext_resource path="res://assets/mapamovi1.png" type="Texture" id=30]
-[ext_resource path="res://assets/mapa2.png" type="Texture" id=31]
-[ext_resource path="res://assets/tutorialbarra.png" type="Texture" id=32]
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
 [ext_resource path="res://assets/Trabalho cenário.jpeg" type="Texture" id=34]
-[ext_resource path="res://assets/INSTRUÇÕES.png" type="Texture" id=35]
 [ext_resource path="res://assets/exclam1.png" type="Texture" id=36]
-[ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=37]
-[ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=38]
 [ext_resource path="res://assets/guilherme_npc.png" type="Texture" id=39]
 [ext_resource path="res://assets/venderdor_npc.png" type="Texture" id=40]
-[ext_resource path="res://assets/notifcação.png" type="Texture" id=41]
 [ext_resource path="res://assets/animação personagens/B/PERSO FEM OPC2 (2).png" type="Texture" id=42]
 [ext_resource path="res://assets/animação personagens/C/PERSO MASC OPC2.png" type="Texture" id=43]
 [ext_resource path="res://assets/animação personagens/D/PERSO FEM OPC1 (5).png" type="Texture" id=44]
-[ext_resource path="res://assets/next.png" type="Texture" id=45]
-[ext_resource path="res://assets/matFinanceira.png" type="Texture" id=46]
-[ext_resource path="res://assets/publico.png" type="Texture" id=47]
-[ext_resource path="res://assets/inflacao.png" type="Texture" id=48]
-[ext_resource path="res://assets/jurosSimples.png" type="Texture" id=49]
-[ext_resource path="res://assets/investimentos.png" type="Texture" id=50]
-[ext_resource path="res://assets/jurosCompostos.png" type="Texture" id=51]
-[ext_resource path="res://assets/incentivados.png" type="Texture" id=52]
-[ext_resource path="res://assets/rostofeliz.png" type="Texture" id=53]
-[ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=54]
-[ext_resource path="res://assets/mercado.png" type="Texture" id=55]
-[ext_resource path="res://assets/comida (7).png" type="Texture" id=56]
 [ext_resource path="res://assets/exclam2.png" type="Texture" id=57]
-[ext_resource path="res://assets/teste-_1_.ogv" type="VideoStream" id=58]
 [ext_resource path="res://assets/lucas npc.png" type="Texture" id=59]
-[ext_resource path="res://assets/COMPUTADOR1.png" type="Texture" id=60]
-[ext_resource path="res://assets/seta_voltar.png" type="Texture" id=61]
-[ext_resource path="res://assets/tela pc nova.png" type="Texture" id=62]
 [ext_resource path="res://assets/seta002.png" type="Texture" id=63]
 [ext_resource path="res://assets/seta001.png" type="Texture" id=64]
-[ext_resource path="res://assets/lucas rosto.png" type="Texture" id=65]
-[ext_resource path="res://assets/fundobarrafunções.png" type="Texture" id=66]
-[ext_resource path="res://assets/popupbloqueio.png" type="Texture" id=67]
 [ext_resource path="res://assets/npcRicardo.png" type="Texture" id=68]
-[ext_resource path="res://assets/cassino rosto.png" type="Texture" id=69]
 [ext_resource path="res://assets/animação personagens/B/PERSO FEM OPC2 (1).png" type="Texture" id=70]
 [ext_resource path="res://assets/animação personagens/B/PERSO FEM OPC2 (3).png" type="Texture" id=71]
 [ext_resource path="res://assets/animação personagens/B/PERSO FEM OPC2 frente.png" type="Texture" id=72]
@@ -102,7 +73,6 @@
 [ext_resource path="res://assets/animação personagens/C/PERSO MASC OPC2 (3).png" type="Texture" id=100]
 [ext_resource path="res://assets/animação personagens/C/PERSO MASC OPC2 (5).png" type="Texture" id=101]
 [ext_resource path="res://assets/animação personagens/C/PERSO MASC OPC2 (11).png" type="Texture" id=102]
-[ext_resource path="res://assets/pc duvida.png" type="Texture" id=103]
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.52827, 6.33526 )
@@ -188,14 +158,19 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"name": "idle.esquerda",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
@@ -203,37 +178,32 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "walk.frente",
-"speed": 5.0
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
 animations = [ {
-"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
+"frames": [ ExtResource( 80 ) ],
 "loop": true,
-"name": "walk.esquerda",
+"name": "idle.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
@@ -241,19 +211,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 79 ), ExtResource( 77 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 70 ), ExtResource( 42 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 74 ) ],
+"frames": [ ExtResource( 79 ), ExtResource( 77 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 75 ) ],
@@ -261,22 +226,27 @@ animations = [ {
 "name": "idle.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 72 ) ],
 "loop": true,
 "name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 80 ) ],
-"loop": true,
-"name": "idle.esquerda",
 "speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=36]
 animations = [ {
-"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
+"frames": [ ExtResource( 99 ) ],
 "loop": true,
-"name": "walk.esquerda",
+"name": "idle.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
@@ -284,19 +254,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 97 ), ExtResource( 94 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 92 ), ExtResource( 43 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 98 ) ],
+"frames": [ ExtResource( 97 ), ExtResource( 94 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 93 ) ],
@@ -304,22 +269,27 @@ animations = [ {
 "name": "idle.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 96 ) ],
 "loop": true,
 "name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 99 ) ],
-"loop": true,
-"name": "idle.esquerda",
 "speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=37]
 animations = [ {
-"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
+"frames": [ ExtResource( 82 ) ],
 "loop": true,
-"name": "walk.esquerda",
+"name": "idle.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
@@ -327,19 +297,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 83 ), ExtResource( 84 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 85 ), ExtResource( 81 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 91 ) ],
+"frames": [ ExtResource( 83 ), ExtResource( 84 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.direita",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 87 ) ],
@@ -347,86 +312,24 @@ animations = [ {
 "name": "idle.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 89 ) ],
 "loop": true,
 "name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 82 ) ],
-"loop": true,
-"name": "idle.esquerda",
 "speed": 5.0
 } ]
 
 [sub_resource type="DynamicFont" id=15]
 size = 26
-font_data = ExtResource( 24 )
-
-[sub_resource type="StyleBoxFlat" id=41]
-bg_color = Color( 0.168627, 0.152941, 0.239216, 1 )
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="StyleBoxFlat" id=42]
-bg_color = Color( 0.647059, 0.290196, 0.305882, 1 )
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="DynamicFont" id=44]
-size = 23
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=43]
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=40]
-size = 18
-extra_spacing_top = 5
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=22]
-size = 18
-extra_spacing_top = 10
-font_data = ExtResource( 24 )
-
-[sub_resource type="Animation" id=34]
-resource_name = "popUp"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
-}
-
-[sub_resource type="DynamicFont" id=32]
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=33]
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=47]
-size = 52
-extra_spacing_top = 19
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=50]
-size = 18
-extra_spacing_top = 6
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=49]
-size = 21
-extra_spacing_top = 10
 font_data = ExtResource( 24 )
 
 [sub_resource type="RectangleShape2D" id=7]
@@ -1015,624 +918,7 @@ custom_fonts/font = SubResource( 15 )
 text = "MONEY
 "
 
-[node name="CanvasLayer" type="CanvasLayer" parent="personagem"]
-
-[node name="bloqueioPop" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 487.5, 314.5 )
-scale = Vector2( 0.277667, 0.277667 )
-texture = ExtResource( 67 )
-
-[node name="Moneysimb" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 23, 27 )
-scale = Vector2( 0.030125, 0.0324167 )
-texture = ExtResource( 38 )
-
-[node name="Relogio" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 194, 32 )
-scale = Vector2( 0.0227677, 0.0210425 )
-texture = ExtResource( 26 )
-
-[node name="happyBar" type="ProgressBar" parent="personagem/CanvasLayer"]
-margin_left = 424.0
-margin_top = 15.0
-margin_right = 604.0
-margin_bottom = 35.0
-custom_styles/fg = SubResource( 41 )
-custom_styles/bg = SubResource( 42 )
-step = 1.0
-value = 50.0
-
-[node name="caraFeliz" type="Sprite" parent="personagem/CanvasLayer/happyBar"]
-position = Vector2( -25, 13 )
-scale = Vector2( 0.0173333, 0.0158629 )
-texture = ExtResource( 53 )
-
-[node name="fundoMario" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-modulate = Color( 0, 0, 0, 0.588235 )
-show_behind_parent = true
-light_mask = 0
-position = Vector2( 547, 544 )
-scale = Vector2( 0.415953, 0.191235 )
-texture = ExtResource( 20 )
-
-[node name="fundoProfessora" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-modulate = Color( 1, 0, 0, 0.588235 )
-position = Vector2( 548, 544 )
-scale = Vector2( 0.415564, 0.195219 )
-texture = ExtResource( 20 )
-
-[node name="Fundo" type="Sprite" parent="personagem/CanvasLayer/fundoProfessora"]
-position = Vector2( -1537.67, -502 )
-texture = ExtResource( 20 )
-
-[node name="fundoGui" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-modulate = Color( 0, 0, 0, 0.588235 )
-self_modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 548.875, 543.5 )
-scale = Vector2( 0.420039, 0.189243 )
-texture = ExtResource( 20 )
-
-[node name="Movi_S" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 122.0
-margin_top = 517.0
-margin_right = 167.0
-margin_bottom = 562.0
-flat = true
-
-[node name="Movi_W" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 124.0
-margin_top = 429.0
-margin_right = 169.0
-margin_bottom = 474.0
-flat = true
-
-[node name="Movi_D" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 169.0
-margin_top = 473.0
-margin_right = 214.0
-margin_bottom = 518.0
-flat = true
-
-[node name="Movi_A" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 77.0
-margin_top = 473.0
-margin_right = 122.0
-margin_bottom = 518.0
-flat = true
-
-[node name="botaoEsquerdo" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 101, 493 )
-rotation = 3.14464
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 30 )
-flip_v = true
-
-[node name="botaoBaixo" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 143, 538 )
-rotation = 1.56864
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 30 )
-flip_v = true
-
-[node name="botaoDireita" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 190, 494 )
-rotation = -0.0110049
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 30 )
-
-[node name="botaoCima" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 144, 453 )
-rotation = -1.57695
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 30 )
-
-[node name="nomeVendedor" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 286.0
-margin_top = 474.0
-margin_right = 346.0
-margin_bottom = 488.0
-custom_fonts/font = SubResource( 44 )
-text = "MARIO"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="textoVendedor" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 286.0
-margin_top = 504.0
-margin_right = 741.0
-margin_bottom = 603.0
-custom_fonts/font = SubResource( 43 )
-text = "Olá, meu nome é Mario e trabalho aqui no mercado!
-
-Vá até a prateleira indicada para realizar suas compras!
-
-Não se esqueça de observar os preços e as vantagens de cada produto!
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="vendedor" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 1168, 598 )
-texture = ExtResource( 54 )
-
-[node name="textoGui" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 289.0
-margin_top = 500.0
-margin_right = 767.0
-margin_bottom = 593.0
-custom_fonts/font = SubResource( 40 )
-text = "Olá, sou o Guilherme e irei te ajudar aqui no banco!
-Você pode ir no caixa indicado para pagar suas 
-contas e retirar seu salário!
-Você também pode colocar seu dinheiro na poupança, 
-daqui 3 dias você pode retirá-lo com rendimento!  
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="nomeGui" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 1168.0
-margin_top = 600.0
-margin_right = 1208.0
-margin_bottom = 614.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="guilherme" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 1168, 600 )
-texture = ExtResource( 37 )
-
-[node name="textoProf" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 289.0
-margin_top = 500.0
-margin_right = 767.0
-margin_bottom = 581.0
-custom_fonts/font = SubResource( 22 )
-text = "Olá, seja bem vindo a aula inaugural de Economia, onde você irá aprender 
-sobre educação financeira!
- Meu nome é Diana e serei sua professora. 
-Vá até a mesa indicada para realizar seu primeiro estudo! 
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="nomeProf" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 1170.0
-margin_top = 602.0
-margin_right = 1210.0
-margin_bottom = 616.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="professora" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 1170, 602 )
-texture = ExtResource( 29 )
-
-[node name="celIconn" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 988, 26 )
-scale = Vector2( 0.0269362, 0.026543 )
-texture = ExtResource( 15 )
-
-[node name="Panel" type="Panel" parent="personagem/CanvasLayer/celIconn"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-rect_scale = Vector2( 1e-05, 1e-05 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="personagem/CanvasLayer/celIconn/Panel"]
-anims/popUp = SubResource( 34 )
-
-[node name="notificação" type="Sprite" parent="personagem/CanvasLayer/celIconn/Panel"]
-visible = false
-position = Vector2( 0, -21.7144 )
-scale = Vector2( 0.189906, 0.189906 )
-texture = ExtResource( 41 )
-
-[node name="botaoMapa" type="Button" parent="personagem/CanvasLayer"]
-margin_left = 969.0
-margin_top = 6.0
-margin_right = 1006.0
-margin_bottom = 48.0
-flat = true
-
-[node name="mapaAberto" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 492, 310 )
-scale = Vector2( 0.186604, 0.158937 )
-texture = ExtResource( 31 )
-
-[node name="sairMapa" type="Button" parent="personagem/CanvasLayer/mapaAberto"]
-margin_left = -1077.0
-margin_top = -1158.0
-margin_right = -975.0
-margin_bottom = -1019.0
-flat = true
-
-[node name="SetaVoltar" type="Sprite" parent="personagem/CanvasLayer/mapaAberto"]
-position = Vector2( -1028.92, -1094.77 )
-scale = Vector2( 0.0870828, 0.0998824 )
-texture = ExtResource( 61 )
-
-[node name="relogio" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 266, 56 )
-scale = Vector2( 0.06, 0.06 )
-texture = ExtResource( 25 )
-
-[node name="dia" type="Label" parent="personagem/CanvasLayer"]
-margin_left = 243.0
-margin_top = 15.0
-margin_right = 283.0
-margin_bottom = 29.0
-custom_fonts/font = SubResource( 32 )
-text = "dia"
-
-[node name="hora" type="Label" parent="personagem/CanvasLayer"]
-margin_left = 242.0
-margin_top = 29.0
-margin_right = 282.0
-margin_bottom = 43.0
-custom_fonts/font = SubResource( 33 )
-text = "hora"
-
-[node name="VideoPlayer" type="VideoPlayer" parent="personagem/CanvasLayer"]
-visible = false
-margin_right = 1026.0
-margin_bottom = 601.0
-stream = ExtResource( 58 )
-autoplay = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="botaoNpc" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 817.0
-margin_top = 474.0
-margin_right = 1011.0
-margin_bottom = 589.0
-
-[node name="botaoTutorial" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 884.994
-margin_top = 467.967
-margin_right = 1059.99
-margin_bottom = 607.967
-
-[node name="botaoNome" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 623.0
-margin_top = 554.0
-margin_right = 707.0
-margin_bottom = 586.0
-
-[node name="Fundobarrafunções" type="Sprite" parent="personagem/CanvasLayer"]
-position = Vector2( 477, 29 )
-scale = Vector2( 1.07129, 0.916667 )
-texture = ExtResource( 66 )
-
-[node name="instrucNpc" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 512, 303 )
-scale = Vector2( 0.534375, 0.561111 )
-texture = ExtResource( 32 )
-
-[node name="boasVindas" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 512, 300 )
-scale = Vector2( 0.533333, 0.559259 )
-texture = ExtResource( 35 )
-
-[node name="nextLivro" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 643.0
-margin_top = 419.0
-margin_right = 769.0
-margin_bottom = 473.0
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="matFinanceira" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 533.784, 296.784 )
-scale = Vector2( 0.178144, 0.178144 )
-texture = ExtResource( 46 )
-
-[node name="inflacao" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 532, 296 )
-scale = Vector2( 0.180447, 0.180447 )
-texture = ExtResource( 48 )
-
-[node name="jurosSimples" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 534, 300 )
-scale = Vector2( 0.179307, 0.179307 )
-texture = ExtResource( 49 )
-
-[node name="jurosCompostos" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 533, 291 )
-scale = Vector2( 0.174519, 0.174519 )
-texture = ExtResource( 51 )
-
-[node name="investimentos" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 529, 304 )
-scale = Vector2( 0.186885, 0.186885 )
-texture = ExtResource( 50 )
-
-[node name="publico" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 528, 306 )
-scale = Vector2( 0.181537, 0.181537 )
-texture = ExtResource( 47 )
-
-[node name="incentivados" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 523.798, 306.798 )
-scale = Vector2( 0.178134, 0.178134 )
-texture = ExtResource( 52 )
-
-[node name="next" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 676.444, 445 )
-scale = Vector2( 0.277778, 0.277778 )
-texture = ExtResource( 45 )
-
-[node name="sairMercado" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 250.0
-margin_top = 135.0
-margin_right = 290.0
-margin_bottom = 175.0
-
-[node name="botaoBife" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 288.0
-margin_top = 183.0
-margin_right = 394.0
-margin_bottom = 314.0
-flat = true
-
-[node name="mercado" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 623, 245 )
-scale = Vector2( 0.208583, 0.208583 )
-texture = ExtResource( 55 )
-offset = Vector2( -417.1, 450.66 )
-
-[node name="setaVolta" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 273, 152 )
-scale = Vector2( 0.0347501, 0.0347501 )
-texture = ExtResource( 56 )
-
-[node name="botaoMacarrao" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 416.0
-margin_top = 178.0
-margin_right = 527.0
-margin_bottom = 318.0
-rect_pivot_offset = Vector2( 176, 38 )
-flat = true
-
-[node name="botaoSushi" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 550.0
-margin_top = 182.0
-margin_right = 654.0
-margin_bottom = 316.0
-rect_pivot_offset = Vector2( 176, 38 )
-flat = true
-
-[node name="botaoLeite" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 420.0
-margin_top = 344.0
-margin_right = 525.0
-margin_bottom = 472.0
-rect_pivot_offset = Vector2( 176, 38 )
-flat = true
-
-[node name="botaoBolo" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 278.0
-margin_top = 344.0
-margin_right = 383.0
-margin_bottom = 472.0
-rect_pivot_offset = Vector2( 176, 38 )
-flat = true
-
-[node name="botaoHamb" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 675.0
-margin_top = 181.0
-margin_right = 784.0
-margin_bottom = 317.0
-rect_pivot_offset = Vector2( 176, 38 )
-flat = true
-
-[node name="botaoRosquinha" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 675.0
-margin_top = 345.0
-margin_right = 780.0
-margin_bottom = 473.0
-rect_pivot_offset = Vector2( 176, 38 )
-flat = true
-
-[node name="botaoMaca" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 549.0
-margin_top = 347.0
-margin_right = 654.0
-margin_bottom = 475.0
-rect_pivot_offset = Vector2( 176, 38 )
-flat = true
-
-[node name="botaoEmail" type="Button" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 440.0
-margin_top = 236.0
-margin_right = 587.0
-margin_bottom = 304.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="computador" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 497, 284 )
-scale = Vector2( 0.270219, 0.235058 )
-texture = ExtResource( 60 )
-
-[node name="setasairpc" type="Button" parent="personagem/CanvasLayer/computador"]
-margin_left = -647.624
-margin_top = 438.191
-margin_right = -598.624
-margin_bottom = 505.191
-rect_scale = Vector2( -2.15068, -1.2916 )
-flat = true
-
-[node name="obj1" type="Label" parent="personagem/CanvasLayer/computador"]
-visible = false
-margin_left = -342.924
-margin_top = -293.7
-margin_right = 465.076
-margin_bottom = 39.3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 47 )
-text = "1. Vá à faculdade e tenha sua
-primeira aula sobre 
-Matemática Financeira!
-
-2.Vá até ao trabalho e 
-execute sua primeira função!
-
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="botaoEmanil" type="Button" parent="personagem/CanvasLayer/computador"]
-margin_left = -592.113
-margin_top = 353.105
-margin_right = -474.113
-margin_bottom = 442.105
-flat = true
-
-[node name="botao duvida" type="Button" parent="personagem/CanvasLayer/computador"]
-margin_left = -740.0
-margin_top = -591.0
-margin_right = -673.0
-margin_bottom = -514.0
-flat = true
-
-[node name="Emailpc" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 496.5, 284.5 )
-scale = Vector2( 0.269667, 0.233 )
-texture = ExtResource( 62 )
-
-[node name="botaovoltar" type="Button" parent="personagem/CanvasLayer/Emailpc"]
-margin_left = -721.261
-margin_top = 336.91
-margin_right = -641.261
-margin_bottom = 426.91
-flat = true
-
-[node name="rostoLucas" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 1167, 600 )
-texture = ExtResource( 65 )
-
-[node name="fundoLucas" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-modulate = Color( 1, 1, 1, 0.686275 )
-position = Vector2( 558.823, 540.769 )
-scale = Vector2( 0.401281, 0.192155 )
-texture = ExtResource( 20 )
-
-[node name="falalucas" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 306.0
-margin_top = 499.0
-margin_right = 801.0
-margin_bottom = 580.0
-custom_fonts/font = SubResource( 50 )
-text = "Meu nome é Lucas, estou aqui para te ajudar nas suas tarefas. 
-Sua primeira tarefa está no setor de importações,
-vá até a esteira rolante indicada e comece a embalar
- os produtos. Assim que acabar, venha falar comigo!
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="rostoRicardo" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 1168, 601 )
-texture = ExtResource( 69 )
-
-[node name="fundoRicardo" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-modulate = Color( 1, 1, 1, 0.666667 )
-position = Vector2( 558.5, 537.5 )
-scale = Vector2( 0.399222, 0.181275 )
-texture = ExtResource( 20 )
-
-[node name="falaRicardo" type="Label" parent="personagem/CanvasLayer"]
-visible = false
-margin_left = 305.0
-margin_top = 486.0
-margin_right = 786.0
-margin_bottom = 593.0
-custom_fonts/font = SubResource( 49 )
-text = "Olá Cris, meu nome é Ricardo e sou o funcionário do cassino.
-Vá até os lugares indicados para realizar apostas! 
-
-
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="duvidaPc" type="Sprite" parent="personagem/CanvasLayer"]
-visible = false
-position = Vector2( 496, 283.5 )
-scale = Vector2( 0.269333, 0.233 )
-texture = ExtResource( 103 )
-
-[node name="botao voltar duvida" type="Button" parent="personagem/CanvasLayer/duvidaPc"]
-margin_left = -742.574
-margin_top = 366.953
-margin_right = -671.574
-margin_bottom = 436.953
-flat = true
+[node name="CanvasLayer" parent="personagem" instance=ExtResource( 15 )]
 
 [node name="areaNotiicacao" type="Area2D" parent="personagem"]
 
@@ -1745,36 +1031,6 @@ __meta__ = {
 [connection signal="body_entered" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_entered"]
 [connection signal="body_exited" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_exited"]
 [connection signal="pressed" from="UniversidadeJudite/botaoProf" to="personagem" method="_on_botaoProf_pressed"]
-[connection signal="button_down" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_down"]
-[connection signal="button_up" from="personagem/CanvasLayer/Movi_S" to="personagem" method="_on_Movi_S_button_up"]
-[connection signal="button_down" from="personagem/CanvasLayer/Movi_W" to="personagem" method="_on_Movi_W_button_down"]
-[connection signal="button_up" from="personagem/CanvasLayer/Movi_W" to="personagem" method="_on_Movi_W_button_up"]
-[connection signal="button_down" from="personagem/CanvasLayer/Movi_D" to="personagem" method="_on_Movi_D_button_down"]
-[connection signal="button_up" from="personagem/CanvasLayer/Movi_D" to="personagem" method="_on_Movi_D_button_up"]
-[connection signal="button_down" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_down"]
-[connection signal="button_up" from="personagem/CanvasLayer/Movi_A" to="personagem" method="_on_Movi_A_button_up"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoMapa" to="personagem" method="_on_boaoMapa_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/mapaAberto/sairMapa" to="personagem" method="_on_sairMapa_pressed"]
-[connection signal="finished" from="personagem/CanvasLayer/VideoPlayer" to="personagem" method="_on_VideoPlayer_finished"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoNpc" to="personagem" method="_on_botaoNpc_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoTutorial" to="personagem" method="_on_botaoTutorial_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoNome" to="personagem" method="_on_botaoNome_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/nextLivro" to="personagem" method="_on_nextLivro_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/sairMercado" to="personagem" method="_on_sairMercado_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoBife" to="personagem" method="_on_botaoBife_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoMacarrao" to="personagem" method="_on_botaoMacarrao_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoSushi" to="personagem" method="_on_botaoSushi_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoLeite" to="personagem" method="_on_botaoLeite_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoBolo" to="personagem" method="_on_botaoBolo_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoHamb" to="personagem" method="_on_botaoHamb_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoRosquinha" to="personagem" method="_on_botaoRosquinha_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoMaca" to="personagem" method="_on_botaoMaca_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/botaoEmail" to="personagem" method="_on_botaoEmail_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/computador/setasairpc" to="personagem" method="_on_setasairpc_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/computador/botaoEmanil" to="personagem" method="_on_botaoEmanil_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/computador/botao duvida" to="personagem" method="_on_botao_duvida_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/Emailpc/botaovoltar" to="personagem" method="_on_botaovoltar_pressed"]
-[connection signal="pressed" from="personagem/CanvasLayer/duvidaPc/botao voltar duvida" to="personagem" method="_on_botao_voltar_duvida_pressed"]
 [connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
 [connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
