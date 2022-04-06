@@ -59,3 +59,9 @@ func _process(delta):
 		$personagem/CanvasLayer/textoVendedor.visible = false
 		$personagem/CanvasLayer/nomeVendedor.visible = false
 		$MercadoJudite/botaoVendedor.visible = false
+	
+	if Global.abriuJogoFab == 1:
+		$botaoFabrica.visible = false
+		
+	if Global.abriuJogoFio == 1:
+		$botaoFios.visible = false

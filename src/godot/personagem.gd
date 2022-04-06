@@ -448,6 +448,7 @@ func _on_sairMercado_pressed():
 
 func _on_botaoFabrica_pressed():
 	get_tree().change_scene("res://Interface.tscn")
+	Global.abriuJogoFab += 1
 
 func _on_botaoBife_pressed():
 	Global.dinheiro -= 20
@@ -538,6 +539,7 @@ func _on_setasairpc_pressed():
 
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
+	Global.abriuJogoFio += 1
 
 func _on_boaoMapa_pressed():
 	$CanvasLayer/mapaAberto.visible = true

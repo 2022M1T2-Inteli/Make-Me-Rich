@@ -14,4 +14,7 @@ var score = 0
 var valor = 0
 var tempo = 0
 var meta = 50
-var posicao 
+var posicao
+var gameAberto = 0
+var abriuJogoFab = 0
+var abriuJogoFio = 0
