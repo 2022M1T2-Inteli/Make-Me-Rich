@@ -1,36 +1,18 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fundo.png" type="Texture" id=1]
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Cena_computador.gd" type="Script" id=3]
 [ext_resource path="res://assets/comp tela.png" type="Texture" id=4]
 [ext_resource path="res://assets/caixa_amarela.png" type="Texture" id=5]
-[ext_resource path="res://comprar.gd" type="Script" id=6]
-[ext_resource path="res://conquistas.gd" type="Script" id=7]
 [ext_resource path="res://investimentos.gd" type="Script" id=8]
-[ext_resource path="res://estudar.gd" type="Script" id=9]
 [ext_resource path="res://sair_pc.gd" type="Script" id=10]
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=11]
-
-[sub_resource type="DynamicFont" id=1]
-size = 42
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 42
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 42
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 42
-font_data = ExtResource( 2 )
-
 [node name="Cena_computador" type="Node2D"]
-script = ExtResource( 3 )
 
 [node name="CapturaDeTela2022-02-22144254" type="Sprite" parent="."]
 position = Vector2( 515, 310 )
@@ -42,67 +24,15 @@ position = Vector2( 515, 322 )
 scale = Vector2( 0.512583, 0.447384 )
 texture = ExtResource( 4 )
 
-[node name="estudar" type="Button" parent="."]
-visible = false
-margin_left = 225.0
-margin_top = 187.0
-margin_right = 478.0
-margin_bottom = 291.0
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CaixaEstudar" type="Sprite" parent="estudar"]
-position = Vector2( 460, 116 )
-scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 5 )
-offset = Vector2( -375.744, -71.9511 )
-
-[node name="Label" type="Label" parent="estudar/CaixaEstudar"]
-margin_left = -445.556
-margin_top = -92.2223
-margin_right = -299.556
-margin_bottom = -76.2223
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "ESTUDAR"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="conquistas" type="Button" parent="."]
-visible = false
-margin_left = 224.0
-margin_top = 341.0
-margin_right = 470.0
-margin_bottom = 442.0
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CaixaConquistas" type="Sprite" parent="conquistas"]
-position = Vector2( 125, 46 )
-scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 5 )
-
-[node name="Label" type="Label" parent="conquistas/CaixaConquistas"]
-margin_left = -100.0
-margin_top = -22.2222
-margin_right = 111.0
-margin_bottom = 40.7778
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "CONQUISTAS"
-
 [node name="investimentos" type="Button" parent="."]
 margin_left = 401.0
 margin_top = 217.0
 margin_right = 654.0
 margin_bottom = 324.0
 script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CaixaInvestir" type="Sprite" parent="investimentos"]
 position = Vector2( 462, 118 )
@@ -123,36 +53,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="comprar" type="Button" parent="."]
-visible = false
-margin_left = 539.0
-margin_top = 333.0
-margin_right = 789.0
-margin_bottom = 441.0
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CaixaComprar" type="Sprite" parent="comprar"]
-position = Vector2( 462, 118 )
-scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 5 )
-offset = Vector2( -375.744, -71.9511 )
-
-[node name="Label" type="Label" parent="comprar/CaixaComprar"]
-margin_left = -440.0
-margin_top = -90.0
-margin_right = -293.0
-margin_bottom = -74.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 4 )
-text = "COMPRAR"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="sair_pc" type="Button" parent="."]
 margin_left = 225.0
 margin_top = 147.0
@@ -168,14 +68,7 @@ position = Vector2( 17, 10 )
 scale = Vector2( 0.052, 0.052 )
 texture = ExtResource( 11 )
 
-[connection signal="mouse_entered" from="estudar" to="estudar" method="_on_estudar_mouse_entered"]
-[connection signal="mouse_exited" from="estudar" to="estudar" method="_on_estudar_mouse_exited"]
-[connection signal="pressed" from="estudar" to="estudar" method="_on_estudar_pressed"]
-[connection signal="mouse_entered" from="conquistas" to="conquistas" method="_on_conquistas_mouse_entered"]
-[connection signal="mouse_exited" from="conquistas" to="conquistas" method="_on_conquistas_mouse_exited"]
 [connection signal="mouse_entered" from="investimentos" to="investimentos" method="_on_investimentos_mouse_entered"]
 [connection signal="mouse_exited" from="investimentos" to="investimentos" method="_on_investimentos_mouse_exited"]
 [connection signal="pressed" from="investimentos" to="investimentos" method="_on_investimentos_pressed"]
-[connection signal="mouse_entered" from="comprar" to="comprar" method="_on_comprar_mouse_entered"]
-[connection signal="mouse_exited" from="comprar" to="comprar" method="_on_comprar_mouse_exited"]
 [connection signal="pressed" from="sair_pc" to="sair_pc" method="_on_sair_pc_pressed"]

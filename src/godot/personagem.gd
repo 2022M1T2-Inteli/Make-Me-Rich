@@ -260,6 +260,7 @@ func _on_dentroTrabalho_body_entered(body):
 #Movimentação Botões
 func _on_Movi_A_button_down():
 	velocidade.x = -200
+	#Faz as animações funcionarem, cada uma de um personagem diferente
 	$AnimatedSpriteA.play("walk.esquerda")
 	$AnimatedSpriteB.play("walk.esquerda")
 	$AnimatedSpriteC.play("walk.esquerda")
@@ -375,7 +376,6 @@ func _on_areaVendedor_body_entered(body):
 	areaVendedor = true
 func _on_areaVendedor_body_exited(body):
 	areaVendedor = false
-
 
 func _on_botaoLivro_pressed():
 	cont += 1
@@ -539,10 +539,6 @@ func _on_setasairpc_pressed():
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
 
-
-
-
-
 func _on_boaoMapa_pressed():
 	$CanvasLayer/mapaAberto.visible = true
 
@@ -550,31 +546,19 @@ func _on_boaoMapa_pressed():
 func _on_sairMapa_pressed():
 	$CanvasLayer/mapaAberto.visible = false 
 
-
-
 func _on_VideoPlayer_finished():
 	Global.contador += 1
 
-
 func _on_botaoEmanil_pressed():
 	$CanvasLayer/Emailpc.visible = true
-	
-	
+
 func _on_botaovoltar_pressed():
 	$CanvasLayer/computador.visible = true
 	$CanvasLayer/Emailpc.visible = false
 	
-
-
-
-
-
-
-
 func _on_botao_voltar_duvida_pressed():
 	$CanvasLayer/computador.visible = true
 	$CanvasLayer/duvidaPc.visible = false
-
 
 func _on_botao_duvida_pressed():
 	$CanvasLayer/computador.visible = false
