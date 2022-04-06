@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Ponta_de_fio.png" type="Texture" id=1]
 [ext_resource path="res://Fio 1.gd" type="Script" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Fio 4.gd" type="Script" id=5]
 [ext_resource path="res://Fundo_among_1.webp" type="Texture" id=6]
 [ext_resource path="res://Fio_amarelo.png" type="Texture" id=7]
-[ext_resource path="res://Area_Fio1.gd" type="Script" id=8]
 [ext_resource path="res://Fio_azul.png" type="Texture" id=9]
 [ext_resource path="res://Fio_vermelho.png" type="Texture" id=10]
 [ext_resource path="res://Fio_roxo.png" type="Texture" id=11]
@@ -43,7 +42,6 @@ texture = ExtResource( 6 )
 
 [node name="Area_Fio1" type="Area2D" parent="."]
 position = Vector2( 896, 386 )
-script = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio1"]
 polygon = PoolVector2Array( -44, -17, -47, 13, 64, 12, 65, -16 )
@@ -51,7 +49,6 @@ polygon = PoolVector2Array( -44, -17, -47, 13, 64, 12, 65, -16 )
 [node name="Area_Fio2" type="Area2D" parent="."]
 position = Vector2( 896, 251 )
 scale = Vector2( 1.03366, 1 )
-script = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio2"]
 scale = Vector2( 0.971425, -0.866032 )
@@ -59,14 +56,12 @@ polygon = PoolVector2Array( -45, -19, -47, 13, 64, 12, 67, -19 )
 
 [node name="Area_Fio3" type="Area2D" parent="."]
 position = Vector2( 891, 139 )
-script = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio3"]
 polygon = PoolVector2Array( -45, -19, -47, 13, 64, 12, 67, -19 )
 
 [node name="Area_Fio4" type="Area2D" parent="."]
 position = Vector2( 896, 517 )
-script = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area_Fio4"]
 polygon = PoolVector2Array( -45, -19, -47, 13, -6, 14, 64, 12, 67, -19 )
