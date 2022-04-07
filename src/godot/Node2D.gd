@@ -12,7 +12,7 @@ func _process(delta):
 	#roda o relogio
 	Global.sent += delta
 	
-	if Global.sent >= 0.08:
+	if Global.sent >= 0.5:
 		Global.minutos += 1
 		Global.sent = 0
 		

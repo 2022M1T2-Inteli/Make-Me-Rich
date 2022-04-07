@@ -16,7 +16,7 @@ var contVideo
 
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str (Global.dinheiro)
+	
 	#mostra o personagem escolhido
 	if Global.selecPersonagem == 1:
 		$AnimatedSpriteA.visible = true
@@ -31,78 +31,7 @@ func _ready():
 	yield (get_tree().create_timer(1),"timeout")
 	
 	
-#faz o botao next sumir com o tutorial
-func _on_botaoTutorial_pressed():
-	Global.contador += 1
-# delta é um método que faz o codigo ser executado a cada frame
-func _process(delta):
-		#tutorial aparece
-	if Global.contador == 0 :
-		$CanvasLayer/boasVindas.visible = true
-		$CanvasLayer/botaoTutorial.visible = true
-		#tutorial sai
-	if Global.contador == 1:
-		$CanvasLayer/boasVindas.visible = false
-		$CanvasLayer/botaoTutorial.visible = false
-		$CanvasLayer/instrucNpc.visible = true
-		$CanvasLayer/botaoNpc.visible = true
 
-	if Global.contador == 2:
-		$CanvasLayer/instrucNpc.visible = false
-		$CanvasLayer/botaoNpc.visible = false
-		
-	if Global.contador == 3:
-		$CanvasLayer/VideoPlayer.visible = false
- 
-	#fala da professora aparece
-	if areaProf == true and prof % 2 == 1:
-		$CanvasLayer/professora.visible = true
-		$CanvasLayer/fundoProfessora.visible = true
-		$CanvasLayer/textoProf.visible = true
-		#fala da professora sai
-	elif areaProf == false or prof % 2 == 0:
-		$CanvasLayer/professora.visible = false
-		$CanvasLayer/fundoProfessora.visible = false
-		$CanvasLayer/textoProf.visible = false
-		#fala do guilherme aparece
-	if areaGui == true and gui % 2 == 1:
-		$CanvasLayer/guilherme.visible = true
-		$CanvasLayer/textoGui.visible = true
-		$CanvasLayer/fundoGui.visible = true
-	elif areaGui == false or gui % 2 == 0:
-		$CanvasLayer/guilherme.visible = false
-		$CanvasLayer/textoGui.visible = false
-		$CanvasLayer/fundoGui.visible = false
-		#fala do vendedor aparece
-	if areaVendedor == true and vendedor % 2 == 1:
-		$CanvasLayer/vendedor.visible = true
-		$CanvasLayer/fundoMario.visible = true
-		$CanvasLayer/textoVendedor.visible = true
-		$CanvasLayer/nomeVendedor.visible = true
-		
-	elif areaVendedor == false or vendedor % 2 == 0:
-		$CanvasLayer/vendedor.visible = false
-		$CanvasLayer/fundoMario.visible = false
-		$CanvasLayer/textoVendedor.visible = false
-		$CanvasLayer/nomeVendedor.visible = false
-		
-	if areaLucas == true and lucas % 2 == 1:
-		$CanvasLayer/fundoLucas.visible = true
-		$CanvasLayer/falalucas.visible = true
-		$CanvasLayer/rostoLucas.visible = true
-	elif areaLucas == false or lucas % 2 == 0:
-		$CanvasLayer/fundoLucas.visible = false
-		$CanvasLayer/falalucas.visible = false 
-		$CanvasLayer/rostoLucas.visible = false
-	
-	if areaRic == true and ricardo % 2 == 1:
-		$CanvasLayer/rostoRicardo.visible = true
-		$CanvasLayer/fundoRicardo.visible = true
-		$CanvasLayer/falaRicardo.visible = true
-	elif areaRic == false or ricardo % 2 == 0:
-		$CanvasLayer/rostoRicardo.visible = false
-		$CanvasLayer/fundoRicardo.visible = false
-		$CanvasLayer/falaRicardo.visible = false
 		
 	if boaNoite == true and areaCama == true:
 		get_tree().change_scene("res://boaNoite.tscn")
@@ -258,28 +187,28 @@ func _on_dentroTrabalho_body_entered(body):
 	position.y = 2438
 
 #Movimentação Botões
-func _on_Movi_A_button_down():
+func _on_movEsquerda_button_down():
 	velocidade.x = -200
 	#Faz as animações funcionarem, cada uma de um personagem diferente
 	$AnimatedSpriteA.play("walk.esquerda")
 	$AnimatedSpriteB.play("walk.esquerda")
 	$AnimatedSpriteC.play("walk.esquerda")
 	$AnimatedSpriteD.play("walk.esquerda")
-func _on_Movi_A_button_up():
+func _on_movEsquerda_button_up():
 	velocidade.x = 0
 	$AnimatedSpriteA.play("idle.esquerda")
 	$AnimatedSpriteB.play("idle.esquerda")
 	$AnimatedSpriteC.play("idle.esquerda")
 	$AnimatedSpriteD.play("idle.esquerda")
 
-func _on_Movi_D_button_down():
+func _on_movDireita_button_down():
 	velocidade.x = 200
 	$AnimatedSpriteA.play("walk.direita")
 	$AnimatedSpriteB.play("walk.direita")
 	$AnimatedSpriteC.play("walk.direita")
 	$AnimatedSpriteD.play("walk.direita")
 
-func _on_Movi_D_button_up():
+func _on_movDireita_button_up():
 	velocidade.x = 0
 	$AnimatedSpriteA.play("idle.direita")
 	$AnimatedSpriteB.play("idle.direita")
@@ -287,14 +216,14 @@ func _on_Movi_D_button_up():
 	$AnimatedSpriteD.play("idle.direita")
 
 
-func _on_Movi_W_button_down():
+func _on_movCima_button_down():
 	velocidade.y = -200
 	$AnimatedSpriteA.play("walk.costas")
 	$AnimatedSpriteB.play("walk.costas")
 	$AnimatedSpriteC.play("walk.costas")
 	$AnimatedSpriteD.play("walk.costas")
 
-func _on_Movi_W_button_up():
+func _on_movCima_button_up():
 	velocidade.y = 0
 	$AnimatedSpriteA.play("idle.costas")
 	$AnimatedSpriteB.play("idle.costas")
@@ -302,14 +231,14 @@ func _on_Movi_W_button_up():
 	$AnimatedSpriteD.play("idle.costas")
 
 
-func _on_Movi_S_button_down():
+func _on_movBaixo_button_down():
 	velocidade.y = 200
 	$AnimatedSpriteA.play("walk.frente")
 	$AnimatedSpriteB.play("walk.frente")
 	$AnimatedSpriteC.play("walk.frente")
 	$AnimatedSpriteD.play("walk.frente")
 
-func _on_Movi_S_button_up():
+func _on_movBaixo_button_up():
 	velocidade.y = 0
 	$AnimatedSpriteA.play("idle.frente")
 	$AnimatedSpriteB.play("idle.frente")
@@ -322,13 +251,6 @@ func _on_computer_body_entered(body):
 	area2DPc = true
 
 
-#muda a variável quando fica do lado da professora
-var areaProf = false
-func _on_caixaTexto_body_entered(body):
-	areaProf = true
-
-func _on_caixaTexto_body_exited(body):
-	areaProf = false 
 
 #botao que gasta dinheiro
 func _on_pagarBoleto_pressed():
@@ -336,78 +258,7 @@ func _on_pagarBoleto_pressed():
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 
 #Adicionar um ao cont com os botões sendo pressionados
-func _on_botaoNpc_pressed():
-	Global.contador += 1
 
-func _on_botaoNome_pressed():
-	Global.contador += 1
-
-func _on_botaoPersonagem_pressed():
-	Global.contador += 1
-	
-#botao que foca atras da professora
-var prof = 0
-func _on_botaoProf_pressed():
-	prof += 1
-
-var gui = 0
-func _on_botaoGui_pressed():
-	gui += 1
-
-var vendedor = 0 
-func _on_botaoVendedor_pressed():
-	vendedor += 1
-	
-#mostra a notificação
-func _on_areaNotiicacao_body_entered(body):
-	yield(get_tree().create_timer(2.6), "timeout")
-	$CanvasLayer/celIconn/Panel/AnimationPlayer.play("popUp")
-	#Global.notificacao = false
-
-#detecta se esta perto do guilherme
-var areaGui = false
-func _on_caixaTextoGui_body_entered(body):
-	areaGui = true
-func _on_caixaTextoGui_body_exited(body):
-	areaGui = false
-
-var areaVendedor = false
-func _on_areaVendedor_body_entered(body):
-	areaVendedor = true
-func _on_areaVendedor_body_exited(body):
-	areaVendedor = false
-
-func _on_botaoLivro_pressed():
-	cont += 1
-	$CanvasLayer/matFinanceira.visible = true
-	$CanvasLayer/next.visible = true
-	$CanvasLayer/nextLivro.visible = true
-func _on_nextLivro_pressed():
-	cont += 1
-	if cont == 2:
-		$CanvasLayer/matFinanceira.visible = false
-		$CanvasLayer/inflacao.visible = true
-	elif cont == 3:
-		$CanvasLayer/inflacao.visible = false
-		$CanvasLayer/jurosSimples.visible = true
-	elif cont == 4:
-		$CanvasLayer/jurosSimples.visible = false
-		$CanvasLayer/jurosCompostos.visible = true
-	elif cont == 5:
-		$CanvasLayer/jurosCompostos.visible = false
-		$CanvasLayer/investimentos.visible = true
-	elif cont == 6:
-		$CanvasLayer/investimentos.visible = false
-		$CanvasLayer/publico.visible = true
-	elif cont == 7:
-		$CanvasLayer/publico.visible = false
-		$CanvasLayer/incentivados.visible = true
-	elif cont == 8:
-		$CanvasLayer/incentivados.visible = false
-		$CanvasLayer/next.visible = false
-		$CanvasLayer/nextLivro.visible = false
-		cont = 0
-		
 #Cria uma váriavel booleana que muda quando o botão da cama é pressionado, volta ao normal quando muda de cena
 var boaNoite = false
 func _on_botaoBoaNoite_pressed():
@@ -420,75 +271,10 @@ func _on_areaCama_body_entered(body):
 func _on_areaCama_body_exited(body):
 	areaCama = false
 
-func _on_botaoMercado_pressed():
-	$CanvasLayer/mercado.visible = true
-	$CanvasLayer/setaVolta.visible = true
-	$CanvasLayer/sairMercado.visible = true
-	$CanvasLayer/botaoBife.visible = true
-	$CanvasLayer/botaoMacarrao.visible = true
-	$CanvasLayer/botaoSushi.visible = true
-	$CanvasLayer/botaoLeite.visible = true
-	$CanvasLayer/botaoBolo.visible = true
-	$CanvasLayer/botaoHamb.visible = true
-	$CanvasLayer/botaoRosquinha.visible = true
-	$CanvasLayer/botaoMaca.visible = true
-
-func _on_sairMercado_pressed():
-	$CanvasLayer/mercado.visible = false
-	$CanvasLayer/setaVolta.visible = false
-	$CanvasLayer/sairMercado.visible = false
-	$CanvasLayer/botaoBife.visible = false
-	$CanvasLayer/botaoMacarrao.visible = false
-	$CanvasLayer/botaoSushi.visible = false
-	$CanvasLayer/botaoLeite.visible = false
-	$CanvasLayer/botaoBolo.visible = false
-	$CanvasLayer/botaoHamb.visible = false
-	$CanvasLayer/botaoRosquinha.visible = false
-	$CanvasLayer/botaoMaca.visible = false
-
 func _on_botaoFabrica_pressed():
 	get_tree().change_scene("res://Interface.tscn")
 	Global.abriuJogoFab += 1
 
-func _on_botaoBife_pressed():
-	Global.dinheiro -= 20
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 16.68
-
-func _on_botaoMacarrao_pressed():
-	Global.dinheiro -= 15
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 12.51
-
-func _on_botaoSushi_pressed():
-	Global.dinheiro -= 15
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 12.51
-
-func _on_botaoLeite_pressed():
-	Global.dinheiro -= 5
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 4.17
-
-func _on_botaoBolo_pressed():
-	Global.dinheiro -= 10
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 8.34
-
-func _on_botaoHamb_pressed():
-	Global.dinheiro -= 10
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 8.34
-
-func _on_botaoRosquinha_pressed():
-	Global.dinheiro -= 5
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 4.17
-
-func _on_botaoMaca_pressed():
-	Global.dinheiro -= 5
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
-	Global.menosFeliz += 4.17
 
 #muda para a tela de investimentos
 func _on_caixaInvestir_pressed():
@@ -502,66 +288,11 @@ func _on_botaoCassino1_pressed():
 func _on_botaoCassino2_pressed():
 	get_tree().change_scene("res://GameCassino.tscn")
 
-var lucas = 0
-func _on_lucasnpc_pressed():
-		lucas += 1
-
-var areaLucas = false
-func _on_areaLucas_body_entered(body):
-	areaLucas = true 
-	
-func _on_areaLucas_body_exited(body):
-	areaLucas = false
-	
-var ricardo = 0
-func _on_botaoRicardo_pressed():
-	ricardo += 1
-
-var areaRic = false 
-func _on_Area2D_body_entered(body):
-	areaRic  = true 
-	
-func _on_Area2D_body_exited(body):
-	areaRic = false
-
-func _on_botaoPC_pressed():
-	$CanvasLayer/computador.visible = true
-	$CanvasLayer/botaoEmail.visible = true
-	
-func _on_botaoEmail_pressed():
-	$CanvasLayer/botaoEmail.visible = false
-	$CanvasLayer/computador/obj1.visible = true
-	$CanvasLayer/computador/Emailpc.visible = true
-	
-func _on_setasairpc_pressed():
-	$CanvasLayer/computador.visible = false 
-	$CanvasLayer/botaoEmail.visible = false
-
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
 	Global.abriuJogoFio += 1
 
-func _on_boaoMapa_pressed():
-	$CanvasLayer/mapaAberto.visible = true
-
-
-func _on_sairMapa_pressed():
-	$CanvasLayer/mapaAberto.visible = false 
 
 func _on_VideoPlayer_finished():
 	Global.contador += 1
 
-func _on_botaoEmanil_pressed():
-	$CanvasLayer/Emailpc.visible = true
-
-func _on_botaovoltar_pressed():
-	$CanvasLayer/computador.visible = true
-	$CanvasLayer/Emailpc.visible = false
-	
-func _on_botao_voltar_duvida_pressed():
-	$CanvasLayer/computador.visible = true
-	$CanvasLayer/duvidaPc.visible = false
-
-func _on_botao_duvida_pressed():
-	$CanvasLayer/computador.visible = false
-	$CanvasLayer/duvidaPc.visible = true 

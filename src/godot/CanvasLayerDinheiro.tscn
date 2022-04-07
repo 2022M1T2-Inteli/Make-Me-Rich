@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fundoRelogio.png" type="Texture" id=2]
+[ext_resource path="res://CanvasLayerDinheiro.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=15]
+size = 26
+font_data = ExtResource( 1 )
+
+[node name="CanvasLayerDinheiro" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 95, 57 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 2 )
+
+[node name="DinheiroPlayer" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 18.0
+margin_right = 129.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 15 )
+text = "MONEY
+"
