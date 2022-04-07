@@ -1,6 +1,6 @@
 extends Panel
 
-export var rollCost = 10 
+export var custoTentativa = 10 
 export var winMultiply = 4
 
 var allWheels = []
@@ -32,8 +32,8 @@ func randomize_wheel(wheel):
 
 
 func _on_StartButton_pressed():
-	if get_node("../Player").can_pay(rollCost) && readyWheels.size() == allWheels.size():
-		get_node("../Player").sub_money(rollCost)
+	if get_node("../Player").can_pay(custoTentativa) && readyWheels.size() == allWheels.size():
+		get_node("../Player").sub_money(custoTentativa)
 		start_all_Wheels()
 
 
@@ -60,8 +60,8 @@ func evaluate_player_roll():
 			playerWin = false
 	
 	if(playerWin == true):
-		print("Congratz! You win " + String(rollCost * winMultiply))
-		get_node("../Player").add_money(rollCost * winMultiply)
+		print("Congratz! You win " + String(custoTentativa * winMultiply))
+		get_node("../Player").add_money(custoTentativa * winMultiply)
 	else:
 		print("Nothing - try a next Spin!")
 	
