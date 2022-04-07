@@ -1,0 +1,243 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Image/images_faculdade/home_faculdade.png" type="Texture" id=1]
+[ext_resource path="res://Faculdade/Scripts/home_faculdade.gd" type="Script" id=2]
+[ext_resource path="res://Image/images_faculdade/personagem2.png" type="Texture" id=3]
+[ext_resource path="res://Image/images_faculdade/personagem1.png" type="Texture" id=4]
+[ext_resource path="res://Image/images_faculdade/personagem4.png" type="Texture" id=5]
+[ext_resource path="res://Image/images_faculdade/personagem3.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.85098, 0.345098, 0.337255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.211765, 0.180392, 0.356863, 1 )
+border_color = Color( 0.0509804, 0.0470588, 0.0470588, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.85098, 0.345098, 0.337255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.211765, 0.180392, 0.356863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.85098, 0.345098, 0.337255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.211765, 0.180392, 0.356863, 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="ParallaxBackground"]
+anchor_left = 0.697
+anchor_top = 0.057
+anchor_right = 0.697
+anchor_bottom = 0.057
+margin_left = -13.728
+margin_top = -13.2
+margin_right = 14.272
+margin_bottom = 13.8
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Conteudo" type="Button" parent="ParallaxBackground"]
+anchor_left = 0.4
+anchor_top = 0.233
+anchor_right = 0.4
+anchor_bottom = 0.233
+margin_left = -51.6
+margin_top = -51.8
+margin_right = 52.4
+margin_bottom = 52.2
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atividade" type="Button" parent="ParallaxBackground"]
+anchor_left = 0.524
+anchor_top = 0.234
+anchor_right = 0.524
+anchor_bottom = 0.234
+margin_left = -52.576
+margin_top = -52.4
+margin_right = 53.424
+margin_bottom = 52.6
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Teste" type="Button" parent="ParallaxBackground"]
+margin_left = 611.0
+margin_top = 87.0
+margin_right = 716.0
+margin_bottom = 193.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ParallaxBackground"]
+margin_left = 369.0
+margin_top = 338.0
+margin_right = 473.0
+margin_bottom = 359.0
+text = "CRIS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValoresEconomia" type="Control" parent="."]
+margin_left = 66.0
+margin_top = 49.0
+margin_right = 106.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="valorInflacao" type="Label" parent="ValoresEconomia"]
+anchor_left = 9.312
+anchor_top = 9.8
+anchor_right = 9.312
+anchor_bottom = 9.8
+margin_left = -71.48
+margin_top = -12.0
+margin_right = 71.52
+margin_bottom = 12.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="valorTaxaSelic" type="Label" parent="ValoresEconomia"]
+anchor_left = 9.337
+anchor_top = 11.45
+anchor_right = 9.337
+anchor_bottom = 11.45
+margin_left = -70.48
+margin_top = -12.0
+margin_right = 70.52
+margin_bottom = 12.0
+align = 1
+valign = 1
+
+[node name="valorDolar" type="Label" parent="ValoresEconomia"]
+anchor_left = 14.15
+anchor_top = 9.787
+anchor_right = 14.15
+anchor_bottom = 9.787
+margin_left = -73.0
+margin_top = -11.48
+margin_right = 73.0
+margin_bottom = 11.52
+align = 1
+valign = 1
+
+[node name="valorEuro" type="Label" parent="ValoresEconomia"]
+anchor_left = 14.212
+anchor_top = 11.475
+anchor_right = 14.212
+anchor_bottom = 11.475
+margin_left = -73.48
+margin_top = -14.0
+margin_right = 73.52
+margin_bottom = 14.0
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="."]
+margin_left = 369.0
+margin_top = 229.0
+margin_right = 472.0
+margin_bottom = 328.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="personagem1" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 51.5, 49.125 )
+scale = Vector2( 1.0404, 0.992574 )
+texture = ExtResource( 4 )
+
+[node name="personagem3" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 52, 49.5 )
+scale = Vector2( 1.05051, 1 )
+texture = ExtResource( 3 )
+
+[node name="personagem2" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 51.75, 49 )
+scale = Vector2( 1.03535, 0.990099 )
+texture = ExtResource( 6 )
+
+[node name="Personagem4" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 51.5, 49 )
+scale = Vector2( 1.0404, 1.0099 )
+texture = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Progress_Conteudo" type="ProgressBar" parent="CanvasLayer"]
+margin_left = 501.0
+margin_top = 245.0
+margin_right = 699.0
+margin_bottom = 264.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 6.0
+step = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress_Atividade" type="ProgressBar" parent="CanvasLayer"]
+margin_left = 501.0
+margin_top = 291.0
+margin_right = 699.0
+margin_bottom = 310.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+max_value = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress_Teste" type="ProgressBar" parent="CanvasLayer"]
+margin_left = 501.0
+margin_top = 335.0
+margin_right = 699.0
+margin_bottom = 355.0
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+max_value = 2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ParallaxBackground/Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="pressed" from="ParallaxBackground/Conteudo" to="." method="_on_Conteudo_pressed"]
+[connection signal="pressed" from="ParallaxBackground/Atividade" to="." method="_on_Atividade_pressed"]
+[connection signal="pressed" from="ParallaxBackground/Teste" to="." method="_on_Teste_pressed"]

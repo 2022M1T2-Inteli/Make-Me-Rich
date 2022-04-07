@@ -1,0 +1,217 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Image/images_faculdade/atividade_JurosCompostos.png" type="Texture" id=1]
+[ext_resource path="res://Image/images_faculdade/Confirma.png" type="Texture" id=2]
+[ext_resource path="res://Image/images_faculdade/erro.png" type="Texture" id=3]
+[ext_resource path="res://Faculdade/Scripts/atividade_JurosCompostos.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta1_p1" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 395.0
+margin_top = 174.0
+margin_right = 486.0
+margin_bottom = 206.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta2_p1" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 495.0
+margin_top = 174.0
+margin_right = 586.0
+margin_bottom = 206.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta1_p2" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 395.0
+margin_top = 284.0
+margin_right = 486.0
+margin_bottom = 316.0
+flat = true
+
+[node name="resposta2_p2" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 494.0
+margin_top = 284.0
+margin_right = 585.0
+margin_bottom = 316.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta1_p3" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 395.0
+margin_top = 382.0
+margin_right = 486.0
+margin_bottom = 413.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta2_p3" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 494.0
+margin_top = 382.0
+margin_right = 585.0
+margin_bottom = 413.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta1_p4" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 397.0
+margin_top = 478.0
+margin_right = 488.0
+margin_bottom = 509.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta2_p4" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 495.0
+margin_top = 477.0
+margin_right = 586.0
+margin_bottom = 509.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="respostaCerta1" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 619.0
+margin_top = 170.0
+margin_right = 659.0
+margin_bottom = 210.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="respostaCerta2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 619.0
+margin_top = 280.0
+margin_right = 659.0
+margin_bottom = 320.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="respostaCerta3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 618.0
+margin_top = 377.0
+margin_right = 658.0
+margin_bottom = 417.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="respostaCerta4" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 619.0
+margin_top = 473.0
+margin_right = 659.0
+margin_bottom = 513.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="erro1" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 618.0
+margin_top = 171.0
+margin_right = 658.0
+margin_bottom = 211.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="erro2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 619.0
+margin_top = 282.0
+margin_right = 659.0
+margin_bottom = 322.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="erro3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 618.0
+margin_top = 378.0
+margin_right = 658.0
+margin_bottom = 418.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="erro4" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 618.0
+margin_top = 474.0
+margin_right = 658.0
+margin_bottom = 514.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="acertos" type="Label" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 566.0
+margin_top = 534.0
+margin_right = 600.0
+margin_bottom = 565.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="voltar" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 699.0
+margin_top = 20.0
+margin_right = 729.0
+margin_bottom = 51.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta1_p1" to="." method="_on_resposta1_p1_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta2_p1" to="." method="_on_resposta2_p1_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta1_p2" to="." method="_on_resposta1_p2_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta2_p2" to="." method="_on_resposta2_p2_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta1_p3" to="." method="_on_resposta1_p3_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta2_p3" to="." method="_on_resposta2_p3_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta1_p4" to="." method="_on_resposta1_p4_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/resposta2_p4" to="." method="_on_resposta2_p4_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/voltar" to="." method="_on_voltar_pressed"]

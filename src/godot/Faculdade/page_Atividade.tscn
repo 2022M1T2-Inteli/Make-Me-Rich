@@ -1,0 +1,197 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Image/images_faculdade/page_Atividade.png" type="Texture" id=1]
+[ext_resource path="res://Faculdade/Scripts/page_Atividade.gd" type="Script" id=2]
+[ext_resource path="res://Image/images_faculdade/button_AtiInflacao.png" type="Texture" id=3]
+[ext_resource path="res://Image/images_faculdade/button_AtiMatFin.png" type="Texture" id=4]
+[ext_resource path="res://Image/images_faculdade/button_AtiJC.png" type="Texture" id=5]
+[ext_resource path="res://Image/images_faculdade/button_AtiJS.png" type="Texture" id=6]
+[ext_resource path="res://Image/images_faculdade/button_AtiRendaFixa.png" type="Texture" id=7]
+[ext_resource path="res://Image/images_faculdade/button_AtiFI.png" type="Texture" id=8]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 700.0
+margin_top = 21.0
+margin_right = 728.0
+margin_bottom = 50.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="atividade_MatFin" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 357.0
+margin_top = 87.0
+margin_right = 527.0
+margin_bottom = 225.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/atividade_MatFin"]
+position = Vector2( 85, 69 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/atividade_MatFin"]
+margin_left = 59.0
+margin_top = 113.0
+margin_right = 110.0
+margin_bottom = 135.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="atividade_Inflacao" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 546.0
+margin_top = 87.0
+margin_right = 717.0
+margin_bottom = 225.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/atividade_Inflacao"]
+position = Vector2( 85.75, 69 )
+scale = Vector2( 1.00292, 1 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/atividade_Inflacao"]
+margin_left = 64.0
+margin_top = 113.0
+margin_right = 115.0
+margin_bottom = 135.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="atividade_JS" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 356.0
+margin_top = 258.0
+margin_right = 527.0
+margin_bottom = 395.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/atividade_JS"]
+position = Vector2( 85.25, 68 )
+scale = Vector2( 1.00292, 1 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/atividade_JS"]
+margin_left = 60.0
+margin_top = 112.0
+margin_right = 111.0
+margin_bottom = 134.0
+align = 1
+valign = 1
+
+[node name="atividade_JC" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 547.0
+margin_top = 258.0
+margin_right = 717.0
+margin_bottom = 395.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/atividade_JC"]
+position = Vector2( 85, 68.75 )
+scale = Vector2( 1, 1.01087 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/atividade_JC"]
+margin_left = 62.0
+margin_top = 114.0
+margin_right = 113.0
+margin_bottom = 136.0
+align = 1
+valign = 1
+
+[node name="atividade_Renda" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 357.0
+margin_top = 427.0
+margin_right = 528.0
+margin_bottom = 564.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/atividade_Renda"]
+position = Vector2( 85, 68.5 )
+scale = Vector2( 1, 1.00725 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/atividade_Renda"]
+margin_left = 59.0
+margin_top = 113.0
+margin_right = 110.0
+margin_bottom = 135.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="atividade_FI" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 545.0
+margin_top = 427.0
+margin_right = 716.0
+margin_bottom = 564.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/atividade_FI"]
+position = Vector2( 86, 68.5 )
+scale = Vector2( 1, 1.00725 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/atividade_FI"]
+margin_left = 62.0
+margin_top = 113.0
+margin_right = 113.0
+margin_bottom = 135.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/atividade_MatFin" to="." method="_on_atividade_MatFin_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/atividade_Inflacao" to="." method="_on_atividade_Inflacao_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/atividade_JS" to="." method="_on_atividade_JS_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/atividade_JC" to="." method="_on_atividade_JC_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/atividade_Renda" to="." method="_on_atividade_Renda_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/atividade_FI" to="." method="_on_atividade_FI_pressed"]

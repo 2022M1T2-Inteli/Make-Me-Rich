@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Image/images_faculdade/page_teste.png" type="Texture" id=1]
+[ext_resource path="res://Faculdade/Scripts/page_Teste.gd" type="Script" id=2]
+[ext_resource path="res://Image/images_faculdade/button_teste1.png" type="Texture" id=3]
+[ext_resource path="res://Image/images_faculdade/button_teste2.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_Teste1" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 353.0
+margin_top = 74.0
+margin_right = 529.0
+margin_bottom = 218.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Button_Teste1"]
+position = Vector2( 88.375, 72 )
+scale = Vector2( 0.398315, 0.395543 )
+texture = ExtResource( 3 )
+
+[node name="Nota1" type="Label" parent="ParallaxBackground/ParallaxLayer/Button_Teste1/Sprite"]
+margin_left = -38.6002
+margin_top = 113.768
+margin_right = 4.39984
+margin_bottom = 143.768
+rect_scale = Vector2( 2, 2 )
+text = "3.5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_Teste2" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+margin_left = 546.0
+margin_top = 75.0
+margin_right = 722.0
+margin_bottom = 217.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Button_Teste2"]
+position = Vector2( 88.125, 71.5 )
+scale = Vector2( 0.397651, 0.397222 )
+texture = ExtResource( 4 )
+
+[node name="Nota2" type="Label" parent="ParallaxBackground/ParallaxLayer/Button_Teste2/Sprite"]
+margin_left = -78.2722
+margin_top = 109.511
+margin_right = 7.72778
+margin_bottom = 143.511
+rect_scale = Vector2( 2, 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 699.0
+margin_top = 21.0
+margin_right = 729.0
+margin_bottom = 50.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/Button_Teste1" to="." method="_on_Button_Teste1_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/Button_Teste2" to="." method="_on_Button_Teste2_pressed"]
+[connection signal="pressed" from="ParallaxBackground/ParallaxLayer/Voltar" to="." method="_on_Voltar_pressed"]
