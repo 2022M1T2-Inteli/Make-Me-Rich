@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=101 format=2]
+=======
+[gd_scene load_steps=102 format=2]
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -23,8 +27,13 @@
 [ext_resource path="res://assets/videoplayback.mp3" type="AudioStream" id=21]
 [ext_resource path="res://assets/universidade_judite.jpg" type="Texture" id=22]
 [ext_resource path="res://Node2D.gd" type="Script" id=23]
+<<<<<<< HEAD
 [ext_resource path="res://CanvasLayerDinheiro.tscn" type="PackedScene" id=24]
 [ext_resource path="res://assets/setamovi.png" type="Texture" id=25]
+=======
+[ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=24]
+[ext_resource path="res://assets/fundoRelogio.png" type="Texture" id=25]
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 [ext_resource path="res://assets/npc professora.png" type="Texture" id=27]
 [ext_resource path="res://assets/Cenário do mercado.jpeg" type="Texture" id=28]
 [ext_resource path="res://assets/Cassino cenário.jpeg" type="Texture" id=33]
@@ -158,6 +167,7 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+<<<<<<< HEAD
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
 "name": "idle.costas",
@@ -169,9 +179,12 @@ animations = [ {
 "speed": 0.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+=======
+"frames": [ ExtResource( 17 ) ],
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
+"name": "idle.esquerda",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
@@ -188,6 +201,7 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk.direita",
@@ -197,13 +211,50 @@ animations = [ {
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
+=======
+"frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
 animations = [ {
+<<<<<<< HEAD
 "frames": [ ExtResource( 75 ) ],
 "loop": true,
 "name": "idle.costas",
+=======
+"frames": [ ExtResource( 80 ) ],
+"loop": true,
+"name": "idle.esquerda",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 72 ) ],
@@ -211,19 +262,28 @@ animations = [ {
 "name": "idle.frente",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 5.0
 }, {
+=======
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "frames": [ ExtResource( 70 ), ExtResource( 42 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 80 ) ],
 "loop": true,
 "name": "idle.esquerda",
+=======
+"frames": [ ExtResource( 79 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "walk.direita",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
@@ -231,22 +291,42 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 79 ), ExtResource( 77 ) ],
 "loop": true,
 "name": "walk.direita",
+=======
+"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "walk.esquerda",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 74 ) ],
 "loop": true,
 "name": "idle.direita",
+<<<<<<< HEAD
+=======
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 72 ) ],
+"loop": true,
+"name": "idle.frente",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=36]
 animations = [ {
+<<<<<<< HEAD
 "frames": [ ExtResource( 93 ) ],
 "loop": true,
 "name": "idle.costas",
+=======
+"frames": [ ExtResource( 99 ) ],
+"loop": true,
+"name": "idle.esquerda",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 96 ) ],
@@ -254,19 +334,28 @@ animations = [ {
 "name": "idle.frente",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 5.0
 }, {
+=======
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "frames": [ ExtResource( 92 ), ExtResource( 43 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 99 ) ],
 "loop": true,
 "name": "idle.esquerda",
+=======
+"frames": [ ExtResource( 97 ), ExtResource( 94 ) ],
+"loop": true,
+"name": "walk.direita",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
@@ -274,22 +363,42 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 97 ), ExtResource( 94 ) ],
 "loop": true,
 "name": "walk.direita",
+=======
+"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "walk.esquerda",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 98 ) ],
 "loop": true,
 "name": "idle.direita",
+<<<<<<< HEAD
+=======
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ) ],
+"loop": true,
+"name": "idle.frente",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=37]
 animations = [ {
+<<<<<<< HEAD
 "frames": [ ExtResource( 87 ) ],
 "loop": true,
 "name": "idle.costas",
+=======
+"frames": [ ExtResource( 82 ) ],
+"loop": true,
+"name": "idle.esquerda",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 89 ) ],
@@ -297,19 +406,28 @@ animations = [ {
 "name": "idle.frente",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
 "loop": true,
 "name": "walk.esquerda",
 "speed": 5.0
 }, {
+=======
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "frames": [ ExtResource( 85 ), ExtResource( 81 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 82 ) ],
 "loop": true,
 "name": "idle.esquerda",
+=======
+"frames": [ ExtResource( 83 ), ExtResource( 84 ) ],
+"loop": true,
+"name": "walk.direita",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
@@ -317,17 +435,38 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 83 ), ExtResource( 84 ) ],
 "loop": true,
 "name": "walk.direita",
+=======
+"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "walk.esquerda",
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 91 ) ],
 "loop": true,
 "name": "idle.direita",
+<<<<<<< HEAD
 "speed": 5.0
 } ]
 
+=======
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 89 ) ],
+"loop": true,
+"name": "idle.frente",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=15]
+size = 26
+font_data = ExtResource( 24 )
+
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 38, 15 )
 
@@ -898,6 +1037,7 @@ limit_bottom = 4344
 editor_draw_limits = true
 script = ExtResource( 2 )
 
+<<<<<<< HEAD
 [node name="CanvasLayerDinheiro" parent="personagem" instance=ExtResource( 24 )]
 
 [node name="CanvasLayerMovimentação" type="CanvasLayer" parent="personagem"]
@@ -955,6 +1095,25 @@ position = Vector2( 147, 538 )
 rotation = -4.71239
 scale = Vector2( 0.038, 0.038 )
 texture = ExtResource( 25 )
+=======
+[node name="CanvasLayerDinheiro" type="CanvasLayer" parent="personagem"]
+
+[node name="Sprite" type="Sprite" parent="personagem/CanvasLayerDinheiro"]
+position = Vector2( 95, 57 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 25 )
+
+[node name="DinheiroPlayer" type="Label" parent="personagem/CanvasLayerDinheiro"]
+margin_left = 64.0
+margin_top = 18.0
+margin_right = 129.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 15 )
+text = "MONEY
+"
+
+[node name="CanvasLayer" parent="personagem" instance=ExtResource( 15 )]
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="botaoDireita" type="Sprite" parent="personagem/CanvasLayerMovimentação"]
 position = Vector2( 190, 494 )
@@ -1066,6 +1225,7 @@ __meta__ = {
 [connection signal="body_entered" from="casa/areaCama" to="personagem" method="_on_areaCama_body_entered"]
 [connection signal="body_exited" from="casa/areaCama" to="personagem" method="_on_areaCama_body_exited"]
 [connection signal="body_entered" from="UniversidadeJudite/dentroUniversidade" to="personagem" method="_on_dentroUniversidade_body_entered"]
+<<<<<<< HEAD
 [connection signal="body_entered" from="UniversidadeJudite/caixaTexto" to="personagem/CanvasLayer" method="_on_caixaTexto_body_entered"]
 [connection signal="body_exited" from="UniversidadeJudite/caixaTexto" to="personagem/CanvasLayer" method="_on_caixaTexto_body_exited"]
 [connection signal="pressed" from="UniversidadeJudite/botaoProf" to="personagem/CanvasLayer" method="_on_botaoProf_pressed"]
@@ -1077,6 +1237,13 @@ __meta__ = {
 [connection signal="button_up" from="personagem/CanvasLayerMovimentação/movBaixo" to="personagem" method="_on_movBaixo_button_up"]
 [connection signal="button_down" from="personagem/CanvasLayerMovimentação/movDireita" to="personagem" method="_on_movDireita_button_down"]
 [connection signal="button_up" from="personagem/CanvasLayerMovimentação/movDireita" to="personagem" method="_on_movDireita_button_up"]
+=======
+[connection signal="body_entered" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_entered"]
+[connection signal="body_exited" from="UniversidadeJudite/caixaTexto" to="personagem" method="_on_caixaTexto_body_exited"]
+[connection signal="pressed" from="UniversidadeJudite/botaoProf" to="personagem" method="_on_botaoProf_pressed"]
+[connection signal="body_entered" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_body_entered"]
+[connection signal="visibility_changed" from="personagem/areaNotiicacao" to="personagem" method="_on_areaNotiicacao_visibility_changed"]
+>>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
 [connection signal="pressed" from="botaoPC" to="personagem/CanvasLayer" method="_on_botaoPC_pressed"]
 [connection signal="pressed" from="botaoLivro" to="personagem/CanvasLayer" method="_on_botaoLivro_pressed"]
