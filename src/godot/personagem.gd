@@ -2,10 +2,10 @@ extends KinematicBody2D
 
 # vector2 é a coordenada inicial física do personagem, o ZERO zera o vetor
 
-var m = false
-var mu = false
-var mo = false
-var mi = false
+var pressionandoW = false
+var pressionandoS = false
+var pressionandoA = false
+var pressionandoD = false
 var velocidade = Vector2.ZERO
 var abrirEnter = false
 var dinheiro = 2000
@@ -63,8 +63,8 @@ func _physics_process(delta):
 	move_and_slide(velocidade)
 	# Codigo pra movimentação 
 	if Input.is_action_pressed("tecla_w"):
-		m = true
-		if m:
+		pressionandoW = true
+		if pressionandoW:
 			velocidade.y = -200
 			$AnimatedSpriteA.play("walk.costas")
 			$AnimatedSpriteB.play("walk.costas")
@@ -72,7 +72,7 @@ func _physics_process(delta):
 			$AnimatedSpriteD.play("walk.costas")
 	#O código abaixo faz o personagem ficar parado na direção do seu ultimo movimento
 	elif Input.is_action_just_released("tecla_w"):
-		m = false
+		pressionandoW = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.costas")
@@ -83,15 +83,15 @@ func _physics_process(delta):
 		
 		
 	elif Input.is_action_pressed("tecla_s"):
-		mu = true
-		if	mu:
+		pressionandoS = true
+		if	pressionandoS:
 			velocidade.y = 200
 			$AnimatedSpriteA.play("walk.frente")
 			$AnimatedSpriteB.play("walk.frente")
 			$AnimatedSpriteC.play("walk.frente")
 			$AnimatedSpriteD.play("walk.frente")
 	elif Input.is_action_just_released("tecla_s"):
-		mu = false
+		pressionandoS = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.frente")
@@ -101,15 +101,15 @@ func _physics_process(delta):
 		
 		
 	elif Input.is_action_pressed("tecla_a"):
-		mo = true
-		if	mo:
+		pressionandoA = true
+		if	pressionandoA:
 			velocidade.x = -200
 			$AnimatedSpriteA.play("walk.esquerda")
 			$AnimatedSpriteB.play("walk.esquerda")
 			$AnimatedSpriteC.play("walk.esquerda")
 			$AnimatedSpriteD.play("walk.esquerda")
 	elif Input.is_action_just_released("tecla_a"):
-		mo = false
+		pressionandoA = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.esquerda")
@@ -119,15 +119,15 @@ func _physics_process(delta):
 
 
 	elif Input.is_action_pressed("tecla_d"):
-		mi = true
-		if	mi:
+		pressionandoD = true
+		if	pressionandoD:
 			velocidade.x = 200
 			$AnimatedSpriteA.play("walk.direita")
 			$AnimatedSpriteB.play("walk.direita")
 			$AnimatedSpriteC.play("walk.direita")
 			$AnimatedSpriteD.play("walk.direita")
 	elif Input.is_action_just_released("tecla_d"):
-		mi = false
+		pressionandoD = false
 		velocidade.x = 0
 		velocidade.y = 0
 		$AnimatedSpriteA.play("idle.direita")
