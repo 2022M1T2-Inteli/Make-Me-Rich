@@ -45,6 +45,9 @@ margin_top = 291.0
 margin_right = 485.0
 margin_bottom = 322.0
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="resposta2_p2" type="Button" parent="ParallaxBackground/ParallaxLayer"]
 margin_left = 495.0

@@ -656,6 +656,7 @@ flat = true
 
 [connection signal="pressed" from="botaoMapa" to="." method="_on_botaoMapa_pressed"]
 [connection signal="pressed" from="mapaAberto/sairMapa" to="." method="_on_sairMapa_pressed"]
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="botaoNpc" to="." method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="botaoTutorial" to="." method="_on_botaoTutorial_pressed"]
 [connection signal="pressed" from="nextLivro" to="." method="_on_nextLivro_pressed"]

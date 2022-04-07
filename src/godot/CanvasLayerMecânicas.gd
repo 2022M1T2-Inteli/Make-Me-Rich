@@ -102,10 +102,11 @@ func _process(delta):
 	if Global.contador == 2:
 		$instrucNpc.visible = false
 		$botaoNpc.visible = false
+		$VideoPlayer.visible = true
 		
 	if Global.contador == 3:
 		$VideoPlayer.visible = false
- 
+		
 	#fala da professora aparece
 	if areaProf == true and prof % 2 == 1:
 		$professora.visible = true
@@ -260,3 +261,6 @@ func _on_botaoDuvida_pressed():
 func _on_botaoVoltar_pressed():
 	$CanvasLayer/computador.visible = true
 	$CanvasLayer/Emailpc.visible = false
+	
+func _on_VideoPlayer_finished():
+	Global.contador += 1

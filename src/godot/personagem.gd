@@ -293,6 +293,5 @@ func _on_botaoFios_pressed():
 	Global.abriuJogoFio += 1
 
 
-func _on_VideoPlayer_finished():
-	Global.contador += 1
+
 
