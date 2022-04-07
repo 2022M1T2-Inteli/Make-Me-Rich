@@ -10,7 +10,7 @@
 script = ExtResource( 5 )
 
 [node name="Menuprincipal" type="Sprite" parent="."]
-position = Vector2( 512, 301 )
+position = Vector2( 513, 301 )
 scale = Vector2( 0.532292, 0.561111 )
 texture = ExtResource( 1 )
 

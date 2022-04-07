@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=1]
@@ -35,45 +34,6 @@
 [ext_resource path="res://assets/RELOGIO.png" type="Texture" id=32]
 [ext_resource path="res://assets/mapa2.png" type="Texture" id=34]
 [ext_resource path="res://CanvasLayerMecânicas.gd" type="Script" id=35]
-=======
-[gd_scene load_steps=48 format=2]
-
-[ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/teste-_1_.ogv" type="VideoStream" id=2]
-[ext_resource path="res://assets/matFinanceira.png" type="Texture" id=3]
-[ext_resource path="res://assets/publico.png" type="Texture" id=4]
-[ext_resource path="res://assets/jurosSimples.png" type="Texture" id=5]
-[ext_resource path="res://assets/next.png" type="Texture" id=6]
-[ext_resource path="res://assets/jurosCompostos.png" type="Texture" id=7]
-[ext_resource path="res://assets/mapamovi1.png" type="Texture" id=8]
-[ext_resource path="res://assets/mapa2.png" type="Texture" id=9]
-[ext_resource path="res://assets/inflacao.png" type="Texture" id=10]
-[ext_resource path="res://assets/tutorialbarra.png" type="Texture" id=11]
-[ext_resource path="res://assets/MONEYSIMB.png" type="Texture" id=12]
-[ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=13]
-[ext_resource path="res://assets/INSTRUÇÕES.png" type="Texture" id=14]
-[ext_resource path="res://assets/investimentos.png" type="Texture" id=15]
-[ext_resource path="res://assets/incentivados.png" type="Texture" id=16]
-[ext_resource path="res://assets/rostofeliz.png" type="Texture" id=17]
-[ext_resource path="res://assets/notifcação.png" type="Texture" id=18]
-[ext_resource path="res://assets/RELOGIO.png" type="Texture" id=19]
-[ext_resource path="res://assets/fundoRelogio.png" type="Texture" id=20]
-[ext_resource path="res://assets/rosto guilherme.png" type="Texture" id=21]
-[ext_resource path="res://assets/fundo.png" type="Texture" id=22]
-[ext_resource path="res://assets/mapasimbolo.png" type="Texture" id=23]
-[ext_resource path="res://assets/mercado.png" type="Texture" id=24]
-[ext_resource path="res://assets/fundobarrafunções.png" type="Texture" id=25]
-[ext_resource path="res://assets/cassino rosto.png" type="Texture" id=26]
-[ext_resource path="res://assets/popupbloqueio.png" type="Texture" id=27]
-[ext_resource path="res://assets/pc duvida.png" type="Texture" id=28]
-[ext_resource path="res://assets/lucas rosto.png" type="Texture" id=29]
-[ext_resource path="res://assets/tela pc nova.png" type="Texture" id=30]
-[ext_resource path="res://assets/comida (7).png" type="Texture" id=31]
-[ext_resource path="res://assets/seta_voltar.png" type="Texture" id=32]
-[ext_resource path="res://assets/npc mario rosto.png" type="Texture" id=33]
-[ext_resource path="res://assets/COMPUTADOR1.png" type="Texture" id=34]
-[ext_resource path="res://CanvasLayer.gd" type="Script" id=35]
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [sub_resource type="StyleBoxFlat" id=41]
 bg_color = Color( 0.168627, 0.152941, 0.239216, 1 )
@@ -127,14 +87,6 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=33]
 font_data = ExtResource( 1 )
 
-<<<<<<< HEAD
-=======
-[sub_resource type="DynamicFont" id=47]
-size = 52
-extra_spacing_top = 19
-font_data = ExtResource( 1 )
-
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 [sub_resource type="DynamicFont" id=50]
 size = 18
 extra_spacing_top = 6
@@ -152,29 +104,17 @@ script = ExtResource( 35 )
 visible = false
 position = Vector2( 487.5, 314.5 )
 scale = Vector2( 0.277667, 0.277667 )
-<<<<<<< HEAD
 texture = ExtResource( 16 )
-=======
-texture = ExtResource( 27 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="Moneysimb" type="Sprite" parent="."]
 position = Vector2( 23, 27 )
 scale = Vector2( 0.030125, 0.0324167 )
-<<<<<<< HEAD
 texture = ExtResource( 3 )
-=======
-texture = ExtResource( 12 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="Relogio" type="Sprite" parent="."]
 position = Vector2( 194, 32 )
 scale = Vector2( 0.0227677, 0.0210425 )
-<<<<<<< HEAD
 texture = ExtResource( 32 )
-=======
-texture = ExtResource( 19 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="happyBar" type="ProgressBar" parent="."]
 margin_left = 424.0
@@ -189,11 +129,7 @@ value = 50.0
 [node name="caraFeliz" type="Sprite" parent="happyBar"]
 position = Vector2( -25, 13 )
 scale = Vector2( 0.0173333, 0.0158629 )
-<<<<<<< HEAD
 texture = ExtResource( 13 )
-=======
-texture = ExtResource( 17 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="fundoMario" type="Sprite" parent="."]
 visible = false
@@ -202,30 +138,18 @@ show_behind_parent = true
 light_mask = 0
 position = Vector2( 547, 544 )
 scale = Vector2( 0.415953, 0.191235 )
-<<<<<<< HEAD
 texture = ExtResource( 29 )
-=======
-texture = ExtResource( 22 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="fundoProfessora" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 0, 0, 0.588235 )
 position = Vector2( 548, 544 )
 scale = Vector2( 0.415564, 0.195219 )
-<<<<<<< HEAD
 texture = ExtResource( 29 )
 
 [node name="Fundo" type="Sprite" parent="fundoProfessora"]
 position = Vector2( -1537.67, -502 )
 texture = ExtResource( 29 )
-=======
-texture = ExtResource( 22 )
-
-[node name="Fundo" type="Sprite" parent="fundoProfessora"]
-position = Vector2( -1537.67, -502 )
-texture = ExtResource( 22 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="fundoGui" type="Sprite" parent="."]
 visible = false
@@ -233,65 +157,7 @@ modulate = Color( 0, 0, 0, 0.588235 )
 self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 548.875, 543.5 )
 scale = Vector2( 0.420039, 0.189243 )
-<<<<<<< HEAD
 texture = ExtResource( 29 )
-=======
-texture = ExtResource( 22 )
-
-[node name="Movi_S" type="Button" parent="."]
-margin_left = 122.0
-margin_top = 517.0
-margin_right = 167.0
-margin_bottom = 562.0
-flat = true
-
-[node name="Movi_W" type="Button" parent="."]
-margin_left = 124.0
-margin_top = 429.0
-margin_right = 169.0
-margin_bottom = 474.0
-flat = true
-
-[node name="Movi_D" type="Button" parent="."]
-margin_left = 169.0
-margin_top = 473.0
-margin_right = 214.0
-margin_bottom = 518.0
-flat = true
-
-[node name="Movi_A" type="Button" parent="."]
-margin_left = 77.0
-margin_top = 473.0
-margin_right = 122.0
-margin_bottom = 518.0
-flat = true
-
-[node name="botaoEsquerdo" type="Sprite" parent="."]
-position = Vector2( 101, 493 )
-rotation = 3.14464
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 8 )
-flip_v = true
-
-[node name="botaoBaixo" type="Sprite" parent="."]
-position = Vector2( 143, 538 )
-rotation = 1.56864
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 8 )
-flip_v = true
-
-[node name="botaoDireita" type="Sprite" parent="."]
-position = Vector2( 190, 494 )
-rotation = -0.0110049
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 8 )
-
-[node name="botaoCima" type="Sprite" parent="."]
-position = Vector2( 144, 453 )
-rotation = -1.57695
-scale = Vector2( 0.038, 0.038 )
-texture = ExtResource( 8 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="nomeVendedor" type="Label" parent="."]
 visible = false
@@ -325,11 +191,7 @@ __meta__ = {
 [node name="vendedor" type="Sprite" parent="."]
 visible = false
 position = Vector2( 1168, 598 )
-<<<<<<< HEAD
 texture = ExtResource( 5 )
-=======
-texture = ExtResource( 33 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="textoGui" type="Label" parent="."]
 visible = false
@@ -361,11 +223,7 @@ __meta__ = {
 [node name="guilherme" type="Sprite" parent="."]
 visible = false
 position = Vector2( 1168, 600 )
-<<<<<<< HEAD
 texture = ExtResource( 27 )
-=======
-texture = ExtResource( 21 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="textoProf" type="Label" parent="."]
 visible = false
@@ -396,20 +254,12 @@ __meta__ = {
 [node name="professora" type="Sprite" parent="."]
 visible = false
 position = Vector2( 1170, 602 )
-<<<<<<< HEAD
 texture = ExtResource( 31 )
-=======
-texture = ExtResource( 13 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="celIconn" type="Sprite" parent="."]
 position = Vector2( 988, 26 )
 scale = Vector2( 0.0269362, 0.026543 )
-<<<<<<< HEAD
 texture = ExtResource( 28 )
-=======
-texture = ExtResource( 23 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="Panel" type="Panel" parent="celIconn"]
 visible = false
@@ -427,11 +277,7 @@ anims/popUp = SubResource( 34 )
 visible = false
 position = Vector2( 0, -21.7144 )
 scale = Vector2( 0.189906, 0.189906 )
-<<<<<<< HEAD
 texture = ExtResource( 19 )
-=======
-texture = ExtResource( 18 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="botaoMapa" type="Button" parent="."]
 margin_left = 969.0
@@ -439,22 +285,15 @@ margin_top = 6.0
 margin_right = 1006.0
 margin_bottom = 48.0
 flat = true
-<<<<<<< HEAD
 __meta__ = {
 "_edit_use_anchors_": false
 }
-=======
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="mapaAberto" type="Sprite" parent="."]
 visible = false
 position = Vector2( 492, 310 )
 scale = Vector2( 0.186604, 0.158937 )
-<<<<<<< HEAD
 texture = ExtResource( 34 )
-=======
-texture = ExtResource( 9 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="sairMapa" type="Button" parent="mapaAberto"]
 margin_left = -1077.0
@@ -466,20 +305,12 @@ flat = true
 [node name="SetaVoltar" type="Sprite" parent="mapaAberto"]
 position = Vector2( -1028.92, -1094.77 )
 scale = Vector2( 0.0870828, 0.0998824 )
-<<<<<<< HEAD
 texture = ExtResource( 12 )
-=======
-texture = ExtResource( 32 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="relogio" type="Sprite" parent="."]
 position = Vector2( 266, 56 )
 scale = Vector2( 0.06, 0.06 )
-<<<<<<< HEAD
 texture = ExtResource( 25 )
-=======
-texture = ExtResource( 20 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="dia" type="Label" parent="."]
 margin_left = 243.0
@@ -488,12 +319,9 @@ margin_right = 283.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 32 )
 text = "dia"
-<<<<<<< HEAD
 __meta__ = {
 "_edit_use_anchors_": false
 }
-=======
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="hora" type="Label" parent="."]
 margin_left = 242.0
@@ -507,11 +335,7 @@ text = "hora"
 visible = false
 margin_right = 1026.0
 margin_bottom = 601.0
-<<<<<<< HEAD
 stream = ExtResource( 24 )
-=======
-stream = ExtResource( 2 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 autoplay = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -523,7 +347,6 @@ margin_left = 817.0
 margin_top = 474.0
 margin_right = 1011.0
 margin_bottom = 589.0
-<<<<<<< HEAD
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -537,51 +360,23 @@ margin_bottom = 595.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-=======
-
-[node name="botaoTutorial" type="Button" parent="."]
-visible = false
-margin_left = 884.994
-margin_top = 467.967
-margin_right = 1059.99
-margin_bottom = 607.967
-
-[node name="botaoNome" type="Button" parent="."]
-visible = false
-margin_left = 623.0
-margin_top = 554.0
-margin_right = 707.0
-margin_bottom = 586.0
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="Fundobarrafunções" type="Sprite" parent="."]
 position = Vector2( 477, 29 )
 scale = Vector2( 1.07129, 0.916667 )
-<<<<<<< HEAD
 texture = ExtResource( 8 )
-=======
-texture = ExtResource( 25 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="instrucNpc" type="Sprite" parent="."]
 visible = false
 position = Vector2( 512, 303 )
 scale = Vector2( 0.534375, 0.561111 )
-<<<<<<< HEAD
 texture = ExtResource( 30 )
-=======
-texture = ExtResource( 11 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="boasVindas" type="Sprite" parent="."]
 visible = false
 position = Vector2( 512, 300 )
 scale = Vector2( 0.533333, 0.559259 )
-<<<<<<< HEAD
 texture = ExtResource( 26 )
-=======
-texture = ExtResource( 14 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="nextLivro" type="Button" parent="."]
 visible = false
@@ -598,81 +393,49 @@ __meta__ = {
 visible = false
 position = Vector2( 533.784, 296.784 )
 scale = Vector2( 0.178144, 0.178144 )
-<<<<<<< HEAD
 texture = ExtResource( 2 )
-=======
-texture = ExtResource( 3 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="inflacao" type="Sprite" parent="."]
 visible = false
 position = Vector2( 532, 296 )
 scale = Vector2( 0.180447, 0.180447 )
-<<<<<<< HEAD
 texture = ExtResource( 11 )
-=======
-texture = ExtResource( 10 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="jurosSimples" type="Sprite" parent="."]
 visible = false
 position = Vector2( 534, 300 )
 scale = Vector2( 0.179307, 0.179307 )
-<<<<<<< HEAD
 texture = ExtResource( 21 )
-=======
-texture = ExtResource( 5 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="jurosCompostos" type="Sprite" parent="."]
 visible = false
 position = Vector2( 533, 291 )
 scale = Vector2( 0.174519, 0.174519 )
-<<<<<<< HEAD
 texture = ExtResource( 6 )
-=======
-texture = ExtResource( 7 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="investimentos" type="Sprite" parent="."]
 visible = false
 position = Vector2( 529, 304 )
 scale = Vector2( 0.186885, 0.186885 )
-<<<<<<< HEAD
 texture = ExtResource( 10 )
-=======
-texture = ExtResource( 15 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="publico" type="Sprite" parent="."]
 visible = false
 position = Vector2( 528, 306 )
 scale = Vector2( 0.181537, 0.181537 )
-<<<<<<< HEAD
 texture = ExtResource( 20 )
-=======
-texture = ExtResource( 4 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="incentivados" type="Sprite" parent="."]
 visible = false
 position = Vector2( 523.798, 306.798 )
 scale = Vector2( 0.178134, 0.178134 )
-<<<<<<< HEAD
 texture = ExtResource( 22 )
-=======
-texture = ExtResource( 16 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="next" type="Sprite" parent="."]
 visible = false
 position = Vector2( 676.444, 445 )
 scale = Vector2( 0.277778, 0.277778 )
-<<<<<<< HEAD
 texture = ExtResource( 14 )
-=======
-texture = ExtResource( 6 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="sairMercado" type="Button" parent="."]
 visible = false
@@ -693,22 +456,14 @@ flat = true
 visible = false
 position = Vector2( 623, 245 )
 scale = Vector2( 0.208583, 0.208583 )
-<<<<<<< HEAD
 texture = ExtResource( 9 )
-=======
-texture = ExtResource( 24 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 offset = Vector2( -417.1, 450.66 )
 
 [node name="setaVolta" type="Sprite" parent="."]
 visible = false
 position = Vector2( 273, 152 )
 scale = Vector2( 0.0347501, 0.0347501 )
-<<<<<<< HEAD
 texture = ExtResource( 7 )
-=======
-texture = ExtResource( 31 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="botaoMacarrao" type="Button" parent="."]
 visible = false
@@ -787,15 +542,9 @@ __meta__ = {
 visible = false
 position = Vector2( 497, 284 )
 scale = Vector2( 0.270219, 0.235058 )
-<<<<<<< HEAD
 texture = ExtResource( 18 )
 
 [node name="setaSairPc" type="Button" parent="computador"]
-=======
-texture = ExtResource( 34 )
-
-[node name="setasairpc" type="Button" parent="computador"]
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 margin_left = -647.624
 margin_top = 438.191
 margin_right = -598.624
@@ -803,71 +552,33 @@ margin_bottom = 505.191
 rect_scale = Vector2( -2.15068, -1.2916 )
 flat = true
 
-<<<<<<< HEAD
 [node name="botaoEmail" type="Button" parent="computador"]
-=======
-[node name="obj1" type="Label" parent="computador"]
-visible = false
-margin_left = -342.924
-margin_top = -293.7
-margin_right = 465.076
-margin_bottom = 39.3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 47 )
-text = "1. Vá à faculdade e tenha sua
-primeira aula sobre 
-Matemática Financeira!
-
-2.Vá até ao trabalho e 
-execute sua primeira função!
-
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="botaoEmanil" type="Button" parent="computador"]
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 margin_left = -592.113
 margin_top = 353.105
 margin_right = -474.113
 margin_bottom = 442.105
 flat = true
-<<<<<<< HEAD
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="botaoDuvida" type="Button" parent="computador"]
-=======
-
-[node name="botao duvida" type="Button" parent="computador"]
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 margin_left = -740.0
 margin_top = -591.0
 margin_right = -673.0
 margin_bottom = -514.0
 flat = true
-<<<<<<< HEAD
 __meta__ = {
 "_edit_use_anchors_": false
 }
-=======
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="Emailpc" type="Sprite" parent="."]
 visible = false
 position = Vector2( 496.5, 284.5 )
 scale = Vector2( 0.269667, 0.233 )
-<<<<<<< HEAD
 texture = ExtResource( 15 )
 
 [node name="botaoVoltar" type="Button" parent="Emailpc"]
-=======
-texture = ExtResource( 30 )
-
-[node name="botaovoltar" type="Button" parent="Emailpc"]
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 margin_left = -721.261
 margin_top = 336.91
 margin_right = -641.261
@@ -877,22 +588,14 @@ flat = true
 [node name="rostoLucas" type="Sprite" parent="."]
 visible = false
 position = Vector2( 1167, 600 )
-<<<<<<< HEAD
 texture = ExtResource( 4 )
-=======
-texture = ExtResource( 29 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="fundoLucas" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.686275 )
 position = Vector2( 558.823, 540.769 )
 scale = Vector2( 0.401281, 0.192155 )
-<<<<<<< HEAD
 texture = ExtResource( 29 )
-=======
-texture = ExtResource( 22 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="falalucas" type="Label" parent="."]
 visible = false
@@ -913,22 +616,14 @@ __meta__ = {
 [node name="rostoRicardo" type="Sprite" parent="."]
 visible = false
 position = Vector2( 1168, 601 )
-<<<<<<< HEAD
 texture = ExtResource( 17 )
-=======
-texture = ExtResource( 26 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="fundoRicardo" type="Sprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.666667 )
 position = Vector2( 558.5, 537.5 )
 scale = Vector2( 0.399222, 0.181275 )
-<<<<<<< HEAD
 texture = ExtResource( 29 )
-=======
-texture = ExtResource( 22 )
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 
 [node name="falaRicardo" type="Label" parent="."]
 visible = false
@@ -950,21 +645,14 @@ __meta__ = {
 visible = false
 position = Vector2( 496, 283.5 )
 scale = Vector2( 0.269333, 0.233 )
-<<<<<<< HEAD
 texture = ExtResource( 23 )
 
 [node name="botaoVoltarDuvida" type="Button" parent="duvidaPc"]
-=======
-texture = ExtResource( 28 )
-
-[node name="botao voltar duvida" type="Button" parent="duvidaPc"]
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
 margin_left = -742.574
 margin_top = 366.953
 margin_right = -671.574
 margin_bottom = 436.953
 flat = true
-<<<<<<< HEAD
 
 [connection signal="pressed" from="botaoMapa" to="." method="_on_botaoMapa_pressed"]
 [connection signal="pressed" from="mapaAberto/sairMapa" to="." method="_on_sairMapa_pressed"]
@@ -986,5 +674,3 @@ flat = true
 [connection signal="pressed" from="computador/botaoDuvida" to="." method="_on_botaoDuvida_pressed"]
 [connection signal="pressed" from="Emailpc/botaoVoltar" to="." method="_on_botaoVoltar_pressed"]
 [connection signal="pressed" from="duvidaPc/botaoVoltarDuvida" to="." method="_on_botaoVoltarDuvida_pressed"]
-=======
->>>>>>> b752d353fb166c2c19d9547b9c9c3c66f18aec11
