@@ -53,36 +53,7 @@ func _on_caixaTexto_body_entered(body):
 
 func _on_caixaTexto_body_exited(body):
 	areaProf = false 
-func _on_botaoLivro_pressed():
-	cont += 1
-	$matFinanceira.visible = true
-	$next.visible = true
-	$nextLivro.visible = true
-func _on_nextLivro_pressed():
-	cont += 1
-	if cont == 2:
-		$matFinanceira.visible = false
-		$inflacao.visible = true
-	elif cont == 3:
-		$inflacao.visible = false
-		$jurosSimples.visible = true
-	elif cont == 4:
-		$jurosSimples.visible = false
-		$jurosCompostos.visible = true
-	elif cont == 5:
-		$jurosCompostos.visible = false
-		$investimentos.visible = true
-	elif cont == 6:
-		$investimentos.visible = false
-		$publico.visible = true
-	elif cont == 7:
-		$publico.visible = false
-		$incentivados.visible = true
-	elif cont == 8:
-		$incentivados.visible = false
-		$next.visible = false
-		$nextLivro.visible = false
-		cont = 0
+
 #faz o botao next sumir com o tutorial
 func _on_botaoTutorial_pressed():
 	Global.contador += 1

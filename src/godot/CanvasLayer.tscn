@@ -378,17 +378,6 @@ position = Vector2( 512, 300 )
 scale = Vector2( 0.533333, 0.559259 )
 texture = ExtResource( 26 )
 
-[node name="nextLivro" type="Button" parent="."]
-visible = false
-margin_left = 643.0
-margin_top = 419.0
-margin_right = 769.0
-margin_bottom = 473.0
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="matFinanceira" type="Sprite" parent="."]
 visible = false
 position = Vector2( 533.784, 296.784 )
@@ -659,7 +648,6 @@ flat = true
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="botaoNpc" to="." method="_on_botaoNpc_pressed"]
 [connection signal="pressed" from="botaoTutorial" to="." method="_on_botaoTutorial_pressed"]
-[connection signal="pressed" from="nextLivro" to="." method="_on_nextLivro_pressed"]
 [connection signal="pressed" from="sairMercado" to="." method="_on_sairMercado_pressed"]
 [connection signal="pressed" from="botaoBife" to="." method="_on_botaoBife_pressed"]
 [connection signal="pressed" from="botaoMacarrao" to="." method="_on_botaoMacarrao_pressed"]

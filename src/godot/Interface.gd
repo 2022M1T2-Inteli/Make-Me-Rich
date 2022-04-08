@@ -20,5 +20,5 @@ func on_button_pressed(button: Button) -> void:
 			pass
 
 func game_over() -> void:
-	if(Global.score == 10):
+	if(Global.ponto == 10):
 		get_tree().change_scene("res://GameOver.tscn")

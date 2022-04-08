@@ -7,15 +7,15 @@ func _ready():
 func refresh_label():
 	get_node("CenterContainer/Label").text = ("R$ " + String(Global.dinheiro))
 
-func add_money(gain):
-	Global.dinheiro += gain
+func add_money(ganhar):
+	Global.dinheiro += ganhar
 	refresh_label()
 
-func sub_money(loss):
-	Global.dinheiro -= loss
+func sub_money(perde):
+	Global.dinheiro -= perde
 	if Global.dinheiro < 0: Global.dinheiro = 0
 	refresh_label()
 
-func can_pay(cost):
-	var can = (Global.dinheiro - cost) >= 0
-	return can
+func can_pay(custo):
+	var pode = (Global.dinheiro - custo) >= 0
+	return pode

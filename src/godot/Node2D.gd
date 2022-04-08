@@ -66,3 +66,7 @@ func _process(delta):
 		$personagem/CanvasLayer/nomeVendedor.visible = false
 		$MercadoJudite/botaoVendedor.visible = false
 	
+
+
+func _on_botaoEstudo_pressed():
+	get_tree().change_scene("res://Faculdade/Faculdade.tscn")

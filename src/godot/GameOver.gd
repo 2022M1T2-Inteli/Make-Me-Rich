@@ -4,7 +4,7 @@ extends CanvasLayer
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var porcentagem = (float(Global.score)/float(Global.meta))*100
+var porcentagem = (float(Global.ponto)/float(Global.meta))*100
 # Called when the node enters the scene tree for the first time.
 var valorProduto = 1.35
 func _ready():

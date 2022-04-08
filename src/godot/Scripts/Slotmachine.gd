@@ -1,67 +1,67 @@
 extends Panel
 
 export var custoTentativa = 10 
-export var winMultiply = 4
+export var multiplicador = 4
 
-var allWheels = []
-var readyWheels = []
+var todasRoletas = []
+var roletasProntas = []
 
-var lastRolled = []
+var ultimaGirada = []
 
-func register_wheel(newWheel):
-	get_node(newWheel).connect("is_stopped", self, "_on_wheel_is_stopped")
+func register_wheel(novaRoleta):
+	get_node(novaRoleta).connect("is_stopped", self, "_on_wheel_is_stopped")
 	
 	
-	randomize_wheel(newWheel)
+	randomize_wheel(novaRoleta)
 	
-	allWheels.insert(allWheels.size(), newWheel)
-	readyWheels.insert(readyWheels.size(), newWheel)
+	todasRoletas.insert(todasRoletas.size(), novaRoleta)
+	roletasProntas.insert(roletasProntas.size(), novaRoleta)
 
 
 
 func start_all_Wheels():
-	for entry in allWheels:
+	for entry in todasRoletas:
 		get_node(entry).start_wheel()
-		readyWheels.erase(entry)
+		roletasProntas.erase(entry)
 
 
-func randomize_wheel(wheel):
+func randomize_wheel(roleta):
 	randomize()
-	get_node(wheel).set_index(randi()%3)
+	get_node(roleta).set_index(randi()%3)
 
 
 
 func _on_StartButton_pressed():
-	if get_node("../Player").can_pay(custoTentativa) && readyWheels.size() == allWheels.size():
+	if get_node("../Player").can_pay(custoTentativa) && roletasProntas.size() == todasRoletas.size():
 		get_node("../Player").sub_money(custoTentativa)
 		start_all_Wheels()
 
 
-func _on_wheel_is_stopped(wheel, value):
+func _on_wheel_is_stopped(roleta, valor):
 	
-	if !readyWheels.has(wheel):
-		readyWheels.insert(readyWheels.size(), wheel)
-		lastRolled.insert(lastRolled.size(), value)
+	if !roletasProntas.has(roleta):
+		roletasProntas.insert(roletasProntas.size(), roleta)
+		ultimaGirada.insert(ultimaGirada.size(), valor)
 	
-	if lastRolled.size() >= allWheels.size():
+	if ultimaGirada.size() >= todasRoletas.size():
 		evaluate_player_roll()
-		lastRolled.clear()
+		ultimaGirada.clear()
 	
 
 func evaluate_player_roll():
-	var playerWin = true
-	var index = 0
-	var firstValue = lastRolled[0]
+	var venceu = true
+	var indice = 0
+	var primeiroValor = ultimaGirada[0]
 	
-	for entry in allWheels:
-		if firstValue == lastRolled[index]:
-			index += 1	
+	for entry in todasRoletas:
+		if primeiroValor == ultimaGirada[indice]:
+			indice += 1	
 		else:
-			playerWin = false
+			venceu = false
 	
-	if(playerWin == true):
-		print("Congratz! You win " + String(custoTentativa * winMultiply))
-		get_node("../Player").add_money(custoTentativa * winMultiply)
+	if(venceu == true):
+		print("Congratz! You win " + String(custoTentativa * multiplicador))
+		get_node("../Player").add_money(custoTentativa * multiplicador)
 	else:
 		print("Nothing - try a next Spin!")
 	

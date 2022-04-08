@@ -18,7 +18,6 @@
 [ext_resource path="res://assets/banco_judite.jpg" type="Texture" id=16]
 [ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
 [ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
-[ext_resource path="res://porta 1.gd" type="Script" id=19]
 [ext_resource path="res://assets/fundo.png" type="Texture" id=20]
 [ext_resource path="res://assets/videoplayback.mp3" type="AudioStream" id=21]
 [ext_resource path="res://assets/universidade_judite.jpg" type="Texture" id=22]
@@ -163,31 +162,6 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
-"loop": false,
-"name": "idle.costas",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "idle.esquerda",
@@ -197,6 +171,31 @@ animations = [ {
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "idle.costas",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -204,31 +203,6 @@ animations = [ {
 "frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
 "loop": true,
 "name": "walk.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 75 ) ],
-"loop": true,
-"name": "idle.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 79 ), ExtResource( 77 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 74 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 72 ) ],
-"loop": true,
-"name": "idle.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 80 ) ],
@@ -240,6 +214,31 @@ animations = [ {
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 72 ) ],
+"loop": true,
+"name": "idle.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 79 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 75 ) ],
+"loop": true,
+"name": "idle.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=36]
@@ -247,31 +246,6 @@ animations = [ {
 "frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
 "loop": true,
 "name": "walk.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 93 ) ],
-"loop": true,
-"name": "idle.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 97 ), ExtResource( 94 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 98 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 96 ) ],
-"loop": true,
-"name": "idle.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 99 ) ],
@@ -283,6 +257,31 @@ animations = [ {
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ) ],
+"loop": true,
+"name": "idle.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 97 ), ExtResource( 94 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 93 ) ],
+"loop": true,
+"name": "idle.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=37]
@@ -290,31 +289,6 @@ animations = [ {
 "frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
 "loop": true,
 "name": "walk.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 87 ) ],
-"loop": true,
-"name": "idle.costas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 83 ), ExtResource( 84 ) ],
-"loop": true,
-"name": "walk.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 91 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 89 ) ],
-"loop": true,
-"name": "idle.frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 82 ) ],
@@ -326,7 +300,54 @@ animations = [ {
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 89 ) ],
+"loop": true,
+"name": "idle.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 83 ), ExtResource( 84 ) ],
+"loop": true,
+"name": "walk.direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 87 ) ],
+"loop": true,
+"name": "idle.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 5.0
 } ]
+
+[sub_resource type="GDScript" id=49]
+script/source = "extends Area2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+
+"
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 38, 15 )
@@ -492,7 +513,6 @@ position = Vector2( -217.584, -49.1094 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="setapopup3" type="AnimatedSprite" parent="Cassino"]
@@ -500,6 +520,7 @@ position = Vector2( 215.535, -55.9297 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="NpcRicardo" type="Sprite" parent="Cassino"]
@@ -544,6 +565,7 @@ position = Vector2( 187.854, -46.7031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
@@ -570,6 +592,7 @@ rotation = 1.5646
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="TrabalhoCenário"]
@@ -577,6 +600,7 @@ position = Vector2( 114.025, 205.203 )
 scale = Vector2( 0.0391785, 0.0338659 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoGui" type="Button" parent="."]
@@ -650,7 +674,6 @@ position = Vector2( 139.193, 4.98828 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -667,7 +690,6 @@ position = Vector2( -20.9536, 35.4211 )
 scale = Vector2( 0.0311811, 0.0268573 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="MercadoJudite" type="Sprite" parent="."]
@@ -701,7 +723,6 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="MercadoJudite"]
@@ -709,7 +730,6 @@ position = Vector2( 264.869, -181.484 )
 scale = Vector2( 0.0405601, 0.0432207 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoVendedor" type="Button" parent="MercadoJudite"]
@@ -774,7 +794,6 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="UniversidadeJudite" type="Sprite" parent="."]
@@ -835,7 +854,6 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -843,6 +861,7 @@ position = Vector2( -237.811, -267.16 )
 scale = Vector2( 0.0320963, 0.0305576 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="UniversidadeJudite"]
@@ -853,8 +872,11 @@ margin_bottom = -167.317
 flat = true
 
 [node name="personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 1068, 568 )
+position = Vector2( 1067, 591 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
 position = Vector2( 1, 10 )
@@ -965,7 +987,7 @@ texture = ExtResource( 25 )
 
 [node name="portaDentro" type="Area2D" parent="."]
 position = Vector2( 1025, 1141 )
-script = ExtResource( 19 )
+script = SubResource( 49 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portaDentro"]
 position = Vector2( -7, 25 )
@@ -986,12 +1008,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="botaoLivro" type="Button" parent="."]
+[node name="botaoEstudo" type="Button" parent="."]
 margin_left = 855.0
 margin_top = -2502.0
 margin_right = 908.0
 margin_bottom = -2462.0
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="botaoMercado" type="Button" parent="."]
 margin_left = 672.0
@@ -1052,15 +1077,15 @@ __meta__ = {
 [connection signal="body_entered" from="TrabalhoCenário/dentroTrabalho" to="personagem" method="_on_dentroTrabalho_body_entered"]
 [connection signal="body_entered" from="TrabalhoCenário/areaLucas" to="personagem/CanvasLayer" method="_on_areaLucas_body_entered"]
 [connection signal="body_exited" from="TrabalhoCenário/areaLucas" to="personagem/CanvasLayer" method="_on_areaLucas_body_exited"]
-[connection signal="pressed" from="botaoGui" to="personagem" method="_on_botaoGui_pressed"]
+[connection signal="pressed" from="botaoGui" to="personagem/CanvasLayer" method="_on_botaoGui_pressed"]
 [connection signal="body_entered" from="BancoJudite/dentroBanco" to="personagem" method="_on_dentroBanco_body_entered"]
-[connection signal="body_entered" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_entered"]
-[connection signal="body_exited" from="BancoJudite/caixaTextoGui" to="personagem" method="_on_caixaTextoGui_body_exited"]
+[connection signal="body_entered" from="BancoJudite/caixaTextoGui" to="personagem/CanvasLayer" method="_on_caixaTextoGui_body_entered"]
+[connection signal="body_exited" from="BancoJudite/caixaTextoGui" to="personagem/CanvasLayer" method="_on_caixaTextoGui_body_exited"]
 [connection signal="pressed" from="BancoJudite/caixaInvestir" to="personagem" method="_on_caixaInvestir_pressed"]
 [connection signal="body_entered" from="MercadoJudite/dentroMercado" to="personagem" method="_on_dentroMercado_body_entered"]
-[connection signal="body_entered" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_entered"]
-[connection signal="body_exited" from="MercadoJudite/areaVendedor" to="personagem" method="_on_areaVendedor_body_exited"]
-[connection signal="pressed" from="MercadoJudite/botaoVendedor" to="personagem" method="_on_botaoVendedor_pressed"]
+[connection signal="body_entered" from="MercadoJudite/areaVendedor" to="personagem/CanvasLayer" method="_on_areaVendedor_body_entered"]
+[connection signal="body_exited" from="MercadoJudite/areaVendedor" to="personagem/CanvasLayer" method="_on_areaVendedor_body_exited"]
+[connection signal="pressed" from="MercadoJudite/botaoVendedor" to="personagem/CanvasLayer" method="_on_botaoVendedor_pressed"]
 [connection signal="pressed" from="botaoBoaNoite" to="personagem" method="_on_botaoBoaNoite_pressed"]
 [connection signal="body_entered" from="casa/computer" to="personagem" method="_on_computer_body_entered"]
 [connection signal="body_entered" from="casa/areaCama" to="personagem" method="_on_areaCama_body_entered"]
@@ -1079,7 +1104,7 @@ __meta__ = {
 [connection signal="button_up" from="personagem/CanvasLayerMovimentação/movDireita" to="personagem" method="_on_movDireita_button_up"]
 [connection signal="body_entered" from="portaDentro" to="personagem" method="_on_portaDentro_body_entered"]
 [connection signal="pressed" from="botaoPC" to="personagem/CanvasLayer" method="_on_botaoPC_pressed"]
-[connection signal="pressed" from="botaoLivro" to="personagem/CanvasLayer" method="_on_botaoLivro_pressed"]
+[connection signal="pressed" from="botaoEstudo" to="." method="_on_botaoEstudo_pressed"]
 [connection signal="pressed" from="botaoMercado" to="personagem/CanvasLayer" method="_on_botaoMercado_pressed"]
 [connection signal="pressed" from="botaoFabrica" to="personagem" method="_on_botaoFabrica_pressed"]
 [connection signal="pressed" from="botaoCassino1" to="personagem" method="_on_botaoCassino1_pressed"]

@@ -87,6 +87,9 @@ margin_right = 167.0
 margin_bottom = 97.0
 flat = true
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Control/Slotmachine"]
 margin_left = 525.0

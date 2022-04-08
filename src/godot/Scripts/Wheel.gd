@@ -12,9 +12,9 @@ func start_wheel():
 	pass
 
 
-func set_index(index):
-	if index <= 2:
-		get_node("AnimatedSprite").set_frame(index)
+func set_index(indice):
+	if indice <= 2:
+		get_node("AnimatedSprite").set_frame(indice)
 
 
 func get_index():

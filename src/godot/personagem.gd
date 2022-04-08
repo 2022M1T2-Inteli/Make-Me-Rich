@@ -56,7 +56,9 @@ func _ready():
 		position.x = 1348
 		position.y = -5891
 		Global.posicao = null
-
+	if Global.posicao == "faculdade":
+		position.x = 810
+		position.y = -2613
 
 
 func _physics_process(delta):
@@ -291,7 +293,4 @@ func _on_botaoCassino2_pressed():
 func _on_botaoFios_pressed():
 	get_tree().change_scene("res://TaskFios.tscn")
 	Global.abriuJogoFio += 1
-
-
-
 
