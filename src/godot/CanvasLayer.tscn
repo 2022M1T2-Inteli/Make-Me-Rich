@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/matFinanceira.png" type="Texture" id=2]
@@ -85,6 +85,46 @@ tracks/0/keys = {
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=33]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 57
+extra_spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=52]
+size = 57
+extra_spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=53]
+size = 57
+extra_spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=54]
+size = 57
+extra_spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=55]
+size = 57
+extra_spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=56]
+size = 57
+extra_spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=57]
+size = 57
+extra_spacing_top = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=58]
+size = 57
+extra_spacing_top = 14
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=50]
@@ -573,6 +613,159 @@ margin_top = 336.91
 margin_right = -641.261
 margin_bottom = 426.91
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia1" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -650.802
+margin_top = -272.532
+margin_right = 991.198
+margin_bottom = 124.468
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 51 )
+text = "1. Vá à faculdade, tenha sua primeira aula sobre 
+Matemática Financeira e depois realize as atividades 
+sobre a aula!
+
+2. Vá até ao trabalho e execute sua primeira função!
+
+3. Não se esqueça de se alimentar entre suas tarefas!
+
+4. Conheça o banco e faça seu primeiro investimento!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia2" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -624.845
+margin_top = -268.24
+margin_right = -40.8447
+margin_bottom = -203.24
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 52 )
+text = "1.Vá à faculdade, aprenda sobre Inflação e depois r
+ealize a atividade com o conteúdo da aula!
+
+2.Vá ao trabalho e realize seu trabalho do dia!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia3" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -650.802
+margin_top = -272.532
+margin_right = 432.198
+margin_bottom = 4.46777
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 53 )
+text = "1.Vá à faculdade, aprenda sobre juros simples 
+e depois realize as atividades da aula!
+
+2.Vá ao trabalho e realize seu trabalho do dia!
+
+3.Volte ao banco e veja seu lucro investido!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia4" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -650.803
+margin_top = -272.532
+margin_right = 664.197
+margin_bottom = -115.532
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 54 )
+text = "1.Vá a faculdade, realize seu primeiro teste e boa sorte!
+
+2.Depois do teste, aproveite para conhecer a cidade!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia5" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -650.803
+margin_top = -272.532
+margin_right = 1340.2
+margin_bottom = 44.4679
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 55 )
+text = "1.Vá até a faculdade, aprenda sobre juros compostos 
+e realize suas atividades da aula!
+
+2.Vá ao trabalho!
+
+3.Vá ao banco para realizar um investimento!
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia6" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -650.803
+margin_top = -272.532
+margin_right = 406.197
+margin_bottom = -75.5322
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 56 )
+text = "1.Vá até a faculdade, aprenda sobre renda 
+fixa e realize a atividade sobre a aula!
+
+2.Vá ao trabalho e realize sua tarefa diária!
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia7" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -650.803
+margin_top = -272.532
+margin_right = 451.197
+margin_bottom = 44.4678
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 57 )
+text = "1.Vá até a faculdade, aprenda sobre Fundos de 
+investimento e realize a atividade sobre a aula!
+
+2.Vá ao banco e retire seu investimento!
+
+3.Vá ao trabalho e realize seu trabalho!
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia8" type="Label" parent="Emailpc"]
+visible = false
+margin_left = -650.802
+margin_top = -272.532
+margin_right = 539.198
+margin_bottom = 4.46777
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 58 )
+text = "1.Vá à faculdade e realize seu teste final!
+
+2.Vá ao trabalho e realize sua tarefa!
+
+3.Depois aproveite a cidade de Santa Mônica Judith
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="rostoLucas" type="Sprite" parent="."]
 visible = false

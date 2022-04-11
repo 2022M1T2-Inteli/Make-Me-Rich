@@ -130,6 +130,23 @@ func _process(delta):
 		$rostoRicardo.visible = false
 		$fundoRicardo.visible = false
 		$falaRicardo.visible = false
+	#Os condicionais abaixo servem pra mostrar os e-mails em seus respectvos dias
+	if Global.dia == 1:
+		$Emailpc/dia1.visible = true
+	if Global.dia == 2:
+		$Emailpc/dia2.visible = true
+	if Global.dia == 3: 
+		$Emailpc/dia3.visible = true
+	if Global.dia == 4:
+		$Emailpc/dia4.visible = true
+	if Global.dia == 5:
+		$Emailpc/dia5.visible = true
+	if Global.dia == 6:
+		$Emailpc/dia6.visible = true
+	if Global.dia == 7: 
+		$Emailpc/dia7.visible = true
+	if Global.dia == 8:
+		$Emailpc/dia8.visible = true
 
 #Faz aparecer os produtos e os botões deles
 func _on_botaoMercado_pressed():
