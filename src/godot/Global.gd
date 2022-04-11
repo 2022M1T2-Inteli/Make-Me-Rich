@@ -1,5 +1,5 @@
 extends Node
-#variavel global do dinheoiro
+#variaveis relacionadas às funcionalidades gerais do jogo, com seus respectivos nomes
 var dinheiro = 2000.00
 var sent = 0
 var horas = 6
@@ -18,7 +18,7 @@ var posicao
 var gameAberto = 0
 var abriuJogoFab = 0
 var abriuJogoFio = 0
-
+#variaveis globais relacionada à seção de estudos na universidade
 var MatFin = 0
 var Inflacao = 0
 var JurosSimples = 0

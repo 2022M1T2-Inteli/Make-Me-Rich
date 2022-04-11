@@ -69,7 +69,7 @@ func _process(delta):
 		$botaoTutorial.visible = false
 		$instrucNpc.visible = true
 		$botaoNpc.visible = true
-
+		#
 	if Global.contador == 2:
 		$instrucNpc.visible = false
 		$botaoNpc.visible = false
@@ -78,17 +78,21 @@ func _process(delta):
 	if Global.contador == 3:
 		$VideoPlayer.visible = false
 		
-	#fala da professora aparece
+	#abaixo, existem variáveis que fazem as falas e os rostos dos NPC's aparecerem na tela, atrás do NPC tem um
+	#botão que aumenta um contador, e é combinado com uma área, a fala só aparece se o player estiver nessa área e 
+	#o resto da divisão for 1.
+	
+	#Cada um tem seu nome
+	
 	if areaProf == true and prof % 2 == 1:
 		$professora.visible = true
 		$fundoProfessora.visible = true
 		$textoProf.visible = true
-		#fala da professora sai
 	elif areaProf == false or prof % 2 == 0:
 		$professora.visible = false
 		$fundoProfessora.visible = false
 		$textoProf.visible = false
-		#fala do guilherme aparece
+	
 	if areaGui == true and gui % 2 == 1:
 		$guilherme.visible = true
 		$textoGui.visible = true
@@ -97,13 +101,12 @@ func _process(delta):
 		$guilherme.visible = false
 		$textoGui.visible = false
 		$fundoGui.visible = false
-		#fala do vendedor aparece
+	
 	if areaVendedor == true and vendedor % 2 == 1:
 		$vendedor.visible = true
 		$fundoMario.visible = true
 		$textoVendedor.visible = true
 		$nomeVendedor.visible = true
-		
 	elif areaVendedor == false or vendedor % 2 == 0:
 		$vendedor.visible = false
 		$fundoMario.visible = false
@@ -127,7 +130,8 @@ func _process(delta):
 		$rostoRicardo.visible = false
 		$fundoRicardo.visible = false
 		$falaRicardo.visible = false
-		
+
+#Faz aparecer os produtos e os botões deles
 func _on_botaoMercado_pressed():
 	$mercado.visible = true
 	$setaVolta.visible = true
@@ -154,6 +158,7 @@ func _on_sairMercado_pressed():
 	$botaoRosquinha.visible = false
 	$botaoMaca.visible = false
 
+#Faz aumentar a felicidade e diminuir o dinheiro, dependendo do produto que escolher
 func _on_botaoBife_pressed():
 	Global.dinheiro -= 20
 	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)

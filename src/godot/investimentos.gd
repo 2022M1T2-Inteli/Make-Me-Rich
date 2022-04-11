@@ -1,13 +1,13 @@
 extends Button
 
-#deixa o botao mais escuro
+#deixa o botão mais escuro
 func _on_investimentos_mouse_entered():
 	$CaixaInvestir.modulate.r = 0.7
 	$CaixaInvestir.modulate.g = 0.7
 	$CaixaInvestir.modulate.b = 0.7
 	
 
-#volta o botao ao normal
+#volta o botão ao normal
 func _on_investimentos_mouse_exited():
 	$CaixaInvestir.modulate.r = 1
 	$CaixaInvestir.modulate.g = 1
