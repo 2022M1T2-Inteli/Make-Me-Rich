@@ -4,7 +4,7 @@ onready var interface: CanvasLayer = get_node("Interface") #Novo
 onready var parralax_background: ParallaxBackground = get_node("ParallaxBackground") #Novo
 const tipoProduto = preload("res://Produtos.tscn") #Dentro dessa variável carregar a cena Produto
 var local = [36,108,180,252]
-var score = 0 #Pontuacao
+
 		
 
 func start_game() -> void:
@@ -16,7 +16,7 @@ func start_game() -> void:
 
 
 func _on_Timer_timeout():
-	$Control/Label.text = str(Global.score)
+	$Control/Label.text = str(Global.ponto)
 	$Control/Label2.text = str(30 - Global.tempo)
 	var novoproduto = tipoProduto.instance()
 	add_child_below_node(get_tree().root,novoproduto)

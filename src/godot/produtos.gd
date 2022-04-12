@@ -11,7 +11,7 @@ func _on_VisibilityNotifier2D_screen_exited(): # Quando chega no limite da tela 
 func _on_Button_pressed():
 	$produto.visible = false
 	$embalagem.visible = true 
-	Global.score += 1
+	Global.ponto += 1
 	
 	
 
