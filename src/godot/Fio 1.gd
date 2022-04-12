@@ -33,7 +33,7 @@ func _move_to_mouse():
 func _on_Button_1_pressed():
 	if $Button1.pressed:
 		p = true
-# Quando o botão for apertado, "P" vira verdadeiro
+# Quando o botão for apertado, "P" vira verdadeiro para que as funções de movimento funcionem
 
 
 
