@@ -2,6 +2,8 @@ extends Control
 
 signal is_stopped
 
+#Função para dar início as animações
+
 func _ready():
 	get_node("../").register_wheel(self.name)
 	pass 

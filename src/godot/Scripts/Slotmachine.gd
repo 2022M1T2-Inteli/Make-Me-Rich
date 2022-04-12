@@ -8,6 +8,7 @@ var roletasProntas = []
 
 var ultimaGirada = []
 
+#Função que executa o mecanismo de reiniciar a roleta
 func register_wheel(novaRoleta):
 	get_node(novaRoleta).connect("is_stopped", self, "_on_wheel_is_stopped")
 	
@@ -18,25 +19,26 @@ func register_wheel(novaRoleta):
 	roletasProntas.insert(roletasProntas.size(), novaRoleta)
 
 
-
+#Função para começar a rodar todas as roletas
 func start_all_Wheels():
 	for entry in todasRoletas:
 		get_node(entry).start_wheel()
 		roletasProntas.erase(entry)
 
-
+#Função para deixar o giro de forma aleatória
 func randomize_wheel(roleta):
 	randomize()
 	get_node(roleta).set_index(randi()%3)
 
 
-
+#Função para começar e descontar dinheiro
 func _on_StartButton_pressed():
 	if get_node("../Player").can_pay(custoTentativa) && roletasProntas.size() == todasRoletas.size():
 		get_node("../Player").sub_money(custoTentativa)
 		start_all_Wheels()
 
 
+#Parar a roleta e identificar se vai perder dinheiro
 func _on_wheel_is_stopped(roleta, valor):
 	
 	if !roletasProntas.has(roleta):
@@ -48,6 +50,7 @@ func _on_wheel_is_stopped(roleta, valor):
 		ultimaGirada.clear()
 	
 
+#Função para identificar se o player ganhou o jogo
 func evaluate_player_roll():
 	var venceu = true
 	var indice = 0

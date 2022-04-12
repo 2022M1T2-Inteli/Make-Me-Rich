@@ -157,6 +157,11 @@ extents = Vector2( 16.5, 14.5 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk.costas",
@@ -182,24 +187,24 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
 animations = [ {
+"frames": [ ExtResource( 80 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
 "loop": true,
 "name": "walk.costas",
@@ -225,24 +230,24 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 74 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 80 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 70 ), ExtResource( 42 ) ],
 "loop": true,
 "name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=36]
 animations = [ {
+"frames": [ ExtResource( 99 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
 "loop": true,
 "name": "walk.costas",
@@ -268,24 +273,24 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 98 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 99 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 92 ), ExtResource( 43 ) ],
 "loop": true,
 "name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=37]
 animations = [ {
+"frames": [ ExtResource( 82 ) ],
+"loop": true,
+"name": "idle.esquerda",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
 "loop": true,
 "name": "walk.costas",
@@ -311,19 +316,14 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 91 ) ],
-"loop": true,
-"name": "idle.direita",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 82 ) ],
-"loop": true,
-"name": "idle.esquerda",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 85 ), ExtResource( 81 ) ],
 "loop": true,
 "name": "walk.frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "idle.direita",
 "speed": 5.0
 } ]
 
@@ -1064,8 +1064,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
