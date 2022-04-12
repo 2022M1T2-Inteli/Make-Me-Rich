@@ -11,6 +11,8 @@ func add_money(ganhar):
 	Global.dinheiro += ganhar
 	refresh_label()
 
+#Somar ou descontar dinheiro no contador global
+
 func sub_money(perde):
 	Global.dinheiro -= perde
 	if Global.dinheiro < 0: Global.dinheiro = 0
