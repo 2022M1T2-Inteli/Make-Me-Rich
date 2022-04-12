@@ -61,6 +61,7 @@ func _physics_process(delta):
 	if Global.posicao == "faculdade":
 		position.x = 810
 		position.y = -2613
+		Global.posicao = null
 	move_and_slide(velocidade)
 	# Codigo pra movimentação 
 	if Input.is_action_pressed("tecla_w"):
