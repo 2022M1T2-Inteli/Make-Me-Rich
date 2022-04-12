@@ -32,7 +32,7 @@ func _move_to_mouse():
 func _on_Button4_pressed():
 	if $Button4.pressed:
 		p = true
-# Quando o botão for apertado, "P" vira verdadeiro
+# Quando o botão for apertado, "P" vira verdadeiro  para que as funções de movimento funcionem
 
 func _on_Area_Fio4_body_entered(body):
 	$CanvasLayer/FioRoxo2.visible = true
