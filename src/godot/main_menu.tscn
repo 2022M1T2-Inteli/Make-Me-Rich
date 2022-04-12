@@ -1,13 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/menuprincipal.png" type="Texture" id=1]
 [ext_resource path="res://start.gd" type="Script" id=2]
 [ext_resource path="res://assets/Kevin MacLeod- Itty Bitty 8 Bit.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/botaojogar (2).png" type="Texture" id=4]
 [ext_resource path="res://main_menu.gd" type="Script" id=5]
+[ext_resource path="res://assets/botãoSobre.png" type="Texture" id=6]
 
 [node name="menu" type="Node2D"]
 script = ExtResource( 5 )
+
+[node name="botaoSobre" type="Button" parent="."]
+margin_left = 832.0
+margin_top = 525.0
+margin_right = 997.0
+margin_bottom = 586.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Menuprincipal" type="Sprite" parent="."]
 position = Vector2( 513, 301 )
@@ -33,6 +43,12 @@ texture = ExtResource( 4 )
 [node name="musica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[node name="BotãoSobre" type="Sprite" parent="."]
+position = Vector2( 916, 606 )
+scale = Vector2( 0.27963, 0.27963 )
+texture = ExtResource( 6 )
+
+[connection signal="pressed" from="botaoSobre" to="." method="_on_botaoSobre_pressed"]
 [connection signal="mouse_entered" from="start" to="start" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="start" to="start" method="_on_start_mouse_exited"]
 [connection signal="pressed" from="start" to="start" method="_on_start_pressed"]

@@ -73,7 +73,7 @@ func _process(delta):
 	if Global.contador == 2:
 		$instrucNpc.visible = false
 		$botaoNpc.visible = false
-		$VideoPlayer.visible = false
+		$VideoPlayer.visible = true
 		
 	if Global.contador == 3:
 		$VideoPlayer.visible = false

@@ -2,7 +2,7 @@ extends Node2D
 
 #código do card do computador
 func _ready():
-	#$AudioStreamPlayer.play()
+	$AudioStreamPlayer.play()
 	pass
 #mostra o horario
 func _process(delta):

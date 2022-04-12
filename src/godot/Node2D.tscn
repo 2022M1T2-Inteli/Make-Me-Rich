@@ -18,8 +18,8 @@
 [ext_resource path="res://assets/banco_judite.jpg" type="Texture" id=16]
 [ext_resource path="res://sprites_player/parado.esquerda.png" type="Texture" id=17]
 [ext_resource path="res://sprites_player/idle.costas.png" type="Texture" id=18]
+[ext_resource path="res://assets/Run-As-Fast-As-You-Can.mp3" type="AudioStream" id=19]
 [ext_resource path="res://assets/fundo.png" type="Texture" id=20]
-[ext_resource path="res://assets/videoplayback.mp3" type="AudioStream" id=21]
 [ext_resource path="res://assets/universidade_judite.jpg" type="Texture" id=22]
 [ext_resource path="res://Node2D.gd" type="Script" id=23]
 [ext_resource path="res://CanvasLayerDinheiro.tscn" type="PackedScene" id=24]
@@ -167,15 +167,15 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "idle.frente",
 "speed": 0.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
@@ -192,10 +192,10 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "idle.direita",
-"speed": 5.0
+"name": "walk.esquerda",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -210,14 +210,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 74 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 72 ) ],
 "loop": true,
 "name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
-"loop": true,
-"name": "walk.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 75 ) ],
@@ -235,9 +235,9 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 74 ) ],
+"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.esquerda",
 "speed": 5.0
 } ]
 
@@ -253,14 +253,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 98 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 96 ) ],
 "loop": true,
 "name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
-"loop": true,
-"name": "walk.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 93 ) ],
@@ -278,9 +278,9 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 98 ) ],
+"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.esquerda",
 "speed": 5.0
 } ]
 
@@ -296,14 +296,14 @@ animations = [ {
 "name": "walk.costas",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "idle.direita",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 89 ) ],
 "loop": true,
 "name": "idle.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
-"loop": true,
-"name": "walk.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 87 ) ],
@@ -321,9 +321,9 @@ animations = [ {
 "name": "walk.frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 91 ) ],
+"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
 "loop": true,
-"name": "idle.direita",
+"name": "walk.esquerda",
 "speed": 5.0
 } ]
 
@@ -513,7 +513,6 @@ position = Vector2( -217.584, -49.1094 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="setapopup3" type="AnimatedSprite" parent="Cassino"]
@@ -521,6 +520,7 @@ position = Vector2( 215.535, -55.9297 )
 scale = Vector2( 0.042211, 0.034979 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="NpcRicardo" type="Sprite" parent="Cassino"]
@@ -565,6 +565,7 @@ position = Vector2( 187.854, -46.7031 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="TrabalhoCenário"]
@@ -591,6 +592,7 @@ rotation = 1.5646
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
+frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="TrabalhoCenário"]
@@ -598,6 +600,7 @@ position = Vector2( 114.025, 205.203 )
 scale = Vector2( 0.0391785, 0.0338659 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoGui" type="Button" parent="."]
@@ -671,7 +674,6 @@ position = Vector2( 139.193, 4.98828 )
 scale = Vector2( 0.0291766, 0.0224995 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="caixaInvestir" type="Button" parent="BancoJudite"]
@@ -688,7 +690,6 @@ position = Vector2( -20.9536, 35.4211 )
 scale = Vector2( 0.0311811, 0.0268573 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="MercadoJudite" type="Sprite" parent="."]
@@ -722,7 +723,6 @@ position = Vector2( -328.635, 38.0078 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="MercadoJudite"]
@@ -730,7 +730,6 @@ position = Vector2( 264.869, -181.484 )
 scale = Vector2( 0.0405601, 0.0432207 )
 frames = SubResource( 48 )
 animation = "popup"
-frame = 1
 playing = true
 
 [node name="botaoVendedor" type="Button" parent="MercadoJudite"]
@@ -795,7 +794,6 @@ position = Vector2( -84.8154, -135.054 )
 scale = Vector2( 0.0326528, 0.0243506 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="UniversidadeJudite" type="Sprite" parent="."]
@@ -856,7 +854,6 @@ position = Vector2( 178.455, -95.3008 )
 scale = Vector2( 0.0558588, 0.0430038 )
 frames = SubResource( 45 )
 animation = "SETAPOPUP"
-frame = 1
 playing = true
 
 [node name="popupnpc" type="AnimatedSprite" parent="UniversidadeJudite"]
@@ -864,6 +861,7 @@ position = Vector2( -237.811, -267.16 )
 scale = Vector2( 0.0320963, 0.0305576 )
 frames = SubResource( 48 )
 animation = "popup"
+frame = 1
 playing = true
 
 [node name="botaoProf" type="Button" parent="UniversidadeJudite"]
@@ -999,7 +997,7 @@ shape = SubResource( 7 )
 position = Vector2( 1291, 568 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 21 )
+stream = ExtResource( 19 )
 
 [node name="botaoPC" type="Button" parent="."]
 margin_left = 796.0
@@ -1064,8 +1062,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CidadeJudite/portaFora" to="personagem" method="_on_portaFora_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaBanco" to="personagem" method="_on_portaBanco_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaFaculdade" to="personagem" method="_on_portaFaculdade_body_entered"]
 [connection signal="body_entered" from="CidadeJudite/portaMercado" to="personagem" method="_on_portaMercado_body_entered"]
