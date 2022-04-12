@@ -3,7 +3,7 @@ extends KinematicBody2D
 var move_speed = 250
 var direction = get_global_mouse_position() -position
 var stop_distance = 0
-var penis = false
+var p = false
 
 func _process(delta):
 	_move_to_mouse()
@@ -12,29 +12,30 @@ func _process(delta):
 func _ready():
 	var button = Button.new()
 	button.connect("pressed", self, "_button_pressed")
-
+# Funcionalidade do botão
 
 func _look_at_mouse():
-	if penis == true:
+	if p == true:
 		Input.is_action_just_pressed("click")
 		look_at(get_global_mouse_position())
 		rotation_degrees = rotation_degrees + 360
+# Quando o botao for apertado, o corpo se posiciona corretamente em relação ao mouse
 
 func _move_to_mouse():
-	if penis == true:
+	if p == true:
 		Input.is_action_pressed ("click")
 		var direction = get_global_mouse_position() -position
 		var normalized_direction = direction.normalized()
 		move_and_slide(direction)
+# Quando o botao for apertado, o corpo so move em direção ao mouse
+
 
 func _on_Button_1_pressed():
 	if $Button1.pressed:
-		penis = true
+		p = true
+# Quando o botão for apertado, "P" vira verdadeiro
 
 
-func _on_Button_1_release():
-	if $Button1.released:
-		penis = false
 
 
 func _on_Area_Fio1_body_entered(body):
@@ -44,6 +45,7 @@ func _on_Area_Fio1_body_entered(body):
 	$Button1.visible = false
 	$FioAmarelo.visible = false
 	$CollisionShape2D.visible = false
+# Quando o corpo entrar na Area 2d, os sprites antigos ficam invisiveis e outros ficam visiveis
 	
 	 
 	
