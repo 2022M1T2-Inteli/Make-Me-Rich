@@ -34,7 +34,7 @@ func _on_perderDinheiro_pressed():
 func _on_voltar_pressed():
 	get_tree().change_scene("res://Cena_computador.tscn")
 
-
+#Os comandos abaixo fazem a cor dos botões mudar quando o mouse passa em cima.
 func _on_ganharDinheiro_mouse_entered():
 	$computador/Depositar.modulate.r = 0.7
 	$computador/Depositar.modulate.g = 0.7

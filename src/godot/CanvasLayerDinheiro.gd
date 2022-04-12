@@ -1,5 +1,5 @@
 extends CanvasLayer
 
-# Called when the node enters the scene tree for the first time.
+# Mostra o dinheiro na tela.
 func _process(delta):
 	$DinheiroPlayer.text = "R$" + str (Global.dinheiro)

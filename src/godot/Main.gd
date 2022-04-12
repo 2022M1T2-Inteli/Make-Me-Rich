@@ -10,9 +10,6 @@ var local = [402,474,546,618]
 func start_game() -> void:
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Timer_timeout():

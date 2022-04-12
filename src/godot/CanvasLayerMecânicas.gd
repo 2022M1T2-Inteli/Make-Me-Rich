@@ -1,9 +1,11 @@
 extends CanvasLayer
 var cont = 0
-#detecta se esta perto do guilherme
+#Cria uma variável para uma área que fica perto dos NPCs e fica true quando o personagem fica perto dele
+#Cada um tem seu nome específico
 var areaGui = false
 func _on_caixaTextoGui_body_entered(body):
 	areaGui = true
+
 func _on_caixaTextoGui_body_exited(body):
 	areaGui = false
 
@@ -63,18 +65,18 @@ func _process(delta):
 	if Global.contador == 0 :
 		$boasVindas.visible = true
 		$botaoTutorial.visible = true
-		#tutorial sai
+		#tutorial sai, e aparece a tela dos NPC's
 	if Global.contador == 1:
 		$boasVindas.visible = false
 		$botaoTutorial.visible = false
 		$instrucNpc.visible = true
 		$botaoNpc.visible = true
-		#
+		#aparece o video e a tela dos NPC's aparece
 	if Global.contador == 2:
 		$instrucNpc.visible = false
 		$botaoNpc.visible = false
 		$VideoPlayer.visible = true
-		
+		#desaparece o vídeo
 	if Global.contador == 3:
 		$VideoPlayer.visible = false
 		
@@ -161,7 +163,7 @@ func _on_botaoMercado_pressed():
 	$botaoHamb.visible = true
 	$botaoRosquinha.visible = true
 	$botaoMaca.visible = true
-
+#Faz os produtos saírem da tela
 func _on_sairMercado_pressed():
 	$mercado.visible = false
 	$setaVolta.visible = false
@@ -207,24 +209,24 @@ func _on_botaoRosquinha_pressed():
 func _on_botaoMaca_pressed():
 	Global.dinheiro -= 5
 	Global.menosFeliz += 4.17
-	
+#Quando clica no botão, o computador aparece na tela
 func _on_botaoPC_pressed():
 	$computador.visible = true
 	$botaoEmail.visible = true
-	
+#Quando clica nesse botão do CanvasLayer, o computador sai da tela
 func _on_setasairpc_pressed():
 	$computador.visible = false 
 	$botaoEmail.visible = false
-
+#Quando clica no botão, o mapa aparece na tela
 func _on_botaoMapa_pressed():
 	$mapaAberto.visible = true
-
+#Mapa some da tela
 func _on_sairMapa_pressed():
 	$mapaAberto.visible = false 
 	#botao que foca atras da professora
 func _on_botaoEmail_pressed():
 	$Emailpc.visible = true
-	
+	#Aumenta o contador para a tela de NPC's sumir
 func _on_botaoNpc_pressed():
 	Global.contador += 1
 
@@ -240,6 +242,6 @@ func _on_botaoDuvida_pressed():
 func _on_botaoVoltar_pressed():
 	$computador.visible = true
 	$Emailpc.visible = false
-	
+	#Aumenta o contador pro vídeo sumir
 func _on_VideoPlayer_finished():
 	Global.contador += 1
