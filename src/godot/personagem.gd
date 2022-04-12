@@ -264,6 +264,7 @@ func _on_pagarBoleto_pressed():
 var boaNoite = false
 func _on_botaoBoaNoite_pressed():
 	boaNoite = true  
+	get_tree().change_scene("res://boaNoite.tscn")
 #Cria uma variável booleana que muda quando entra em uma área perto da cama, e muda de novo qando sai
 var areaCama = false
 func _on_areaCama_body_entered(body):
