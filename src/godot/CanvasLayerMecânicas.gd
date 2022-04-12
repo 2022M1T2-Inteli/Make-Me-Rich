@@ -73,7 +73,7 @@ func _process(delta):
 	if Global.contador == 2:
 		$instrucNpc.visible = false
 		$botaoNpc.visible = false
-		$VideoPlayer.visible = true
+		$VideoPlayer.visible = false
 		
 	if Global.contador == 3:
 		$VideoPlayer.visible = false
@@ -178,42 +178,34 @@ func _on_sairMercado_pressed():
 #Faz aumentar a felicidade e diminuir o dinheiro, dependendo do produto que escolher
 func _on_botaoBife_pressed():
 	Global.dinheiro -= 20
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 16.68
 
 func _on_botaoMacarrao_pressed():
 	Global.dinheiro -= 15
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 12.51
 
 func _on_botaoSushi_pressed():
 	Global.dinheiro -= 15
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 12.51
 
 func _on_botaoLeite_pressed():
 	Global.dinheiro -= 5
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 4.17
 
 func _on_botaoBolo_pressed():
 	Global.dinheiro -= 10
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 8.34
 
 func _on_botaoHamb_pressed():
 	Global.dinheiro -= 10
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 8.34
 
 func _on_botaoRosquinha_pressed():
 	Global.dinheiro -= 5
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 4.17
 
 func _on_botaoMaca_pressed():
 	Global.dinheiro -= 5
-	$CanvasLayerDinheiro/DinheiroPlayer.text = "R$" + str(Global.dinheiro)
 	Global.menosFeliz += 4.17
 	
 func _on_botaoPC_pressed():

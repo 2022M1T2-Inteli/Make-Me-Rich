@@ -165,6 +165,9 @@ custom_styles/fg = SubResource( 41 )
 custom_styles/bg = SubResource( 42 )
 step = 1.0
 value = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="caraFeliz" type="Sprite" parent="happyBar"]
 position = Vector2( -25, 13 )
