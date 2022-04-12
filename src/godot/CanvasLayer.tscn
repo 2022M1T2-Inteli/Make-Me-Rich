@@ -568,7 +568,6 @@ __meta__ = {
 }
 
 [node name="computador" type="Sprite" parent="."]
-visible = false
 position = Vector2( 497, 284 )
 scale = Vector2( 0.270219, 0.235058 )
 texture = ExtResource( 18 )
@@ -852,7 +851,7 @@ flat = true
 [connection signal="pressed" from="botaoMaca" to="." method="_on_botaoMaca_pressed"]
 [connection signal="pressed" from="botaoEmail" to="." method="_on_botaoEmail_pressed"]
 [connection signal="pressed" from="computador/setaSairPc" to="." method="_on_setasairpc_pressed"]
-[connection signal="pressed" from="computador/botaoEmail" to="." method="_on_botaoEmanil_pressed"]
+[connection signal="pressed" from="computador/botaoEmail" to="." method="_on_botaoEmail_pressed"]
 [connection signal="pressed" from="computador/botaoDuvida" to="." method="_on_botaoDuvida_pressed"]
 [connection signal="pressed" from="Emailpc/botaoVoltar" to="." method="_on_botaoVoltar_pressed"]
 [connection signal="pressed" from="duvidaPc/botaoVoltarDuvida" to="." method="_on_botaoVoltarDuvida_pressed"]

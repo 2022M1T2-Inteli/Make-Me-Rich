@@ -19,11 +19,6 @@ animations = [ {
 "name": "Produto3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "Produto4",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "Produto2",
@@ -32,6 +27,11 @@ animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "Produto5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Produto4",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],

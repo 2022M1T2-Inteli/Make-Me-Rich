@@ -236,12 +236,6 @@ func _on_botaoEmail_pressed():
 func _on_botaoNpc_pressed():
 	Global.contador += 1
 
-func _on_botaoNome_pressed():
-	Global.contador += 1
-
-func _on_botaoPersonagem_pressed():
-	Global.contador += 1
-
 func _on_botaoVoltarDuvida_pressed():
 	$CanvasLayer/computador.visible = true
 	$CanvasLayer/duvidaPc.visible = false
