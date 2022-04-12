@@ -3,7 +3,7 @@ extends Node
 onready var interface: CanvasLayer = get_node("Interface") #Novo
 onready var parralax_background: ParallaxBackground = get_node("ParallaxBackground") #Novo
 const tipoProduto = preload("res://Produtos.tscn") #Dentro dessa variável carregar a cena Produto
-var local = [36,108,180,252]
+var local = [402,474,546,618]
 
 		
 

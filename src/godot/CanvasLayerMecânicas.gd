@@ -231,23 +231,23 @@ func _on_sairMapa_pressed():
 	$mapaAberto.visible = false 
 	#botao que foca atras da professora
 func _on_botaoEmail_pressed():
-	$CanvasLayer/emailpc.visible = true
+	$Emailpc.visible = true
 	
 func _on_botaoNpc_pressed():
 	Global.contador += 1
 
 func _on_botaoVoltarDuvida_pressed():
-	$CanvasLayer/computador.visible = true
-	$CanvasLayer/duvidaPc.visible = false
+	$computador.visible = true
+	$duvidaPc.visible = false
 
 
 func _on_botaoDuvida_pressed():
-	$CanvasLayer/computador.visible = false
-	$CanvasLayer/duvidaPc.visible = true 
+	$computador.visible = false
+	$duvidaPc.visible = true 
 
 func _on_botaoVoltar_pressed():
-	$CanvasLayer/computador.visible = true
-	$CanvasLayer/Emailpc.visible = false
+	$computador.visible = true
+	$Emailpc.visible = false
 	
 func _on_VideoPlayer_finished():
 	Global.contador += 1

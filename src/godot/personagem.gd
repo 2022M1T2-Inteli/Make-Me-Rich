@@ -14,6 +14,7 @@ var selecPersonagem
 var cont = 0
 var contVideo
 
+
 #mostra o dinheiro no canto superior esquerdo
 func _ready():
 	
@@ -29,13 +30,14 @@ func _ready():
 	$CanvasLayer/happyBar.percent_visible = false 
 	
 	yield (get_tree().create_timer(1),"timeout")
-	
-	
-
 		
 	if boaNoite == true and areaCama == true:
 		get_tree().change_scene("res://boaNoite.tscn")
 		Global.posicao = "casa"
+	
+
+
+func _physics_process(delta):
 	#faz spawnar no banco
 	if Global.posicao == "banco":
 		position.x = 1400
@@ -59,9 +61,6 @@ func _ready():
 	if Global.posicao == "faculdade":
 		position.x = 810
 		position.y = -2613
-
-
-func _physics_process(delta):
 	move_and_slide(velocidade)
 	# Codigo pra movimentação 
 	if Input.is_action_pressed("tecla_w"):
