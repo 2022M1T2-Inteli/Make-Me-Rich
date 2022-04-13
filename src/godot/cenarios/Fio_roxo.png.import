@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fio_vermelho.png-122cda643ddb802a1e7c4f922471fc93.stex"
+path="res://.import/Fio_roxo.png-0606a2d110e1b94c179d49e4c0d18476.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fio_vermelho.png"
-dest_files=[ "res://.import/Fio_vermelho.png-122cda643ddb802a1e7c4f922471fc93.stex" ]
+source_file="res://cenarios/Fio_roxo.png"
+dest_files=[ "res://.import/Fio_roxo.png-0606a2d110e1b94c179d49e4c0d18476.stex" ]
 
 [params]
 

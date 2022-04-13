@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/interface.png-06c92e5bcd80a78268e5d217686395ce.stex"
+path="res://.import/casinha.png-c319a012fa86c2498df3111a22ff2317.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface.png"
-dest_files=[ "res://.import/interface.png-06c92e5bcd80a78268e5d217686395ce.stex" ]
+source_file="res://cenarios/casinha.png"
+dest_files=[ "res://.import/casinha.png-c319a012fa86c2498df3111a22ff2317.stex" ]
 
 [params]
 

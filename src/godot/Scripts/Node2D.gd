@@ -26,7 +26,12 @@ func _process(delta):
 		Global.horas = 00
 		Global.dia += 1
 		
-	#botões invisiveis no jogo
+	#while Global.dia < 60:
+		#if Global.abriuJogoFab == 1:
+		#	$botaoFabrica.visible = false
+		#if Global.abriuJogoFio == 1:
+		#	$botaoFios.visible = false
+	
 	if Global.menosFeliz <= 5:
 		$personagem/CanvasLayer/bloqueioPop.visible = true
 		$botaoRicardo.visible = false

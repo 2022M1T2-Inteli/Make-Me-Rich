@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Verde_claro.png-4669c6b5da19ad5803a217fc1e8efaf2.stex"
+path="res://.import/GameOver.png-3f3d6d396207876d8a5d3fdce0eb55c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Verde_claro.png"
-dest_files=[ "res://.import/Verde_claro.png-4669c6b5da19ad5803a217fc1e8efaf2.stex" ]
+source_file="res://cenarios/GameOver.png"
+dest_files=[ "res://.import/GameOver.png-3f3d6d396207876d8a5d3fdce0eb55c6.stex" ]
 
 [params]
 

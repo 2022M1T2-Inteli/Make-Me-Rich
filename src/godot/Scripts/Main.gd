@@ -15,12 +15,12 @@ func start_game() -> void:
 func _on_Timer_timeout():
 	$Control/Label.text = str(Global.ponto)
 	$Control/Label2.text = str(30 - Global.tempo)
-	var novoproduto = tipoProduto.instance()
-	add_child_below_node(get_tree().root,novoproduto)
-	move_child(novoproduto, 0)
-	novoproduto.position.y = -72 #Da onde o produto parte 
-	novoproduto.position.x = local[randi() % local.size()] #Posicao Y sempre aleatoria
-	novoproduto.linear_velocity = Vector2(0,150) #Velocidade do produto
+	var novoProduto = tipoProduto.instance()
+	add_child_below_node(get_tree().root,novoProduto)
+	move_child(novoProduto, 0)
+	novoProduto.position.y = -72 #Da onde o produto parte 
+	novoProduto.position.x = local[randi() % local.size()] #Posicao Y sempre aleatoria
+	novoProduto.linear_velocity = Vector2(0,150) #Velocidade do produto
 
 func _process(delta):
 	Global.sent += delta

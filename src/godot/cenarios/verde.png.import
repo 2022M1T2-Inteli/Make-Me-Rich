@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fio_azul.png-3160b8c190762e734f64988790f58ef3.stex"
+path="res://.import/verde.png-48f92543688c83ea32dcb4d7763a8163.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fio_azul.png"
-dest_files=[ "res://.import/Fio_azul.png-3160b8c190762e734f64988790f58ef3.stex" ]
+source_file="res://cenarios/verde.png"
+dest_files=[ "res://.import/verde.png-48f92543688c83ea32dcb4d7763a8163.stex" ]
 
 [params]
 

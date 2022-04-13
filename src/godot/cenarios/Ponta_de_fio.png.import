@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fio_roxo.png-9838b7eaadd8557e4165857c46404048.stex"
+path="res://.import/Ponta_de_fio.png-5d4444f73a4e24bd299664aa96a846dc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fio_roxo.png"
-dest_files=[ "res://.import/Fio_roxo.png-9838b7eaadd8557e4165857c46404048.stex" ]
+source_file="res://cenarios/Ponta_de_fio.png"
+dest_files=[ "res://.import/Ponta_de_fio.png-5d4444f73a4e24bd299664aa96a846dc.stex" ]
 
 [params]
 

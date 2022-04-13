@@ -33,7 +33,8 @@
 [ext_resource path="res://assets/ROSTO PROFESSORa.png" type="Texture" id=31]
 [ext_resource path="res://assets/RELOGIO.png" type="Texture" id=32]
 [ext_resource path="res://assets/mapa2.png" type="Texture" id=34]
-[ext_resource path="res://CanvasLayerMecânicas.gd" type="Script" id=35]
+[ext_resource path="res://Scripts/CanvasLayerMecânicas.gd" type="Script" id=35]
+
 
 [sub_resource type="StyleBoxFlat" id=41]
 bg_color = Color( 0.168627, 0.152941, 0.239216, 1 )

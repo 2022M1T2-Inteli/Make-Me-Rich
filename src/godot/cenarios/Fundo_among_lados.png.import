@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fio_amarelo.png-7de09dd6e0d0c938880f511cea88faf7.stex"
+path="res://.import/Fundo_among_lados.png-2c7a5148faf7283f11c603387f1bb475.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fio_amarelo.png"
-dest_files=[ "res://.import/Fio_amarelo.png-7de09dd6e0d0c938880f511cea88faf7.stex" ]
+source_file="res://cenarios/Fundo_among_lados.png"
+dest_files=[ "res://.import/Fundo_among_lados.png-2c7a5148faf7283f11c603387f1bb475.stex" ]
 
 [params]
 

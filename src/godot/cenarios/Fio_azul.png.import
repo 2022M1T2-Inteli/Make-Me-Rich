@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/casinha.png-cbbc141cd9a0eef49796d746f055bdcc.stex"
+path="res://.import/Fio_azul.png-d516a16b20b61c44c2bcf863fbc19626.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://casinha.png"
-dest_files=[ "res://.import/casinha.png-cbbc141cd9a0eef49796d746f055bdcc.stex" ]
+source_file="res://cenarios/Fio_azul.png"
+dest_files=[ "res://.import/Fio_azul.png-d516a16b20b61c44c2bcf863fbc19626.stex" ]
 
 [params]
 

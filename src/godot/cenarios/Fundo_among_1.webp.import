@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pontuacao.png-c2f85e264b6e49a6c13eed599ce148c3.stex"
+path="res://.import/Fundo_among_1.webp-d0bc093fa21ef17c0b2b4d490a81ae19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pontuacao.png"
-dest_files=[ "res://.import/pontuacao.png-c2f85e264b6e49a6c13eed599ce148c3.stex" ]
+source_file="res://cenarios/Fundo_among_1.webp"
+dest_files=[ "res://.import/Fundo_among_1.webp-d0bc093fa21ef17c0b2b4d490a81ae19.stex" ]
 
 [params]
 

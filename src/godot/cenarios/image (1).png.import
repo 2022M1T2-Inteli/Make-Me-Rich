@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Significado-da-cor-preto.jpg-5e51cac184230d19d0a73ed73ac301e7.stex"
+path="res://.import/image (1).png-4038f7256e6157898e73b6460c4f14dc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Significado-da-cor-preto.jpg"
-dest_files=[ "res://.import/Significado-da-cor-preto.jpg-5e51cac184230d19d0a73ed73ac301e7.stex" ]
+source_file="res://cenarios/image (1).png"
+dest_files=[ "res://.import/image (1).png-4038f7256e6157898e73b6460c4f14dc.stex" ]
 
 [params]
 

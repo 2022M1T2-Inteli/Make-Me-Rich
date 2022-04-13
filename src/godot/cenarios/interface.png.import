@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pont.png-4ba9a4bf71b0f147f2be6dc3bbf05512.stex"
+path="res://.import/interface.png-b631d8d8fcdd28c2cc9d3007aea0cc76.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pont.png"
-dest_files=[ "res://.import/Pont.png-4ba9a4bf71b0f147f2be6dc3bbf05512.stex" ]
+source_file="res://cenarios/interface.png"
+dest_files=[ "res://.import/interface.png-b631d8d8fcdd28c2cc9d3007aea0cc76.stex" ]
 
 [params]
 

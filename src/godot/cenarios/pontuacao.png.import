@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ponta_de_fio.png-bd39f54bb1881d82c5e8179fc24504b5.stex"
+path="res://.import/pontuacao.png-ceaabbadb5c15e8df60ed5b3bce958f9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ponta_de_fio.png"
-dest_files=[ "res://.import/Ponta_de_fio.png-bd39f54bb1881d82c5e8179fc24504b5.stex" ]
+source_file="res://cenarios/pontuacao.png"
+dest_files=[ "res://.import/pontuacao.png-ceaabbadb5c15e8df60ed5b3bce958f9.stex" ]
 
 [params]
 

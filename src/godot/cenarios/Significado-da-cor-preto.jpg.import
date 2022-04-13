@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Captura de tela 2022-02-22 144254.png-7179f3f1ffe33b3368eb059de1313c68.stex"
+path="res://.import/Significado-da-cor-preto.jpg-64c49eb28b8988738ffd03e32d69b790.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Captura de tela 2022-02-22 144254.png"
-dest_files=[ "res://.import/Captura de tela 2022-02-22 144254.png-7179f3f1ffe33b3368eb059de1313c68.stex" ]
+source_file="res://cenarios/Significado-da-cor-preto.jpg"
+dest_files=[ "res://.import/Significado-da-cor-preto.jpg-64c49eb28b8988738ffd03e32d69b790.stex" ]
 
 [params]
 
