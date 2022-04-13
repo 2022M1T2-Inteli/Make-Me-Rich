@@ -41,13 +41,8 @@ https://itch.io/embed/1416795"
 
 ## 📈 Exemplo de uso
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado.
-
-Adicione blocos de códigos e, se necessário, screenshots.
-
-Este modelo pode ser copiado e utilizado à vontade.
-
-Através da cópia/clone/ download do repositório, altere os dados do readme.md e carregue os arquivos de seu projeto.
+Nosso projeto tem o foco em repassar uma maior consciência no âmbito financeiro da sociedade e facilitar a aprendizagem utilizando a gamificação para aliviar a complexidade do conteúdo.
+Com isso, o jogo pode ser acessado de diferentes plataformas como o computador e o celular, por exemplo.
 
 ## 💻 Configuração para Desenvolvimento
 
