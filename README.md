@@ -4,7 +4,7 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Money Guy Adventures
+# Make Me Rich
 
 ## The FinancialEd Devs
 
@@ -46,34 +46,23 @@ Com isso, o jogo pode ser acessado de diferentes plataformas como o computador e
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
 Para abrir este projeto você necessita das seguintes ferramentas:
 
 -<a href="https://godotengine.org/download">GODOT</a>
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
-
 ## 🗃 Histórico de lançamentos
 
-A cada atualização os detalhes devem ser lançados aqui.
-
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.2.1 - 04/03/2022
+    * MUDANÇA: Atualização de documentação final
+* 0.2.0 - 28/02/2022
+    * MUDANÇA: Sprite animado do personagem
+    * ADD: Implementação de cenários
+* 0.1.1 - 21/02/2022
+    * CONSERTADO: Movimentação básica do jogo
+* 0.1.0 - 14/02/2022
+    * O primeiro lançamento no Itch.io
+* 0.0.1 - 07/02/2022
+    * Início do trabalho
 
 ## 📋 Licença/License
 
