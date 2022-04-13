@@ -15,10 +15,5 @@ func on_button_pressed(button: Button) -> void:
 			button_conteiner.get_node("Button").hide()
 			score_container.show()
 			emit_signal("start_game") #Emite sinal de inicio de jogo
+			#Ao pressionar o botao, o jogador é direcionado a task
 			get_tree().change_scene("res://Main.tscn")
-		"GameOver":
-			pass
-
-func game_over() -> void:
-	if(Global.ponto == 10):
-		get_tree().change_scene("res://GameOver.tscn")
