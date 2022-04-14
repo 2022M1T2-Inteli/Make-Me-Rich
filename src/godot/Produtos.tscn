@@ -6,8 +6,9 @@
 [ext_resource path="res://Image/P5.png" type="Texture" id=4]
 [ext_resource path="res://Image/P3.png" type="Texture" id=5]
 [ext_resource path="res://Image/P2.png" type="Texture" id=6]
-[ext_resource path="res://produtos.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/produtos.gd" type="Script" id=7]
 [ext_resource path="res://Image/embalagem.png" type="Texture" id=8]
+
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 36, 36 )

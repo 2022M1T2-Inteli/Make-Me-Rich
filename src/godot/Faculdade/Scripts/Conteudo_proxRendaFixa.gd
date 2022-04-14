@@ -1,20 +1,8 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+	pass 
+	
 func _on_Button_pressed():
+	#Ao pressionar o botao, o jogador é direcionado a próxima página do conteúdo de Renda Fixa
 	get_tree().change_scene("res://Faculdade/Conteudo_RendaFixa.tscn")

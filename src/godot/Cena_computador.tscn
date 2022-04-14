@@ -4,9 +4,10 @@
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/comp tela.png" type="Texture" id=4]
 [ext_resource path="res://assets/caixa_amarela.png" type="Texture" id=5]
-[ext_resource path="res://investimentos.gd" type="Script" id=8]
-[ext_resource path="res://sair_pc.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/investimentos.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/sair_pc.gd" type="Script" id=10]
 [ext_resource path="res://assets/seta_voltar.png" type="Texture" id=11]
+
 
 [sub_resource type="DynamicFont" id=3]
 size = 42

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/pkmnfl.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/fundoRelogio.png" type="Texture" id=2]
-[ext_resource path="res://CanvasLayerDinheiro.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/CanvasLayerDinheiro.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=15]
 size = 26

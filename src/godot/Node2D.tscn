@@ -1,10 +1,10 @@
 [gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://sprites_player/andando.frente.png" type="Texture" id=1]
-[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://assets/cidade_judite.jpg" type="Texture" id=3]
 [ext_resource path="res://sprites_player/andando.esquerda.png" type="Texture" id=4]
-[ext_resource path="res://personagem.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/personagem.gd" type="Script" id=5]
 [ext_resource path="res://sprites_player/andando.frente_2.png" type="Texture" id=6]
 [ext_resource path="res://sprites_player/andando.direita.png" type="Texture" id=7]
 [ext_resource path="res://sprites_player/idle.frente.png" type="Texture" id=8]
@@ -21,7 +21,7 @@
 [ext_resource path="res://assets/Run-As-Fast-As-You-Can.mp3" type="AudioStream" id=19]
 [ext_resource path="res://assets/fundo.png" type="Texture" id=20]
 [ext_resource path="res://assets/universidade_judite.jpg" type="Texture" id=22]
-[ext_resource path="res://Node2D.gd" type="Script" id=23]
+[ext_resource path="res://Scripts/Node2D.gd" type="Script" id=23]
 [ext_resource path="res://CanvasLayerDinheiro.tscn" type="PackedScene" id=24]
 [ext_resource path="res://assets/setamovi.png" type="Texture" id=25]
 [ext_resource path="res://assets/npc professora.png" type="Texture" id=27]
@@ -162,20 +162,20 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "idle.frente",
-"speed": 0.0
+"frames": [ ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk.esquerda",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": false,
@@ -187,15 +187,15 @@ animations = [ {
 "name": "walk.direita",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "idle.frente",
+"speed": 0.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk.frente",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk.esquerda",
-"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
@@ -205,19 +205,19 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 74 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 72 ) ],
+"frames": [ ExtResource( 76 ), ExtResource( 78 ) ],
 "loop": true,
-"name": "idle.frente",
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "walk.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 75 ) ],
@@ -230,14 +230,14 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 72 ) ],
+"loop": true,
+"name": "idle.frente",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 70 ), ExtResource( 42 ) ],
 "loop": true,
 "name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 71 ), ExtResource( 73 ) ],
-"loop": true,
-"name": "walk.esquerda",
 "speed": 5.0
 } ]
 
@@ -248,19 +248,19 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 98 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 96 ) ],
+"frames": [ ExtResource( 95 ), ExtResource( 102 ) ],
 "loop": true,
-"name": "idle.frente",
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "walk.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 93 ) ],
@@ -273,14 +273,14 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 96 ) ],
+"loop": true,
+"name": "idle.frente",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 92 ), ExtResource( 43 ) ],
 "loop": true,
 "name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 100 ), ExtResource( 101 ) ],
-"loop": true,
-"name": "walk.esquerda",
 "speed": 5.0
 } ]
 
@@ -291,19 +291,19 @@ animations = [ {
 "name": "idle.esquerda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
-"loop": true,
-"name": "walk.costas",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 91 ) ],
 "loop": true,
 "name": "idle.direita",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 89 ) ],
+"frames": [ ExtResource( 86 ), ExtResource( 88 ) ],
 "loop": true,
-"name": "idle.frente",
+"name": "walk.costas",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "walk.esquerda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 87 ) ],
@@ -316,14 +316,14 @@ animations = [ {
 "name": "walk.direita",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 89 ) ],
+"loop": true,
+"name": "idle.frente",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 85 ), ExtResource( 81 ) ],
 "loop": true,
 "name": "walk.frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 90 ), ExtResource( 44 ) ],
-"loop": true,
-"name": "walk.esquerda",
 "speed": 5.0
 } ]
 
