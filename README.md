@@ -32,16 +32,16 @@
 
 ## 🛠 Estrutura de pastas
 
-📦<b>Projeto 2</b><br>
-📎Documentos<br>
-&emsp;&emsp;Aqui estará toda a documentação do projeto, contendo toda a contextualização do projeto<br>
-💻Executáveis<br>
-&emsp;&emsp;📁|-->Windows<br>
-&emsp;&emsp;📁|-->HTML<br>
-📷Imagens<br>
-💾Src<br>
-📄README.md<br>
-📜license.txt
+- Raiz<br><br>
+| --> documentos<br>
+  &emsp;| --> antigos<br>
+  &emsp;|  Modelo GDD grupo 2.docx<br>
+| --> executáveis<br>
+  &emsp;| --> windows<br>
+  &emsp;| --> html<br>
+| --> imagens<br>
+| --> src<br>
+| readme.md<br>
 
 
 ## 🛠 Instalação
